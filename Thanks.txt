@@ -8,7 +8,7 @@ Markus Schroeder	N(S)N - Noise is Silence is Noise
 
 			Linux Port:
 
-Frank Becker		provided patches which served as the basis for the 'kiki on linux port'.
+Frank Becker	provided patches which served as the basis for the 'kiki on linux port'.
 
 			Level:
 
@@ -23,13 +23,13 @@ Pick			he started the Windows-port.
 
 			www.idevgames.com:
 
-Carlos Camacho 		organized the competition which motivated me to write this program
+Carlos Camacho 	organized the competition which motivated me to write this program
 			and also provided the sounds that are used in the game. 
 
 			Translations:
 
 Arthur Langereis 	Dutch
 F.C.Covett 		Portuguese
-jay_traveller 		Spanish
-Fenris			Swedish
+jay_traveller 	Spanish
+Fenris		Swedish
 
