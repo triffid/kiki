@@ -8,9 +8,9 @@
                         (bodyQuadStripIndices[i+1] - bodyQuadStripIndices[i])/6); \
     } \
     glInterleavedArrays (GL_N3F_V3F, 0, bodyInterleavedTriangleFans); \
-    for (int i = 0; i < bodyNumTriangleFans; i++) { \
-        glDrawArrays (GL_TRIANGLE_FAN, bodyTriangleFanIndices[i]/6, \
-                        (bodyTriangleFanIndices[i+1] - bodyTriangleFanIndices[i])/6); \
+    for (int ii = 0; ii < bodyNumTriangleFans; ii++) { \
+        glDrawArrays (GL_TRIANGLE_FAN, bodyTriangleFanIndices[ii]/6, \
+                        (bodyTriangleFanIndices[ii+1] - bodyTriangleFanIndices[ii])/6); \
     } \
 }
 

@@ -8,7 +8,7 @@ package contents
 
 The package contains beside this Readme
 some documentation in HTML format and
-the binary for Mac OS X or the complete sources
+the binary for Windows, Mac OS X or the complete sources
 (depending on which package you downloaded).
 If you donwloaded the sources, please check
 the documents in the linux or macosx subdirectories
@@ -55,7 +55,7 @@ feedback
 
 It always makes me happy to receive some feedback at
 
-monsterkodi@gmx.net
+monsterkodi@users.sourceforge.net
 
 have fun
 

@@ -14,7 +14,7 @@
 #else
 #ifdef WIN32
 #define rint(x) (((x) < 0.0) ? (double)(int)((x) - 0.5) : (double)(int)((x) + 0.5))
-#include <GL/glut.h>
+#include <GLUT/glut.h>
 #endif
 #include <GL/gl.h>
 #endif
@@ -39,6 +39,14 @@ class KSize
 };
 
 // --------------------------------------------------------------------------------------------------------
+
+#ifndef M_PI
+#define M_PI 3.14159265358979323846f
+#endif
+
+#ifndef M_PI_2
+#define M_PI_2 1.5707963267948965580f
+#endif
 
 #define DEG2RAD(d)			(M_PI*(d)/180.0)
 #define RAD2DEG(r)			((r)*180.0/M_PI)

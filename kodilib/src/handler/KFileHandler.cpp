@@ -7,6 +7,7 @@
 #include "KFileTools.h"
 #include "KConsole.h"
 
+
 #ifndef WIN32
 #	include <unistd.h> 	// chdir & getcwd
 //#include <sys/param.h>	// MAXPATHLEN
@@ -21,9 +22,6 @@ std::vector<std::string> KFileHandler::current_dir_stack;
 // --------------------------------------------------------------------------------------------------------
 void KFileHandler::init()
 {
-    //char buffer[MAXPATHLEN+1];
-    //getwd(buffer);
-    //current_dir_stack.push_back(buffer);
     current_dir_stack.push_back(kFileGetCurrentPath());
 }
 

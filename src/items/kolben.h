@@ -10,9 +10,9 @@
                         (kolbenQuadStripIndices[i+1] - kolbenQuadStripIndices[i])/6); \
     } \
     glInterleavedArrays (GL_N3F_V3F, 0, kolbenInterleavedTriangleFans); \
-    for (int i = 0; i < kolbenNumTriangleFans; i++) { \
-        glDrawArrays (GL_TRIANGLE_FAN, kolbenTriangleFanIndices[i]/6, \
-                        (kolbenTriangleFanIndices[i+1] - kolbenTriangleFanIndices[i])/6); \
+    for (int ii = 0; ii < kolbenNumTriangleFans; ii++) { \
+        glDrawArrays (GL_TRIANGLE_FAN, kolbenTriangleFanIndices[ii]/6, \
+                        (kolbenTriangleFanIndices[ii+1] - kolbenTriangleFanIndices[ii])/6); \
     } \
 }
 

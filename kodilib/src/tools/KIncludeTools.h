@@ -11,7 +11,7 @@
 #endif
 
 #ifdef K_INCLUDE_GLUT
-#	if defined(__APPLE__) && defined(__MACH__)
+#	if defined(__APPLE__) && defined(__MACH__) || defined(_WIN32)
 #		include <GLUT/glut.h>
 #	else
 #		include <GL/glut.h>

@@ -3,208 +3,202 @@
 <pre>
 <h1>Erstellungsprotokoll</h1>
 <h3>
---------------------Konfiguration: kodilib - Win32 Debug--------------------
+--------------------Konfiguration: kodilib - Win32 Release--------------------
 </h3>
 <h3>Befehlszeilen</h3>
-Erstellen der temporären Datei  "C:\DOKUME~1\CHRIST~1\LOKALE~1\Temp\RSP10A.tmp" mit Inhalten
+Erstellen der temporären Datei  "C:\DOKUME~1\kodi\LOKALE~1\Temp\RSP100.tmp" mit Inhalten
 [
-/nologo /MLd /w /W0 /Gm /GX /ZI /Od /I "..\..\glut-3.7.6-bin" /I "..\..\SDL_image-1.2.2\include" /I "..\..\SDL_mixer-1.2.4\include" /I "..\..\SDL-1.2.5\include" /I "..\src\handler" /I "..\src\tools" /I "..\src\types" /I "..\src\windows" /I "..\src\widgets" /D "_WIN32" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /FR"Debug/" /Fp"Debug/kodilib.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
-"C:\Dokumente und Einstellungen\christoph\Eigene Dateien\Projects\kodi\kodilib\src\handler\KEventHandler.cpp"
-"C:\Dokumente und Einstellungen\christoph\Eigene Dateien\Projects\kodi\kodilib\src\handler\KPickHandler.cpp"
-"C:\Dokumente und Einstellungen\christoph\Eigene Dateien\Projects\kodi\kodilib\src\handler\KSelectionHandler.cpp"
-"C:\Dokumente und Einstellungen\christoph\Eigene Dateien\Projects\kodi\kodilib\src\tools\KFileTools.cpp"
-"C:\Dokumente und Einstellungen\christoph\Eigene Dateien\Projects\kodi\kodilib\src\types\KTrash.cpp"
-"C:\Dokumente und Einstellungen\christoph\Eigene Dateien\Projects\kodi\kodilib\src\widgets\KFileNameField.cpp"
-"C:\Dokumente und Einstellungen\christoph\Eigene Dateien\Projects\kodi\kodilib\src\widgets\KWidget.cpp"
+/nologo /MD /W3 /GX /O2 /I "." /I ".\SDL\include" /I ".\SDL_image\include" /I "..\src\handler" /I "..\src\tools" /I "..\src\types" /I "..\src\windows" /I "..\src\widgets" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /Fp"Release/kodilib.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\widgets\KButton.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\widgets\KButtonBox.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\windows\KConsole.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\tools\KDisplayTools.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\handler\KEventHandler.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\handler\KFileHandler.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\widgets\KFileNameField.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\tools\KFileTools.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\widgets\KFileTreeDir.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\widgets\KFileTreeDirCurrent.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\widgets\KFileTreeDirUp.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\widgets\KFileTreeFile.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\widgets\KFileTreeNode.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\widgets\KFileTreeWidget.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\windows\KFileTreeWindow.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\widgets\KIconButton.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\tools\KIntrospection.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\types\KKey.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\handler\KKeyActionHandler.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\handler\KKeyHandler.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\handler\KKeyRecorder.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\widgets\KKeySequenceField.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\tools\KKeyTools.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\widgets\KLabel.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\types\KLight.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\types\KLightingProjection.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\types\KMatrix.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\widgets\KMenu.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\widgets\KMenuItem.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\windows\KMenuWindow.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\windows\KMessagePanel.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\tools\KNotificationObject.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\widgets\KNumberField.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\types\KOrthographicProjection.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\types\KPerspectiveProjection.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\handler\KPickable.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\handler\KPickHandler.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\windows\KPopupMenu.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\types\KProjection.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\widgets\KProjectionWidget.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\types\KQuaternion.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\widgets\KScrollBar.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\handler\KSelectable.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\handler\KSelectionHandler.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\types\KSeparatedMatrix.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\widgets\KSliderButton.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\widgets\KStatusMenuItem.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\tools\KStringTools.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\widgets\KSubMenuItem.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\widgets\KTextField.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\types\KTexture.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\widgets\KTextWidget.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\widgets\KToggleButton.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\types\KTrash.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\widgets\KWidget.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\widgets\KWidgetArray.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\windows\KWindow.cpp"
+"C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\tools\KXMLTools.cpp"
 ]
-Creating command line "cl.exe @C:\DOKUME~1\CHRIST~1\LOKALE~1\Temp\RSP10A.tmp" 
-Erstellen der temporären Datei  "C:\DOKUME~1\CHRIST~1\LOKALE~1\Temp\RSP10B.tmp" mit Inhalten
+Creating command line "cl.exe @C:\DOKUME~1\kodi\LOKALE~1\Temp\RSP100.tmp" 
+Erstellen der temporären Datei  "C:\DOKUME~1\kodi\LOKALE~1\Temp\RSP101.tmp" mit Inhalten
 [
-/nologo /out:"Debug\kodilib.lib" 
-".\Debug\KEventHandler.obj"
-".\Debug\KFileHandler.obj"
-".\Debug\KKeyActionHandler.obj"
-".\Debug\KKeyHandler.obj"
-".\Debug\KKeyRecorder.obj"
-".\Debug\KPickable.obj"
-".\Debug\KPickHandler.obj"
-".\Debug\KSelectable.obj"
-".\Debug\KSelectionHandler.obj"
-".\Debug\KDisplayTools.obj"
-".\Debug\KFileTools.obj"
-".\Debug\KIntrospection.obj"
-".\Debug\KKeyTools.obj"
-".\Debug\KNotificationObject.obj"
-".\Debug\KStringTools.obj"
-".\Debug\KXMLTools.obj"
-".\Debug\KLight.obj"
-".\Debug\KKey.obj"
-".\Debug\KLightingProjection.obj"
-".\Debug\KMatrix.obj"
-".\Debug\KOrthographicProjection.obj"
-".\Debug\KPerspectiveProjection.obj"
-".\Debug\KProjection.obj"
-".\Debug\KQuaternion.obj"
-".\Debug\KSeparatedMatrix.obj"
-".\Debug\KTexture.obj"
-".\Debug\KTrash.obj"
-".\Debug\KButton.obj"
-".\Debug\KButtonBox.obj"
-".\Debug\KFileNameField.obj"
-".\Debug\KFileTreeDir.obj"
-".\Debug\KFileTreeDirCurrent.obj"
-".\Debug\KFileTreeDirUp.obj"
-".\Debug\KFileTreeFile.obj"
-".\Debug\KFileTreeNode.obj"
-".\Debug\KFileTreeWidget.obj"
-".\Debug\KIconButton.obj"
-".\Debug\KKeySequenceField.obj"
-".\Debug\KLabel.obj"
-".\Debug\KMenu.obj"
-".\Debug\KMenuItem.obj"
-".\Debug\KNumberField.obj"
-".\Debug\KProjectionWidget.obj"
-".\Debug\KScrollBar.obj"
-".\Debug\KSliderButton.obj"
-".\Debug\KStatusMenuItem.obj"
-".\Debug\KSubMenuItem.obj"
-".\Debug\KTextField.obj"
-".\Debug\KTextWidget.obj"
-".\Debug\KToggleButton.obj"
-".\Debug\KWidget.obj"
-".\Debug\KWidgetArray.obj"
-".\Debug\KConsole.obj"
-".\Debug\KFileTreeWindow.obj"
-".\Debug\KMenuWindow.obj"
-".\Debug\KMessagePanel.obj"
-".\Debug\KPopupMenu.obj"
-".\Debug\KWindow.obj"
+/nologo /out:"Release\kodilib.lib" 
+".\Release\KButton.obj"
+".\Release\KButtonBox.obj"
+".\Release\KConsole.obj"
+".\Release\KDisplayTools.obj"
+".\Release\KEventHandler.obj"
+".\Release\KFileHandler.obj"
+".\Release\KFileNameField.obj"
+".\Release\KFileTools.obj"
+".\Release\KFileTreeDir.obj"
+".\Release\KFileTreeDirCurrent.obj"
+".\Release\KFileTreeDirUp.obj"
+".\Release\KFileTreeFile.obj"
+".\Release\KFileTreeNode.obj"
+".\Release\KFileTreeWidget.obj"
+".\Release\KFileTreeWindow.obj"
+".\Release\KIconButton.obj"
+".\Release\KIntrospection.obj"
+".\Release\KKey.obj"
+".\Release\KKeyActionHandler.obj"
+".\Release\KKeyHandler.obj"
+".\Release\KKeyRecorder.obj"
+".\Release\KKeySequenceField.obj"
+".\Release\KKeyTools.obj"
+".\Release\KLabel.obj"
+".\Release\KLight.obj"
+".\Release\KLightingProjection.obj"
+".\Release\KMatrix.obj"
+".\Release\KMenu.obj"
+".\Release\KMenuItem.obj"
+".\Release\KMenuWindow.obj"
+".\Release\KMessagePanel.obj"
+".\Release\KNotificationObject.obj"
+".\Release\KNumberField.obj"
+".\Release\KOrthographicProjection.obj"
+".\Release\KPerspectiveProjection.obj"
+".\Release\KPickable.obj"
+".\Release\KPickHandler.obj"
+".\Release\KPopupMenu.obj"
+".\Release\KProjection.obj"
+".\Release\KProjectionWidget.obj"
+".\Release\KQuaternion.obj"
+".\Release\KScrollBar.obj"
+".\Release\KSelectable.obj"
+".\Release\KSelectionHandler.obj"
+".\Release\KSeparatedMatrix.obj"
+".\Release\KSliderButton.obj"
+".\Release\KStatusMenuItem.obj"
+".\Release\KStringTools.obj"
+".\Release\KSubMenuItem.obj"
+".\Release\KTextField.obj"
+".\Release\KTexture.obj"
+".\Release\KTextWidget.obj"
+".\Release\KToggleButton.obj"
+".\Release\KTrash.obj"
+".\Release\KWidget.obj"
+".\Release\KWidgetArray.obj"
+".\Release\KWindow.obj"
+".\Release\KXMLTools.obj"
 ]
-Erstellen der Befehlzeile "link.exe -lib @C:\DOKUME~1\CHRIST~1\LOKALE~1\Temp\RSP10B.tmp"
+Erstellen der Befehlzeile "link.exe -lib @C:\DOKUME~1\kodi\LOKALE~1\Temp\RSP101.tmp"
 <h3>Ausgabefenster</h3>
 Kompilierung läuft...
+KButton.cpp
+KButtonBox.cpp
+KConsole.cpp
+KDisplayTools.cpp
 KEventHandler.cpp
-c:\dokumente und einstellungen\christoph\eigene dateien\projects\kodi\kodilib\src\handler\keventhandler.cpp(408) : error C2065: 'find' : nichtdeklarierter Bezeichner
-c:\dokumente und einstellungen\christoph\eigene dateien\projects\kodi\kodilib\src\handler\keventhandler.cpp(408) : error C2440: 'initializing' : 'int' kann nicht in 'class KPickHandler ** ' konvertiert werden
-        Die Konvertierung eines ganzzahligen Typs in einen Zeigertyp erfordert ein reinterpret_cast-Operator oder eine Typumwandlung im C- oder Funktionsformat
-c:\dokumente und einstellungen\christoph\eigene dateien\projects\kodi\kodilib\src\handler\keventhandler.cpp(412) : error C2065: 'sort' : nichtdeklarierter Bezeichner
-c:\dokumente und einstellungen\christoph\eigene dateien\projects\kodi\kodilib\src\handler\keventhandler.cpp(420) : error C2440: 'initializing' : 'int' kann nicht in 'class KPickHandler ** ' konvertiert werden
-        Die Konvertierung eines ganzzahligen Typs in einen Zeigertyp erfordert ein reinterpret_cast-Operator oder eine Typumwandlung im C- oder Funktionsformat
-c:\dokumente und einstellungen\christoph\eigene dateien\projects\kodi\kodilib\src\handler\keventhandler.cpp(433) : error C2440: 'initializing' : 'int' kann nicht in 'class KKeyHandler ** ' konvertiert werden
-        Die Konvertierung eines ganzzahligen Typs in einen Zeigertyp erfordert ein reinterpret_cast-Operator oder eine Typumwandlung im C- oder Funktionsformat
-c:\dokumente und einstellungen\christoph\eigene dateien\projects\kodi\kodilib\src\handler\keventhandler.cpp(444) : error C2440: 'initializing' : 'int' kann nicht in 'class KKeyHandler ** ' konvertiert werden
-        Die Konvertierung eines ganzzahligen Typs in einen Zeigertyp erfordert ein reinterpret_cast-Operator oder eine Typumwandlung im C- oder Funktionsformat
-KPickHandler.cpp
-c:\dokumente und einstellungen\christoph\eigene dateien\projects\kodi\kodilib\src\handler\kpickhandler.cpp(213) : error C2065: 'find' : nichtdeklarierter Bezeichner
-c:\dokumente und einstellungen\christoph\eigene dateien\projects\kodi\kodilib\src\handler\kpickhandler.cpp(213) : error C2440: 'initializing' : 'int' kann nicht in 'class KPickable ** ' konvertiert werden
-        Die Konvertierung eines ganzzahligen Typs in einen Zeigertyp erfordert ein reinterpret_cast-Operator oder eine Typumwandlung im C- oder Funktionsformat
-KSelectionHandler.cpp
-c:\dokumente und einstellungen\christoph\eigene dateien\projects\kodi\kodilib\src\handler\kselectionhandler.cpp(92) : error C2065: 'find' : nichtdeklarierter Bezeichner
-c:\dokumente und einstellungen\christoph\eigene dateien\projects\kodi\kodilib\src\handler\kselectionhandler.cpp(92) : error C2440: '=' : 'int' kann nicht in 'class KSelectable ** ' konvertiert werden
-        Die Konvertierung eines ganzzahligen Typs in einen Zeigertyp erfordert ein reinterpret_cast-Operator oder eine Typumwandlung im C- oder Funktionsformat
-c:\dokumente und einstellungen\christoph\eigene dateien\projects\kodi\kodilib\src\handler\kselectionhandler.cpp(100) : error C2440: '=' : 'int' kann nicht in 'class KSelectable ** ' konvertiert werden
-        Die Konvertierung eines ganzzahligen Typs in einen Zeigertyp erfordert ein reinterpret_cast-Operator oder eine Typumwandlung im C- oder Funktionsformat
-c:\dokumente und einstellungen\christoph\eigene dateien\projects\kodi\kodilib\src\handler\kselectionhandler.cpp(126) : error C2440: '=' : 'int' kann nicht in 'class KSelectable ** ' konvertiert werden
-        Die Konvertierung eines ganzzahligen Typs in einen Zeigertyp erfordert ein reinterpret_cast-Operator oder eine Typumwandlung im C- oder Funktionsformat
-KFileTools.cpp
-c:\dokumente und einstellungen\christoph\eigene dateien\projects\kodi\kodilib\src\tools\kfiletools.cpp(112) : error C2065: 'realpath' : nichtdeklarierter Bezeichner
-c:\dokumente und einstellungen\christoph\eigene dateien\projects\kodi\kodilib\src\tools\kfiletools.cpp(112) : error C2440: 'initializing' : 'int' kann nicht in 'char *' konvertiert werden
-        Die Konvertierung eines ganzzahligen Typs in einen Zeigertyp erfordert ein reinterpret_cast-Operator oder eine Typumwandlung im C- oder Funktionsformat
-c:\dokumente und einstellungen\christoph\eigene dateien\projects\kodi\kodilib\src\tools\kfiletools.cpp(183) : error C2039: 'st_blksize' : Ist kein Element von 'stat'
-        c:\programme\microsoft visual studio\vc98\include\wchar.h(406) : Siehe Deklaration von 'stat'
-c:\dokumente und einstellungen\christoph\eigene dateien\projects\kodi\kodilib\src\tools\kfiletools.cpp(192) : error C2065: 'getdirentries' : nichtdeklarierter Bezeichner
-c:\dokumente und einstellungen\christoph\eigene dateien\projects\kodi\kodilib\src\tools\kfiletools.cpp(192) : error C2039: 'st_blksize' : Ist kein Element von 'stat'
-        c:\programme\microsoft visual studio\vc98\include\wchar.h(406) : Siehe Deklaration von 'stat'
-c:\dokumente und einstellungen\christoph\eigene dateien\projects\kodi\kodilib\src\tools\kfiletools.cpp(198) : error C2027: Verwendung des undefinierten Typs "dirent"
-        c:\dokumente und einstellungen\christoph\eigene dateien\projects\kodi\kodilib\src\tools\kfiletools.cpp(197) : Siehe Deklaration von 'dirent'
-c:\dokumente und einstellungen\christoph\eigene dateien\projects\kodi\kodilib\src\tools\kfiletools.cpp(198) : error C2227: Der linke Teil von '->d_name' muss auf Klasse/Struktur/Union zeigen
-c:\dokumente und einstellungen\christoph\eigene dateien\projects\kodi\kodilib\src\tools\kfiletools.cpp(208) : error C2027: Verwendung des undefinierten Typs "dirent"
-        c:\dokumente und einstellungen\christoph\eigene dateien\projects\kodi\kodilib\src\tools\kfiletools.cpp(197) : Siehe Deklaration von 'dirent'
-c:\dokumente und einstellungen\christoph\eigene dateien\projects\kodi\kodilib\src\tools\kfiletools.cpp(208) : error C2227: Der linke Teil von '->d_reclen' muss auf Klasse/Struktur/Union zeigen
-KTrash.cpp
-c:\dokumente und einstellungen\christoph\eigene dateien\projects\kodi\kodilib\src\types\ktrash.cpp(16) : error C2065: 'find' : nichtdeklarierter Bezeichner
-c:\dokumente und einstellungen\christoph\eigene dateien\projects\kodi\kodilib\src\types\ktrash.cpp(16) : error C2440: 'initializing' : 'int' kann nicht in 'class KObject ** ' konvertiert werden
-        Die Konvertierung eines ganzzahligen Typs in einen Zeigertyp erfordert ein reinterpret_cast-Operator oder eine Typumwandlung im C- oder Funktionsformat
+KFileHandler.cpp
+C:\Dokumente und Einstellungen\kodi\Eigene Dateien\kiki\kodilib\src\handler\KFileHandler.cpp(27) : error C2065: 'kFileGetCurrentPath' : nichtdeklarierter Bezeichner
 KFileNameField.cpp
-c:\dokumente und einstellungen\christoph\eigene dateien\projects\kodi\kodilib\src\widgets\kfilenamefield.cpp(137) : error C2065: 'find' : nichtdeklarierter Bezeichner
-c:\dokumente und einstellungen\christoph\eigene dateien\projects\kodi\kodilib\src\widgets\kfilenamefield.cpp(137) : error C2440: '=' : 'int' kann nicht in 'class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > *' konvertiert werden
-        Die Konvertierung eines ganzzahligen Typs in einen Zeigertyp erfordert ein reinterpret_cast-Operator oder eine Typumwandlung im C- oder Funktionsformat
+KFileTools.cpp
+KFileTreeDir.cpp
+KFileTreeDirCurrent.cpp
+KFileTreeDirUp.cpp
+KFileTreeFile.cpp
+KFileTreeNode.cpp
+KFileTreeWidget.cpp
+KFileTreeWindow.cpp
+KIconButton.cpp
+KIntrospection.cpp
+KKey.cpp
+KKeyActionHandler.cpp
+KKeyHandler.cpp
+KKeyRecorder.cpp
+KKeySequenceField.cpp
+KKeyTools.cpp
+KLabel.cpp
+KLight.cpp
+KLightingProjection.cpp
+KMatrix.cpp
+KMenu.cpp
+KMenuItem.cpp
+KMenuWindow.cpp
+KMessagePanel.cpp
+KNotificationObject.cpp
+KNumberField.cpp
+KOrthographicProjection.cpp
+KPerspectiveProjection.cpp
+KPickable.cpp
+KPickHandler.cpp
+KPopupMenu.cpp
+KProjection.cpp
+KProjectionWidget.cpp
+KQuaternion.cpp
+KScrollBar.cpp
+KSelectable.cpp
+KSelectionHandler.cpp
+KSeparatedMatrix.cpp
+KSliderButton.cpp
+KStatusMenuItem.cpp
+KStringTools.cpp
+KSubMenuItem.cpp
+KTextField.cpp
+KTexture.cpp
+KTextWidget.cpp
+KToggleButton.cpp
+KTrash.cpp
 KWidget.cpp
-c:\dokumente und einstellungen\christoph\eigene dateien\projects\kodi\kodilib\src\widgets\kwidget.cpp(65) : error C2065: 'find' : nichtdeklarierter Bezeichner
-c:\dokumente und einstellungen\christoph\eigene dateien\projects\kodi\kodilib\src\widgets\kwidget.cpp(65) : error C2440: 'initializing' : 'int' kann nicht in 'class KWidget ** ' konvertiert werden
-        Die Konvertierung eines ganzzahligen Typs in einen Zeigertyp erfordert ein reinterpret_cast-Operator oder eine Typumwandlung im C- oder Funktionsformat
-c:\dokumente und einstellungen\christoph\eigene dateien\projects\kodi\kodilib\src\widgets\kwidget.cpp(78) : error C2440: 'initializing' : 'int' kann nicht in 'class KWidget ** ' konvertiert werden
-        Die Konvertierung eines ganzzahligen Typs in einen Zeigertyp erfordert ein reinterpret_cast-Operator oder eine Typumwandlung im C- oder Funktionsformat
+KWidgetArray.cpp
+KWindow.cpp
+KXMLTools.cpp
 Fehler beim Ausführen von cl.exe.
-Erstellen der temporären Datei  "C:\DOKUME~1\CHRIST~1\LOKALE~1\Temp\RSP10C.tmp" mit Inhalten
-[
-/nologo /o"Debug/kodilib.bsc" 
-".\Debug\KEventHandler.sbr"
-".\Debug\KFileHandler.sbr"
-".\Debug\KKeyActionHandler.sbr"
-".\Debug\KKeyHandler.sbr"
-".\Debug\KKeyRecorder.sbr"
-".\Debug\KPickable.sbr"
-".\Debug\KPickHandler.sbr"
-".\Debug\KSelectable.sbr"
-".\Debug\KSelectionHandler.sbr"
-".\Debug\KDisplayTools.sbr"
-".\Debug\KFileTools.sbr"
-".\Debug\KIntrospection.sbr"
-".\Debug\KKeyTools.sbr"
-".\Debug\KNotificationObject.sbr"
-".\Debug\KStringTools.sbr"
-".\Debug\KXMLTools.sbr"
-".\Debug\KLight.sbr"
-".\Debug\KKey.sbr"
-".\Debug\KLightingProjection.sbr"
-".\Debug\KMatrix.sbr"
-".\Debug\KOrthographicProjection.sbr"
-".\Debug\KPerspectiveProjection.sbr"
-".\Debug\KProjection.sbr"
-".\Debug\KQuaternion.sbr"
-".\Debug\KSeparatedMatrix.sbr"
-".\Debug\KTexture.sbr"
-".\Debug\KTrash.sbr"
-".\Debug\KButton.sbr"
-".\Debug\KButtonBox.sbr"
-".\Debug\KFileNameField.sbr"
-".\Debug\KFileTreeDir.sbr"
-".\Debug\KFileTreeDirCurrent.sbr"
-".\Debug\KFileTreeDirUp.sbr"
-".\Debug\KFileTreeFile.sbr"
-".\Debug\KFileTreeNode.sbr"
-".\Debug\KFileTreeWidget.sbr"
-".\Debug\KIconButton.sbr"
-".\Debug\KKeySequenceField.sbr"
-".\Debug\KLabel.sbr"
-".\Debug\KMenu.sbr"
-".\Debug\KMenuItem.sbr"
-".\Debug\KNumberField.sbr"
-".\Debug\KProjectionWidget.sbr"
-".\Debug\KScrollBar.sbr"
-".\Debug\KSliderButton.sbr"
-".\Debug\KStatusMenuItem.sbr"
-".\Debug\KSubMenuItem.sbr"
-".\Debug\KTextField.sbr"
-".\Debug\KTextWidget.sbr"
-".\Debug\KToggleButton.sbr"
-".\Debug\KWidget.sbr"
-".\Debug\KWidgetArray.sbr"
-".\Debug\KConsole.sbr"
-".\Debug\KFileTreeWindow.sbr"
-".\Debug\KMenuWindow.sbr"
-".\Debug\KMessagePanel.sbr"
-".\Debug\KPopupMenu.sbr"
-".\Debug\KWindow.sbr"]
-Erstellen der Befehlzeile "bscmake.exe @C:\DOKUME~1\CHRIST~1\LOKALE~1\Temp\RSP10C.tmp"
-Browse-Informationsdatei wird erstellt...
-<h3>Ausgabefenster</h3>
 
 
 
 <h3>Ergebnisse</h3>
-kodilib.lib - 28 Fehler, 0 Warnung(en)
+kodilib.lib - 1 Fehler, 0 Warnung(en)
 </pre>
 </body>
 </html>

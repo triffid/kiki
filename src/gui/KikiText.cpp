@@ -143,13 +143,13 @@ void KikiText::addText ( const std::string & str, float scaleFactor )
     width  = 0.0;
     height = 0.0;
     
-    for (std::vector<KikiTextLine*>::iterator iter = text_lines.begin(); iter != text_lines.end(); iter++)
+    for (std::vector<KikiTextLine*>::iterator tliter = text_lines.begin(); tliter != text_lines.end(); tliter++)
     {
-        if ((*iter)->getWidth() > width) 
+        if ((*tliter)->getWidth() > width) 
         {
-            width = (*iter)->getWidth();
+            width = (*tliter)->getWidth();
         }
-        height += (*iter)->getHeight() + line_spacing;
+        height += (*tliter)->getHeight() + line_spacing;
     }
 
     float currentHeight = text_lines[0]->getHeight();

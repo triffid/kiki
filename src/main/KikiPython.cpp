@@ -109,11 +109,17 @@ void KikiPython::initPython ()
     //putenv ("PYTHONDEBUG=1");
     //putenv ("PYTHONVERBOSE=1");
     putenv ("PYTHONPATH=./py:../Frameworks/Python.framework/Versions/A/lib/python2.2");
+#elif defined(WIN32)
+    putenv ("PYTHONDEBUG=1");
+    putenv ("PYTHONVERBOSE=1");
+	string pypath = string("PYTHONPATH=") + kFileNativePath(Controller.getKikiHome() + "py_crippled");
+	KConsole::debugf(true, "pypath: %s", pypath.c_str());
+	putenv (pypath.c_str());
 #endif
 
     Py_Initialize();
 
-    std::string kikipy_path = kFileCleanPath(Controller.getKikiHome() + "py/kiki.py");
+    std::string kikipy_path = kFileNativePath(Controller.getKikiHome() + "py/kiki.py");
     
     init_kiki();
     
@@ -124,7 +130,7 @@ void KikiPython::initPython ()
         if (PyRun_SimpleFile (pythonFile, (char *)kikipy_path.c_str()) == 0)
         {
             // ........................................................ python environment    
-            executeFile (kFileCleanPath (Controller.getKikiHome() + "py/env.py"));
+            executeFile (kFileNativePath (Controller.getKikiHome() + "py/env.py"));
             python_widget->initPython();
         }
         else

@@ -7,63 +7,116 @@
 #include "KConsole.h"
 #include "KStringTools.h"
 
+#pragma warning(disable:4786)
+
 #include <fcntl.h>     	// open
-
-#ifndef WIN32
-#	include <unistd.h>    	// close, chdir & getcwd
-#	include <dirent.h>	// getdirentries
-#	include <sys/param.h>	// MAXPATHLEN
-#else
-#	include <windows.h>
-#	include <io.h>
-#	define MAXPATHLEN MAX_PATH
-#	define O_NONBLOCK 0
-#	include <direct.h>
-#	define getwd(x) getcwd(x, MAXPATHLEN)
-#endif
-
 #include <sys/types.h> 	// stat
 #include <sys/stat.h>
 
+#ifndef WIN32
+#include <unistd.h>    	// close
+#include <dirent.h>		// getdirentries
+#include <sys/param.h>	// MAXPATHLEN
+#else
+#include <windows.h>
+#include <winbase.h>
+#include <direct.h>
+#endif
+
 #include <SDL_image.h>
 
+#ifdef WIN32
+const char kPathSep = '\\';
+#else
+const char kPathSep = '/';
+#endif
+
 // --------------------------------------------------------------------------------------------------------
-std::string kFileCleanPath ( const std::string & path )
+string kFileJoinPaths ( const string & path1, const string & path2 )
+{
+    string filePath;
+	filePath = path1 + kPathSep + path2;
+    return filePath;
+}
+
+// --------------------------------------------------------------------------------------------------------
+string kFileGetCurrentPath ()
+{
+#ifndef WIN32
+    char buffer[MAXPATHLEN+1];
+    getwd(buffer);
+#else
+	char buffer[MAX_PATH+1];
+	getcwd(buffer, MAX_PATH+1);
+#endif
+
+    return string(buffer);
+}
+
+// --------------------------------------------------------------------------------------------------------
+string kFileHomeDir ()
 {
 #ifdef WIN32
-    std::string str(path);
-    kStringReplace (str, "/", "\\");
-    return str;
+	return string(getenv("HOMEDRIVE")) + string(getenv("HOMEPATH"));
+#else
+	return string(getenv("HOME"));
 #endif
-    return path;
 }
 
 // --------------------------------------------------------------------------------------------------------
-std::string kFileGetCurrentPath ()
+string kFileNativePath ( const string & path )
 {
-    char buffer[MAXPATHLEN+1];
-    return getwd(buffer);
+	string replaced(path);
+    
+#ifdef WIN32
+	kStringReplace(replaced, "/", "\\");
+#else
+	kStringReplace(replaced, "\\", "/");
+#endif
+
+	return replaced;
 }
 
 // --------------------------------------------------------------------------------------------------------
-std::string kFileSubstitutePath ( const std::string & path )
+string kFileSubstitutePath ( const string & path )
 {
-    std::string filePath;
-    if (path[0] == '~')
+	string native = kFileNativePath(path);
+    string filePath;
+    if (native[0] == '~')
     {
-        filePath = getenv("HOME") + path.substr(1);
+        filePath = kFileHomeDir();
+		if (native.size() > 1)
+			 filePath += native.substr(1);
     }
     else
     {
-        filePath = path;
+        filePath = native;
     }
 
     return filePath;
 }
 
 // --------------------------------------------------------------------------------------------------------
-bool kFileExists ( const std::string & path )
+bool kFileHasParent ( const string & path )
 {
+	if (path.size() == 1 && path[0] == kPathSep) return false;
+	if (path.size() == 2 && path[1] == ':') return false;
+	if (path.size() == 3 && path[1] == ':' && path[2] == kPathSep) return false;
+	return true;
+}
+
+// --------------------------------------------------------------------------------------------------------
+bool kFileIsAbsPath ( const string & path )
+{
+	if (path.size() > 0 && path[0] == kPathSep) return true;
+	if (path.size() > 2 && path[1] == ':' && path[2] == kPathSep) return true;
+	return false;
+}
+
+// --------------------------------------------------------------------------------------------------------
+bool kFileExists ( const string & path )
+{
+#ifndef WIN32
     int fd = open (kFileSubstitutePath(path).c_str(), O_RDONLY | O_NONBLOCK);
     if (fd >= 0)
     {
@@ -71,23 +124,30 @@ bool kFileExists ( const std::string & path )
         return true;
     }
     return false;
+#else
+	DWORD dwAttr = GetFileAttributes(path.c_str());
+	if (dwAttr == 0xffffffff)
+		return false;
+	else 
+		return true;
+#endif
 }
 
 // --------------------------------------------------------------------------------------------------------
-bool kFileIsFile ( const std::string & path )
+bool kFileIsFile ( const string & path )
 {
     if (kFileExists(path) == false) return false;
     return !kFileIsDir(path);
 }
 
 // --------------------------------------------------------------------------------------------------------
-bool kFileIsImageFile ( const std::string & filename )
+bool kFileIsImageFile ( const string & filename )
 {
     if (kFileIsFile(filename) == false) 
     {
         return false;
     }
-    std::string suffix = kFileSuffix(filename);
+    string suffix = kFileSuffix(filename);
     if (suffix == "tga") return true;
     if (suffix == "tif") return true;
     if (suffix == "jpg") return true;
@@ -103,9 +163,12 @@ bool kFileIsImageFile ( const std::string & filename )
 }
 
 // --------------------------------------------------------------------------------------------------------
-bool kFileIsDir ( const std::string & path )
+bool kFileIsDir ( const string & path )
 {
-    std::string filePath = kFileSubstitutePath(path);
+#ifdef WIN32
+	return ((GetFileAttributes(path.c_str()) & FILE_ATTRIBUTE_DIRECTORY) != 0);
+#else
+    string filePath = kFileSubstitutePath(path);
     if (kFileExists(filePath) == false) return false;
     bool   isDir = false;
     struct stat sb;
@@ -120,33 +183,41 @@ bool kFileIsDir ( const std::string & path )
     }
     close(fd);
     return isDir;
+#endif
 }
 
 // --------------------------------------------------------------------------------------------------------
-std::string kFileAbsPathName ( const std::string & path )
+string kFileAbsPathName ( const string & path )
 {
-    if (path.size() == 0) return "";
-    std::string filePath = kFileSubstitutePath(path);
+	string native = kFileNativePath(path);
+#ifdef WIN32
+	char buffer[MAX_PATH];
+	DWORD result = GetFullPathName(native.c_str(), MAX_PATH, buffer, NULL);
+	if (result > 0 && result < MAX_PATH)
+	{
+		return string(buffer);
+	}
+	return "";
+#else
+    if (native.size() == 0) return "";
+    string filePath = kFileSubstitutePath(native);
 
     if (kFileExists(filePath) == false) return "";
     
-#ifndef _WIN32
-	char buffer[MAXPATHLEN+1];
-    char * result = realpath (filePath.c_str(), buffer);
-#else
-	const char * result = filePath.c_str();
-#endif
+    char buffer[MAXPATHLEN+1];
+    char * result = realpath(filePath.c_str(), buffer);
     if (result) return result;
     return "";
+#endif
 }
 
 // --------------------------------------------------------------------------------------------------------
-std::string kFileSuffix ( const std::string & path )
+string kFileSuffix ( const string & path )
 {
     unsigned int lastDotPos = path.rfind(".");
-    unsigned int lastSlashPos = path.rfind("/");
+    unsigned int lastSlashPos = path.rfind(kPathSep);
 
-    if (lastDotPos < path.size() - 1 && (lastDotPos > lastSlashPos || lastSlashPos == std::string::npos))
+    if (lastDotPos < path.size() - 1 && (lastDotPos > lastSlashPos || lastSlashPos == string::npos))
     {
         return path.substr(lastDotPos+1);
     }
@@ -154,33 +225,35 @@ std::string kFileSuffix ( const std::string & path )
 }
 
 // --------------------------------------------------------------------------------------------------------
-std::string kFileDirName ( const std::string & path )
+string kFileDirName ( const string & path )
 {
-    unsigned int lastSlashPos = path.rfind("/");
-    if (lastSlashPos < path.size())
+	string native = kFileNativePath(path);
+    unsigned int lastSlashPos = native.rfind(kPathSep);
+    if (lastSlashPos < native.size())
     {
-        return path.substr(0, lastSlashPos+1);
+        return native.substr(0, lastSlashPos+1);
     }
-    return "./";
+    return string(".") + kPathSep;
 }
 
 // --------------------------------------------------------------------------------------------------------
-std::string kFileBaseName ( const std::string & path, bool removeSuffix )
+string kFileBaseName ( const string & path, bool removeSuffix )
 {
-    std::string baseName = path;
-    unsigned int lastSlashPos = path.rfind("/");
-    if (lastSlashPos < path.size() - 1) 
+	string native = kFileNativePath(path);
+    string baseName = native;
+    unsigned int lastSlashPos = native.rfind(kPathSep);
+    if (lastSlashPos < native.size() - 1) 
     {
-        baseName = path.substr(lastSlashPos+1);
+        baseName = native.substr(lastSlashPos+1);
     }
-    else if (lastSlashPos == path.size() - 1)
+    else if (lastSlashPos == native.size() - 1)
     {
         return "";
     }
     
     if (removeSuffix)
     {
-        std::string suffix = kFileSuffix(baseName);
+        string suffix = kFileSuffix(baseName);
         baseName = baseName.substr(0, baseName.size()-suffix.size()-1);
     }
     
@@ -188,14 +261,46 @@ std::string kFileBaseName ( const std::string & path, bool removeSuffix )
 }
 
 // --------------------------------------------------------------------------------------------------------
-bool kFileGetDirEntries ( const std::string & path, std::vector<std::string> & entries, bool listDotFiles )
+bool kFileGetDirEntries ( const string & path, vector<string> & entries, bool listDotFiles )
 {
-    std::string dirPath = kFileAbsPathName((path == "") ? "." : path); //(path == "") ? "." : path;
+	string dirPath = kFileAbsPathName((path == "") ? "." : path); //(path == "") ? "." : path;
     if (kFileIsDir(dirPath) == false) return false;
 
+#ifdef WIN32
+	WIN32_FIND_DATA FileData; 
+	HANDLE hSearch;
+	bool finished = false;
+
+	hSearch = FindFirstFile((dirPath + "\\*").c_str(), &FileData); 
+	if (hSearch == INVALID_HANDLE_VALUE) 
+	{ 
+		return false;
+	} 
+
+	while (!finished) 
+	{  
+		if (listDotFiles || FileData.cFileName[0] != '.')
+		{
+			entries.push_back(string(FileData.cFileName));
+		}
+
+		if (!FindNextFile(hSearch, &FileData)) 
+		{
+			finished = TRUE; 
+		}
+	} 
+ 
+	// Close the search handle. 
+ 
+	FindClose(hSearch);
+
+	return true;
+#else
     int fd = open (dirPath.c_str(), O_RDONLY | O_NONBLOCK);
     
     struct stat sb;
+    long   basep;
+    char * entry;
             
     if (fstat(fd, &sb) == -1)
     {
@@ -203,19 +308,15 @@ bool kFileGetDirEntries ( const std::string & path, std::vector<std::string> & e
             ("file error:\nunable to read stats of directory\n'%s'", path.c_str()));
         close (fd); return false;
     }
-
-#ifndef _WIN32 
-
-    long   basep;
-    char * entry = (char*)malloc(sb.st_blksize);
-
-	if (entry == NULL)
+    
+    entry = (char*)malloc(sb.st_blksize);
+    if (entry == NULL)
     {
         KConsole::printError(kStringPrintf
             ("file error:\nunable to allocate memory for directory entries\n'%s'", path.c_str()));
         close(fd); return false;
     }
-
+    
     int bytesRead;
     while ((bytesRead = getdirentries(fd, entry, sb.st_blksize, &basep)) > 0)
     {
@@ -223,10 +324,10 @@ bool kFileGetDirEntries ( const std::string & path, std::vector<std::string> & e
         while (pos < bytesRead)
         {
             struct dirent * entryPtr = (struct dirent *)(entry+pos);
-            std::string filename = entryPtr->d_name;
+            string filename = entryPtr->d_name;
             
             if ((listDotFiles == false && filename[0] == '.') || 
-                filename == "." || filename == ".." || (filename == "dev" && dirPath == "/"))
+                filename == "." || filename == ".." || (filename == "dev" && dirPath[0] == kPathSep))
             {
             }
             else
@@ -238,18 +339,18 @@ bool kFileGetDirEntries ( const std::string & path, std::vector<std::string> & e
     }
     
     free (entry);
-#endif
     close(fd);
     return true;
+#endif
 }
 
 // --------------------------------------------------------------------------------------------------------
-std::string kFileReadStringFromFile ( const std::string & filename, unsigned int numCharacters )
+string kFileReadStringFromFile ( const string & filename, unsigned int numCharacters )
 {
     if (filename == "") return "";
-    std::string filePath = kFileSubstitutePath(filename);
+    string filePath = kFileSubstitutePath(filename);
 
-    std::string xml;
+    string xml;
     
     FILE * file = fopen (filePath.c_str(), "r");
     if (file == NULL)
@@ -277,9 +378,9 @@ std::string kFileReadStringFromFile ( const std::string & filename, unsigned int
 }
 
 // --------------------------------------------------------------------------------------------------------
-bool kFileWriteStringToFile ( const std::string & xml, const std::string & filename )
+bool kFileWriteStringToFile ( const string & xml, const string & filename )
 {    
-    std::string filePath = kFileSubstitutePath(filename);
+    string filePath = kFileSubstitutePath(filename);
     
     FILE * file = fopen (filePath.c_str(), "w+");
     if (file == NULL)

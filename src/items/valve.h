@@ -10,9 +10,9 @@
                         (valveQuadStripIndices[i+1] - valveQuadStripIndices[i])/6); \
     } \
     glInterleavedArrays (GL_N3F_V3F, 0, valveInterleavedTriangleFans); \
-    for (int i = 0; i < valveNumTriangleFans; i++) { \
-        glDrawArrays (GL_TRIANGLE_FAN, valveTriangleFanIndices[i]/6, \
-                        (valveTriangleFanIndices[i+1] - valveTriangleFanIndices[i])/6); \
+    for (int ii = 0; ii < valveNumTriangleFans; ii++) { \
+        glDrawArrays (GL_TRIANGLE_FAN, valveTriangleFanIndices[ii]/6, \
+                        (valveTriangleFanIndices[ii+1] - valveTriangleFanIndices[ii])/6); \
     } \
 }
 

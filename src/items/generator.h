@@ -10,9 +10,9 @@
                         (generatorQuadStripIndices[i+1] - generatorQuadStripIndices[i])/6); \
     } \
     glInterleavedArrays (GL_N3F_V3F, 0, generatorInterleavedTriangleFans); \
-    for (int i = 0; i < generatorNumTriangleFans; i++) { \
-        glDrawArrays (GL_TRIANGLE_FAN, generatorTriangleFanIndices[i]/6, \
-                        (generatorTriangleFanIndices[i+1] - generatorTriangleFanIndices[i])/6); \
+    for (int ii = 0; ii < generatorNumTriangleFans; ii++) { \
+        glDrawArrays (GL_TRIANGLE_FAN, generatorTriangleFanIndices[ii]/6, \
+                        (generatorTriangleFanIndices[ii+1] - generatorTriangleFanIndices[ii])/6); \
     } \
 }
 

@@ -262,6 +262,7 @@ void KikiCharacter::render ()
 // __________________________________________________________________________________________________
 void KikiCharacter::renderCharacter ( char c )
 {
+	int contourIndex;
     GLUtesselator * tess = gluNewTess ();
     
     gluTessNormal (tess, 0.0, 0.0, 1.0);
@@ -278,7 +279,7 @@ void KikiCharacter::renderCharacter ( char c )
 #endif
 
     gluTessBeginPolygon (tess, NULL);
-    for (int contourIndex = 0; contourIndex < 3; contourIndex++)
+    for (contourIndex = 0; contourIndex < 3; contourIndex++)
     {
         int index = 0;
         gluTessBeginContour (tess);
@@ -296,7 +297,7 @@ void KikiCharacter::renderCharacter ( char c )
     float color_values[4];
     glGetFloatv (GL_CURRENT_COLOR, color_values);
     
-    for (int contourIndex = 0; contourIndex < 3; contourIndex++)
+    for (contourIndex = 0; contourIndex < 3; contourIndex++)
     {
         int index = 0;
         glBegin(GL_QUADS);
