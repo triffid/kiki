@@ -93,7 +93,7 @@ bool KFileNameField::handleKey ( const KKey & key )
         std::vector<std::string>::iterator iter = dir_entries.begin();
         while (iter != dir_entries.end())
         {
-            if (iter->compare((unsigned int)0, restLength, restPath) == 0)
+            if (iter->compare(0, restLength, restPath) == 0)
             {
                 matchingEntries.push_back(*iter);
             }
