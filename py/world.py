@@ -2,6 +2,7 @@
 if Controller.isDebugVersion(): print "[world.py]"
 
 import random
+import types
 
 execfile(kikipy_path + "colors.py")
 execfile(kikipy_path + "action.py")
