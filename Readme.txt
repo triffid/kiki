@@ -46,7 +46,7 @@ homepage
 
 The homepage for this game is
 	
-         http://www.mulle-kybernetik.com/software/kiki
+         http://kiki.sourceforge.net
 
 Updates and new levels will be published there.
 
