@@ -9,7 +9,7 @@
 #include <OpenGL/gl.h>
 #else
 #ifdef _WIN32
-#include <glut.h>
+#include <GL/glut.h>
 #endif
 #include <GL/gl.h>
 #endif

@@ -6,16 +6,6 @@
 #include "KFileTreeFile.h"
 #include "KFileTreeDir.h"
 
-#if defined(__APPLE__) && defined(__MACH__)
-#include <GLUT/glut.h>
-#else
-#if defined (_WIN32)
-#include <glut.h>
-#else
-#include <GL/glut.h>
-#endif
-#endif
-
 KDL_CLASS_INTROSPECTION_1 (KFileTreeFile, KFileTreeNode)
 
 // --------------------------------------------------------------------------------------------------------

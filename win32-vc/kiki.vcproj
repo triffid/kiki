@@ -20,9 +20,9 @@
 				Name="VCCLCompilerTool"
 				AdditionalOptions="/D &quot;_USE_MATH_DEFINES&quot;"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\kodilib\src\windows;..\..\kodilib\src\widgets;..\..\kodilib\src\types;..\..\kodilib\src\tools;..\..\kodilib\src\handler;..\src\world;..\src\sound;..\src\main;..\src\items;..\src\gui;..\src\bots;..\SWIG\;..\src\base;&quot;..\..\glut-3.7.6-bin&quot;;&quot;..\..\SDL_mixer-1.2.5\include&quot;;&quot;..\..\SDL_image-1.2.3\include&quot;;&quot;..\..\SDL-1.2.5\include&quot;;&quot;..\..\Python-2.3a2\Include&quot;;&quot;..\..\Python-2.3a2\PC&quot;"
+				AdditionalIncludeDirectories="..\kodilib\src\windows;..\kodilib\src\widgets;..\kodilib\src\types;..\kodilib\src\tools;..\kodilib\src\handler;..\src\world;..\src\sound;..\src\main;..\src\items;..\src\gui;..\src\bots;..\SWIG\;..\src\base"
 				PreprocessorDefinitions="_WIN32;WIN32;_DEBUG;DEBUG;_WINDOWS"
-				MinimalRebuild="TRUE"
+				MinimalRebuild="FALSE"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
 				UsePrecompiledHeader="0"
@@ -33,12 +33,12 @@
 				Name="VCCustomBuildTool"/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="glut32.lib python23_d.lib kodilib.lib SDLmain.lib SDL.lib SDL_image.lib SDL_mixer.lib"
+				AdditionalDependencies="python23_d.lib kodilib.lib SDL_image.lib SDL_mixer.lib SDLmain.lib SDL.lib glut32.lib"
 				OutputFile="$(OutDir)/kiki.exe"
 				LinkIncremental="2"
-				AdditionalLibraryDirectories="&quot;..\..\glut-3.7.6-bin&quot;;&quot;..\..\SDL_mixer-1.2.5\lib&quot;;&quot;..\..\SDL_image-1.2.3\lib&quot;;&quot;..\..\SDL-1.2.5\lib&quot;;&quot;..\..\Python-2.3a2\PCbuild&quot;;&quot;..\..\kodilib\win32-vc6\Debug&quot;"
+				AdditionalLibraryDirectories="&quot;..\kodilib\win32-vc\Debug&quot;"
 				IgnoreAllDefaultLibraries="FALSE"
-				IgnoreDefaultLibraryNames="msvcrt"
+				IgnoreDefaultLibraryNames=""
 				GenerateDebugInformation="TRUE"
 				ProgramDatabaseFile="$(OutDir)/kiki.pdb"
 				SubSystem="2"
@@ -50,7 +50,7 @@
 			<Tool
 				Name="VCPreBuildEventTool"
 				Description="swigging"
-				CommandLine="..\..\SWIG-1.3.19\swig.exe -c++ -python -I..\SWIG -globals kiki -o KikiPy_wrap.cpp KikiPy.i"/>
+				CommandLine="C:\Projects\kodi\SWIG-1.3.19\swig.exe -c++ -python -I..\SWIG -globals kiki -o ..\SWIG\KikiPy_wrap.cpp KikiPy.i"/>
 			<Tool
 				Name="VCPreLinkEventTool"/>
 			<Tool
@@ -75,7 +75,7 @@
 				Optimization="2"
 				InlineFunctionExpansion="1"
 				OmitFramePointers="TRUE"
-				AdditionalIncludeDirectories="..\..\kodilib\src\windows;..\..\kodilib\src\widgets;..\..\kodilib\src\types;..\..\kodilib\src\tools;..\..\kodilib\src\handler;..\src\world;..\src\sound;..\src\main;..\src\items;..\src\gui;..\src\bots;..\SWIG\;..\src\base;&quot;..\..\glut-3.7.6-bin&quot;;&quot;..\..\SDL_mixer-1.2.5\include&quot;;&quot;..\..\SDL_image-1.2.3\include&quot;;&quot;..\..\SDL-1.2.5\include&quot;;C:\Python22\include"
+				AdditionalIncludeDirectories="..\kodilib\src\windows;..\kodilib\src\widgets;..\kodilib\src\types;..\kodilib\src\tools;..\kodilib\src\handler;..\src\world;..\src\sound;..\src\main;..\src\items;..\src\gui;..\src\bots;..\SWIG\;..\src\base"
 				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS"
 				StringPooling="TRUE"
 				RuntimeLibrary="2"
@@ -83,17 +83,17 @@
 				UsePrecompiledHeader="0"
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="TRUE"
-				DebugInformationFormat="3"/>
+				DebugInformationFormat="0"/>
 			<Tool
 				Name="VCCustomBuildTool"/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="glut32.lib python22.lib kodilib.lib SDLmain.lib SDL.lib SDL_image.lib SDL_mixer.lib"
+				AdditionalDependencies="python23.lib kodilib.lib SDL_image.lib SDL_mixer.lib SDLmain.lib SDL.lib glut32.lib"
 				OutputFile="$(OutDir)/kiki.exe"
 				LinkIncremental="1"
-				AdditionalLibraryDirectories="&quot;..\..\glut-3.7.6-bin&quot;;..\..\..\..\Python22\libs;&quot;..\..\SDL_mixer-1.2.5\lib&quot;;&quot;..\..\SDL_image-1.2.3\lib&quot;;&quot;..\..\SDL-1.2.5\lib&quot;;C:\Python22\libs;&quot;..\..\kodilib\win32-vc6\Debug&quot;"
+				AdditionalLibraryDirectories="&quot;..\kodilib\win32-vc\Release&quot;"
 				IgnoreAllDefaultLibraries="FALSE"
-				IgnoreDefaultLibraryNames="LIBCD"
+				IgnoreDefaultLibraryNames=""
 				GenerateDebugInformation="TRUE"
 				SubSystem="2"
 				OptimizeReferences="2"
@@ -104,7 +104,8 @@
 			<Tool
 				Name="VCPostBuildEventTool"/>
 			<Tool
-				Name="VCPreBuildEventTool"/>
+				Name="VCPreBuildEventTool"
+				CommandLine="C:\Projects\kodi\SWIG-1.3.19\swig.exe -c++ -python -I..\SWIG -globals kiki -o ..\SWIG\KikiPy_wrap.cpp KikiPy.i"/>
 			<Tool
 				Name="VCPreLinkEventTool"/>
 			<Tool
@@ -538,6 +539,79 @@
 		<Filter
 			Name="Ressourcendateien"
 			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe">
+		</Filter>
+		<Filter
+			Name="py"
+			Filter="">
+			<File
+				RelativePath="..\py\action.py">
+			</File>
+			<File
+				RelativePath="..\py\buffer.py">
+			</File>
+			<File
+				RelativePath="..\py\colors.py">
+			</File>
+			<File
+				RelativePath="..\py\config.py">
+			</File>
+			<File
+				RelativePath="..\py\edit.py">
+			</File>
+			<File
+				RelativePath="..\py\env.py">
+			</File>
+			<File
+				RelativePath="..\py\file.py">
+			</File>
+			<File
+				RelativePath="..\py\highscore.py">
+			</File>
+			<File
+				RelativePath="..\py\interpreter.py">
+			</File>
+			<File
+				RelativePath="..\py\intro.py">
+			</File>
+			<File
+				RelativePath="..\py\intro01.rec">
+			</File>
+			<File
+				RelativePath="..\py\intro02.rec">
+			</File>
+			<File
+				RelativePath="..\py\intro03.rec">
+			</File>
+			<File
+				RelativePath="..\py\intro04.rec">
+			</File>
+			<File
+				RelativePath="..\py\intro05.rec">
+			</File>
+			<File
+				RelativePath="..\py\kiki.cfg">
+			</File>
+			<File
+				RelativePath="..\py\kiki.hsc">
+			</File>
+			<File
+				RelativePath="..\py\levels.py">
+			</File>
+			<File
+				RelativePath="..\py\levelselection.py">
+			</File>
+			<File
+				RelativePath="..\py\obj.py">
+			</File>
+			<File
+				RelativePath="..\py\runkiki">
+			</File>
+			<File
+				RelativePath="..\py\setup.py">
+			</File>
+			<File
+				RelativePath="..\py\world.py">
+			</File>
 		</Filter>
 	</Files>
 	<Globals>

@@ -1,6 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 7.00
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kiki", "kiki.vcproj", "{A48B4E31-BF32-4DA2-BCE4-9B01C09C8731}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kodilib", "..\kodilib\win32-vc\kodilib.vcproj", "{E4BD4AF1-A023-4000-8034-18B23D6005B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfiguration) = preSolution
 		ConfigName.0 = Debug
@@ -13,6 +15,10 @@ Global
 		{A48B4E31-BF32-4DA2-BCE4-9B01C09C8731}.Debug.Build.0 = Debug|Win32
 		{A48B4E31-BF32-4DA2-BCE4-9B01C09C8731}.Release.ActiveCfg = Release|Win32
 		{A48B4E31-BF32-4DA2-BCE4-9B01C09C8731}.Release.Build.0 = Release|Win32
+		{E4BD4AF1-A023-4000-8034-18B23D6005B5}.Debug.ActiveCfg = Debug|Win32
+		{E4BD4AF1-A023-4000-8034-18B23D6005B5}.Debug.Build.0 = Debug|Win32
+		{E4BD4AF1-A023-4000-8034-18B23D6005B5}.Release.ActiveCfg = Release|Win32
+		{E4BD4AF1-A023-4000-8034-18B23D6005B5}.Release.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 	EndGlobalSection

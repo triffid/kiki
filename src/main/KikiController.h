@@ -5,16 +5,6 @@
 #ifndef __KikiController
 #define __KikiController
 
-#if defined(__APPLE__) && defined(__MACH__)
-#include <OpenGL/glu.h>
-#else
-#ifdef WIN32
-#pragma warning ( disable : 4800 4305 4267 ) // Disable warnings
-#include <glut.h>
-#endif
-#include <GL/glu.h>
-#endif
-
 #include <SDL.h>
 #include <vector>
 #include <string>

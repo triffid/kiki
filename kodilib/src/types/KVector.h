@@ -14,7 +14,7 @@
 #else
 #ifdef WIN32
 #define rint(x) (((x) < 0.0) ? (double)(int)((x) - 0.5) : (double)(int)((x) + 0.5))
-#include <glut.h>
+#include <GL/glut.h>
 #endif
 #include <GL/gl.h>
 #endif

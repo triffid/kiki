@@ -23,7 +23,7 @@
 				Name="VCCLCompilerTool"
 				AdditionalOptions="/D &quot;_USE_MATH_DEFINES&quot;"
 				InlineFunctionExpansion="1"
-				AdditionalIncludeDirectories="&quot;..\..\glut-3.7.6-bin&quot;;&quot;..\..\SDL_image-1.2.3\include&quot;;&quot;..\..\SDL_mixer-1.2.5\include&quot;;&quot;..\..\SDL-1.2.5\include&quot;;..\src\handler;..\src\tools;..\src\types;..\src\windows;..\src\widgets"
+				AdditionalIncludeDirectories="..\src\handler;..\src\tools;..\src\types;..\src\windows;..\src\widgets"
 				PreprocessorDefinitions="_WIN32,WIN32,NDEBUG,_LIB"
 				StringPooling="TRUE"
 				RuntimeLibrary="2"
@@ -68,12 +68,12 @@
 				Name="VCCLCompilerTool"
 				AdditionalOptions="/D &quot;_USE_MATH_DEFINES&quot;"
 				Optimization="0"
-				AdditionalIncludeDirectories="&quot;..\..\glut-3.7.6-bin&quot;;&quot;..\..\SDL_image-1.2.3\include&quot;;&quot;..\..\SDL_mixer-1.2.5\include&quot;;&quot;..\..\SDL-1.2.5\include&quot;;..\src\handler;..\src\tools;..\src\types;..\src\windows;..\src\widgets"
+				AdditionalIncludeDirectories="..\src\handler;..\src\tools;..\src\types;..\src\windows;..\src\widgets"
 				PreprocessorDefinitions="_WIN32,WIN32,_DEBUG,_LIB"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
 				UsePrecompiledHeader="0"
-				PrecompiledHeaderFile=".\Debug/kodilib.pch"
+				PrecompiledHeaderFile=""
 				AssemblerListingLocation=".\Debug/"
 				ObjectFile=".\Debug/"
 				ProgramDataBaseFileName=".\Debug/"
@@ -417,6 +417,9 @@
 				</File>
 				<File
 					RelativePath="..\src\tools\KFileTools.h">
+				</File>
+				<File
+					RelativePath="..\src\tools\KIncludeTools.h">
 				</File>
 				<File
 					RelativePath="..\src\tools\KIntrospection.h">

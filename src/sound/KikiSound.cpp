@@ -2,10 +2,7 @@
  *  KikiSound.cpp
  */
 
-#ifdef WIN32
-
-#include <glut.h>
-#else
+#ifndef WIN32
 #include <sys/param.h>
 #endif
 
@@ -33,13 +30,13 @@ typedef struct _KikiSound
 static KikiSoundData KikiSounds[] = 
 {
     {	KikiSound::BOT_MOVE, 			"bot_move.wav",			0.2 },
-    {	KikiSound::BOT_JUMP,			"bot_jump.aiff",		0.7 },
+    {	KikiSound::BOT_JUMP,			"bot_jump.wav",		0.7 },
     {	KikiSound::BOT_LAND,			"bot_land.wav", 		0.7 },
     {	KikiSound::BOT_SPIKED,			"bot_move.wav", 		1.0 },
     {	KikiSound::BOT_HEALTH_ALERT,		"bot_health_alert.wav", 	1.0 },
     {	KikiSound::BOT_DEATH,			"bot_death.wav",		1.0 },
     {	KikiSound::BOT_NO_ENERGY,		"bot_no_energy.wav",		1.0 },
-    {	KikiSound::BULLET_SHOT,			"bullet_shot.aiff",		1.0 },
+    {	KikiSound::BULLET_SHOT,			"bullet_shot.wav",		1.0 },
     {	KikiSound::BULLET_HIT_WALL,		"bullet_hit_wall.wav",		1.0 }, 
     {	KikiSound::BULLET_HIT_OBJECT,		"bullet_hit_object.wav",	1.0 },
     {	KikiSound::BULLET_HIT_PLAYER,		"bullet_hit_player.wav",	1.0 },
@@ -53,18 +50,18 @@ static KikiSoundData KikiSounds[] =
     {	KikiSound::SPIKES_START,		"bot_move.wav",			1.0 },
     {	KikiSound::MENU_FADE,			"menu_fade.wav",		1.0 },
     {	KikiSound::MENU_ITEM,			"menu_item.wav",		1.0 },
-    {	KikiSound::MENU_SELECT,			"menu_select.aiff",		1.0 },
+    {	KikiSound::MENU_SELECT,			"menu_select.wav",		1.0 },
     {	KikiSound::MENU_ABORT,			"menu_abort.wav",		1.0 },
     {	KikiSound::GATE_OPEN,			"gate_open.wav",		1.0 },
-    {	KikiSound::GATE_CLOSE,			"gate_close.aif",		1.0 },
-    {	KikiSound::GATE_WARP,			"gate_warp.aif",		1.0 },
+    {	KikiSound::GATE_CLOSE,			"gate_close.wav",		1.0 },
+    {	KikiSound::GATE_WARP,			"gate_warp.wav",		1.0 },
     {	KikiSound::BOMB_EXPLODE,		"bomb_explode.wav",		1.0 },
-    {	KikiSound::BOMB_SPLITTER,		"bomb_splitter.aif",		1.0 },
+    {	KikiSound::BOMB_SPLITTER,		"bomb_splitter.wav",		1.0 },
     {	KikiSound::GEAR_ON,			"gear_on.wav",			1.0 },
     {	KikiSound::GEAR_OFF,			"gear_off.wav",			1.0 },
     {	KikiSound::GENERATOR_ON,		"generator_on.wav",		1.0 },
     {	KikiSound::GENERATOR_OFF,		"generator_off.wav",		1.0 },
-    {	KikiSound::MOTOR,			"bomb_splitter.aif",		1.0 },
+    {	KikiSound::MOTOR,			"bomb_splitter.wav",		1.0 },
 };
 
 // __________________________________________________________________________________________________

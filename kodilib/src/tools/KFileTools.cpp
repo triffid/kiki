@@ -130,8 +130,8 @@ std::string kFileAbsPathName ( const std::string & path )
 
     if (kFileExists(filePath) == false) return "";
     
-    char buffer[MAXPATHLEN+1];
 #ifndef _WIN32
+	char buffer[MAXPATHLEN+1];
     char * result = realpath (filePath.c_str(), buffer);
 #else
 	const char * result = filePath.c_str();
@@ -196,8 +196,6 @@ bool kFileGetDirEntries ( const std::string & path, std::vector<std::string> & e
     int fd = open (dirPath.c_str(), O_RDONLY | O_NONBLOCK);
     
     struct stat sb;
-    long   basep;
-    char * entry;
             
     if (fstat(fd, &sb) == -1)
     {
@@ -206,8 +204,10 @@ bool kFileGetDirEntries ( const std::string & path, std::vector<std::string> & e
         close (fd); return false;
     }
 
-#ifndef _WIN32    
-    entry = (char*)malloc(sb.st_blksize);
+#ifndef _WIN32 
+
+    long   basep;
+    char * entry = (char*)malloc(sb.st_blksize);
 
 	if (entry == NULL)
     {

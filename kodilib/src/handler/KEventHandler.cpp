@@ -59,6 +59,7 @@ KEventHandler::KEventHandler ()
 // --------------------------------------------------------------------------------------------------------
 void KEventHandler::quit ()
 {
+	SDL_SetGamma (1, 1, 1);
     SDL_Event event;
     event.type = SDL_QUIT;
     SDL_PushEvent (&event);

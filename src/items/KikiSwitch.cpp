@@ -11,15 +11,11 @@
 #include <KConsole.h>
 #include <KDisplayTools.h>
 
-#if defined(__APPLE__) && defined(__MACH__)
-#include <GLUT/glut.h>
-#else
-#ifdef WIN32
-#include <glut.h>
-#else
-#include <GL/glut.h>
-#endif
-#endif
+//#if defined(__APPLE__) && defined(__MACH__)
+//#include <GLUT/glut.h>
+//#else
+//#include <GL/glut.h>
+//#endif
 
 // __________________________________________________________________________________________________
 KDL_CLASS_INTROSPECTION_1 	( KikiSwitch, KikiObject )
@@ -84,10 +80,9 @@ void KikiSwitch::setActive ( bool status )
             events[SWITCH_ON_EVENT]->triggerActions();
             
             light = new KikiLight (position, 3.0);
-#ifndef WIN32
+
             light->addReceiverCallback((KObject*)this, (KCallbackPtr)&KikiSwitch::lightDeleted, 
-                                                       KIKI_NOTIFICATION_OBJECT_DELETED);  
-#endif
+                                                       KIKI_NOTIFICATION_OBJECT_DELETED);
         }
         else
         {

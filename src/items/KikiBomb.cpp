@@ -9,15 +9,11 @@
 #include "KikiSound.h"
 #include "KikiPlayer.h"
 
-#if defined(__APPLE__) && defined(__MACH__)
-#include <GLUT/glut.h>
-#else
-#ifdef WIN32
-#include <glut.h>
-#else
-#include <GL/glut.h>
-#endif
-#endif
+//#if defined(__APPLE__) && defined(__MACH__)
+//#include <GLUT/glut.h>
+//#else
+//#include <GL/glut.h>
+//#endif
 
 // __________________________________________________________________________________________________
 KDL_CLASS_INTROSPECTION_1 	( KikiBomb, KikiPushable )
