@@ -1,0 +1,5 @@
+#!/bin/sh
+#PYTHONHOME=`pwd`/
+PYTHONPATH=${PYTHONHOME}:/usr/lib/python2.2/:/usr/lib/python2.2/lib-dynload/
+../linux/kiki
+

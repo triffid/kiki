@@ -1,0 +1,35 @@
+Big thanks for contributing to the creation of this game goes to the following people:
+
+			Music: Maintheme 2003 by
+
+Markus Schroeder	N(S)N - Noise is Silence is Noise
+			Re(S)earch Project iNto jilted liNk(S) betweeN Philo(S)ophy aNd (S)ouNd
+			www.n2s1.com
+
+			Linux Port:
+
+Frank Becker		provided patches which served as the basis for the 'kiki on linux port'.
+
+			Level:
+
+Niko Boehm		made me very happy by creating the level 'captured'. 
+			he also provided bugfixes and hints for the linux port
+
+			Consulting:
+
+Znek			helped with some Project-Builder issues and wrote the Readme for building
+			the application under Mac OS X. Together with
+Pick			he started the Windows-port.
+
+			www.idevgames.com:
+
+Carlos Camacho 		organized the competition which motivated me to write this program
+			and also provided the sounds that are used in the game. 
+
+			Translations:
+
+Arthur Langereis 	Dutch
+F.C.Covett 		Portuguese
+jay_traveller 		Spanish
+Fenris			Swedish
+
