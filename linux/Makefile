@@ -21,7 +21,7 @@ PYTHONLIBS = $(PYTHONHOME)/config/libpython$(PYTHON_VERSION).a -lutil \
 
 # change this, if the kodilib directory isn't parallel to the kiki directory
 
-KODILIBDIR = ../../kodilib
+KODILIBDIR = ../kodilib
 
 #
 # the following should be ok on most machines
