@@ -18,4 +18,12 @@
 #	endif
 #endif
 
+#ifdef K_INCLUDE_GLU
+#	if defined(__APPLE__) && defined(__MACH__)
+#		include <OpenGL/glu.h>
+#	else
+#		include <GL/glu.h>
+#	endif
+#endif
+
 #endif

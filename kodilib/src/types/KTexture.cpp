@@ -10,11 +10,8 @@
 #include <SDL_image.h>
 #include <SDL_opengl.h>
 
-#if defined(__APPLE__) && defined(__MACH__)
-#include <OpenGL/glu.h>
-#else
-#include <GL/glu.h>
-#endif
+#define K_INCLUDE_GLU
+#include "KIncludeTools.h"
 
 KDL_CLASS_INTROSPECTION (KTexture)
 

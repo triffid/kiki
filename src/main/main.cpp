@@ -61,8 +61,6 @@ int main (int argc, char * argv[])
     
     SDL_Quit();
 
-	fprintf(stderr, "kiki quitted\n");
-
     return 0;
 }
 

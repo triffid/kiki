@@ -12,6 +12,9 @@
 #include <SDL_video.h>
 #include <SDL_image.h>
 
+#define K_INCLUDE_GLUT
+#include "KIncludeTools.h"
+
 // --------------------------------------------------------------------------------------------------------
 SDL_PixelFormat KDL_PIXEL_FORMAT = { 
     0x0, 		// palette

@@ -145,10 +145,10 @@
 		29B97323FDCFA39411CA2CEA = {
 			children = (
 				1058C7A1FEA54F0111CA2CBB,
-				C38D59A1042D6CE700A8013F,
 				F52536F302DE558A01694C0A,
 				F5F25C95031A76C6014E1008,
 				C34A749D042D057500A8013F,
+				C32163020444F70D00A8013F,
 			);
 			isa = PBXGroup;
 			name = Frameworks;
@@ -168,9 +168,10 @@
 			buildSettings = {
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUGGING_SYMBOLS = NO;
-				FRAMEWORK_SEARCH_PATHS = "\"$(USER_LIBRARY_DIR)/Frameworks\" /tmp/kodilib";
+				FRAMEWORK_SEARCH_PATHS = "\"$(USER_LIBRARY_DIR)/Frameworks\" /tmp/kodilib /Users/kodi/Projects/Python/PythonMinimal/Mac/OSX/Python/build";
 				HEADER_SEARCH_PATHS = "\"$(USER_LIBRARY_DIR)/Frameworks/SDL.framework/Versions/A/Headers\" \"$(LOCAL_LIBRARY_DIR)/Frameworks/SDL.framework/Versions/A/Headers\" \"$(USER_LIBRARY_DIR)/Frameworks/SDL_mixer.framework/Versions/A/Headers\" \"$(LOCAL_LIBRARY_DIR)/Frameworks/SDL_mixer.framework/Versions/A/Headers\" \"$(USER_LIBRARY_DIR)/Frameworks/Python.framework/Versions/2.3/include/python2.3\" \"$(LOCAL_LIBRARY_DIR)/Frameworks/Python.framework/Versions/2.3/include/python2.3\" /usr/include/python2.2 /tmp/kodilib/kodilib.framework/Versions/A/Headers";
 				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "/Users/kodi/Projects/Python/Python-2.2.1 /Users/kodi/Desktop";
 				OPTIMIZATION_CFLAGS = "-O2";
 				OTHER_CFLAGS = "-Wno-long-double";
 				OTHER_LDFLAGS = "-framework SDL -framework SDL_image -framework SDL_mixer";
@@ -412,7 +413,7 @@
 				F525370402DE558A01694C0A,
 				F5F25CB1031A76C6014E1008,
 				C34A749E042D057500A8013F,
-				C38D59A2042D6CE700A8013F,
+				C32163030444F70D00A8013F,
 			);
 			isa = PBXFrameworksBuildPhase;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,6 +480,24 @@
 //C32
 //C33
 //C34
+		C32163020444F70D00A8013F = {
+			isa = PBXFrameworkReference;
+			name = Python.framework;
+			path = /Users/kodi/Projects/Python/PythonMinimal/Mac/OSX/Python/build/Python.framework;
+			refType = 0;
+		};
+		C32163030444F70D00A8013F = {
+			fileRef = C32163020444F70D00A8013F;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C32163080444F72600A8013F = {
+			fileRef = C32163020444F70D00A8013F;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
 		C34A749D042D057500A8013F = {
 			isa = PBXFrameworkReference;
 			name = kodilib.framework;
@@ -493,18 +512,6 @@
 		};
 		C34A74A1042D05A400A8013F = {
 			fileRef = C34A749D042D057500A8013F;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		C38D59A1042D6CE700A8013F = {
-			isa = PBXFrameworkReference;
-			name = Python.framework;
-			path = /Library/Frameworks/Python.framework;
-			refType = 0;
-		};
-		C38D59A2042D6CE700A8013F = {
-			fileRef = C38D59A1042D6CE700A8013F;
 			isa = PBXBuildFile;
 			settings = {
 			};
@@ -2195,6 +2202,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				C34A74A1042D05A400A8013F,
+				C32163080444F72600A8013F,
 			);
 			isa = PBXCopyFilesBuildPhase;
 			runOnlyForDeploymentPostprocessing = 0;

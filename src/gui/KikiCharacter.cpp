@@ -10,14 +10,8 @@
 #include <KDisplayTools.h>
 #include <KConsole.h>
 
-//#if defined(__APPLE__) && defined(__MACH__)
-//#include <OpenGL/glu.h>
-//#else
-//#ifdef WIN32
-//#include <glut.h>
-//#endif
-//#include <GL/glu.h>
-//#endif
+#define K_INCLUDE_GLU
+#include "KIncludeTools.h"
 
 // __________________________________________________________________________________________________
 typedef struct {
