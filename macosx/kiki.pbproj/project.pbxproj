@@ -148,7 +148,7 @@
 				F52536F302DE558A01694C0A,
 				F5F25C95031A76C6014E1008,
 				C34A749D042D057500A8013F,
-				C32163020444F70D00A8013F,
+				C340CF4404472CD100A8013F,
 			);
 			isa = PBXGroup;
 			name = Frameworks;
@@ -413,7 +413,7 @@
 				F525370402DE558A01694C0A,
 				F5F25CB1031A76C6014E1008,
 				C34A749E042D057500A8013F,
-				C32163030444F70D00A8013F,
+				C340CF4504472CD100A8013F,
 			);
 			isa = PBXFrameworksBuildPhase;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,20 +480,20 @@
 //C32
 //C33
 //C34
-		C32163020444F70D00A8013F = {
+		C340CF4404472CD100A8013F = {
 			isa = PBXFrameworkReference;
 			name = Python.framework;
 			path = /Users/kodi/Projects/Python/PythonMinimal/Mac/OSX/Python/build/Python.framework;
 			refType = 0;
 		};
-		C32163030444F70D00A8013F = {
-			fileRef = C32163020444F70D00A8013F;
+		C340CF4504472CD100A8013F = {
+			fileRef = C340CF4404472CD100A8013F;
 			isa = PBXBuildFile;
 			settings = {
 			};
 		};
-		C32163080444F72600A8013F = {
-			fileRef = C32163020444F70D00A8013F;
+		C340CF4B04472CD800A8013F = {
+			fileRef = C340CF4404472CD100A8013F;
 			isa = PBXBuildFile;
 			settings = {
 			};
@@ -2202,7 +2202,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				C34A74A1042D05A400A8013F,
-				C32163080444F72600A8013F,
+				C340CF4B04472CD800A8013F,
 			);
 			isa = PBXCopyFilesBuildPhase;
 			runOnlyForDeploymentPostprocessing = 0;

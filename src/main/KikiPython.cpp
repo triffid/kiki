@@ -105,8 +105,11 @@ KikiPython::KikiPython () : KWindow ()
 // __________________________________________________________________________________________________
 void KikiPython::initPython ()
 {
+#if defined(__APPLE__) && defined(__MACH__)
     //putenv ("PYTHONDEBUG=1");
     //putenv ("PYTHONVERBOSE=1");
+    putenv ("PYTHONPATH=./py:../Frameworks/Python.framework/Versions/A/lib/python2.2");
+#endif
 
     Py_Initialize();
 
