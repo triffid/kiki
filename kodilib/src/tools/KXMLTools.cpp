@@ -6,6 +6,7 @@
 #include "KXMLTools.h"
 #include "KConsole.h"
 #include "KSeparatedMatrix.h"
+#include <stdio.h>
 
 // --------------------------------------------------------------------------------------------------------
 std::string kXMLTag ( const std::string & name, const std::string & attributes, int depth )

@@ -7,6 +7,7 @@
 #include "KVector.h"
 
 #include <sys/types.h> 	// INT_MAX
+#include <stdio.h>
 
 // --------------------------------------------------------------------------------------------------------
 void kStringInsertStringBehindTags ( std::string & str, const std::string & insertString, 
