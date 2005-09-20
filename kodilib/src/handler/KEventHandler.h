@@ -122,7 +122,7 @@ class KEventHandler : public KObject
     static KPosition	getMousePos			();
     static KPosition	getMouseDelta 			();
     static KSize	getScreenSize 			();
-    static bool		setScreenSize			( const KSize &, bool fullscreen = false );
+    static bool		setScreenSize			( int width, int height, bool fullscreen = false );
     static bool		getFullscreen			();
     static void		setFullscreen			( bool );
 

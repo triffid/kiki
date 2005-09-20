@@ -224,7 +224,7 @@ KSize KEventHandler::getScreenSize ()
 }
 
 // --------------------------------------------------------------------------------------------------------
-bool KEventHandler::setScreenSize ( const KSize & screenSize, bool fullscreen )
+bool KEventHandler::setScreenSize ( int width, int height, bool fullscreen )
 {
     int flags = SDL_OPENGL; // | SDL_ANYFORMAT;
     if (fullscreen) 
@@ -236,41 +236,41 @@ bool KEventHandler::setScreenSize ( const KSize & screenSize, bool fullscreen )
         flags |= SDL_RESIZABLE;
     }
     
-    if (SDL_VideoModeOK (screenSize.w, screenSize.h, 32, flags) == 0)
+    if (SDL_VideoModeOK (width, height, 32, flags) == 0)
     {
         if (fullscreen)
         {
             // fallback to window mode
             KConsole::printf ("couldn't set video mode %dx%d (%s):\n%s\n", 
-                             screenSize.w, screenSize.h, 
+                             width, height, 
                              fullscreen ? "fullscreen" : "window", SDL_GetError());
             KConsole::printf ("trying to fallback to window mode");
-            return setScreenSize (screenSize, false);
+            return setScreenSize (width, height, false);
         }
         else
         {
             KConsole::printError( kStringPrintf("couldn't set video mode %dx%d (%s)", 
-                              screenSize.w, screenSize.h, 
+                              width, height, 
                               fullscreen ? "fullscreen" : "window"), true);
             return false;
         }
     }
     
-    if (SDL_SetVideoMode (screenSize.w, screenSize.h, 32, flags) == NULL) // paranoid
+    if (SDL_SetVideoMode (width, height, 32, flags) == NULL) // paranoid
     {
         if (fullscreen)
         {
             // fallback to window mode
             KConsole::printf ("couldn't change video mode %dx%d (%s):\n%s\n", 
-                             screenSize.w, screenSize.h, 
+                             width, height, 
                              fullscreen ? "fullscreen" : "window", SDL_GetError());
             KConsole::printf ("trying to fallback to window mode");
-            return setScreenSize (screenSize, false);
+            return setScreenSize (width, height, false);
         }
         else
         {
             KConsole::printError(kStringPrintf("couldn't change video mode %dx%d (%s):\n%s\n", 
-                             screenSize.w, screenSize.h, 
+                             width, height, 
                              fullscreen ? "fullscreen" : "window", SDL_GetError()), true);
             return false;
         }
@@ -295,7 +295,7 @@ void KEventHandler::setFullscreen ( bool fullscreen )
     if (!fullscreen)
     {
         // switch to normal mode
-        KSize windowSize;
+		int width, height;
         // get available hardware modes
         SDL_Rect **modes = SDL_ListModes (NULL, SDL_OPENGL);
         
@@ -309,20 +309,20 @@ void KEventHandler::setFullscreen ( bool fullscreen )
         if (modes != (SDL_Rect **)-1)
         {
             // all resolutions available
-            windowSize.w = 1024;
-            windowSize.h = 768;
+            width  = 1024;
+            height = 768;
         }
         else
         {
-            windowSize.w = modes[0]->w;
-            windowSize.h = modes[0]->h;
+            width  = modes[0]->w;
+            height = modes[0]->h;
         }
 
-        setScreenSize(windowSize, false);
+        setScreenSize(width, height, false);
     }
     else
     {
-        KSize fullscreenSize;
+        int width, height;
         // get available fullscreen/hardware modes
         SDL_Rect **modes = SDL_ListModes(NULL, SDL_OPENGL | SDL_HWSURFACE | SDL_FULLSCREEN);
         
@@ -336,16 +336,16 @@ void KEventHandler::setFullscreen ( bool fullscreen )
         if (modes != (SDL_Rect **)-1)
         {
             // all resolutions available
-            fullscreenSize.w = 1024;
-            fullscreenSize.h = 768;
+            width  = 1024;
+            height = 768;
         }
         else
         {
-            fullscreenSize.w = modes[0]->w;
-            fullscreenSize.h = modes[0]->h;
+            width  = modes[0]->w;
+            height = modes[0]->h;
         }
 
-        setScreenSize(fullscreenSize, true);
+        setScreenSize(width, height, true);
     }
 }
 

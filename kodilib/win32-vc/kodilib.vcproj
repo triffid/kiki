@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding = "Windows-1252"?>
+<?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="7.00"
+	Version="7.10"
 	Name="kodilib"
 	ProjectGUID="{E4BD4AF1-A023-4000-8034-18B23D6005B5}"
 	SccProjectName=""
@@ -23,7 +23,7 @@
 				Name="VCCLCompilerTool"
 				AdditionalOptions="/D &quot;_USE_MATH_DEFINES&quot;"
 				InlineFunctionExpansion="1"
-				AdditionalIncludeDirectories="..\src\handler;..\src\tools;..\src\types;..\src\windows;..\src\widgets"
+				AdditionalIncludeDirectories="&quot;..\..\win32-vc\deps\SDL_image-1.2.4\include&quot;;&quot;..\..\win32-vc\deps\SDL-1.2.9\include&quot;;&quot;..\..\win32-vc\deps&quot;;..\src\handler;..\src\tools;..\src\types;..\src\windows;..\src\widgets"
 				PreprocessorDefinitions="_WIN32,WIN32,NDEBUG,_LIB"
 				StringPooling="TRUE"
 				RuntimeLibrary="2"
@@ -55,6 +55,12 @@
 				Culture="1031"/>
 			<Tool
 				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
 		</Configuration>
 		<Configuration
 			Name="Debug|Win32"
@@ -68,7 +74,7 @@
 				Name="VCCLCompilerTool"
 				AdditionalOptions="/D &quot;_USE_MATH_DEFINES&quot;"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\src\handler;..\src\tools;..\src\types;..\src\windows;..\src\widgets"
+				AdditionalIncludeDirectories="&quot;..\..\SDL_image-1.2.4\include&quot;;&quot;..\..\SDL-1.2.9\include&quot;;..\..\;..\src\handler;..\src\tools;..\src\types;..\src\windows;..\src\widgets"
 				PreprocessorDefinitions="_WIN32,WIN32,_DEBUG,_LIB"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
@@ -101,8 +107,16 @@
 				Culture="1031"/>
 			<Tool
 				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
 		</Configuration>
 	</Configurations>
+	<References>
+	</References>
 	<Files>
 		<Filter
 			Name="Quellcodedateien"
@@ -252,10 +266,10 @@
 					RelativePath="..\src\handler\KKeyRecorder.cpp">
 				</File>
 				<File
-					RelativePath="..\src\handler\KPickHandler.cpp">
+					RelativePath="..\src\handler\KPickable.cpp">
 				</File>
 				<File
-					RelativePath="..\src\handler\KPickable.cpp">
+					RelativePath="..\src\handler\KPickHandler.cpp">
 				</File>
 				<File
 					RelativePath="..\src\handler\KSelectable.cpp">
@@ -505,10 +519,10 @@
 					RelativePath="..\src\handler\KKeyRecorder.h">
 				</File>
 				<File
-					RelativePath="..\src\handler\KPickHandler.h">
+					RelativePath="..\src\handler\KPickable.h">
 				</File>
 				<File
-					RelativePath="..\src\handler\KPickable.h">
+					RelativePath="..\src\handler\KPickHandler.h">
 				</File>
 				<File
 					RelativePath="..\src\handler\KSelectable.h">

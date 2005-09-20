@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding = "Windows-1252"?>
+<?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="7.00"
+	Version="7.10"
 	Name="kiki"
 	ProjectGUID="{A48B4E31-BF32-4DA2-BCE4-9B01C09C8731}"
+	RootNamespace="kiki"
 	Keyword="Win32Proj">
 	<Platforms>
 		<Platform
@@ -20,7 +21,7 @@
 				Name="VCCLCompilerTool"
 				AdditionalOptions="/D &quot;_USE_MATH_DEFINES&quot;"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\kodilib\src\windows;..\kodilib\src\widgets;..\kodilib\src\types;..\kodilib\src\tools;..\kodilib\src\handler;..\src\world;..\src\sound;..\src\main;..\src\items;..\src\gui;..\src\bots;..\SWIG\;..\src\base"
+				AdditionalIncludeDirectories="C:\Python\include;&quot;..\SDL_mixer-1.2.6\include&quot;;&quot;..\SDL-1.2.9\include&quot;;..\;..\kodilib\src\windows;..\kodilib\src\widgets;..\kodilib\src\types;..\kodilib\src\tools;..\kodilib\src\handler;..\src\world;..\src\sound;..\src\main;..\src\items;..\src\gui;..\src\bots;..\SWIG\;..\src\base"
 				PreprocessorDefinitions="_WIN32;WIN32;_DEBUG;DEBUG;_WINDOWS"
 				MinimalRebuild="FALSE"
 				BasicRuntimeChecks="3"
@@ -50,7 +51,7 @@
 			<Tool
 				Name="VCPreBuildEventTool"
 				Description="swigging"
-				CommandLine="C:\Projects\kodi\SWIG-1.3.19\swig.exe -c++ -python -I..\SWIG -globals kiki -o ..\SWIG\KikiPy_wrap.cpp KikiPy.i"/>
+				CommandLine="&quot;C:\Dokumente und Einstellungen\Kodi\Eigene Dateien\Tools\swigwin-1.3.25\swig.exe&quot; -c++ -python -I..\SWIG -globals kiki -o ..\SWIG\KikiPy_wrap.cpp KikiPy.i"/>
 			<Tool
 				Name="VCPreLinkEventTool"/>
 			<Tool
@@ -59,7 +60,13 @@
 			<Tool
 				Name="VCWebServiceProxyGeneratorTool"/>
 			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
 				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
@@ -76,7 +83,7 @@
 				Optimization="2"
 				InlineFunctionExpansion="1"
 				OmitFramePointers="TRUE"
-				AdditionalIncludeDirectories="..\kodilib\src\windows;..\kodilib\src\widgets;..\kodilib\src\types;..\kodilib\src\tools;..\kodilib\src\handler;..\src\world;..\src\sound;..\src\main;..\src\items;..\src\gui;..\src\bots;..\SWIG\;..\src\base"
+				AdditionalIncludeDirectories="C:\Python\include;&quot;.\deps\SDL_mixer-1.2.6\include&quot;;&quot;.\deps\SDL-1.2.9\include&quot;;.\deps\;..\kodilib\src\windows;..\kodilib\src\widgets;..\kodilib\src\types;..\kodilib\src\tools;..\kodilib\src\handler;..\src\world;..\src\sound;..\src\main;..\src\items;..\src\gui;..\src\bots;..\SWIG\;..\src\base"
 				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS"
 				StringPooling="TRUE"
 				RuntimeLibrary="2"
@@ -89,10 +96,10 @@
 				Name="VCCustomBuildTool"/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="python23.lib kodilib.lib SDL_image.lib SDL_mixer.lib SDLmain.lib SDL.lib glut32.lib"
+				AdditionalDependencies="python24.lib kodilib.lib SDL_image.lib SDL_mixer.lib SDLmain.lib SDL.lib glut32.lib"
 				OutputFile="$(OutDir)/kiki.exe"
 				LinkIncremental="1"
-				AdditionalLibraryDirectories="&quot;..\kodilib\win32-vc\Release&quot;"
+				AdditionalLibraryDirectories=".\deps\GLUT;&quot;.\deps\SDL_mixer-1.2.6\lib&quot;;&quot;.\deps\SDL-1.2.9\lib&quot;;&quot;.\deps\SDL_image-1.2.4\lib&quot;;&quot;..\kodilib\win32-vc\Release&quot;;C:\Python\libs"
 				IgnoreAllDefaultLibraries="FALSE"
 				IgnoreDefaultLibraryNames=""
 				GenerateDebugInformation="TRUE"
@@ -103,10 +110,11 @@
 			<Tool
 				Name="VCMIDLTool"/>
 			<Tool
-				Name="VCPostBuildEventTool"/>
+				Name="VCPostBuildEventTool"
+				CommandLine="copy .\Release\kiki.exe .\bin"/>
 			<Tool
 				Name="VCPreBuildEventTool"
-				CommandLine="C:\Projects\kodi\SWIG-1.3.19\swig.exe -c++ -python -I..\SWIG -globals kiki -o ..\SWIG\KikiPy_wrap.cpp KikiPy.i"/>
+				CommandLine=".\deps\swigwin-1.3.25\swig.exe -c++ -python -I..\SWIG -globals kiki -o ..\SWIG\KikiPy_wrap.cpp KikiPy.i"/>
 			<Tool
 				Name="VCPreLinkEventTool"/>
 			<Tool
@@ -114,9 +122,17 @@
 			<Tool
 				Name="VCWebServiceProxyGeneratorTool"/>
 			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
 				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
 		</Configuration>
 	</Configurations>
+	<References>
+	</References>
 	<Files>
 		<Filter
 			Name="Quelldateien"
@@ -316,6 +332,18 @@
 				Name="items"
 				Filter="">
 				<File
+					RelativePath="..\src\bots\body.h">
+				</File>
+				<File
+					RelativePath="..\src\items\cylinder.h">
+				</File>
+				<File
+					RelativePath="..\src\items\gear.h">
+				</File>
+				<File
+					RelativePath="..\src\items\generator.h">
+				</File>
+				<File
 					RelativePath="..\src\items\KikiAtom.h">
 				</File>
 				<File
@@ -383,18 +411,6 @@
 				</File>
 				<File
 					RelativePath="..\src\items\KikiWireStone.h">
-				</File>
-				<File
-					RelativePath="..\src\bots\body.h">
-				</File>
-				<File
-					RelativePath="..\src\items\cylinder.h">
-				</File>
-				<File
-					RelativePath="..\src\items\gear.h">
-				</File>
-				<File
-					RelativePath="..\src\items\generator.h">
 				</File>
 				<File
 					RelativePath="..\src\items\kolben.h">
@@ -490,10 +506,10 @@
 					RelativePath="..\src\bots\KikiBotFume.h">
 				</File>
 				<File
-					RelativePath="..\src\bots\KikiBotStatus.h">
+					RelativePath="..\src\bots\KikiBots.h">
 				</File>
 				<File
-					RelativePath="..\src\bots\KikiBots.h">
+					RelativePath="..\src\bots\KikiBotStatus.h">
 				</File>
 				<File
 					RelativePath="..\src\bots\KikiMutant.h">

@@ -4,7 +4,7 @@
 
 import _kiki
 
-def _swig_setattr(self,class_type,name,value):
+def _swig_setattr_nondynamic(self,class_type,name,value,static=1):
     if (name == "this"):
         if isinstance(value, class_type):
             self.__dict__[name] = value.this
@@ -13,7 +13,13 @@ def _swig_setattr(self,class_type,name,value):
             return
     method = class_type.__swig_setmethods__.get(name,None)
     if method: return method(self,value)
-    self.__dict__[name] = value
+    if (not static) or hasattr(self,name) or (name == "thisown"):
+        self.__dict__[name] = value
+    else:
+        raise AttributeError("You cannot add attributes to %s" % self)
+
+def _swig_setattr(self,class_type,name,value):
+    return _swig_setattr_nondynamic(self,class_type,name,value,0)
 
 def _swig_getattr(self,class_type,name):
     method = class_type.__swig_getmethods__.get(name,None)
@@ -36,7 +42,7 @@ class KikiPos(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, KikiPos, name)
     def __repr__(self):
-        return "<C KikiPos instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiPos instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     __swig_setmethods__["x"] = _kiki.KikiPos_x_set
     __swig_getmethods__["x"] = _kiki.KikiPos_x_get
     if _newclass:x = property(_kiki.KikiPos_x_get, _kiki.KikiPos_x_set)
@@ -62,6 +68,7 @@ class KikiPos(_object):
             if self.thisown: destroy(self)
         except: pass
 
+
 class KikiPosPtr(KikiPos):
     def __init__(self, this):
         _swig_setattr(self, KikiPos, 'this', this)
@@ -75,7 +82,7 @@ class KVector(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, KVector, name)
     def __repr__(self):
-        return "<C KVector instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KVector instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def __init__(self, *args):
         _swig_setattr(self, KVector, 'this', _kiki.new_KVector(*args))
         _swig_setattr(self, KVector, 'thisown', 1)
@@ -107,6 +114,7 @@ class KVector(_object):
             if self.thisown: destroy(self)
         except: pass
 
+
 class KVectorPtr(KVector):
     def __init__(self, this):
         _swig_setattr(self, KVector, 'this', this)
@@ -120,7 +128,7 @@ class KQuaternion(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, KQuaternion, name)
     def __repr__(self):
-        return "<C KQuaternion instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KQuaternion instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     __swig_setmethods__["w"] = _kiki.KQuaternion_w_set
     __swig_getmethods__["w"] = _kiki.KQuaternion_w_get
     if _newclass:w = property(_kiki.KQuaternion_w_get, _kiki.KQuaternion_w_set)
@@ -155,6 +163,7 @@ class KQuaternion(_object):
             if self.thisown: destroy(self)
         except: pass
 
+
 class KQuaternionPtr(KQuaternion):
     def __init__(self, this):
         _swig_setattr(self, KQuaternion, 'this', this)
@@ -170,7 +179,7 @@ class KColor(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, KColor, name)
     def __repr__(self):
-        return "<C KColor instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KColor instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def __init__(self, *args):
         _swig_setattr(self, KColor, 'this', _kiki.new_KColor(*args))
         _swig_setattr(self, KColor, 'thisown', 1)
@@ -190,6 +199,7 @@ class KColor(_object):
             if self.thisown: destroy(self)
         except: pass
 
+
 class KColorPtr(KColor):
     def __init__(self, this):
         _swig_setattr(self, KColor, 'this', this)
@@ -204,7 +214,7 @@ class KProjection(_object):
     __getattr__ = lambda self, name: _swig_getattr(self, KProjection, name)
     def __init__(self): raise RuntimeError, "No constructor defined"
     def __repr__(self):
-        return "<C KProjection instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KProjection instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def focusOn(*args): return _kiki.KProjection_focusOn(*args)
     def setFov(*args): return _kiki.KProjection_setFov(*args)
     def getFov(*args): return _kiki.KProjection_getFov(*args)
@@ -224,7 +234,7 @@ class KKey(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, KKey, name)
     def __repr__(self):
-        return "<C KKey instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KKey instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def __init__(self, *args):
         _swig_setattr(self, KKey, 'this', _kiki.new_KKey(*args))
         _swig_setattr(self, KKey, 'thisown', 1)
@@ -247,7 +257,7 @@ class KikiAction(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, KikiAction, name)
     def __repr__(self):
-        return "<C KikiAction instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiAction instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     ONCE = _kiki.KikiAction_ONCE
     CONTINUOUS = _kiki.KikiAction_CONTINUOUS
     REPEAT = _kiki.KikiAction_REPEAT
@@ -276,7 +286,7 @@ class KikiPyAction(KikiAction):
     for _s in [KikiAction]: __swig_getmethods__.update(_s.__swig_getmethods__)
     __getattr__ = lambda self, name: _swig_getattr(self, KikiPyAction, name)
     def __repr__(self):
-        return "<C KikiPyAction instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiPyAction instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def __init__(self, *args):
         _swig_setattr(self, KikiPyAction, 'this', _kiki.new_KikiPyAction(*args))
         _swig_setattr(self, KikiPyAction, 'thisown', 1)
@@ -284,6 +294,7 @@ class KikiPyAction(KikiAction):
         try:
             if self.thisown: destroy(self)
         except: pass
+
     def __init__(self,*args):
         self.this = apply (_kiki.new_KikiPyAction, (self,) + args)
         self.thisown = 1
@@ -302,7 +313,7 @@ class KikiEvent(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, KikiEvent, name)
     def __repr__(self):
-        return "<C KikiEvent instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiEvent instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def __init__(self, *args):
         _swig_setattr(self, KikiEvent, 'this', _kiki.new_KikiEvent(*args))
         _swig_setattr(self, KikiEvent, 'thisown', 1)
@@ -328,7 +339,7 @@ class KikiActionObject(_object):
     __getattr__ = lambda self, name: _swig_getattr(self, KikiActionObject, name)
     def __init__(self): raise RuntimeError, "No constructor defined"
     def __repr__(self):
-        return "<C KikiActionObject instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiActionObject instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def addAction(*args): return _kiki.KikiActionObject_addAction(*args)
     def removeAction(*args): return _kiki.KikiActionObject_removeAction(*args)
     def startTimedAction(*args): return _kiki.KikiActionObject_startTimedAction(*args)
@@ -356,7 +367,7 @@ class KikiObject(KikiActionObject):
     __getattr__ = lambda self, name: _swig_getattr(self, KikiObject, name)
     def __init__(self): raise RuntimeError, "No constructor defined"
     def __repr__(self):
-        return "<C KikiObject instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiObject instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def setName(*args): return _kiki.KikiObject_setName(*args)
     def getName(*args): return _kiki.KikiObject_getName(*args)
     def getPos(*args): return _kiki.KikiObject_getPos(*args)
@@ -383,7 +394,7 @@ class KikiBotStatus(_object):
     __getattr__ = lambda self, name: _swig_getattr(self, KikiBotStatus, name)
     def __init__(self): raise RuntimeError, "No constructor defined"
     def __repr__(self):
-        return "<C KikiBotStatus instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiBotStatus instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def getMoves(*args): return _kiki.KikiBotStatus_getMoves(*args)
     def setMoves(*args): return _kiki.KikiBotStatus_setMoves(*args)
     def addMoves(*args): return _kiki.KikiBotStatus_addMoves(*args)
@@ -406,7 +417,7 @@ class KikiBotFume(KikiObject):
     __getattr__ = lambda self, name: _swig_getattr(self, KikiBotFume, name)
     def __init__(self): raise RuntimeError, "No constructor defined"
     def __repr__(self):
-        return "<C KikiBotFume instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiBotFume instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     __swig_getmethods__["setObjectColor"] = lambda x: _kiki.KikiBotFume_setObjectColor
     if _newclass:setObjectColor = staticmethod(_kiki.KikiBotFume_setObjectColor)
 
@@ -428,7 +439,7 @@ class KikiBot(KikiObject):
     __getattr__ = lambda self, name: _swig_getattr(self, KikiBot, name)
     def __init__(self): raise RuntimeError, "No constructor defined"
     def __repr__(self):
-        return "<C KikiBot instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiBot instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def isDead(*args): return _kiki.KikiBot_isDead(*args)
     def getDown(*args): return _kiki.KikiBot_getDown(*args)
     def getUp(*args): return _kiki.KikiBot_getUp(*args)
@@ -450,7 +461,7 @@ class KikiStatusDisplay(_object):
     __getattr__ = lambda self, name: _swig_getattr(self, KikiStatusDisplay, name)
     def __init__(self): raise RuntimeError, "No constructor defined"
     def __repr__(self):
-        return "<C KikiStatusDisplay instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiStatusDisplay instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def show(*args): return _kiki.KikiStatusDisplay_show(*args)
     def hide(*args): return _kiki.KikiStatusDisplay_hide(*args)
 
@@ -468,7 +479,7 @@ class KikiPlayback(_object):
     __getattr__ = lambda self, name: _swig_getattr(self, KikiPlayback, name)
     def __init__(self): raise RuntimeError, "No constructor defined"
     def __repr__(self):
-        return "<C KikiPlayback instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiPlayback instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     __swig_getmethods__["start"] = lambda x: _kiki.KikiPlayback_start
     if _newclass:start = staticmethod(_kiki.KikiPlayback_start)
     __swig_getmethods__["stop"] = lambda x: _kiki.KikiPlayback_stop
@@ -494,7 +505,7 @@ class KikiPlayer(KikiBot):
     __getattr__ = lambda self, name: _swig_getattr(self, KikiPlayer, name)
     def __init__(self): raise RuntimeError, "No constructor defined"
     def __repr__(self):
-        return "<C KikiPlayer instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiPlayer instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def die(*args): return _kiki.KikiPlayer_die(*args)
     def reborn(*args): return _kiki.KikiPlayer_reborn(*args)
     def reset(*args): return _kiki.KikiPlayer_reset(*args)
@@ -536,7 +547,7 @@ class KikiMutant(KikiBot):
     for _s in [KikiBot]: __swig_getmethods__.update(_s.__swig_getmethods__)
     __getattr__ = lambda self, name: _swig_getattr(self, KikiMutant, name)
     def __repr__(self):
-        return "<C KikiMutant instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiMutant instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def __init__(self, *args):
         _swig_setattr(self, KikiMutant, 'this', _kiki.new_KikiMutant(*args))
         _swig_setattr(self, KikiMutant, 'thisown', 1)
@@ -560,7 +571,7 @@ class KikiSound(_object):
     __getattr__ = lambda self, name: _swig_getattr(self, KikiSound, name)
     def __init__(self): raise RuntimeError, "No constructor defined"
     def __repr__(self):
-        return "<C KikiSound instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiSound instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def toggleMute(*args): return _kiki.KikiSound_toggleMute(*args)
     def setMute(*args): return _kiki.KikiSound_setMute(*args)
     def isMute(*args): return _kiki.KikiSound_isMute(*args)
@@ -583,7 +594,7 @@ class KikiWorld(_object):
     __getattr__ = lambda self, name: _swig_getattr(self, KikiWorld, name)
     def __init__(self): raise RuntimeError, "No constructor defined"
     def __repr__(self):
-        return "<C KikiWorld instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiWorld instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     CAMERA_INSIDE = _kiki.KikiWorld_CAMERA_INSIDE
     CAMERA_BEHIND = _kiki.KikiWorld_CAMERA_BEHIND
     CAMERA_FOLLOW = _kiki.KikiWorld_CAMERA_FOLLOW
@@ -641,7 +652,7 @@ class KEventHandler(_object):
     __getattr__ = lambda self, name: _swig_getattr(self, KEventHandler, name)
     def __init__(self): raise RuntimeError, "No constructor defined"
     def __repr__(self):
-        return "<C KEventHandler instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KEventHandler instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def quit(*args): return _kiki.KEventHandler_quit(*args)
     __swig_getmethods__["getMouseState"] = lambda x: _kiki.KEventHandler_getMouseState
     if _newclass:getMouseState = staticmethod(_kiki.KEventHandler_getMouseState)
@@ -695,7 +706,7 @@ class KikiController(KEventHandler,KikiActionObject):
     __getattr__ = lambda self, name: _swig_getattr(self, KikiController, name)
     def __init__(self): raise RuntimeError, "No constructor defined"
     def __repr__(self):
-        return "<C KikiController instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiController instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     __swig_setmethods__["gui"] = _kiki.KikiController_gui_set
     __swig_getmethods__["gui"] = _kiki.KikiController_gui_get
     if _newclass:gui = property(_kiki.KikiController_gui_get, _kiki.KikiController_gui_set)
@@ -745,7 +756,7 @@ class KWindow(_object):
     __getattr__ = lambda self, name: _swig_getattr(self, KWindow, name)
     def __init__(self): raise RuntimeError, "No constructor defined"
     def __repr__(self):
-        return "<C KWindow instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KWindow instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def isVisible(*args): return _kiki.KWindow_isVisible(*args)
     def setVisibility(*args): return _kiki.KWindow_setVisibility(*args)
     def toggleVisibility(*args): return _kiki.KWindow_toggleVisibility(*args)
@@ -770,7 +781,7 @@ class KikiText(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, KikiText, name)
     def __repr__(self):
-        return "<C KikiText instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiText instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     base_color = _kiki.KikiText_base_color
     bright_color = _kiki.KikiText_bright_color
     dark_color = _kiki.KikiText_dark_color
@@ -812,7 +823,7 @@ class KikiGUI(KWindow):
     __getattr__ = lambda self, name: _swig_getattr(self, KikiGUI, name)
     def __init__(self): raise RuntimeError, "No constructor defined"
     def __repr__(self):
-        return "<C KikiGUI instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiGUI instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
 
 class KikiGUIPtr(KikiGUI):
     def __init__(self, this):
@@ -829,7 +840,7 @@ class KikiScreenText(KikiText,KikiActionObject):
     for _s in [KikiText,KikiActionObject]: __swig_getmethods__.update(_s.__swig_getmethods__)
     __getattr__ = lambda self, name: _swig_getattr(self, KikiScreenText, name)
     def __repr__(self):
-        return "<C KikiScreenText instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiScreenText instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def __init__(self, *args):
         _swig_setattr(self, KikiScreenText, 'this', _kiki.new_KikiScreenText(*args))
         _swig_setattr(self, KikiScreenText, 'thisown', 1)
@@ -853,7 +864,7 @@ class KikiMenu(KikiScreenText):
     for _s in [KikiScreenText]: __swig_getmethods__.update(_s.__swig_getmethods__)
     __getattr__ = lambda self, name: _swig_getattr(self, KikiMenu, name)
     def __repr__(self):
-        return "<C KikiMenu instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiMenu instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def __init__(self, *args):
         _swig_setattr(self, KikiMenu, 'this', _kiki.new_KikiMenu(*args))
         _swig_setattr(self, KikiMenu, 'thisown', 1)
@@ -875,7 +886,7 @@ class KikiScrollMenu(KikiMenu):
     for _s in [KikiMenu]: __swig_getmethods__.update(_s.__swig_getmethods__)
     __getattr__ = lambda self, name: _swig_getattr(self, KikiScrollMenu, name)
     def __repr__(self):
-        return "<C KikiScrollMenu instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiScrollMenu instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def __init__(self, *args):
         _swig_setattr(self, KikiScrollMenu, 'this', _kiki.new_KikiScrollMenu(*args))
         _swig_setattr(self, KikiScrollMenu, 'thisown', 1)
@@ -896,7 +907,7 @@ class KikiColumnMenu(KikiMenu):
     for _s in [KikiMenu]: __swig_getmethods__.update(_s.__swig_getmethods__)
     __getattr__ = lambda self, name: _swig_getattr(self, KikiColumnMenu, name)
     def __repr__(self):
-        return "<C KikiColumnMenu instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiColumnMenu instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def __init__(self, *args):
         _swig_setattr(self, KikiColumnMenu, 'this', _kiki.new_KikiColumnMenu(*args))
         _swig_setattr(self, KikiColumnMenu, 'thisown', 1)
@@ -916,7 +927,7 @@ class KikiPageText(KikiScreenText):
     for _s in [KikiScreenText]: __swig_getmethods__.update(_s.__swig_getmethods__)
     __getattr__ = lambda self, name: _swig_getattr(self, KikiPageText, name)
     def __repr__(self):
-        return "<C KikiPageText instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiPageText instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def __init__(self, *args):
         _swig_setattr(self, KikiPageText, 'this', _kiki.new_KikiPageText(*args))
         _swig_setattr(self, KikiPageText, 'thisown', 1)
@@ -935,7 +946,7 @@ class KikiFace(_object):
     __getattr__ = lambda self, name: _swig_getattr(self, KikiFace, name)
     def __init__(self): raise RuntimeError, "No constructor defined"
     def __repr__(self):
-        return "<C KikiFace instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiFace instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     PX = _kiki.KikiFace_PX
     X = _kiki.KikiFace_X
     PY = _kiki.KikiFace_PY
@@ -961,7 +972,7 @@ class KikiWire(KikiObject):
     for _s in [KikiObject]: __swig_getmethods__.update(_s.__swig_getmethods__)
     __getattr__ = lambda self, name: _swig_getattr(self, KikiWire, name)
     def __repr__(self):
-        return "<C KikiWire instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiWire instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     UP = _kiki.KikiWire_UP
     RIGHT = _kiki.KikiWire_RIGHT
     DOWN = _kiki.KikiWire_DOWN
@@ -995,7 +1006,7 @@ class KikiGear(KikiObject,KikiFace):
     for _s in [KikiObject,KikiFace]: __swig_getmethods__.update(_s.__swig_getmethods__)
     __getattr__ = lambda self, name: _swig_getattr(self, KikiGear, name)
     def __repr__(self):
-        return "<C KikiGear instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiGear instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def __init__(self, *args):
         _swig_setattr(self, KikiGear, 'this', _kiki.new_KikiGear(*args))
         _swig_setattr(self, KikiGear, 'thisown', 1)
@@ -1022,7 +1033,7 @@ class KikiValve(KikiObject,KikiFace):
     for _s in [KikiObject,KikiFace]: __swig_getmethods__.update(_s.__swig_getmethods__)
     __getattr__ = lambda self, name: _swig_getattr(self, KikiValve, name)
     def __repr__(self):
-        return "<C KikiValve instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiValve instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def __init__(self, *args):
         _swig_setattr(self, KikiValve, 'this', _kiki.new_KikiValve(*args))
         _swig_setattr(self, KikiValve, 'thisown', 1)
@@ -1048,7 +1059,7 @@ class KikiMotorCylinder(KikiObject):
     for _s in [KikiObject]: __swig_getmethods__.update(_s.__swig_getmethods__)
     __getattr__ = lambda self, name: _swig_getattr(self, KikiMotorCylinder, name)
     def __repr__(self):
-        return "<C KikiMotorCylinder instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiMotorCylinder instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def __init__(self, *args):
         _swig_setattr(self, KikiMotorCylinder, 'this', _kiki.new_KikiMotorCylinder(*args))
         _swig_setattr(self, KikiMotorCylinder, 'thisown', 1)
@@ -1072,7 +1083,7 @@ class KikiMotorGear(KikiGear):
     for _s in [KikiGear]: __swig_getmethods__.update(_s.__swig_getmethods__)
     __getattr__ = lambda self, name: _swig_getattr(self, KikiMotorGear, name)
     def __repr__(self):
-        return "<C KikiMotorGear instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiMotorGear instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def __init__(self, *args):
         _swig_setattr(self, KikiMotorGear, 'this', _kiki.new_KikiMotorGear(*args))
         _swig_setattr(self, KikiMotorGear, 'thisown', 1)
@@ -1096,7 +1107,7 @@ class KikiGenerator(KikiGear):
     for _s in [KikiGear]: __swig_getmethods__.update(_s.__swig_getmethods__)
     __getattr__ = lambda self, name: _swig_getattr(self, KikiGenerator, name)
     def __repr__(self):
-        return "<C KikiGenerator instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiGenerator instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def __init__(self, *args):
         _swig_setattr(self, KikiGenerator, 'this', _kiki.new_KikiGenerator(*args))
         _swig_setattr(self, KikiGenerator, 'thisown', 1)
@@ -1120,7 +1131,7 @@ class KikiLight(KikiObject):
     for _s in [KikiObject]: __swig_getmethods__.update(_s.__swig_getmethods__)
     __getattr__ = lambda self, name: _swig_getattr(self, KikiLight, name)
     def __repr__(self):
-        return "<C KikiLight instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiLight instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def __init__(self, *args):
         _swig_setattr(self, KikiLight, 'this', _kiki.new_KikiLight(*args))
         _swig_setattr(self, KikiLight, 'thisown', 1)
@@ -1146,7 +1157,7 @@ class KikiCellText(KikiObject,KikiText):
     for _s in [KikiObject,KikiText]: __swig_getmethods__.update(_s.__swig_getmethods__)
     __getattr__ = lambda self, name: _swig_getattr(self, KikiCellText, name)
     def __repr__(self):
-        return "<C KikiCellText instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiCellText instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def __init__(self, *args):
         _swig_setattr(self, KikiCellText, 'this', _kiki.new_KikiCellText(*args))
         _swig_setattr(self, KikiCellText, 'thisown', 1)
@@ -1173,7 +1184,7 @@ class KikiStone(KikiObject):
     for _s in [KikiObject]: __swig_getmethods__.update(_s.__swig_getmethods__)
     __getattr__ = lambda self, name: _swig_getattr(self, KikiStone, name)
     def __repr__(self):
-        return "<C KikiStone instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiStone instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def __init__(self, *args):
         _swig_setattr(self, KikiStone, 'this', _kiki.new_KikiStone(*args))
         _swig_setattr(self, KikiStone, 'thisown', 1)
@@ -1199,7 +1210,7 @@ class KikiWireStone(KikiStone):
     for _s in [KikiStone]: __swig_getmethods__.update(_s.__swig_getmethods__)
     __getattr__ = lambda self, name: _swig_getattr(self, KikiWireStone, name)
     def __repr__(self):
-        return "<C KikiWireStone instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiWireStone instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def __init__(self, *args):
         _swig_setattr(self, KikiWireStone, 'this', _kiki.new_KikiWireStone(*args))
         _swig_setattr(self, KikiWireStone, 'thisown', 1)
@@ -1225,7 +1236,7 @@ class KikiWall(KikiObject):
     for _s in [KikiObject]: __swig_getmethods__.update(_s.__swig_getmethods__)
     __getattr__ = lambda self, name: _swig_getattr(self, KikiWall, name)
     def __repr__(self):
-        return "<C KikiWall instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiWall instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def __init__(self, *args):
         _swig_setattr(self, KikiWall, 'this', _kiki.new_KikiWall(*args))
         _swig_setattr(self, KikiWall, 'thisown', 1)
@@ -1251,7 +1262,7 @@ class KikiBomb(KikiObject):
     for _s in [KikiObject]: __swig_getmethods__.update(_s.__swig_getmethods__)
     __getattr__ = lambda self, name: _swig_getattr(self, KikiBomb, name)
     def __repr__(self):
-        return "<C KikiBomb instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiBomb instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def __init__(self, *args):
         _swig_setattr(self, KikiBomb, 'this', _kiki.new_KikiBomb(*args))
         _swig_setattr(self, KikiBomb, 'thisown', 1)
@@ -1277,7 +1288,7 @@ class KikiSwitch(KikiObject):
     for _s in [KikiObject]: __swig_getmethods__.update(_s.__swig_getmethods__)
     __getattr__ = lambda self, name: _swig_getattr(self, KikiSwitch, name)
     def __repr__(self):
-        return "<C KikiSwitch instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiSwitch instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def __init__(self, *args):
         _swig_setattr(self, KikiSwitch, 'this', _kiki.new_KikiSwitch(*args))
         _swig_setattr(self, KikiSwitch, 'thisown', 1)
@@ -1306,7 +1317,7 @@ class KikiGate(KikiSwitch):
     for _s in [KikiSwitch]: __swig_getmethods__.update(_s.__swig_getmethods__)
     __getattr__ = lambda self, name: _swig_getattr(self, KikiGate, name)
     def __repr__(self):
-        return "<C KikiGate instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiGate instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def __init__(self, *args):
         _swig_setattr(self, KikiGate, 'this', _kiki.new_KikiGate(*args))
         _swig_setattr(self, KikiGate, 'thisown', 1)
@@ -1333,7 +1344,7 @@ class KikiAtom(KikiObject):
     __getattr__ = lambda self, name: _swig_getattr(self, KikiAtom, name)
     def __init__(self): raise RuntimeError, "No constructor defined"
     def __repr__(self):
-        return "<C KikiAtom instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiAtom instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def setValue(*args): return _kiki.KikiAtom_setValue(*args)
     def getValue(*args): return _kiki.KikiAtom_getValue(*args)
 
@@ -1353,7 +1364,7 @@ class KikiMovesAtom(KikiAtom):
     __getattr__ = lambda self, name: _swig_getattr(self, KikiMovesAtom, name)
     def __init__(self): raise RuntimeError, "No constructor defined"
     def __repr__(self):
-        return "<C KikiMovesAtom instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiMovesAtom instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     __swig_getmethods__["setObjectColor"] = lambda x: _kiki.KikiMovesAtom_setObjectColor
     if _newclass:setObjectColor = staticmethod(_kiki.KikiMovesAtom_setObjectColor)
 
@@ -1374,7 +1385,7 @@ class KikiValueAtom(KikiAtom):
     for _s in [KikiAtom]: __swig_getmethods__.update(_s.__swig_getmethods__)
     __getattr__ = lambda self, name: _swig_getattr(self, KikiValueAtom, name)
     def __repr__(self):
-        return "<C KikiValueAtom instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiValueAtom instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def __init__(self, *args):
         _swig_setattr(self, KikiValueAtom, 'this', _kiki.new_KikiValueAtom(*args))
         _swig_setattr(self, KikiValueAtom, 'thisown', 1)
@@ -1398,7 +1409,7 @@ class KikiSpikes(KikiObject):
     for _s in [KikiObject]: __swig_getmethods__.update(_s.__swig_getmethods__)
     __getattr__ = lambda self, name: _swig_getattr(self, KikiSpikes, name)
     def __repr__(self):
-        return "<C KikiSpikes instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiSpikes instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def __init__(self, *args):
         _swig_setattr(self, KikiSpikes, 'this', _kiki.new_KikiSpikes(*args))
         _swig_setattr(self, KikiSpikes, 'thisown', 1)
@@ -1425,7 +1436,7 @@ class KikiBullet(KikiObject):
     __getattr__ = lambda self, name: _swig_getattr(self, KikiBullet, name)
     def __init__(self): raise RuntimeError, "No constructor defined"
     def __repr__(self):
-        return "<C KikiBullet instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiBullet instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     __swig_getmethods__["setObjectColor"] = lambda x: _kiki.KikiBullet_setObjectColor
     if _newclass:setObjectColor = staticmethod(_kiki.KikiBullet_setObjectColor)
 
@@ -1447,7 +1458,7 @@ class KConsole(KWindow):
     __getattr__ = lambda self, name: _swig_getattr(self, KConsole, name)
     def __init__(self): raise RuntimeError, "No constructor defined"
     def __repr__(self):
-        return "<C KConsole instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KConsole instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     __swig_getmethods__["_print"] = lambda x: _kiki.KConsole__print
     if _newclass:_print = staticmethod(_kiki.KConsole__print)
     __swig_getmethods__["write"] = lambda x: _kiki.KConsole_write
@@ -1483,7 +1494,7 @@ class KikiPythonWidget(_object):
     __getattr__ = lambda self, name: _swig_getattr(self, KikiPythonWidget, name)
     def __init__(self): raise RuntimeError, "No constructor defined"
     def __repr__(self):
-        return "<C KikiPythonWidget instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiPythonWidget instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     __swig_setmethods__["cursorPos"] = _kiki.KikiPythonWidget_cursorPos_set
     __swig_getmethods__["cursorPos"] = _kiki.KikiPythonWidget_cursorPos_get
     if _newclass:cursorPos = property(_kiki.KikiPythonWidget_cursorPos_get, _kiki.KikiPythonWidget_cursorPos_set)
@@ -1514,7 +1525,7 @@ class KikiPython(KWindow):
     __getattr__ = lambda self, name: _swig_getattr(self, KikiPython, name)
     def __init__(self): raise RuntimeError, "No constructor defined"
     def __repr__(self):
-        return "<C KikiPython instance at %s>" % (self.this,)
+        return "<%s.%s; proxy of C++ KikiPython instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
     def getPythonWidget(*args): return _kiki.KikiPython_getPythonWidget(*args)
     def setScrollBarUnits(*args): return _kiki.KikiPython_setScrollBarUnits(*args)
     def requestUserInput(*args): return _kiki.KikiPython_requestUserInput(*args)

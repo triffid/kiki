@@ -89,7 +89,7 @@ KikiSound::KikiSound ()
     
     // title song
 
-    std::string song_path = kFileNativePath(Controller.getKikiHome() + "/sounds/" + "title_song.mp3");
+    std::string song_path = kFileNativePath(Controller.getKikiHome() + "/sound/" + "title_song.mp3");
     Mix_Music * music = Mix_LoadMUS(song_path.c_str());
     if(!music) 
     {
@@ -148,7 +148,7 @@ bool KikiSound::loadSound ( const std::string & file )
 {
     if (num_channels == 0) return false;
 
-    std::string file_path = kFileNativePath(Controller.getKikiHome() + "/sounds/" + file);
+    std::string file_path = kFileNativePath(Controller.getKikiHome() + "/sound/" + file);
     Mix_Chunk * chunk = loadWav(file_path.c_str());
 
     if (chunk == NULL)

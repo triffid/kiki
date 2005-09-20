@@ -90,7 +90,7 @@ std::string KFileTreeNode::getPathName () const
 // --------------------------------------------------------------------------------------------------------
 void KFileTreeNode::relayout ()
 {
-    int side = (int)ceil(sqrt(children.size())); 
+    int side = (int)ceil(sqrt(double(children.size()))); 
     int pl = getPathLength() + 1; 
     float scalePow = pow(0.6, kMin(4, pl));
     float transPow = scalePow;

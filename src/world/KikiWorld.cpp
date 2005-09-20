@@ -712,7 +712,7 @@ void KikiWorld::initializeTextures ()
     {
         for (int y = 0; y < 32; y++)
         {
-            float value = kMax(1.0-sqrt(x*x+y*y)/32.0, 0.0);
+            float value = kMax(1.0-sqrt(double(x*x+y*y))/32.0, 0.0);
             unsigned char cvalue = (unsigned char)(value * value * 255);
 
             imageBuffer[(32+x)*64+(32+y)] = cvalue;
