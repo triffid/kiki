@@ -34,7 +34,7 @@
 
 static int ESCAPE_KEY_EVENT;
 
-const unsigned char 	kikiVersionString[] = "0.9";
+const unsigned char 	kikiVersionString[] = "1.0";
 extern const double 	kikiVersionNumber;
 
 // __________________________________________________________________________________________________
@@ -47,7 +47,7 @@ KikiController::KikiController () : KEventHandler (), KKeyHandler (), KikiAction
 #ifdef DEBUG
     debug_version = true;
 #else
-    debug_version = false;
+    debug_version = true;
 #endif
 
 #if defined(__APPLE__) && defined(__MACH__)
@@ -413,10 +413,14 @@ bool KikiController::handleKey ( const KKey & key )
         world->debug_cells = !world->debug_cells;
         return true;
     }
+	if (key.name == "c")
+	{
+		KConsole::getConsole()->show();
+	}
     }
 
     if (key.character >= '1' && key.character <= '9') { speed = key.character - '0'; return true; }
-    if (key.name == "c") { KConsole::getConsole()->clear(); return true; }
+    //if (key.name == "c") { KConsole::getConsole()->clear(); return true; }
             
     return false;
 }

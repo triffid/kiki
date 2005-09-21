@@ -1562,7 +1562,7 @@ SWIG_Check_int(PyObject* obj)
 }
 
 
-  /*@c:\\Dokumente und Einstellungen\\Kodi\\Eigene Dateien\\kiki\\win32-vc\\deps\\swigwin-1.3.25\\Lib\\python\\pymacros.swg,66,SWIG_define@*/
+  /*@c:\\Dokumente und Einstellungen\\kodi\\Eigene Dateien\\projects\\kiki\\win32-vc\\deps\\swigwin-1.3.25\\Lib\\python\\pymacros.swg,66,SWIG_define@*/
 #define SWIG_From_int PyInt_FromLong
 /*@@*/
 
@@ -1718,7 +1718,7 @@ SWIG_Check_float(PyObject* obj)
 }
 
 
-  /*@c:\\Dokumente und Einstellungen\\Kodi\\Eigene Dateien\\kiki\\win32-vc\\deps\\swigwin-1.3.25\\Lib\\python\\pymacros.swg,66,SWIG_define@*/
+  /*@c:\\Dokumente und Einstellungen\\kodi\\Eigene Dateien\\projects\\kiki\\win32-vc\\deps\\swigwin-1.3.25\\Lib\\python\\pymacros.swg,66,SWIG_define@*/
 #define SWIG_From_float PyFloat_FromDouble
 /*@@*/
 
@@ -1797,7 +1797,7 @@ SWIG_AsCharPtrAndSize(PyObject *obj, char** cptr, size_t* psize)
     }
 
 
-  /*@c:\\Dokumente und Einstellungen\\Kodi\\Eigene Dateien\\kiki\\win32-vc\\deps\\swigwin-1.3.25\\Lib\\python\\pymacros.swg,66,SWIG_define@*/
+  /*@c:\\Dokumente und Einstellungen\\kodi\\Eigene Dateien\\projects\\kiki\\win32-vc\\deps\\swigwin-1.3.25\\Lib\\python\\pymacros.swg,66,SWIG_define@*/
 #define SWIG_From_long PyInt_FromLong
 /*@@*/
 
@@ -1812,11 +1812,11 @@ SWIGINTERNINLINE PyObject*
 
 
 #if UINT_MAX < LONG_MAX
-/*@c:\\Dokumente und Einstellungen\\Kodi\\Eigene Dateien\\kiki\\win32-vc\\deps\\swigwin-1.3.25\\Lib\\python\\pymacros.swg,66,SWIG_define@*/
+/*@c:\\Dokumente und Einstellungen\\kodi\\Eigene Dateien\\projects\\kiki\\win32-vc\\deps\\swigwin-1.3.25\\Lib\\python\\pymacros.swg,66,SWIG_define@*/
 #define SWIG_From_unsigned_SS_int SWIG_From_long
 /*@@*/
 #else
-/*@c:\\Dokumente und Einstellungen\\Kodi\\Eigene Dateien\\kiki\\win32-vc\\deps\\swigwin-1.3.25\\Lib\\python\\pymacros.swg,66,SWIG_define@*/
+/*@c:\\Dokumente und Einstellungen\\kodi\\Eigene Dateien\\projects\\kiki\\win32-vc\\deps\\swigwin-1.3.25\\Lib\\python\\pymacros.swg,66,SWIG_define@*/
 #define SWIG_From_unsigned_SS_int SWIG_From_unsigned_SS_long
 /*@@*/
 #endif

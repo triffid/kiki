@@ -77,7 +77,7 @@ bool KKeyActionHandler::setSequenceCallback ( const std::string sequence, KObjec
         KConsole::printError(errorMessage, true);
         return false;
 #else
-		KConsole::printf("There is already an action bound\nto the key sequence %s (or any prefix of it)",
+		KConsole::printf("[WARNING] There is already an action bound\nto the key sequence %s (or any prefix of it)",
              sequence.c_str());
 #endif
     }

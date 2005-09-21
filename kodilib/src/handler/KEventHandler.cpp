@@ -103,7 +103,7 @@ void KEventHandler::display ()
         glEnable (GL_LIGHTING);
     }
     
-    KConsole::checkGLError();
+    //KConsole::checkGLError();
     
     glFinish();
     SDL_GL_SwapBuffers();
