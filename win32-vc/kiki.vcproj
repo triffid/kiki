@@ -89,7 +89,7 @@
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="TRUE"
 				UsePrecompiledHeader="0"
-				WarningLevel="3"
+				WarningLevel="1"
 				Detect64BitPortabilityProblems="TRUE"
 				DebugInformationFormat="0"/>
 			<Tool
@@ -111,7 +111,9 @@
 				Name="VCMIDLTool"/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="copy .\Release\kiki.exe .\bin"/>
+				CommandLine="copy .\Release\kiki.exe ..\
+copy .\kiki.py ..\py
+"/>
 			<Tool
 				Name="VCPreBuildEventTool"
 				CommandLine=".\deps\swigwin-1.3.25\swig.exe -c++ -python -I..\SWIG -globals kiki -o ..\SWIG\KikiPy_wrap.cpp KikiPy.i"/>

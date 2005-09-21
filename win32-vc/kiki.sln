@@ -1,6 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 8.00
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kiki", "kiki.vcproj", "{A48B4E31-BF32-4DA2-BCE4-9B01C09C8731}"
 	ProjectSection(ProjectDependencies) = postProject
+		{E4BD4AF1-A023-4000-8034-18B23D6005B5} = {E4BD4AF1-A023-4000-8034-18B23D6005B5}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kodilib", "..\kodilib\win32-vc\kodilib.vcproj", "{E4BD4AF1-A023-4000-8034-18B23D6005B5}"
