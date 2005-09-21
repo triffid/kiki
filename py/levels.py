@@ -35,9 +35,9 @@ def outro (index=0):
 
 level_list = [  "start", "steps", "move", "switch", "electro", # demo
                 "gold", "jump", "escape", "gears", # easy
-                "elevate", "bombs", "energy", "captured", # medium
+                "elevate", "bombs", "energy", "towers", # medium
                 "bridge", "stones", "grid", "rings", "bronze", # difficult
-                "hidden", "church", "strange", "columns", # tough
+                "hidden", "church", "captured", "strange", "columns", # tough
                 "mutants" ]
                 
 for levelName in level_list:

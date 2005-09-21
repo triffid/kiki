@@ -19,7 +19,9 @@ def levelSelection (level_index=-1, escapeAction=0):
         w = KikiPyWorld ()
         w.preview = true
         world.setCameraMode (world.CAMERA_FOLLOW)
+        print "display level %d" % index
         w.create (level_list[index])
+        print "level %d displayed" % index
         
     def nextLevel ():
         world.level_index += 1
@@ -32,8 +34,10 @@ def levelSelection (level_index=-1, escapeAction=0):
         if world.level_index < 0: 
             world.level_index = world.max_level_index
         displayLevel (world.level_index)
-
+    
     last_level = highscore.getLastFinishedLevel() + 1
+    
+    print "level selection %d last %d" % (level_index, last_level)
     
     if level_index >= 0:
         world.level_index = level_index
@@ -55,6 +59,7 @@ def levelSelection (level_index=-1, escapeAction=0):
     
     for index in range (last_level+1):
         item_text = "%d |%s" % (index+1, level_dict[level_list[index]]["intro"])
+        print "item_text"
         menu.addItem (item_text, once (lambda l=index: startLevel(l)))
 
     displayLevel (world.level_index)

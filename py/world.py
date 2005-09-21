@@ -239,6 +239,8 @@ class KikiPyWorld (KikiPyActionObject):
         
         world.getProjection().setPosition (KVector())
         
+        print "world create set min moves"
+        
         Controller.player.getStatus().setMinMoves (highscore.levelMinMoves (world.level_name))
         Controller.player.getStatus().setMoves (0)
 
