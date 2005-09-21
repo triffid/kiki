@@ -64,7 +64,7 @@ KikiBot::KikiBot () : KikiPushable ()
     addAction (new KikiAction (this, ACTION_JUMP,		"jump",			120));
     addAction (new KikiAction (this, ACTION_JUMP_FORWARD,	"jump forward", 	200));
     addAction (new KikiAction (this, ACTION_FALL_FORWARD,	"fall forward", 	200));
-    addAction (new KikiAction (this, ACTION_SHOOT,		"shoot", 		60, 												KikiAction::REPEAT));
+    addAction (new KikiAction (this, ACTION_SHOOT,		"shoot", 		200, 												KikiAction::REPEAT));
 
     getActionWithId (ACTION_FALL)->setDuration (120);
     addEventWithName ("died");
