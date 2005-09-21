@@ -1,4 +1,4 @@
-# level design by mrthoughtful
+# level design by Ben "mrthoughtful" Griffin
 
 # Should take not more than 90 moves.  
 #----------------------------------------------------- 
