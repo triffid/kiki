@@ -6,6 +6,7 @@ import types
 
 execfile(kikipy_path + "colors.py")
 execfile(kikipy_path + "action.py")
+execfile(kikipy_path + "lang.py")
 
 # .................................................................................................................
 #                                           KikiWorld Extensions
@@ -238,9 +239,7 @@ class KikiPyWorld (KikiPyActionObject):
                 Controller.player_status.show()
         
         world.getProjection().setPosition (KVector())
-        
-        print "world create set min moves"
-        
+
         Controller.player.getStatus().setMinMoves (highscore.levelMinMoves (world.level_name))
         Controller.player.getStatus().setMoves (0)
 
