@@ -8,7 +8,8 @@ level_dict["stones"] = {
                                         "to get to the exit,\nuse the stones",
                                         "to move a stone,\npress \"$key(push)\"\nwhile moving",
                                     ),
-                        "player":   {   "position":         (0,0,5),
+                        "player":   {   "position":         (0,-1,-1),
+                                        "orientation":      rotx90 * roty180,
                                     },
                         "exits":    [
                                         {

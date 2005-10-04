@@ -36,9 +36,7 @@ def levelSelection (level_index=-1, escapeAction=0):
         displayLevel (world.level_index)
     
     last_level = highscore.getLastFinishedLevel() + 1
-    
-    print "level selection %d last %d" % (level_index, last_level)
-    
+
     if level_index >= 0:
         world.level_index = level_index
     else:
@@ -46,7 +44,7 @@ def levelSelection (level_index=-1, escapeAction=0):
         
     world.max_level_index = last_level
     
-    menu = KikiColumnMenu (5, world.level_index)
+    menu = KikiColumnMenu (8, world.level_index)
     if escapeAction:
         menu.getEventWithName ("hide").addAction (escapeAction)
     else:

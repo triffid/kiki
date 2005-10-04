@@ -56,6 +56,8 @@ class KikiConfig (ConfigParser):
         elif section == "game":
             if option == "speed":
                 Controller.setSpeed (int(value))
+            elif option == "language":
+                Controller.language = value
         
     def set (self, section, option, value):
         """overwritten to allow spaces in option names"""        

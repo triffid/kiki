@@ -11,7 +11,8 @@ level_dict["move"] = {
                                         "to move a stone, press \"$key(push)\" while moving\n\n" + \
                                         "to shoot, press \"$key(shoot)\"",
                                     ),
-                        "player":   {   "coordinates":     (3,0,3),
+                        "player":   {   "coordinates":     (3,5,5),
+                                        "orientation":      roty180,
                                         "nostatus":         0,
                                     },
                         "exits":    [

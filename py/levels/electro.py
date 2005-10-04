@@ -8,7 +8,8 @@ level_dict["electro"] = {
                                         "to activate the exit\nfeed it with electricity:\n\n" + \
                                         "connect the generator\nwith the motor",
                                     ),
-                        "player":   {   "position":         (4,0,4),
+                        "player":   {   "coordinates":         (2,0,4),
+                                        "orientation":      rotz180,
                                         "nostatus":         0,
                                     },
                         "exits":    [

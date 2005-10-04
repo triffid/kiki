@@ -1,13 +1,14 @@
 # .................................................................................................................
-level_dict["bombs"] = {   
-                        "scheme":   "red_scheme",
+level_dict["grenade"] = {   
+                        "scheme":   "blue_scheme",
                         "size":     (9,9,9),    
-                        "intro":    "bombs", 
+                        "intro":    "grenade", 
                         "help":     ( 
                                         "$scale(1.5)mission:\nget to the exit!\n\n" + \
-                                        "to get to the exit,\nuse the bombs",
+                                        "to get to the exit,\nuse the bombs\n\n" + \
+                                        "tip: use 1-9 keys to\nadjust the game speed",
                                     ),
-                        "player":   {   "position":         (0,-4,0),
+                        "player":   {   "position":   (0,-4,0),
                                     },
                         "exits":    [
                                         {
@@ -18,8 +19,7 @@ level_dict["bombs"] = {
                                     ],
                         "create":
 """
-world.addObjectAtPos (KikiBomb(), world.decenter (0,-4,2))
-world.addObjectAtPos (KikiBomb(), world.decenter (0,-4,-2))
-world.addObjectAtPos (KikiBomb(), world.decenter (-2,-2,0))
+world.addObjectAtPos (KikiBomb(), world.decenter (0,-3,-4))
+world.addObjectAtPos (KikiBomb(), world.decenter (0,-3,-3))
 """,                                 
 }

@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -*- encoding: utf-8 -*-
 
 if Controller.isDebugVersion(): print "[levels.py]"
 
@@ -10,11 +10,10 @@ def outro (index=0):
     outro_text = [  "$scale(1.5)congratulations!\n\n$scale(1)you rescued\nthe nano world!\n\n" +
                 "the last dumb mutant bot\nhas been destroyed.\n\nthe maker is functioning again.\n" + 
                 "kiki will go now\nand see all his new friends.\n\nyou should maybe\ndo the same?",
-                "the maker want's to thank you!\n\n(btw.: you thought\nyou didn't see\nkiki's maker in the game?\n" +
+                "the maker wants to thank you!\n\n(btw.: you thought\nyou didn't see\nkiki's maker in the game?\n" +
                 "you are wrong!\nyou saw him\nall the time,\nbecause kiki\nlives inside him!)\n\n$scale(1.5)the end", 
-                "p.s.: the maker of the game\nwants to thank you as well!\n\n(i am sorry\nthat there are not\n" +
-                "more levels yet\nand i hope you didn't cheat ;-)\n\ni definitely want your feedback:\n" + 
-                "please send me a mail (monsterkodi@gmx.net)\nwith your experiences,\n" +
+                "p.s.: the maker of the game\nwants to thank you as well!\n\ni definitely want your feedback:\n" + 
+                "please send me a mail (monsterkodi@users.sf.net)\nwith your experiences,\n" +
                 "which levels you liked, etc.\n\nthanks in advance and have a nice day,\n\nyours kodi" ]
     
     more_text = index < len(outro_text)-1
@@ -36,10 +35,13 @@ def outro (index=0):
 level_list = [  "start", "steps", "move", "switch", "electro", # demo
                 "gold", "jump", "escape", "gears", # easy
                 "elevate", "bombs", "energy", "towers", # medium
-                "bridge", "stones", "grid", "rings", "bronze", # difficult
-                "hidden", "church", "captured", "strange", "columns", # tough
-                "mutants" ]
+                "bridge", "stones", "grid", "rings", "bronze", "grenade", # difficult
+                "core", "hidden", "church", "strange", "columns", "captured", # tough 
+		"gamma", "borg", "cube", # easy
+		"maze", "random", "julia", #medium
+		"juliette", #harder
+		"machine", "neutron", "nice", #real hard
+		"mutants"                ]
                 
 for levelName in level_list:
-    print "adding " + levelName
     execfile (kikipy_path + os.path.sep + "levels" + os.path.sep + levelName + ".py")

@@ -32,10 +32,14 @@ class KikiHighscore (ConfigParser):
     # ................................................................ minmoves for level
     def levelMinMoves (self, level_name):
         """reads minimal number of moves for level level_num from highscore file"""
-        print "levelMinMoves %s" % level_name
-        min_moves = int (self.get (level_name, "moves"))
-        print str((min_moves, level_name))
-        return min_moves
+        if not self.has_section (level_name):
+            self.add_section (level_name)
+        if self.has_option(level_name, "moves"):    
+            min_moves = int (self.get (level_name, "moves"))
+            return min_moves
+        else:
+          self.set (level_name, "moves", "1000")
+          return 1000
                         
     # ................................................................ finish level
     def levelFinished (self, level_name, moves):

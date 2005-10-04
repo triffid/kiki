@@ -9,7 +9,7 @@ def quickKeySetup (item_index = 0, escapeAction=0):
     
     menu = KikiMenu (item_index)    
     
-    action_names = ["$no_itemkeyboard setup", "$no_item",
+    action_names = ["$no_itemkeyboard setup", "$no_item", 
                     "move forward", 
                     "move backward", 
                     "turn left", 
@@ -88,33 +88,38 @@ def quickSetup (itemIndex = 0, escapeAction=0):
         if callable (option):
             option_func = option
         else:
-            if option == "mute":
+            if option == "language":
                 itemIndex = 2
+                langIndex = lang_list.index(Controller.language) + 1
+                if langIndex >= len(lang_list): langIndex = 0
+                option_func = lambda: config.apply ("game", "language", lang_list[langIndex])
+            elif option == "mute":
+                itemIndex = 3
                 option_func = lambda: config.apply ("sound", "mute", not Controller.sound.isMute())
             elif option == "volume":
-                itemIndex = 3
+                itemIndex = 4
                 volume = sound.getSoundVolume() / (128/9) + 1
                 if volume > 10: volume = 1
                 option_func = lambda: config.apply ("sound", "volume", volume)   
             elif option == "fullscreen":
-                itemIndex = 4
+                itemIndex = 5
                 option_func = lambda: config.apply ("display", "fullscreen", not Controller.getFullscreen())
             elif option == "fov":
-                itemIndex = 5
+                itemIndex = 6
                 fov = int (Controller.world.getProjection().getFov()) + 10
                 if fov > 120: fov = 60
                 option_func = lambda: config.apply ("display", "fov", fov)
             elif option == "gamma":
-                itemIndex = 6
+                itemIndex = 7
                 gamma = Controller.getGamma() + 1
                 if gamma > 10: gamma = 0
                 option_func = lambda: config.apply ("display", "gamma", gamma)
             elif option == "speed":
-                itemIndex = 7
+                itemIndex = 8
                 speed = Controller.getSpeed() + 1
                 if speed > 10: speed = 1
                 option_func = lambda: config.apply ("game", "speed", speed)
-
+            
         menu_func = lambda i=itemIndex: quickSetup (i, escapeAction)
 
         return once (lambda f=option_func, m=menu_func: (f() or true) and m())
@@ -122,12 +127,13 @@ def quickSetup (itemIndex = 0, escapeAction=0):
     menu.addItem ("$no_item" + Controller.getLocalizedString ("setup"))
     menu.addItem ("$no_item")
 
+    menu.addItem (Controller.getLocalizedString ("language") + ": |" + Controller.language, setupOption ("language"))
     menu.addItem (Controller.getLocalizedString ("sound") + ": |" + (sound.isMute() and Controller.getLocalizedString ("off") or Controller.getLocalizedString ("on")), setupOption ("mute"))
-    menu.addItem (Controller.getLocalizedString ("volume") + ": |%d" % (int (sound.getSoundVolume()/(128/9)), ), setupOption ("volume"))
+    menu.addItem (Controller.getLocalizedString ("volume") + ": |%d" % (int (sound.getSoundVolume()/(128/9)),), setupOption ("volume"))
     menu.addItem (Controller.getLocalizedString ("fullscreen") + ": |" + (Controller.getFullscreen() and Controller.getLocalizedString ("on") or Controller.getLocalizedString ("off")), setupOption ("fullscreen"))        
-    menu.addItem (Controller.getLocalizedString ("fov") + ": |%d" % (int (Controller.world.getProjection().getFov()), ), setupOption ("fov"))        
-    menu.addItem ("gamma: |%d" % (int (Controller.getGamma()), ), setupOption ("gamma"))
-    menu.addItem (Controller.getLocalizedString ("speed") + ": |%d" % (Controller.getSpeed(), ), setupOption ("speed"))
+    menu.addItem (Controller.getLocalizedString ("fov") + ": |%d" % (int (Controller.world.getProjection().getFov()),), setupOption ("fov"))        
+    menu.addItem ("gamma: |%d" % (int (Controller.getGamma()),), setupOption ("gamma"))
+    menu.addItem (Controller.getLocalizedString ("speed") + ": |%d" % (Controller.getSpeed(),), setupOption ("speed"))
 
     if escapeAction:
         menu.getEventWithName ("hide").addAction (once (escapeAction))
