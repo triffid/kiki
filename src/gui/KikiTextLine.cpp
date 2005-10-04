@@ -39,7 +39,7 @@ void KikiTextLine::addCharacter ( char c )
     
     width += character_spacing;
     newCharacter->setPosition(KVector(width, 0.0, 0.0));
-    width += newCharacter->getWidth();   
+    width += newCharacter->getWidth();
 }
 
 // __________________________________________________________________________________________________
@@ -63,7 +63,8 @@ void KikiTextLine::setText ( const std::string & str )
         }
         else
         {
-            addCharacter (text[i]);
+			if (text[i] != -61)
+				addCharacter (text[i]);
         }
     }
 }

@@ -17,6 +17,7 @@ class KikiMenuItem
     KikiMenuItem ();
     
     bool ignore;
+	bool option;
     KikiTextLine * 	item_text;
     KikiTextLine * 	value_text;
     std::string		event_name;
@@ -35,6 +36,7 @@ class KikiMenu : public KikiScreenText
     
     // ........................................................................ menu items
     virtual void addItem	( const std::string & itemText, KikiAction * action = 0 );    
+	virtual void addOption	( const std::string & itemText, KikiAction * action = 0 );    
 
     // ........................................................................ 
     void	display		();

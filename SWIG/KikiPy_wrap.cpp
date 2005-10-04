@@ -11053,6 +11053,140 @@ static PyObject *_wrap_KikiMenu_addItem(PyObject *self, PyObject *args) {
 }
 
 
+static PyObject *_wrap_KikiMenu_addOption__SWIG_0(PyObject *, PyObject *args) {
+    PyObject *resultobj = NULL;
+    KikiMenu *arg1 = (KikiMenu *) 0 ;
+    std::string *arg2 = 0 ;
+    KikiAction *arg3 = (KikiAction *) 0 ;
+    int res2 = 0 ;
+    PyObject * obj0 = 0 ;
+    PyObject * obj1 = 0 ;
+    PyObject * obj2 = 0 ;
+    
+    if(!PyArg_ParseTuple(args,(char *)"OOO:KikiMenu_addOption",&obj0,&obj1,&obj2)) goto fail;
+    SWIG_Python_ConvertPtr(obj0, (void **)&arg1, SWIGTYPE_p_KikiMenu, SWIG_POINTER_EXCEPTION | 0);
+    if (SWIG_arg_fail(1)) SWIG_fail;
+    {
+        std::string *ptr = (std::string *)0;
+        res2 = SWIG_AsPtr_std_string(obj1, &ptr);
+        if (!res2) {
+            if (!PyErr_Occurred())
+            SWIG_type_error("std::string", obj1);
+        } else if (!ptr) {
+            SWIG_null_ref("std::string");
+        }
+        if (SWIG_arg_fail(2)) SWIG_fail;
+        arg2 = ptr;
+    }
+    SWIG_Python_ConvertPtr(obj2, (void **)&arg3, SWIGTYPE_p_KikiAction, SWIG_POINTER_EXCEPTION | 0);
+    if (SWIG_arg_fail(3)) SWIG_fail;
+    (arg1)->addOption((std::string const &)*arg2,arg3);
+    
+    Py_INCREF(Py_None); resultobj = Py_None;
+    if (res2 == SWIG_NEWOBJ) delete arg2;
+    return resultobj;
+    fail:
+    if (res2 == SWIG_NEWOBJ) delete arg2;
+    return NULL;
+}
+
+
+static PyObject *_wrap_KikiMenu_addOption__SWIG_1(PyObject *, PyObject *args) {
+    PyObject *resultobj = NULL;
+    KikiMenu *arg1 = (KikiMenu *) 0 ;
+    std::string *arg2 = 0 ;
+    int res2 = 0 ;
+    PyObject * obj0 = 0 ;
+    PyObject * obj1 = 0 ;
+    
+    if(!PyArg_ParseTuple(args,(char *)"OO:KikiMenu_addOption",&obj0,&obj1)) goto fail;
+    SWIG_Python_ConvertPtr(obj0, (void **)&arg1, SWIGTYPE_p_KikiMenu, SWIG_POINTER_EXCEPTION | 0);
+    if (SWIG_arg_fail(1)) SWIG_fail;
+    {
+        std::string *ptr = (std::string *)0;
+        res2 = SWIG_AsPtr_std_string(obj1, &ptr);
+        if (!res2) {
+            if (!PyErr_Occurred())
+            SWIG_type_error("std::string", obj1);
+        } else if (!ptr) {
+            SWIG_null_ref("std::string");
+        }
+        if (SWIG_arg_fail(2)) SWIG_fail;
+        arg2 = ptr;
+    }
+    (arg1)->addOption((std::string const &)*arg2);
+    
+    Py_INCREF(Py_None); resultobj = Py_None;
+    if (res2 == SWIG_NEWOBJ) delete arg2;
+    return resultobj;
+    fail:
+    if (res2 == SWIG_NEWOBJ) delete arg2;
+    return NULL;
+}
+
+
+static PyObject *_wrap_KikiMenu_addOption(PyObject *self, PyObject *args) {
+    int argc;
+    PyObject *argv[4];
+    int ii;
+    
+    argc = PyObject_Length(args);
+    for (ii = 0; (ii < argc) && (ii < 3); ii++) {
+        argv[ii] = PyTuple_GetItem(args,ii);
+    }
+    if (argc == 2) {
+        int _v;
+        {
+            void *ptr;
+            if (SWIG_ConvertPtr(argv[0], &ptr, SWIGTYPE_p_KikiMenu, 0) == -1) {
+                _v = 0;
+                PyErr_Clear();
+            } else {
+                _v = 1;
+            }
+        }
+        if (_v) {
+            _v = SWIG_AsPtr_std_string(argv[1], (std::string**)(0));
+            if (_v) {
+                return _wrap_KikiMenu_addOption__SWIG_1(self,args);
+            }
+        }
+    }
+    if (argc == 3) {
+        int _v;
+        {
+            void *ptr;
+            if (SWIG_ConvertPtr(argv[0], &ptr, SWIGTYPE_p_KikiMenu, 0) == -1) {
+                _v = 0;
+                PyErr_Clear();
+            } else {
+                _v = 1;
+            }
+        }
+        if (_v) {
+            _v = SWIG_AsPtr_std_string(argv[1], (std::string**)(0));
+            if (_v) {
+                {
+                    void *ptr;
+                    if (SWIG_ConvertPtr(argv[2], &ptr, SWIGTYPE_p_KikiAction, 0) == -1) {
+                        _v = 0;
+                        PyErr_Clear();
+                    } else {
+                        _v = 1;
+                    }
+                }
+                if (_v) {
+                    return _wrap_KikiMenu_addOption__SWIG_0(self,args);
+                }
+            }
+        }
+    }
+    
+    PyErr_SetString(PyExc_NotImplementedError,"No matching function for overloaded 'KikiMenu_addOption'");
+    return NULL;
+}
+
+
 static PyObject *_wrap_KikiMenu_setEscapeActive__SWIG_0(PyObject *, PyObject *args) {
     PyObject *resultobj = NULL;
     KikiMenu *arg1 = (KikiMenu *) 0 ;
@@ -12001,6 +12135,23 @@ static PyObject *_wrap_KikiGear_setActive(PyObject *self, PyObject *args) {
 }
 
 
+static PyObject *_wrap_KikiGear_updateActive(PyObject *, PyObject *args) {
+    PyObject *resultobj = NULL;
+    KikiGear *arg1 = (KikiGear *) 0 ;
+    PyObject * obj0 = 0 ;
+    
+    if(!PyArg_ParseTuple(args,(char *)"O:KikiGear_updateActive",&obj0)) goto fail;
+    SWIG_Python_ConvertPtr(obj0, (void **)&arg1, SWIGTYPE_p_KikiGear, SWIG_POINTER_EXCEPTION | 0);
+    if (SWIG_arg_fail(1)) SWIG_fail;
+    (arg1)->updateActive();
+    
+    Py_INCREF(Py_None); resultobj = Py_None;
+    return resultobj;
+    fail:
+    return NULL;
+}
+
+
 static PyObject *_wrap_KikiGear_setObjectColor(PyObject *, PyObject *args) {
     PyObject *resultobj = NULL;
     char *arg1 = (char *) 0 ;
@@ -12816,7 +12967,49 @@ static PyObject *_wrap_kikiObjectToCellText(PyObject *, PyObject *args) {
 }
 
 
-static PyObject *_wrap_new_KikiStone(PyObject *, PyObject *args) {
+static PyObject *_wrap_new_KikiStone__SWIG_0(PyObject *, PyObject *args) {
+    PyObject *resultobj = NULL;
+    KColor *arg1 = (KColor *) 0 ;
+    bool arg2 ;
+    KikiStone *result;
+    PyObject * obj0 = 0 ;
+    PyObject * obj1 = 0 ;
+    
+    if(!PyArg_ParseTuple(args,(char *)"OO:new_KikiStone",&obj0,&obj1)) goto fail;
+    SWIG_Python_ConvertPtr(obj0, (void **)&arg1, SWIGTYPE_p_KColor, SWIG_POINTER_EXCEPTION | 0);
+    if (SWIG_arg_fail(1)) SWIG_fail;
+    {
+        arg2 = (bool)(SWIG_As_bool(obj1)); 
+        if (SWIG_arg_fail(2)) SWIG_fail;
+    }
+    result = (KikiStone *)new KikiStone(arg1,arg2);
+    
+    resultobj = SWIG_NewPointerObj((void*)(result), SWIGTYPE_p_KikiStone, 1);
+    return resultobj;
+    fail:
+    return NULL;
+}
+
+
+static PyObject *_wrap_new_KikiStone__SWIG_1(PyObject *, PyObject *args) {
+    PyObject *resultobj = NULL;
+    KColor *arg1 = (KColor *) 0 ;
+    KikiStone *result;
+    PyObject * obj0 = 0 ;
+    
+    if(!PyArg_ParseTuple(args,(char *)"O:new_KikiStone",&obj0)) goto fail;
+    SWIG_Python_ConvertPtr(obj0, (void **)&arg1, SWIGTYPE_p_KColor, SWIG_POINTER_EXCEPTION | 0);
+    if (SWIG_arg_fail(1)) SWIG_fail;
+    result = (KikiStone *)new KikiStone(arg1);
+    
+    resultobj = SWIG_NewPointerObj((void*)(result), SWIGTYPE_p_KikiStone, 1);
+    return resultobj;
+    fail:
+    return NULL;
+}
+
+
+static PyObject *_wrap_new_KikiStone__SWIG_2(PyObject *, PyObject *args) {
     PyObject *resultobj = NULL;
     KikiStone *result;
     
@@ -12826,6 +13019,57 @@ static PyObject *_wrap_new_KikiStone(PyObject *, PyObject *args) {
     resultobj = SWIG_NewPointerObj((void*)(result), SWIGTYPE_p_KikiStone, 1);
     return resultobj;
     fail:
+    return NULL;
+}
+
+
+static PyObject *_wrap_new_KikiStone(PyObject *self, PyObject *args) {
+    int argc;
+    PyObject *argv[3];
+    int ii;
+    
+    argc = PyObject_Length(args);
+    for (ii = 0; (ii < argc) && (ii < 2); ii++) {
+        argv[ii] = PyTuple_GetItem(args,ii);
+    }
+    if (argc == 0) {
+        return _wrap_new_KikiStone__SWIG_2(self,args);
+    }
+    if (argc == 1) {
+        int _v;
+        {
+            void *ptr;
+            if (SWIG_ConvertPtr(argv[0], &ptr, SWIGTYPE_p_KColor, 0) == -1) {
+                _v = 0;
+                PyErr_Clear();
+            } else {
+                _v = 1;
+            }
+        }
+        if (_v) {
+            return _wrap_new_KikiStone__SWIG_1(self,args);
+        }
+    }
+    if (argc == 2) {
+        int _v;
+        {
+            void *ptr;
+            if (SWIG_ConvertPtr(argv[0], &ptr, SWIGTYPE_p_KColor, 0) == -1) {
+                _v = 0;
+                PyErr_Clear();
+            } else {
+                _v = 1;
+            }
+        }
+        if (_v) {
+            _v = SWIG_Check_bool(argv[1]);
+            if (_v) {
+                return _wrap_new_KikiStone__SWIG_0(self,args);
+            }
+        }
+    }
+    
+    PyErr_SetString(PyExc_NotImplementedError,"No matching function for overloaded 'new_KikiStone'");
     return NULL;
 }
 
@@ -14795,6 +15039,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"KikiScreenText_swigregister", KikiScreenText_swigregister, METH_VARARGS, NULL},
 	 { (char *)"new_KikiMenu", _wrap_new_KikiMenu, METH_VARARGS, NULL},
 	 { (char *)"KikiMenu_addItem", _wrap_KikiMenu_addItem, METH_VARARGS, NULL},
+	 { (char *)"KikiMenu_addOption", _wrap_KikiMenu_addOption, METH_VARARGS, NULL},
 	 { (char *)"KikiMenu_setEscapeActive", _wrap_KikiMenu_setEscapeActive, METH_VARARGS, NULL},
 	 { (char *)"KikiMenu_swigregister", KikiMenu_swigregister, METH_VARARGS, NULL},
 	 { (char *)"new_KikiScrollMenu", _wrap_new_KikiScrollMenu, METH_VARARGS, NULL},
@@ -14812,6 +15057,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"kikiObjectToWire", _wrap_kikiObjectToWire, METH_VARARGS, NULL},
 	 { (char *)"new_KikiGear", _wrap_new_KikiGear, METH_VARARGS, NULL},
 	 { (char *)"KikiGear_setActive", _wrap_KikiGear_setActive, METH_VARARGS, NULL},
+	 { (char *)"KikiGear_updateActive", _wrap_KikiGear_updateActive, METH_VARARGS, NULL},
 	 { (char *)"KikiGear_setObjectColor", _wrap_KikiGear_setObjectColor, METH_VARARGS, NULL},
 	 { (char *)"KikiGear_swigregister", KikiGear_swigregister, METH_VARARGS, NULL},
 	 { (char *)"kikiObjectToGear", _wrap_kikiObjectToGear, METH_VARARGS, NULL},

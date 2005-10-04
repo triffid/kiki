@@ -21,7 +21,7 @@
 				Name="VCCLCompilerTool"
 				AdditionalOptions="/D &quot;_USE_MATH_DEFINES&quot;"
 				Optimization="0"
-				AdditionalIncludeDirectories="C:\Python\include;&quot;..\SDL_mixer-1.2.6\include&quot;;&quot;..\SDL-1.2.9\include&quot;;..\;..\kodilib\src\windows;..\kodilib\src\widgets;..\kodilib\src\types;..\kodilib\src\tools;..\kodilib\src\handler;..\src\world;..\src\sound;..\src\main;..\src\items;..\src\gui;..\src\bots;..\SWIG\;..\src\base"
+				AdditionalIncludeDirectories="C:\Python\include;&quot;.\deps\SDL_mixer-1.2.6\include&quot;;&quot;.\deps\SDL-1.2.9\include&quot;;.\deps\;..\kodilib\src\windows;..\kodilib\src\widgets;..\kodilib\src\types;..\kodilib\src\tools;..\kodilib\src\handler;..\src\world;..\src\sound;..\src\main;..\src\items;..\src\gui;..\src\bots;..\SWIG\;..\src\base"
 				PreprocessorDefinitions="_WIN32;WIN32;_DEBUG;DEBUG;_WINDOWS"
 				MinimalRebuild="FALSE"
 				BasicRuntimeChecks="3"
@@ -34,14 +34,14 @@
 				Name="VCCustomBuildTool"/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="python23_d.lib kodilib.lib SDL_image.lib SDL_mixer.lib SDLmain.lib SDL.lib glut32.lib"
+				AdditionalDependencies="python24_d.lib kodilib.lib SDL_image.lib SDL_mixer.lib SDLmain.lib SDL.lib glut32.lib"
 				OutputFile="$(OutDir)/kiki.exe"
 				LinkIncremental="2"
-				AdditionalLibraryDirectories="&quot;..\kodilib\win32-vc\Debug&quot;"
+				AdditionalLibraryDirectories=".\deps\GLUT;&quot;.\deps\SDL_mixer-1.2.6\lib&quot;;&quot;.\deps\SDL-1.2.9\lib&quot;;&quot;.\deps\SDL_image-1.2.4\lib&quot;;&quot;..\kodilib\win32-vc\Release&quot;;C:\Python\libs"
 				IgnoreAllDefaultLibraries="FALSE"
 				IgnoreDefaultLibraryNames=""
 				GenerateDebugInformation="TRUE"
-				ProgramDatabaseFile="$(OutDir)/kiki.pdb"
+				ProgramDatabaseFile="$(OutDir)/$(ProjectName).pdb"
 				SubSystem="2"
 				TargetMachine="1"/>
 			<Tool
@@ -51,7 +51,7 @@
 			<Tool
 				Name="VCPreBuildEventTool"
 				Description="swigging"
-				CommandLine="&quot;C:\Dokumente und Einstellungen\Kodi\Eigene Dateien\Tools\swigwin-1.3.25\swig.exe&quot; -c++ -python -I..\SWIG -globals kiki -o ..\SWIG\KikiPy_wrap.cpp KikiPy.i"/>
+				CommandLine=".\deps\swigwin-1.3.25\swig.exe -c++ -python -DDEBUG -I..\SWIG -globals kiki -o ..\SWIG\KikiPy_wrap.cpp KikiPy.i"/>
 			<Tool
 				Name="VCPreLinkEventTool"/>
 			<Tool
@@ -626,14 +626,151 @@ copy .\kiki.py ..\py
 				RelativePath="..\py\obj.py">
 			</File>
 			<File
-				RelativePath="..\py\runkiki">
-			</File>
-			<File
 				RelativePath="..\py\setup.py">
 			</File>
 			<File
 				RelativePath="..\py\world.py">
 			</File>
+			<Filter
+				Name="levels"
+				Filter="">
+				<File
+					RelativePath="..\py\levels\bombs.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\borg.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\bridge.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\bronze.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\captured.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\chain.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\church.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\columns.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\core.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\daend.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\electro.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\electrobot.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\elevate.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\energy.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\escape.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\gears.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\glimmer.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\gold.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\grid.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\hidden.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\isotrop.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\julia.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\juliette.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\jump.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\michas.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\move.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\mutants.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\neutron.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\new1.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\nice.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\rings.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\start.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\steps.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\stones.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\strange.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\switch.py">
+				</File>
+				<File
+					RelativePath="..\py\levels\towers.py">
+				</File>
+			</Filter>
+			<Filter
+				Name="lang"
+				Filter="">
+				<File
+					RelativePath="..\py\lang\dutch.py">
+				</File>
+				<File
+					RelativePath="..\py\lang\english.py">
+				</File>
+				<File
+					RelativePath="..\py\lang\german.py">
+				</File>
+				<File
+					RelativePath="..\py\lang\portuguese.py">
+				</File>
+				<File
+					RelativePath="..\py\lang\spanish.py">
+				</File>
+				<File
+					RelativePath="..\py\lang\spanish_utf8.py">
+				</File>
+				<File
+					RelativePath="..\py\lang\swedish.py">
+				</File>
+			</Filter>
 		</Filter>
 	</Files>
 	<Globals>

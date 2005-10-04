@@ -869,6 +869,7 @@ class KikiMenu(KikiScreenText):
         _swig_setattr(self, KikiMenu, 'this', _kiki.new_KikiMenu(*args))
         _swig_setattr(self, KikiMenu, 'thisown', 1)
     def addItem(*args): return _kiki.KikiMenu_addItem(*args)
+    def addOption(*args): return _kiki.KikiMenu_addOption(*args)
     def setEscapeActive(*args): return _kiki.KikiMenu_setEscapeActive(*args)
 
 class KikiMenuPtr(KikiMenu):
@@ -1011,6 +1012,7 @@ class KikiGear(KikiObject,KikiFace):
         _swig_setattr(self, KikiGear, 'this', _kiki.new_KikiGear(*args))
         _swig_setattr(self, KikiGear, 'thisown', 1)
     def setActive(*args): return _kiki.KikiGear_setActive(*args)
+    def updateActive(*args): return _kiki.KikiGear_updateActive(*args)
     __swig_getmethods__["setObjectColor"] = lambda x: _kiki.KikiGear_setObjectColor
     if _newclass:setObjectColor = staticmethod(_kiki.KikiGear_setObjectColor)
 

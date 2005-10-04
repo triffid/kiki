@@ -29,6 +29,7 @@ class KikiMenu : public KikiScreenText
                 KikiMenu	( int selectedItem = -1 );
                 
     virtual void addItem	( const std::string & itemText, KikiAction * action = NULL );
+    virtual void addOption	( const std::string & itemText, KikiAction * action = NULL );
     void	setEscapeActive ( bool active = true );
 };
 

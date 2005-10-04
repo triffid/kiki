@@ -74,7 +74,7 @@
 				Name="VCCLCompilerTool"
 				AdditionalOptions="/D &quot;_USE_MATH_DEFINES&quot;"
 				Optimization="0"
-				AdditionalIncludeDirectories="&quot;..\..\SDL_image-1.2.4\include&quot;;&quot;..\..\SDL-1.2.9\include&quot;;..\..\;..\src\handler;..\src\tools;..\src\types;..\src\windows;..\src\widgets"
+				AdditionalIncludeDirectories="&quot;..\..\win32-vc\deps\SDL_image-1.2.4\include&quot;;&quot;..\..\win32-vc\deps\SDL-1.2.9\include&quot;;&quot;..\..\win32-vc\deps&quot;;..\src\handler;..\src\tools;..\src\types;..\src\windows;..\src\widgets"
 				PreprocessorDefinitions="_WIN32,WIN32,_DEBUG,_LIB"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"

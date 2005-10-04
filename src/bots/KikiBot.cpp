@@ -118,6 +118,12 @@ void KikiBot::reset ()
 }
 
 // __________________________________________________________________________________________________
+bool KikiBot::isFalling () const
+{
+	return (move_action && move_action->getId() == ACTION_FALL);
+}
+
+// __________________________________________________________________________________________________
 void KikiBot::initAction ( KikiAction * action )
 {
     KikiPos newPos (position);
@@ -130,11 +136,11 @@ void KikiBot::initAction ( KikiAction * action )
     	case ACTION_CLIMB_DOWN:		newPos += getDir() + getDown();	break;
     	case ACTION_JUMP:		newPos += getUp();		break;
     	case ACTION_JUMP_FORWARD:	newPos += getUp() + getDir();	break;
-	case ACTION_FALL_FORWARD:	newPos += getDown() + getDir();	break;
+	    case ACTION_FALL_FORWARD:	newPos += getDown() + getDir();	break;
     	case ACTION_FALL:		
             if (direction != KVector())
             {
-                KConsole::printf ("bot push fall direction [%f %f %f]", direction[X], direction[Y], direction[Z]);
+                //KConsole::printf ("bot push fall direction [%f %f %f]", direction[X], direction[Y], direction[Z]);
                 KikiPushable::initAction (action);
                 return;
             }
@@ -408,12 +414,16 @@ void KikiBot::actionFinished ( KikiAction * action )
             { // forward will be empty 
                 if (Controller.world->isOccupiedPos (position + getDir() - getUp()))
                 { // below forward is solid
-                    move_action = getActionWithId (ACTION_FORWARD);
+					KikiObject * occupant = Controller.world->getOccupantAtPos(position + getDir() - getUp());
+					if (occupant == NULL || !occupant->isSlippery())
+						move_action = getActionWithId (ACTION_FORWARD);
                 }
             }
             else
             {
-                move_action = getActionWithId (ACTION_CLIMB_UP);
+				KikiObject * occupant = Controller.world->getOccupantAtPos(position + getDir());
+				if (occupant == NULL || !occupant->isSlippery())
+					move_action = getActionWithId (ACTION_CLIMB_UP);
             }
         }
         
@@ -502,8 +512,6 @@ void KikiBot::moveBot ()
             else
             {
                 move_action = moveAction;
-                // pushing stones costs one energy point
-                // status->addEnergy (-0.01); 
             }
         }
         else // just climb up

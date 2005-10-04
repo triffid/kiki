@@ -31,6 +31,7 @@ class KikiBot : public KikiPushable
     
     virtual void	die		();
     bool		isDead		() const { return (status->getHealth() == 0.0); }
+	bool		isFalling   () const;
 
     void		renderBody	();
     virtual void	render		();

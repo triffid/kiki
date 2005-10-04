@@ -16,6 +16,7 @@
 KikiMenuItem::KikiMenuItem ()
 {
     ignore     = false;
+	option     = false;
     item_text  = NULL;
     value_text = NULL;
 }
@@ -109,6 +110,13 @@ void KikiMenu::addItem ( const std::string & itemText, KikiAction * itemAction )
 {  
     menu_items.push_back (newItem (itemText, itemAction));
     alignItems();
+}
+
+// __________________________________________________________________________________________________
+void KikiMenu::addOption ( const std::string & itemText, KikiAction * itemAction )
+{  
+	addItem (itemText, itemAction);
+	menu_items.back()->option = true;
 }
 
 // __________________________________________________________________________________________________
@@ -274,6 +282,17 @@ bool KikiMenu::handleKey ( const KKey & key )
             KEventHandler::removeFocusKeyHandler (this);
         }
     }
+	else if (keyName == "LEFT" || keyName == "RIGHT" )
+	{
+		if (menu_items[active_index]->option == true && menu_items[active_index]->ignore == false)
+		{
+			KConsole::print("left or right");
+            Controller.sound->playSound (KikiSound::MENU_SELECT);
+            getEventWithName (menu_items[active_index]->event_name)->triggerActions();
+            Controller.timer_event->addAction (getActionWithId (ACTION_DELETE));
+            KEventHandler::removeFocusKeyHandler (this);
+        }
+	}
     else if (keyName == "F1")
     {
         Controller.saveScreenShot();

@@ -552,10 +552,7 @@ bool KikiPlayer::handleKey ( const KKey & key )
             // forward or backward direction
             new_dir_sgn = dir_sgn = (key.getUnmodifiedName() == backward_key) ? -1 : 1; 
 
-            //if (spiked == false)
-            //{
-                moveBot(); // perform new move action (depending on environment)
-            //}
+            moveBot(); // perform new move action (depending on environment)
         }
         else
         {

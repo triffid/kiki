@@ -47,7 +47,6 @@ class KikiObject : public KObject, public KikiActionObject, public KNotification
     virtual void	preDisplay		();
     virtual void	display			();
     virtual void	postDisplay		();
-    
     virtual void	render 			() {}
 
     KikiPos		getPos			() const { return current_position; }
@@ -69,6 +68,8 @@ class KikiObject : public KObject, public KikiActionObject, public KNotification
     KQuaternion		getOrientation		() const { return orientation; }
     void		setCurrentOrientation	( const KQuaternion & q ) { current_orientation = q; }
     KQuaternion		getCurrentOrientation	() const { return current_orientation; }
+
+	virtual bool    isSlippery      () { return false; }
 
     protected: // ..................................................................... PROTECTED
 

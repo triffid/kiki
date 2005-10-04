@@ -41,6 +41,7 @@ class KikiGear : public KikiObject, public KikiFace
                         KikiGear	( int face = KikiFace::PZ );
 
     void		setActive	( bool active = true );
+    void   updateActive ();
 
     static void		setObjectColor	( const char * color_name, const KColor & color );
 };
@@ -150,7 +151,7 @@ class KikiCellText : public KikiObject, public KikiText
 class KikiStone : public KikiObject
 {
     public: // ........................................................................ PUBLIC
-                        KikiStone 	 ();
+                        KikiStone 	 (KColor * color = NULL, bool slippery = false);
 
     static void		setObjectColor	( const char * color_name, const KColor & color );
 };

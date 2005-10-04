@@ -88,7 +88,7 @@ KikiSound::KikiSound ()
     Mix_Volume (-1, sound_volume); // set the start volume
     
     // title song
-
+#ifndef _WINDOWS
     std::string song_path = kFileNativePath(Controller.getKikiHome() + "/sound/" + "title_song.mp3");
     Mix_Music * music = Mix_LoadMUS(song_path.c_str());
     if(!music) 
@@ -102,6 +102,7 @@ KikiSound::KikiSound ()
             KConsole::printf("unable to play title song: %s\n", Mix_GetError());
         }
     }
+#endif
 
     int soundIndex = 0;
     while (soundIndex < KikiSound::END)

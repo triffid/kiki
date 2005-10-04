@@ -167,21 +167,23 @@ KikiCharacter::KikiCharacter ( char c )
     }
     else if (c < 0)
     {
+		//KConsole::printf ("KikiCharacter::KikiCharacter character %c (%d)", c, c);
         switch (c)
         {
-            case -97:  character = 52; addon = 1; break; // Ÿ
-            case -100: character = 52; addon = 2; break; // œ
-            case -102: character = 46; addon = 1; break; // š
-            case -103: character = 46; addon = 4; break; // ™
-            case -105: character = 46; addon = 2; break; // —
-            case -106: character = 45; addon = 5; break; // –            
-            case -110: character = 40; addon = 2; break; // ’
-            case -114: character = 36; addon = 2; break; // 
-            case -115: character = 34; addon = 6; break; // 
-            case -116: character = 32; addon = 7; break; // Œ
-            case -117: character = 32; addon = 5; break; // ‹
-            case -118: character = 32; addon = 1; break; // Š
-            case -120: character = 32; addon = 3; break; // ˆ
+			case -68:  character = 52; addon = 1; break; // ü
+		    case -74:  character = 46; addon = 1; break; // ö
+			case -76:  character = 46; addon = 4; break; // ô
+		    case -77:  character = 46; addon = 2; break; // ó
+		    case -79:  character = 45; addon = 5; break; // ñ
+			case -83:  character = 40; addon = 2; break; // í
+			case -87:  character = 36; addon = 2; break; // é
+			case -89:  character = 34; addon = 6; break; // ç
+			case -91:  character = 32; addon = 7; break; // å
+		    case -92:  character = 32; addon = 1; break; // ä
+			case -93:  character = 32; addon = 5; break; // ã
+			case -95:  character = 32; addon = 2; break; // á
+			case -96:  character = 32; addon = 3; break; // à
+
             default:
                 KConsole::printf ("KikiCharacter::KikiCharacter unknown character %c (%d)", c, c);
                 break;

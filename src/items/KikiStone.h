@@ -15,9 +15,14 @@ class KikiStone : public KikiPushable
     
     public: // ........................................................................ PUBLIC
     
-                        KikiStone 	 	();
-    
-    virtual void	render			();
+                    KikiStone (KColor * c = NULL, bool slippery = false);
+                   ~KikiStone ();
+    virtual void	render	  ();
+
+	virtual bool    isSlippery() { return slippery; }
+
+	bool     slippery;
+	KColor * color;
 };
 
 #endif

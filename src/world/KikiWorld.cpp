@@ -361,7 +361,7 @@ void KikiWorld::setEditMode ( bool editMode )
     }
         
     edit_projection->focusOn (((KVector)size)/2.0);
-    edit_projection->setEyeDistance (max_distance);
+    edit_projection->setEyeDistance (max_distance*1.5);
 }
 
 // __________________________________________________________________________________________________
