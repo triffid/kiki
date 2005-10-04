@@ -1,3 +1,4 @@
+# level design by Michael Abel
 
 def supercube(point=(5,5,5),size=2,obj=KikiWall):	
 	p=point

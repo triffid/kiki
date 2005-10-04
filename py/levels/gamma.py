@@ -1,3 +1,4 @@
+# level design by Michael Abel
 
 schemes=[test_scheme, tron_scheme,candy_scheme, default_scheme,
     		green_scheme, yellow_scheme, blue_scheme, red_scheme, metal_scheme, bronze_scheme]
