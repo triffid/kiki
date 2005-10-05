@@ -869,7 +869,6 @@ class KikiMenu(KikiScreenText):
         _swig_setattr(self, KikiMenu, 'this', _kiki.new_KikiMenu(*args))
         _swig_setattr(self, KikiMenu, 'thisown', 1)
     def addItem(*args): return _kiki.KikiMenu_addItem(*args)
-    def addOption(*args): return _kiki.KikiMenu_addOption(*args)
     def setEscapeActive(*args): return _kiki.KikiMenu_setEscapeActive(*args)
 
 class KikiMenuPtr(KikiMenu):

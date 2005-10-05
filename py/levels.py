@@ -36,12 +36,12 @@ level_list = [  "start", "steps", "move", "switch", "electro", # demo
                 "gold", "jump", "escape", "gears", # easy
                 "elevate", "bombs", "energy", "towers", # medium
                 "bridge", "stones", "grid", "rings", "bronze", "grenade", # difficult
-                "core", "hidden", "church", "strange", "columns", "captured", # tough 
+                "core", "hidden", "church", "strange", "columns", "regal", "captured", # tough 
 		"gamma", "borg", "cube", # easy
 		"maze", "random", "julia", #medium
 		"juliette", #harder
 		"machine", "neutron", "nice", #real hard
-		"mutants"                ]
+		"mutants", "new1"                ]
                 
 for levelName in level_list:
     execfile (kikipy_path + os.path.sep + "levels" + os.path.sep + levelName + ".py")

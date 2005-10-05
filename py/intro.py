@@ -71,8 +71,8 @@ def display_main_menu ():
     
     m.addItem ("$no_item$scale(2)" + Controller.getLocalizedString ("kiki the nano bot"))
     m.addItem ("$no_item")
-    m.addItem (Controller.getLocalizedString ("new game"), once (lambda: KikiPyWorld().create (level_list[0])))
     m.addItem (Controller.getLocalizedString ("load level"), once (lambda a=main_menu_action: levelSelection (-1, a)))
+    m.addItem (Controller.getLocalizedString ("new game"), once (lambda: KikiPyWorld().create (level_list[0])))
     m.addItem (Controller.getLocalizedString ("setup"), once (lambda: quickSetup (0, display_main_menu)))
     m.addItem (Controller.getLocalizedString ("story"), once (display_story))
     #m.addItem (Controller.getLocalizedString ("demo"), once (display_demo))

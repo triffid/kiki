@@ -127,13 +127,13 @@ def quickSetup (itemIndex = 0, escapeAction=0):
     menu.addItem ("$no_item" + Controller.getLocalizedString ("setup"))
     menu.addItem ("$no_item")
 
-    menu.addItem (Controller.getLocalizedString ("language") + ": |" + Controller.language, setupOption ("language"))
-    menu.addItem (Controller.getLocalizedString ("sound") + ": |" + (sound.isMute() and Controller.getLocalizedString ("off") or Controller.getLocalizedString ("on")), setupOption ("mute"))
-    menu.addItem (Controller.getLocalizedString ("volume") + ": |%d" % (int (sound.getSoundVolume()/(128/9)),), setupOption ("volume"))
-    menu.addItem (Controller.getLocalizedString ("fullscreen") + ": |" + (Controller.getFullscreen() and Controller.getLocalizedString ("on") or Controller.getLocalizedString ("off")), setupOption ("fullscreen"))        
-    menu.addItem (Controller.getLocalizedString ("fov") + ": |%d" % (int (Controller.world.getProjection().getFov()),), setupOption ("fov"))        
-    menu.addItem ("gamma: |%d" % (int (Controller.getGamma()),), setupOption ("gamma"))
-    menu.addItem (Controller.getLocalizedString ("speed") + ": |%d" % (Controller.getSpeed(),), setupOption ("speed"))
+    menu.addItem (Controller.getLocalizedString ("language") + ": |" + Controller.language, setupOption ("language"), True)
+    menu.addItem (Controller.getLocalizedString ("sound") + ": |" + (sound.isMute() and Controller.getLocalizedString ("off") or Controller.getLocalizedString ("on")), setupOption ("mute"), True)
+    menu.addItem (Controller.getLocalizedString ("volume") + ": |%d" % (int (sound.getSoundVolume()/(128/9)),), setupOption ("volume"), True)
+    menu.addItem (Controller.getLocalizedString ("fullscreen") + ": |" + (Controller.getFullscreen() and Controller.getLocalizedString ("on") or Controller.getLocalizedString ("off")), setupOption ("fullscreen"), True)
+    menu.addItem (Controller.getLocalizedString ("fov") + ": |%d" % (int (Controller.world.getProjection().getFov()),), setupOption ("fov"), True)
+    menu.addItem ("gamma: |%d" % (int (Controller.getGamma()),), setupOption ("gamma"), True)
+    menu.addItem (Controller.getLocalizedString ("speed") + ": |%d" % (Controller.getSpeed(),), setupOption ("speed"), True)
 
     if escapeAction:
         menu.getEventWithName ("hide").addAction (once (escapeAction))

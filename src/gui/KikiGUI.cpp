@@ -37,7 +37,7 @@ void KikiGUI::init ()
 
     addMenuItem(new KSubMenuItem ("view", viewMenu));
 
-    viewMenu->addChild(item = new KStatusMenuItem ("hide python", "show python", "META_w"));
+    viewMenu->addChild(item = new KStatusMenuItem ("hide python", "show python", "p"));
     item->addReceiverCallback(Controller.python, (KSetBoolPtr)&KWindow::setVisibility );
     item->setProviderCallback(Controller.python, (KGetBoolPtr)&KWindow::getVisibility );
     
@@ -45,11 +45,11 @@ void KikiGUI::init ()
     item->addReceiverCallback(KConsole::getConsole(), (KSetBoolPtr)&KConsole::setVisibility );
     item->setProviderCallback(KConsole::getConsole(), (KGetBoolPtr)&KConsole::getVisibility );
 
-    viewMenu->addChild(item = new KStatusMenuItem ("hide shortcuts", "show shortcuts", "ALT_s"));
+    viewMenu->addChild(item = new KStatusMenuItem ("hide shortcuts", "show shortcuts", "s"));
     item->addReceiverCallback(this, (KSetBoolPtr)&KikiGUI::setShowShortCuts );
     item->setProviderCallback(this, (KGetBoolPtr)&KikiGUI::getShowShortCuts );
 
-    viewMenu->addChild(item = new KStatusMenuItem ("hide menu", "show menu", "ALT_m"));
+    viewMenu->addChild(item = new KStatusMenuItem ("hide menu", "show menu", "m"));
     item->addReceiverCallback(this, (KSetBoolPtr)&KikiGUI::setVisibility );
     item->setProviderCallback(this, (KGetBoolPtr)&KikiGUI::getVisibility );
 

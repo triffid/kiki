@@ -190,10 +190,10 @@ void KikiController::init ()
     python = kiki_python;
 
     // ........................................................ gui    
-    gui = new KikiGUI ();
-    addPickHandler(gui);
-    gui->init();
-    gui->hide();
+    //gui = new KikiGUI ();
+    //addPickHandler(gui);
+    //gui->init();
+    //gui->hide();
 
     world->init();
     projection_handler = world;
