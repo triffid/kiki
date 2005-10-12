@@ -1,0 +1,21 @@
+# alternate level_list
+# The list items may also be copied into the main level_list
+		
+		
+level_list = [  
+		"gamma", "borg", "cube", 	#easy
+		"maze", "random", "plate", 	#medium
+		"nice"				#harder
+		"machine", "neutron",	 	#real hard
+		
+		#"julia" renamed to plate
+		#"juliette" temporarily removed
+		
+		#new, beta Levels
+		
+		"entropy","pool","walls","mesh","sandbox",
+		"slick",	# introcduction into slcky stones
+		"flower" 	# second introduce to the slick stones
+		
+		#"barrier","edge","mini"  	#testing
+		]
