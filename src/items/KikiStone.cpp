@@ -37,7 +37,7 @@ void KikiStone::render ()
 		colors[KikiStone_base_color].glColor();
 	if (isSlippery())
 	{
-		float s = 0.38f;
+		float s = 0.48f;
 		float o = 0.5-(s+0.02f)/2;
 		glPushMatrix();
 		glTranslated(o, o, o);
