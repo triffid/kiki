@@ -53,7 +53,7 @@ lang['euskara'] = {
 
 # keyboard setup 
 
-"$no_itemkeyboard setup": "$no_itemteklak zehaztu" # don't translate $no_item
+"$no_itemkeyboard setup": "$no_itemteklak zehaztu", # don't translate $no_item
 "$no_item": "$no_item", # don't change this
 
 "move forward": "aurrera egin",
