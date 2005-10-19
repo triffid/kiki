@@ -5,7 +5,7 @@
 level_list = [  
 		"gamma", "borg", "cube", 	#easy
 		"maze", "random", "plate", 	#medium
-		"nice"				#harder
+		"nice",				#harder
 		"machine", "neutron",	 	#real hard
 		
 		#"julia" renamed to plate
@@ -15,7 +15,16 @@ level_list = [
 		
 		"entropy","pool","walls","mesh","sandbox",
 		"slick",	# introcduction into slcky stones
-		"flower" 	# second introduce to the slick stones
+		"flower", 	# second introduction into slicky stones
+		"mini"  ,	#easy, but nice
+		"green2",	#evil # moving stones on the ring should not be possible	
 		
-		#"barrier","edge","mini"  	#testing
+		#testing
+		
+		#"tetris",
+		"tetris2",	#just proof of concept, not really playable yet
+		#"barrier","edge",
+		#"lazy",
+		#"test"
+		
 		]
