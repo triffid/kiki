@@ -16,10 +16,10 @@ class KikiColumnMenu : public KikiMenu
     // ........................................................................ (con|de)struction
                 KikiColumnMenu	( int maxColumnItems = 10, int selectedItem = -1 );
     
+	virtual void alignItems ();
+
     protected: // ..................................................................... PROTECTED
-    
-    void	alignItems ();
-    
+       
     float	column_spacing;
     int 	max_column_items;
 };

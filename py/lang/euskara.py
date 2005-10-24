@@ -24,10 +24,10 @@ lang['euskara'] = {
 
 # about
 
-"version": "bertsioa:",
-"programmed by": "programatzailea:",
-"sounds from": "soinuak:",
-"thanks to": "eskerrak:",
+"version": "bertsioa",
+"programmed by": "programatzailea",
+"sounds from": "soinuak",
+"thanks": "eskerrak",
 "visit": "ikusi",
 "for more games": "joku gehiagorako",
 "main menu": "hautesleihoa",

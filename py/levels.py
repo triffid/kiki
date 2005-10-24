@@ -2,6 +2,18 @@
 
 if Controller.isDebugVersion(): print "[levels.py]"
 
+# .................................................................................................................
+
+level_list = ["start", "steps", "move", "switch", "electro", # intro
+              "gold", "jump", "escape", "gears", "gamma", "cube", # easy
+              "elevate", "bombs", "sandbox", "energy", "towers", "maze", "random", "plate", "entropy", "pool", # medium
+              "slick", "bridge", "flower", "stones", "walls", "grid", "rings", "core", "bronze", "mesh", # difficult
+              "hidden", "church", "strange", "nice", "columns", "machine", "neutron", "regal", "captured", "green", # tough 
+              "borg",
+             ]
+                   
+# .................................................................................................................
+
 level_dict = {}
 
 # .................................................................................................................
@@ -29,19 +41,8 @@ def outro (index=0):
         page.getEventWithName ("next").addAction (once (lambda i=index+1: outro (i)))
     if less_text:
         page.getEventWithName ("previous").addAction (once (lambda i=index-1: outro (i)))
-
-# .................................................................................................................
-
-level_list = [  "start", "steps", "move", "switch", "electro", # demo
-                "gold", "jump", "escape", "gears", # easy
-                "elevate", "bombs", "energy", "towers", # medium
-                "bridge", "stones", "grid", "rings", "bronze", "grenade", # difficult
-                "core", "hidden", "church", "strange", "columns", "regal", "captured", # tough 
-		"gamma", "borg", "cube", # easy
-		"maze", "random", "julia", #medium
-		"juliette", #harder
-		"machine", "neutron", "nice", #real hard
-		"mutants", "new1"                ]
-                
+               
+# import the levels
 for levelName in level_list:
     execfile (kikipy_path + os.path.sep + "levels" + os.path.sep + levelName + ".py")
+            

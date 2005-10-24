@@ -25,6 +25,7 @@ void KikiColumnMenu::alignItems ()
     
     float value_offset = 0.0;
     float value_width  = 0.0;
+	float extra_width  = 0.0;
     
     for (std::vector<KikiMenuItem*>::iterator iter = menu_items.begin(); iter != menu_items.end(); iter++)
     {
@@ -36,6 +37,10 @@ void KikiColumnMenu::alignItems ()
             value_offset = kMax ((*iter)->item_text->getWidth(), value_offset);
             value_width  = kMax ((*iter)->value_text->getWidth(), value_width);
         }
+        if ((*iter)->extra_text)
+        {
+            extra_width  = kMax ((*iter)->extra_text->getWidth(), extra_width);
+        }
     }
 
     if (value_offset == 0.0)
@@ -44,7 +49,7 @@ void KikiColumnMenu::alignItems ()
     }
     else
     {
-        width = kMax (width, value_offset + value_width);
+        width = kMax (width, value_offset + value_width + extra_width);
     }
     
     float 	currentHeight;
@@ -85,11 +90,12 @@ void KikiColumnMenu::alignItems ()
             if (menu_items[lineIndex]->value_text)
             {
                 menu_items[lineIndex]->item_text->setPosition
-                        (KVector (-column_width/2.0 + value_offset - 
-                                    menu_items[lineIndex]->item_text->getWidth() + column_offset, 
+                        (KVector (-column_width/2.0 + value_offset + column_offset - 
+                                    menu_items[lineIndex]->item_text->getWidth(), 
                                     yOffset, 0.0));
                 menu_items[lineIndex]->value_text->setPosition 
-                        (KVector (-column_width/2.0 + value_offset + column_offset, yOffset, 0.0));            
+                        (KVector (-column_width/2.0 + value_offset + column_offset, 
+									yOffset, 0.0));            
             }
             else
             {
@@ -109,6 +115,12 @@ void KikiColumnMenu::alignItems ()
                         (KVector (column_offset - column_width / 2.0 + value_offset, 
                                     yOffset, 0.0));
             }
+			if (menu_items[lineIndex]->extra_text)
+			{
+				menu_items[lineIndex]->extra_text->setPosition
+						(KVector (column_offset + column_width / 2.0 - extra_width, 
+                                    yOffset, 0.0));
+			}
         }
     }
 

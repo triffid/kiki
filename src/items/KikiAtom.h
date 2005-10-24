@@ -53,31 +53,6 @@ class KikiMovesAtom : public KikiAtom
 };
 
 // __________________________________________________________________________________________________
-#ifdef KIKI_OLD_STATUS
-class KikiHealthAtom : public KikiAtom
-{
-    KIKI_OBJECT_HEADER
-    
-    public: // ........................................................................ PUBLIC
-                        KikiHealthAtom	( int neutrons = 9 ) : KikiAtom (neutrons) {}
-    void		newCellMate	( KikiObject * object );
-    const KColor & 	getNucleusColor () { return colors[0]; }
-    const KColor & 	getNeutronColor () { return colors[1]; }
-};
-
-// __________________________________________________________________________________________________
-class KikiEnergyAtom : public KikiAtom
-{
-    KIKI_OBJECT_HEADER
-    
-    public: // ........................................................................ PUBLIC
-                        KikiEnergyAtom	( int neutrons = 9 ) : KikiAtom (neutrons) {}
-    void		newCellMate	( KikiObject * object );
-    const KColor & 	getNucleusColor () { return colors[0]; }
-    const KColor & 	getNeutronColor () { return colors[1]; }
-};
-#endif
-// __________________________________________________________________________________________________
 class KikiValueAtom : public KikiAtom
 {
     KIKI_OBJECT_HEADER

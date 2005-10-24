@@ -27,7 +27,7 @@ lang["swedish"] = {
 "version": "version",
 "programmed by": "skrivet av",
 "sounds from": "ljud från",
-"thanks to": "tack till",
+"thanks": "tack till",
 "visit": "besök",
 "for more games": "för fler spel",
 "main menu": "huvudmeny",

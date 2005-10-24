@@ -11,10 +11,6 @@
 class KikiBotStatus;
 class KikiCellText;
 class KikiMovesAtom;
-#ifdef KIKI_OLD_STATUS
-class KikiHealthAtom;
-class KikiEnergyAtom;
-#endif 
 
 // __________________________________________________________________________________________________
 class KikiStatusDisplay : public KPickHandler
@@ -23,13 +19,6 @@ class KikiStatusDisplay : public KPickHandler
 
     KikiMovesAtom *	moves_atom;
     KikiCellText *	moves_text;
-#ifdef KIKI_OLD_STATUS    
-    KikiHealthAtom *	health_atom;
-    KikiEnergyAtom *	energy_atom;
-
-    KikiCellText *	health_text;
-    KikiCellText *	energy_text;
-#endif    
     KikiBotStatus *	player_status;
     bool		visible;
 

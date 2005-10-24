@@ -20,6 +20,7 @@ class KikiMenuItem
 	bool option;
     KikiTextLine * 	item_text;
     KikiTextLine * 	value_text;
+	KikiTextLine *  extra_text;
     std::string		event_name;
     
     float	getWidth	() const;
@@ -36,25 +37,29 @@ class KikiMenu : public KikiScreenText
     
     // ........................................................................ menu items
     virtual void addItem	( const std::string & itemText, KikiAction * action = 0, bool option = false);
+	virtual KikiMenuItem * currentItem ();
+	virtual void setCurrentIndex (int index);
 
     // ........................................................................ 
     void	display		();
     void	performAction	( KikiAction * action );
     void	actionFinished	( KikiAction * action );
-    bool	handleKey	( const KKey & key );
+    virtual bool	handleKey	( const KKey & key );
     void	setEscapeActive ( bool active = true ) { escape_active = active; }
+    virtual void alignItems	();
+
+	bool    circular; 
 
     protected: // ..................................................................... PROTECTED
     
-    int				active_index;
     int				index_offset;
+	int				active_index;
     std::vector<KikiMenuItem*>	menu_items;
     bool			escape_active;
 
     KikiMenuItem * newItem	( const std::string & itemText, KikiAction * action = 0 );
     virtual void nextItem	();
     virtual void previousItem	();
-    virtual void alignItems	();
 };
 
 #endif

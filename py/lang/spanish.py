@@ -27,7 +27,7 @@ lang['spanish'] = {
 "version": "version",
 "programmed by": "programacion",
 "sounds from": "sonido",
-"thanks to": "agradecimientos",
+"thanks": "agradecimientos",
 "visit": "visita",
 "for more games": "mas juegos",
 "main menu": "menu principal",

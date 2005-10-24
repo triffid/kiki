@@ -18,7 +18,7 @@ class KikiTextLine
     
     KMatrix			matrix;
     std::vector<KikiCharacter*> characters;
-    std::string			text;
+    std::string		text;
     float			width;
     float			scale_factor;
 

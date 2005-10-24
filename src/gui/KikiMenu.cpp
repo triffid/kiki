@@ -13,45 +13,21 @@
 #include <KLightingProjection.h>
 
 // __________________________________________________________________________________________________
-KikiMenuItem::KikiMenuItem ()
-{
-    ignore     = false;
-	option     = false;
-    item_text  = NULL;
-    value_text = NULL;
-}
-
 // __________________________________________________________________________________________________
-float KikiMenuItem::getWidth () const
-{
-    float width = 0.0;
-    if (item_text) width += item_text->getWidth();
-    if (value_text) width += value_text->getWidth();
-    return width;
-}
 
-// __________________________________________________________________________________________________
-float KikiMenuItem::getHeight () const
-{
-    float height = 0.0;
-    if (item_text) height = item_text->getHeight();
-    if (value_text) height = kMax (value_text->getHeight(), height);
-    return height;
-}
-
-// __________________________________________________________________________________________________
 KikiMenu::KikiMenu ( int selectedItem ) : KikiScreenText ()
-{
-    active_index = selectedItem;
+{    
     index_offset = 0;
+	circular     = true;
 
-    if (selectedItem == -1) 
+    if (selectedItem < 0)
     {
+		active_index = 0;
         Controller.sound->playSound (KikiSound::MENU_FADE);
-        active_index = 0;
     }
     else
     {
+		active_index = selectedItem;
         getActionWithId (ACTION_SHOW)->setDuration (0);
         getActionWithId (ACTION_HIDE)->setDuration (0);
         fade_value = 1.0;
@@ -59,10 +35,18 @@ KikiMenu::KikiMenu ( int selectedItem ) : KikiScreenText ()
 
     addEventWithName ("next");
     addEventWithName ("previous");
+	addEventWithName ("changed");
     
     escape_active = true;
     
     show();
+}
+
+// __________________________________________________________________________________________________
+
+void KikiMenu::setCurrentIndex (int index)
+{
+	active_index = 0;
 }
 
 // __________________________________________________________________________________________________
@@ -96,12 +80,20 @@ KikiMenuItem * KikiMenu::newItem ( const std::string & itemText, KikiAction * it
         
     if ((pos = item_text.find ("|")) != std::string::npos)
     {
-        menu_item->value_text = new KikiTextLine (item_text.substr (pos+1, item_text.size()), scale_factor);
-        item_text.erase (pos, item_text.size());
+		std::string valueText(item_text.substr (pos+1, item_text.size()));
+		item_text.erase (pos, item_text.size());
+
+		if ((pos = valueText.find("|")) != std::string::npos)
+		{
+			menu_item->extra_text = new KikiTextLine (valueText.substr (pos+1, valueText.size()), scale_factor);
+			valueText.erase (pos, valueText.size());
+		}
+
+		menu_item->value_text = new KikiTextLine (valueText, scale_factor);    
     }
     
     menu_item->item_text = new KikiTextLine (item_text);
-    
+
     return menu_item;
 }
 
@@ -204,7 +196,7 @@ void KikiMenu::actionFinished ( KikiAction * action )
     {
         if (active_index >= 0)
         {
-            getEventWithName (menu_items[active_index]->event_name)->triggerActions();
+            getEventWithName (currentItem()->event_name)->triggerActions();
         }
         else
         {
@@ -223,7 +215,10 @@ void KikiMenu::nextItem ()
 {
     do
     {
-        active_index = (active_index + 1) % menu_items.size();
+		if (circular)
+			active_index = (active_index + 1) % menu_items.size();
+		else
+			active_index = kMin(active_index + 1, menu_items.size()-1);
     }
     while (menu_items[active_index]->ignore);
 }
@@ -233,8 +228,15 @@ void KikiMenu::previousItem ()
 {
     do
     {
-        if (active_index > 0) active_index--;
-        else active_index = (int)menu_items.size() - 1;
+		if (circular)
+		{
+			if (active_index > 0) active_index--;
+			else active_index = (int)menu_items.size() - 1;
+		}
+		else
+		{
+			active_index = kMax(active_index - 1, 0);
+		}
     }
     while (menu_items[active_index]->ignore);
 }
@@ -248,6 +250,7 @@ bool KikiMenu::handleKey ( const KKey & key )
     {
         nextItem ();
         getEventWithName ("next")->triggerActions();
+	    getEventWithName ("changed")->triggerActions();
         
         Controller.sound->playSound (KikiSound::MENU_ITEM);
     }
@@ -255,6 +258,7 @@ bool KikiMenu::handleKey ( const KKey & key )
     {
         previousItem ();
         getEventWithName ("previous")->triggerActions();
+		getEventWithName ("changed")->triggerActions();
         
         Controller.sound->playSound (KikiSound::MENU_ITEM);
     }
@@ -268,20 +272,20 @@ bool KikiMenu::handleKey ( const KKey & key )
     }
     else if (keyName == "RETURN" || keyName == "SPACE")
     {
-        if (menu_items[active_index]->ignore == false)
+		if (currentItem()->ignore == false)
         {
             Controller.sound->playSound (KikiSound::MENU_SELECT);
-            getEventWithName (menu_items[active_index]->event_name)->triggerActions();
+            getEventWithName (currentItem()->event_name)->triggerActions();
             Controller.timer_event->addAction (getActionWithId (ACTION_DELETE));
             KEventHandler::removeFocusKeyHandler (this);
         }
     }
 	else if (keyName == "RIGHT" )
 	{
-		if (menu_items[active_index]->option == true && menu_items[active_index]->ignore == false)
+		if (currentItem()->option == true && currentItem()->ignore == false)
 		{
             Controller.sound->playSound (KikiSound::MENU_SELECT);
-            getEventWithName (menu_items[active_index]->event_name)->triggerActions();
+            getEventWithName (currentItem()->event_name)->triggerActions();
             Controller.timer_event->addAction (getActionWithId (ACTION_DELETE));
             KEventHandler::removeFocusKeyHandler (this);
         }
@@ -362,6 +366,11 @@ void KikiMenu::display ()
                 KikiText::colors[list_color].glColor();
             }
             menu_items[index]->value_text->display();
+
+			if (menu_items[index]->extra_text)
+			{
+				menu_items[index]->extra_text->display();
+			}
         }
 
         if (index == active_index - index_offset)
@@ -371,3 +380,41 @@ void KikiMenu::display ()
     }
 }
 
+// __________________________________________________________________________________________________
+
+KikiMenuItem * KikiMenu::currentItem()
+{
+	if (active_index >= 0)
+		return menu_items[active_index];
+	return NULL;
+}
+
+// __________________________________________________________________________________________________
+// __________________________________________________________________________________________________
+
+KikiMenuItem::KikiMenuItem ()
+{
+    ignore     = false;
+	option     = false;
+    item_text  = NULL;
+    value_text = NULL;
+	extra_text = NULL;
+}
+
+// __________________________________________________________________________________________________
+float KikiMenuItem::getWidth () const
+{
+    float width = 0.0;
+    if (item_text) width += item_text->getWidth();
+    if (value_text) width += value_text->getWidth();
+    return width;
+}
+
+// __________________________________________________________________________________________________
+float KikiMenuItem::getHeight () const
+{
+    float height = 0.0;
+    if (item_text) height = item_text->getHeight();
+    if (value_text) height = kMax (value_text->getHeight(), height);
+    return height;
+}

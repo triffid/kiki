@@ -30,13 +30,24 @@ class KikiHighscore (ConfigParser):
         self.save ()
 
     # ................................................................ minmoves for level
-    def levelMinMoves (self, level_name):
-        """reads minimal number of moves for level level_num from highscore file"""
+    def levelUserMoves (self, level_name):
+        """reads users number of moves for level level_name from highscore file"""
         if not self.has_section (level_name):
             self.add_section (level_name)
-        if self.has_option(level_name, "moves"):    
-            min_moves = int (self.get (level_name, "moves"))
+        if self.has_option(level_name, getpass.getuser()):    
+            min_moves = int (self.get (level_name, getpass.getuser()))
             return min_moves
+        else:
+          return 0
+
+    # ................................................................ minmoves for level
+    def levelParMoves (self, level_name):
+        """reads par number of moves for level level_name from highscore file"""
+        if not self.has_section (level_name):
+            self.add_section (level_name)
+        if self.has_option(level_name, "moves"):
+            par_moves = int (self.get (level_name, "moves"))
+            return par_moves
         else:
           self.set (level_name, "moves", "1000")
           return 1000
@@ -46,12 +57,7 @@ class KikiHighscore (ConfigParser):
         """writes data for finished level to highscore file"""
         
         level_num = level_list.index(level_name)
-        
-        saved_level_num = self.getLastFinishedLevel()
-        
-        if saved_level_num < level_num and level_num < len(level_list)-1:
-            self.set ("main", "last_level", level_name)
-        
+                
         if not self.has_section (level_name):
             self.add_section (level_name)
         
@@ -62,12 +68,14 @@ class KikiHighscore (ConfigParser):
         else:
             self.set (level_name, "moves", str (int (moves)))
             
-        if self.has_option(level_name, getpass.getuser()):
+        if self.has_option(level_name, getpass.getuser()): # level already solved
             old_moves = int (self.get (level_name, getpass.getuser()))
             if moves < old_moves:
                 self.set (level_name, getpass.getuser(), str (int (moves)))
-        else:
+        else: # first time solved
             self.set (level_name, getpass.getuser(), str (int (moves)))
+            saved_level_num = self.getLastFinishedLevel()
+            self.set ("main", "last_level", level_list[min(saved_level_num+2, len(level_list)-1)])
         
         self.save ()
 

@@ -109,16 +109,6 @@ KikiWorld.setObjectRandom = setObjectRandom
 del setObjectRandom
 
 # .................................................................................................................
-def minimal (self):
-    """minimal world"""
-    applyColorScheme (default_scheme)
-    self.setSize (10,10,10)
-    self.init()
-    
-KikiWorld.minimal = minimal
-del minimal
-
-# .................................................................................................................
 #                                               KikiPyWorld
 # .................................................................................................................
 
@@ -240,7 +230,7 @@ class KikiPyWorld (KikiPyActionObject):
         
         world.getProjection().setPosition (KVector())
 
-        Controller.player.getStatus().setMinMoves (highscore.levelMinMoves (world.level_name))
+        Controller.player.getStatus().setMinMoves (highscore.levelParMoves (world.level_name))
         Controller.player.getStatus().setMoves (0)
 
         # ............................................................ init
@@ -314,11 +304,17 @@ class KikiPyWorld (KikiPyActionObject):
             help_text.getEventWithName ("next").addAction (once (lambda i=index+1: self.help (i)))
         if less_text:
             help_text.getEventWithName ("previous").addAction (once (lambda i=index-1: self.help (i)))
+ 
+    # ................................................................  
+    def resetProjection(self):
+        world.getProjection().setViewport (0.0, 0.0, 1.0, 1.0)
                                     
     # ................................................................ escape key
     def escape (self):
         """handles an ESC key event"""
 
+        self.resetProjection()
+        
         if "escape" in self.dict:
             if callable(self.dict["escape"]):
                 self.dict["escape"]()
@@ -327,16 +323,19 @@ class KikiPyWorld (KikiPyActionObject):
             return
 
         menu = KikiMenu()
+        menu.getEventWithName ("hide").addAction (once(self.resetProjection))
         
         if Controller.isDebugVersion ():
             menu.addItem (Controller.getLocalizedString ("next level"), once (lambda w=self: w.performAction("exit 0",0)))
-        menu.addItem (Controller.getLocalizedString ("setup"), once (quickSetup))
-        menu.addItem (Controller.getLocalizedString ("restart"), once (self.restart))
-        menu.addItem (Controller.getLocalizedString ("load level"), once (lambda i=world.level_index: levelSelection(i)))
-        
-        if "help" in self.dict:    
+        if "help" in self.dict:
             menu.addItem (Controller.getLocalizedString ("help"), once (self.help))
-
+        menu.addItem (Controller.getLocalizedString ("restart"), once (self.restart))
+        
+        esc_menu_action = once (self.escape)
+        console.out("level_index %d" % world.level_index)
+        menu.addItem (Controller.getLocalizedString ("load level"), once (lambda i=world.level_index,a=esc_menu_action: levelSelection(i, a)))
+        menu.addItem (Controller.getLocalizedString ("setup"), once (quickSetup))        
+        menu.addItem (Controller.getLocalizedString ("about"), once (display_about))
         menu.addItem (Controller.getLocalizedString ("quit"), once (Controller.quit))
      
 # .................................................................................................................

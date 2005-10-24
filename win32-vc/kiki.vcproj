@@ -112,7 +112,7 @@
 			<Tool
 				Name="VCPostBuildEventTool"
 				CommandLine="copy .\Release\kiki.exe ..\
-copy .\kiki.py ..\py
+copy ..\SWIG\kiki.py ..\py
 "/>
 			<Tool
 				Name="VCPreBuildEventTool"

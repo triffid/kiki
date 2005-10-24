@@ -35,7 +35,7 @@ KikiBullet::KikiBullet () : KikiObject ()
 // __________________________________________________________________________________________________
 void KikiBullet::shootFromBot ( KikiBot * bot )
 {
-    if (bot->getStatus()->getEnergy() >= 0.01 || Controller.player_status->isVisible() == false)
+    //if (bot->getStatus()->getEnergy() >= 0.01 || Controller.player_status->isVisible() == false)
     {
         KikiBullet * bullet = new KikiBullet ();
         Controller.world->addObject(bullet);
@@ -45,10 +45,10 @@ void KikiBullet::shootFromBot ( KikiBot * bot )
         bullet->color = bot->getBodyColor();
         bullet->color.setAlpha(0.8);
     
-        if (bot->getClassId() >= KikiMutant::classId())
-        {
-            bot->getStatus()->addEnergy(-0.01);
-        }
+        //if (bot->getClassId() >= KikiMutant::classId()) // mutants loose energy when shooting
+        //{
+        //    bot->getStatus()->addEnergy(-0.01);
+        //}
     
         Controller.sound->playSoundAtPos(KikiSound::BULLET_SHOT, bot->getPos());
     
@@ -56,10 +56,10 @@ void KikiBullet::shootFromBot ( KikiBot * bot )
     
         Controller.timer_event->addAction (bullet->getActionWithId(ACTION_FLY));
     }
-    else
-    {
-        Controller.sound->playSoundAtPos(KikiSound::BOT_NO_ENERGY, bot->getPos());       
-    }
+    //else
+    //{
+    //    Controller.sound->playSoundAtPos(KikiSound::BOT_NO_ENERGY, bot->getPos());       
+    //}
 }
 
 // __________________________________________________________________________________________________

@@ -1,6 +1,5 @@
+# level design by Michael Abel
 
-
-	
 # .................................................................................................................
 level_dict["cube"] = {   
                         "scheme":   "default_scheme",
@@ -23,7 +22,6 @@ level_dict["cube"] = {
                         "create":
 """
 #startblock
-
 
 x=range(5)
 for (i,j,l) in [(i,j,l) for i in x for j in x for l in x]:

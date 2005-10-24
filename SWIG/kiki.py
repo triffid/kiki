@@ -869,7 +869,11 @@ class KikiMenu(KikiScreenText):
         _swig_setattr(self, KikiMenu, 'this', _kiki.new_KikiMenu(*args))
         _swig_setattr(self, KikiMenu, 'thisown', 1)
     def addItem(*args): return _kiki.KikiMenu_addItem(*args)
+    def setCurrentIndex(*args): return _kiki.KikiMenu_setCurrentIndex(*args)
     def setEscapeActive(*args): return _kiki.KikiMenu_setEscapeActive(*args)
+    __swig_setmethods__["circular"] = _kiki.KikiMenu_circular_set
+    __swig_getmethods__["circular"] = _kiki.KikiMenu_circular_get
+    if _newclass:circular = property(_kiki.KikiMenu_circular_get, _kiki.KikiMenu_circular_set)
 
 class KikiMenuPtr(KikiMenu):
     def __init__(self, this):
@@ -877,27 +881,6 @@ class KikiMenuPtr(KikiMenu):
         if not hasattr(self,"thisown"): _swig_setattr(self, KikiMenu, 'thisown', 0)
         _swig_setattr(self, KikiMenu,self.__class__,KikiMenu)
 _kiki.KikiMenu_swigregister(KikiMenuPtr)
-
-class KikiScrollMenu(KikiMenu):
-    __swig_setmethods__ = {}
-    for _s in [KikiMenu]: __swig_setmethods__.update(_s.__swig_setmethods__)
-    __setattr__ = lambda self, name, value: _swig_setattr(self, KikiScrollMenu, name, value)
-    __swig_getmethods__ = {}
-    for _s in [KikiMenu]: __swig_getmethods__.update(_s.__swig_getmethods__)
-    __getattr__ = lambda self, name: _swig_getattr(self, KikiScrollMenu, name)
-    def __repr__(self):
-        return "<%s.%s; proxy of C++ KikiScrollMenu instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
-    def __init__(self, *args):
-        _swig_setattr(self, KikiScrollMenu, 'this', _kiki.new_KikiScrollMenu(*args))
-        _swig_setattr(self, KikiScrollMenu, 'thisown', 1)
-    def addItem(*args): return _kiki.KikiScrollMenu_addItem(*args)
-
-class KikiScrollMenuPtr(KikiScrollMenu):
-    def __init__(self, this):
-        _swig_setattr(self, KikiScrollMenu, 'this', this)
-        if not hasattr(self,"thisown"): _swig_setattr(self, KikiScrollMenu, 'thisown', 0)
-        _swig_setattr(self, KikiScrollMenu,self.__class__,KikiScrollMenu)
-_kiki.KikiScrollMenu_swigregister(KikiScrollMenuPtr)
 
 class KikiColumnMenu(KikiMenu):
     __swig_setmethods__ = {}
@@ -918,6 +901,28 @@ class KikiColumnMenuPtr(KikiColumnMenu):
         if not hasattr(self,"thisown"): _swig_setattr(self, KikiColumnMenu, 'thisown', 0)
         _swig_setattr(self, KikiColumnMenu,self.__class__,KikiColumnMenu)
 _kiki.KikiColumnMenu_swigregister(KikiColumnMenuPtr)
+
+class KikiScrollMenu(KikiColumnMenu):
+    __swig_setmethods__ = {}
+    for _s in [KikiColumnMenu]: __swig_setmethods__.update(_s.__swig_setmethods__)
+    __setattr__ = lambda self, name, value: _swig_setattr(self, KikiScrollMenu, name, value)
+    __swig_getmethods__ = {}
+    for _s in [KikiColumnMenu]: __swig_getmethods__.update(_s.__swig_getmethods__)
+    __getattr__ = lambda self, name: _swig_getattr(self, KikiScrollMenu, name)
+    def __repr__(self):
+        return "<%s.%s; proxy of C++ KikiScrollMenu instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
+    def __init__(self, *args):
+        _swig_setattr(self, KikiScrollMenu, 'this', _kiki.new_KikiScrollMenu(*args))
+        _swig_setattr(self, KikiScrollMenu, 'thisown', 1)
+    def getCurrentIndex(*args): return _kiki.KikiScrollMenu_getCurrentIndex(*args)
+    def addItem(*args): return _kiki.KikiScrollMenu_addItem(*args)
+
+class KikiScrollMenuPtr(KikiScrollMenu):
+    def __init__(self, this):
+        _swig_setattr(self, KikiScrollMenu, 'this', this)
+        if not hasattr(self,"thisown"): _swig_setattr(self, KikiScrollMenu, 'thisown', 0)
+        _swig_setattr(self, KikiScrollMenu,self.__class__,KikiScrollMenu)
+_kiki.KikiScrollMenu_swigregister(KikiScrollMenuPtr)
 
 class KikiPageText(KikiScreenText):
     __swig_setmethods__ = {}

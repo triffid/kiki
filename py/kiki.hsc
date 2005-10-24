@@ -15,8 +15,8 @@ moves = 12
 monsterkodi = 12
 
 [move]
-moves = 9
-monsterkodi = 9
+moves = 10
+monsterkodi = 10
 
 [jump]
 moves = 22
@@ -93,3 +93,10 @@ monsterkodi = 103
 moves = 44
 monsterkodi = 44
 
+[walls]
+moves = 30
+monsterkodi = 30
+
+[core]
+moves = 28
+monsterkodi = 28

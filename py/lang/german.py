@@ -25,7 +25,7 @@ lang['german'] = {
 "version": "version",
 "programmed by": "programmiert von",
 "sounds from": "sounds von",
-"thanks to": "dank an",
+"thanks": "dank an",
 "visit": "besuche",
 "for more games": "für mehr spiele",
 "main menu": "hauptmenü",

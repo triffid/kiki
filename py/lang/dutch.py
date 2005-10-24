@@ -27,7 +27,7 @@ lang['dutch'] = {
 "version": "versie",
 "programmed by": "geprogrammeerd door",
 "sounds from": "geluidseffecten van",
-"thanks to": "met dank aan",
+"thanks": "met dank aan",
 "visit": "bezoek",
 "for more games": "voor meer spellen",
 "main menu": "hoofd menu",

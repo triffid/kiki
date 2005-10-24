@@ -37,24 +37,31 @@ def display_about ():
     about_menu.addItem ("$no_item$scale(0.7)" + Controller.getLocalizedString ("version") + " 1.0.0")
     about_menu.addItem ("$no_item")
 
-    about_menu.addItem ("$no_item" + Controller.getLocalizedString ("programmed by") + ": |kodi")
-    about_menu.addItem ("$no_item |monsterkodi@users.sourceforge.net")
+    about_menu.addItem ("$no_item" + "|" + Controller.getLocalizedString ("programmed by"))
     about_menu.addItem ("$no_item")
-
-    about_menu.addItem ("$no_item music theme by: |N(S)N - NOISE IS SILENCE IS NOISE")
-    about_menu.addItem ("$no_item |WWW.N2S1.COM")
+    about_menu.addItem ("$no_item kodi: |monsterkodi@users.sf.net")
     about_menu.addItem ("$no_item")
     
-    about_menu.addItem ("$no_item" + Controller.getLocalizedString ("sounds from") + ": |www.iDevGames.com")
+    about_menu.addItem ("$no_item" + "|" + Controller.getLocalizedString ("levels"))
     about_menu.addItem ("$no_item")
-
-    about_menu.addItem ("$no_item" + Controller.getLocalizedString ("thanks to") + ": |www.mulle-kybernetik.com")
-    about_menu.addItem ("$no_item |www.innot.org")
+    about_menu.addItem ("$no_item" + "Michael Abel: |borg, cube, entropy, flower, gamma,")
+    about_menu.addItem ("$no_item" + " |machine, maze, mesh, neutron, plate, ")
+    about_menu.addItem ("$no_item" + " |pool, random, sandbox, slick, walls")
+    about_menu.addItem ("$no_item" + "Niko Boehm: |captured")
+    about_menu.addItem ("$no_item" + "Ben Griffin: |towers")
+    about_menu.addItem ("$no_item")  
+    about_menu.addItem ("$no_item" + "|" + Controller.getLocalizedString ("translations"))
+    about_menu.addItem ("$no_item")    
+    about_menu.addItem ("$no_item" + "Arthur Langereis: |dutch")
+    about_menu.addItem ("$no_item" + "3ARRANO.com: |euskara")
+    about_menu.addItem ("$no_item" + "F.C.Covett: |portuguese")
+    about_menu.addItem ("$no_item" + "jay traveller: |spanish")
+    about_menu.addItem ("$no_item" + "Ivan aka Fenris: |swedish")
+    about_menu.addItem ("$no_item")    
+    about_menu.addItem ("$no_item" + "|" + Controller.getLocalizedString ("sounds"))
     about_menu.addItem ("$no_item")
-
-    about_menu.addItem ("$no_item" + Controller.getLocalizedString ("visit") + ": |www.iDevGames.com")
-    about_menu.addItem ("$no_item |" + Controller.getLocalizedString ("for more games"))
-    about_menu.addItem ("$no_item")
+    about_menu.addItem ("$no_item" + "|www.iDevGames.com")
+    about_menu.addItem ("$no_item")    
 
     about_menu.addItem (Controller.getLocalizedString ("main menu"), once (display_main_menu)) 
 
@@ -71,11 +78,13 @@ def display_main_menu ():
     
     m.addItem ("$no_item$scale(2)" + Controller.getLocalizedString ("kiki the nano bot"))
     m.addItem ("$no_item")
-    m.addItem (Controller.getLocalizedString ("load level"), once (lambda a=main_menu_action: levelSelection (-1, a)))
+    last_level = highscore.getLastFinishedLevel()
+    if last_level >= 0:
+        m.addItem (Controller.getLocalizedString ("continue"), once (lambda: KikiPyWorld().create (level_list[last_level+1])))
+        m.addItem (Controller.getLocalizedString ("load level"), once (lambda a=main_menu_action: levelSelection (-1, a)))
     m.addItem (Controller.getLocalizedString ("new game"), once (lambda: KikiPyWorld().create (level_list[0])))
     m.addItem (Controller.getLocalizedString ("setup"), once (lambda: quickSetup (0, display_main_menu)))
     m.addItem (Controller.getLocalizedString ("story"), once (display_story))
-    #m.addItem (Controller.getLocalizedString ("demo"), once (display_demo))
     m.addItem (Controller.getLocalizedString ("about"), once (display_about))
     m.addItem (Controller.getLocalizedString ("quit"), once (Controller.quit))
 

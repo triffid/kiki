@@ -29,20 +29,9 @@ class KikiMenu : public KikiScreenText
                 KikiMenu	( int selectedItem = -1 );
                 
     virtual void addItem	( const std::string & itemText, KikiAction * action = NULL, bool option = false );
-
+	virtual void setCurrentIndex (int index);
     void	setEscapeActive ( bool active = true );
-};
-
-// __________________________________________________________________________________________________
-%nodefault;
-
-class KikiScrollMenu : public KikiMenu 
-{
-    public: // ........................................................................ PUBLIC
-
-                KikiScrollMenu	( int visibleItems = 10, int selectedItem = -1 );
-    
-    virtual void addItem	( const std::string & itemText, KikiAction * action = 0 );    
+    bool    circular;
 };
 
 // __________________________________________________________________________________________________
@@ -53,6 +42,19 @@ class KikiColumnMenu : public KikiMenu
     public: // ........................................................................ PUBLIC
 
                 KikiColumnMenu	( int maxColumnItems = 10, int selectedItem = -1 );
+};
+
+// __________________________________________________________________________________________________
+%nodefault;
+
+class KikiScrollMenu : public KikiColumnMenu 
+{
+    public: // ........................................................................ PUBLIC
+
+                KikiScrollMenu	( int rows = 5, int columns = 4, int selectedItem = -1 );
+    
+    int     getCurrentIndex();
+    virtual void addItem	( const std::string & itemText, KikiAction * action = 0, bool option = false );
 };
 
 // __________________________________________________________________________________________________

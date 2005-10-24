@@ -27,7 +27,7 @@ lang['portuguese'] = {
 "version": "versão",
 "programmed by": "desenvolido por",
 "sounds from": "audio por",
-"thanks to": "agradecimentos",
+"thanks": "agradecimentos",
 "visit": "visite",
 "for more games": "para mais jogos",
 "main menu": "menu principal",

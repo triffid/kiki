@@ -25,7 +25,7 @@ lang['english'] = {
 "version": "version",
 "programmed by": "programmed by",
 "sounds from": "sounds from",
-"thanks to": "thanks to",
+"thanks": "thanks",
 "visit": "visit",
 "for more games": "for more games",
 "main menu": "main menu",

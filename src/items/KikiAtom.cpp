@@ -15,12 +15,6 @@
 // __________________________________________________________________________________________________
 KDL_CLASS_INTROSPECTION_1 	( KikiAtom, 	  KikiObject )
 KDL_CLASS_INTROSPECTION_1 	( KikiMovesAtom, KikiAtom )
-#ifdef KIKI_OLD_STATUS
-KDL_CLASS_INTROSPECTION_1 	( KikiEnergyAtom, KikiAtom )
-KDL_CLASS_INTROSPECTION_1 	( KikiHealthAtom, KikiAtom )
-KIKI_OBJECT_VALUES_1 		( KikiEnergyAtom, false, neutron )
-KIKI_OBJECT_VALUES_1 		( KikiHealthAtom, false, neutron )
-#endif
 KDL_CLASS_INTROSPECTION_1 	( KikiValueAtom,  KikiAtom )
 KIKI_OBJECT_VALUES 		( KikiAtom, 	  false )
 KIKI_OBJECT_VALUES_1 		( KikiMovesAtom,  false, neutron )
@@ -126,28 +120,6 @@ void KikiAtom::addNeutron ()
     KikiNeutron * newNeutron = new KikiNeutron(orbitNormal, KikiNeutronOrbits[neutrons.size()][3]);
     neutrons.push_back(newNeutron);
 }
-
-// __________________________________________________________________________________________________
-#ifdef KIKI_OLD_STATUS 
-void KikiHealthAtom::newCellMate ( KikiObject * object )
-{
-    if (object->getClassId() >= KikiBot::classId())
-    {
-        ((KikiBot*)object)->getStatus()->addHealth(neutrons.size()/9.0);
-        startTimer (200); // atom digest action
-    }
-}
-
-// __________________________________________________________________________________________________
-void KikiEnergyAtom::newCellMate ( KikiObject * object )
-{
-    if (object->getClassId() >= KikiBot::classId())
-    {
-        ((KikiBot*)object)->getStatus()->addEnergy(neutrons.size()/9.0);
-        startTimer (200); // atom digest action
-    }
-}
-#endif
 
 // __________________________________________________________________________________________________
 void KikiAtom::initAction ( KikiAction * action )

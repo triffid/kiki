@@ -47,7 +47,7 @@ KikiController::KikiController () : KEventHandler (), KKeyHandler (), KikiAction
 #ifdef DEBUG
     debug_version = true;
 #else
-    debug_version = true;
+    debug_version = false;
 #endif
 
 #if defined(__APPLE__) && defined(__MACH__)
