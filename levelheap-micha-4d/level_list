@@ -13,17 +13,20 @@ level_list = [
 		
 		#new, beta Levels
 		
-		"entropy","pool","walls","mesh","sandbox",
+		"edge","entropy","pool","walls","mesh","sandbox",
+		
+		"blocks",	# inctroduction into grabbing and slicky stones
 		"slick",	# introcduction into slcky stones
 		"flower", 	# second introduction into slicky stones
 		"mini"  ,	#easy, but nice
 		"green2",	#evil # moving stones on the ring should not be possible	
+						
 		
-		#testing
+		#test levels
 		
 		#"tetris",
-		"tetris2",	#just proof of concept, not really playable yet
-		#"barrier","edge",
+		#"tetris2",	#just proof of concept, not really playable yet
+		#"barrier",
 		#"lazy",
 		#"test"
 		
