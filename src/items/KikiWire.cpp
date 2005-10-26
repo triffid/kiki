@@ -176,7 +176,8 @@ void KikiWire::display ()
 {
     KikiObject::preDisplay();
     KVector face_normal = KikiFace::normalVectorForFace (face);
-    (0.5 * face_normal).glTranslate();
+    float o = 0.005;
+    ((0.5-o) * face_normal).glTranslate();
 
     glPushMatrix();
 
@@ -189,11 +190,12 @@ void KikiWire::display ()
 
     glDisable (GL_CULL_FACE);
     float h = 0.05;
+    float s = 0.5+o;
     glNormal3f(0.0, 0.0, 1.0);
-    if (connections & RIGHT) 	glRectf ( 0.0, -h, 0.5, h);
-    if (connections & LEFT)  	glRectf (-0.5, -h, 0.0, h);
-    if (connections & UP) 	glRectf (-h,  0.0, h, 0.5);
-    if (connections & DOWN) 	glRectf (-h, -0.5, h, 0.0);
+    if (connections & RIGHT) 	glRectf ( 0.0, -h, s, h);
+    if (connections & LEFT)  	glRectf (-s, -h, 0.0, h);
+    if (connections & UP) 	  glRectf (-h,  0.0, h, s);
+    if (connections & DOWN) 	glRectf (-h, -s, h, 0.0);
     glEnable (GL_CULL_FACE);
     
     glPopMatrix();
