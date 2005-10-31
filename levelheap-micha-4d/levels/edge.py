@@ -1,24 +1,32 @@
 # level design by Michael Abel
 
-# .................................................................................................................
-def func_empty():
-	for i in range (2):
-		world.addObjectAtPos (KikiLight	(), KikiPos (1,1,i))
-		
+# ........................................................................................
+def func_edge():
+	s=world.getSize()
+	
+	for (i,j,l) in [ (m,n,o) for m in range(3) for n in range(3) for o in range(3)]:
+	  if (i==2 or j==2 or l==2) and i>=1 and j>=1 and l >=1 :
+	    c=	0.6 - (0.3)*(-1)**(i+j+l)
+	    d=	0.6 + (0.3)*(-1)**(i+j+l)
+	    world.addObjectAtPos (KikiStone(KColor(c ,0, d, 0.8) , False), KikiPos (i,j,l))
+	    world.addObjectAtPos (KikiStone(KColor(c ,0, d, 0.8) , False), KikiPos(s.x-i-1,s.y-j-1,s.z-l-1))
+	    world.addObjectAtPos (KikiStone(KColor(c ,0, d, 0.8) , False), KikiPos (s.x-i-1,j,l))
+	    world.addObjectAtPos (KikiStone(KColor(c ,0, d, 0.8) , False), KikiPos (i,s.y-j-1,s.z-l-1))
+
  
 	
-level_dict["empty"] = {   
-                        "scheme":   "tron_scheme",
-                        "size":     (10,10,10),
-                        "intro":    "empty",    
+level_dict["edge"] = {   
+                        "scheme":   "candy_scheme",
+                        "size":     (7,7,7),
+                        "intro":    "edges",    
                         "help":     ( 
                                         "",
                                         "",
                                         "" 
                                     ),
-                        "player":   {   "coordinates":     (0,0,0),
+                        "player":   {   "coordinates":     (3,0,0),
                                         "nostatus":         0,
-					#"orientation"	:	roty180
+					"orientation"	:	rot0
 
 				    },
                         "exits":    [
@@ -30,7 +38,7 @@ level_dict["empty"] = {
 					    
                                         },
 				    ],
-			 "create": func_empty,
+			 "create": func_edge,
 			}
 
 # .................................................................................................................
