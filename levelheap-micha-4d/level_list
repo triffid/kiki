@@ -20,14 +20,12 @@ level_list = [
 		"flower", 	# second introduction into slicky stones
 		"mini"  ,	#easy, but nice
 		"green2",	#evil # moving stones on the ring should not be possible	
-						
+		
+		"throw",	#very easy level to get used to nanothrowing stones
+		"conductor",	#hard wiring
 		
 		#test levels
 		
-		#"tetris",
-		#"tetris2",	#just proof of concept, not really playable yet
-		#"barrier",
-		#"lazy",
 		#"test"
 		
 		]
