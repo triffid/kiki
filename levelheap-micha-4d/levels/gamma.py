@@ -5,7 +5,7 @@ schemes=[test_scheme, tron_scheme,candy_scheme, default_scheme,
 
 
 # .................................................................................................................
-def func_isotrop():
+def func_gamma():
 	s = world.getSize()
 	world.switch_countera = 0
 	world.switch_counter = 0
@@ -77,7 +77,7 @@ level_dict["gamma"] = {
                                             "coordinates":     (2,7,4), #absolute coord
                                         },
 				    ],
-			 "create": func_isotrop,
+			 "create": func_gamma,
 			}
 
 # .................................................................................................................

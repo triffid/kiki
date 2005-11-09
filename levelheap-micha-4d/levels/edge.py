@@ -18,7 +18,7 @@ def func_edge():
 level_dict["edge"] = {   
                         "scheme":   "candy_scheme",
                         "size":     (7,7,7),
-                        "intro":    "edges",    
+                        "intro":    "edge",    
                         "help":     ( 
                                         "",
                                         "",

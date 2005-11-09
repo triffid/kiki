@@ -17,9 +17,9 @@ level_dict["throw"] = {
                         "help":     ( 
                                         "",
                                     ),
-                        "player":   {   "coordinates":     (0,0,0),
+                        "player":   {   "coordinates":     (0,3,0),
                                         "nostatus":         0,
-					#"orientation"	:	roty180
+					"orientation"	:	rotz90
 
 				    },
                         "exits":    [

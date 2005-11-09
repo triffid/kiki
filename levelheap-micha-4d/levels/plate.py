@@ -10,9 +10,9 @@ level_dict["plate"] = {
                                         "use the bombs : )",
                                          
                                     ),
-                        "player":   {   "coordinates":     (3,2,1),
+                        "player":   {   "coordinates":     (3,6,0),
                                         "nostatus":         0,
-					"orientation":		KQuaternion.rotationAroundVector(270,  KVector(1,0,0))
+					"orientation":	rot0	#KQuaternion.rotationAroundVector(270,  KVector(1,0,0))
                                     },
                         "exits":    [
                                         {
@@ -28,7 +28,7 @@ level_dict["plate"] = {
 """
 
 stone=lambda:KikiStone(KColor(0.6,0.6,0.6),True)
-world.addObjectAtPos (KikiStone(KColor(0.8,0.8,0.3),True), world.decenter(0,0,0))
+world.addObjectAtPos (KikiStone(KColor(0.8,0.8,0.3,0.8),True), world.decenter(0,0,0))
 
 world.addObjectPoly(stone, [	world.decenter(1,1,0),world.decenter(1,-1,0),
 				world.decenter(-1,-1,0),world.decenter(-1,1,0)], 1)
@@ -51,7 +51,7 @@ world.addObjectAtPos (KikiBomb(), world.decenter(0,-1,-4))
 world.addObjectAtPos (KikiBomb(), world.decenter(1,0,-4))
 world.addObjectAtPos (KikiBomb(), world.decenter(-1,0,-4))
 
-world.addObjectAtPos (KikiBomb(), world.decenter(0,0,-2))
+world.addObjectAtPos (KikiBomb(), world.decenter(0,0,-3))
 
 """,                                 
 }

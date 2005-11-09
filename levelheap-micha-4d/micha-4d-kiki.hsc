@@ -1,54 +1,4 @@
-# alternate level_list
-# The list items may also be copied into the main level_list
-		
-		
-level_list = [  
-		#easy
-		"gamma", 
-		"borg", 
-		"cube", 	
-		"blocks",	# inctroduction into grabbing and slicky stones
-		"slick",	# introcduction into slcky stones
-		"flower", 	# second introduction into slicky stones
-		"mini"  ,	#easy, but nice
-		"throw",	#very easy level to get used to nanothrowing stones
-		
-		#medium
-		"maze", 
-		"random", 
-		"plate", 	
-		"walls",
-		"sandbox",
-		
-		#harder
-		"nice",				
-		"edge",
-		"entropy",
-		"pool",
-		"circuit",
-		
-		#real hard
-		"green2",	#evil # moving stones on the ring should not be possible	
-		"machine", 
-		"neutron",	 	
-		"mesh",
-		"conductor",	#hard wiring
-		
-		
-		
-		
-		
-		]
-		
-print ""	
-for i in level_list :
-	print "["+i+"]"
-	print "moves = 1000"
-	print "micha = 1000"
-	print ""
-	
 
-"""	
 #[gamma]	20	ok
 #[borg]		8,9	naja?
 #[cube]		8	ok
@@ -71,9 +21,8 @@ for i in level_list :
 #[mesh		217	???
 #[conductor	476	ok
 #walls		25	ok
-"""
 
-"""
+#mainly ready highscore
 
 [plate]
 moves = 67
@@ -167,6 +116,3 @@ micha-4d = 119
 [gamma]
 moves = 20
 micha-4d = 20
-
-"""
-

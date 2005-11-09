@@ -15,7 +15,7 @@ def func_slick():
 level_dict["slick"] = {   
                         "scheme":   "tron_scheme",
                         "size":     (9,11,15),
-                        "intro":    "slicky stones",    
+                        "intro":    "slick",    
                         "help":     ( 
                                         "The green stone is a slicky",
                                         "stone, that means, you ",
