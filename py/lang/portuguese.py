@@ -38,6 +38,10 @@ lang['portuguese'] = {
 "STORY_PAGE_2": "mas um dia,\num certo parasita\ndestruiu o programa central\nde controle do criador.\n\ndesde então, o criado não\nfunciona mais direito\ne só produz\nrobôs preguiçosos e malucos\nque atiram uns nos outros,\nassim destruindo o mundo nanoscópico.",
 "STORY_PAGE_3": "é sua missão ajudar kiki,\no único nano-robô são,\na reparar o criador.\n\nboa sorte!",
 
+# statistics
+
+"STATISTICS_TEXT": "$scale(1.5)statistics\n\nyou solved %d of %d levels\n\nyour current score is\n\n$scale(2.0)%d",
+
 # setup 
 
 "off": "desligar",

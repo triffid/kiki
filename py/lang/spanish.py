@@ -38,6 +38,10 @@ lang['spanish'] = {
 "STORY_PAGE_2": "pero un dia,\nun parasito\ndestruyo el programa principal\nde control del creador.\n\ndesde entonces\nel solo produce\ninservibles, flojos y pequeños\nrobots estupidos\nquienes se atacan entre si\ny destruyeron el nanomundo.",
 "STORY_PAGE_3": "tu tarea es ayudar a kiki,\nel ultimo robot,\na reparar a su creador.\n\nbuena suerte!",
 
+# statistics
+
+"STATISTICS_TEXT": "$scale(1.5)statistics\n\nyou solved %d of %d levels\n\nyour current score is\n\n$scale(2.0)%d",
+
 # setup 
 
 "language": "idioma",

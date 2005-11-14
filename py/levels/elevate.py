@@ -5,10 +5,10 @@ level_dict["elevate"] = {
                         "intro":    "elevate", 
                         "help":     ( 
                                         "$scale(1.5)mission:\nactivate the exit!\n\n" + \
-                                        "to activate the exit,\nfeed it with electricity:\n\n" + \
-                                        "connect the generator\nwith the motor\n\n" + \
+                                        "to activate the exit,\nfeed it with electricity\n\n" + \
                                         "use the bombs\nto elevate the gears\n" + \
-                                        "and the generator",
+                                        "and the generator\n\n" + \
+                                        "the bombs will detonate\nif you shoot them",
                                     ),
                         "player":   {   "position":         (3,-2,0),
                                     },

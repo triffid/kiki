@@ -72,6 +72,8 @@ class KikiController : public KEventHandler, public KKeyHandler, public KikiActi
 
     void		setGamma		( int );
     int			getGamma		() const { return gamma; }
+
+	bool        changeScreenSize( int width, int height, bool fullscreen = false );
     
     // ........................................................................ event handling
     bool		handleKey		( const KKey & key );

@@ -292,7 +292,7 @@ void KikiController::saveScreenShot ()
     bmask = 0x0000ff00;
     amask = 0x00000000;
 
-    setDisplayFps(false); // hopefully the programm will run faster in the future :-)
+    setDisplayFps(false);
     display();
 
     void * pixels = malloc (screenSize.w * screenSize.h * sizeof(GLuint));
@@ -337,7 +337,11 @@ void KikiController::saveScreenShot ()
     do  
     {
         counter++;
+#ifndef WIN32
         screenShotFile = kStringPrintf("%s/kiki_%03d.bmp", getenv ("HOME"), counter);
+#else
+		screenShotFile = kStringPrintf("c:/kiki_%03d.bmp", counter);
+#endif
     }
     while (kFileExists(screenShotFile));
     
@@ -450,6 +454,17 @@ void KikiController::setGamma ( int g )
     float gf = 1.0+g/10.0;
     gamma = g;
     SDL_SetGamma (gf, gf, gf);
+}
+
+// --------------------------------------------------------------------------------------------------------
+bool KikiController::changeScreenSize ( int width, int height, bool fullscreen)
+{
+	bool result;
+	int oldGamma = gamma;
+	setGamma(0); // hack to restore gamma after failed resolution test
+	result = KEventHandler::setScreenSize (width, height, fullscreen);
+	setGamma(oldGamma);
+	return result;
 }
 
 // __________________________________________________________________________________________________

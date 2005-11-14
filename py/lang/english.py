@@ -36,6 +36,10 @@ lang['english'] = {
 "STORY_PAGE_2": "but one day,\na parasitic capacity\ndestroyed the maker's\nmaster control program.\n\nsince then he is\nmalfunctioning\nand only producing\nlazy stupid little robots\nwhich shoot each other\nand destroy the nano world.",
 "STORY_PAGE_3": "your task is to help kiki,\nthe only sane bot left over,\nto repair the maker.\n\ngood luck!",
 
+# statistics
+
+"STATISTICS_TEXT": "$scale(1.5)statistics:\n\nyou solved %d of %d levels\n\nyour current score is\n\n$scale(2.0)%d",
+
 # setup
 
 "language": "language",

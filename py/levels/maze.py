@@ -64,8 +64,8 @@ level_dict["maze"] = {
                         "size":     (4,4,4),
                         "intro":    "maze",    
                         "help":     ( 
-                                        "Dont get confused :) !",
-                                       
+                        				"$scale(1.5)mission:\nget to the exit!\n\n" + \
+                                        "but don't get confused :) !",
                                     ),
                         "player":   {   "coordinates":     (3,0,0),
                                         "nostatus":         0,

@@ -60,13 +60,6 @@ class KikiHighscore (ConfigParser):
                 
         if not self.has_section (level_name):
             self.add_section (level_name)
-        
-        if self.has_option(level_name, "moves"):    
-            min_moves = int (self.get (level_name, "moves"))
-            if moves < min_moves:
-                self.set (level_name, "moves", str (int (moves)))
-        else:
-            self.set (level_name, "moves", str (int (moves)))
             
         if self.has_option(level_name, getpass.getuser()): # level already solved
             old_moves = int (self.get (level_name, getpass.getuser()))
@@ -74,15 +67,26 @@ class KikiHighscore (ConfigParser):
                 self.set (level_name, getpass.getuser(), str (int (moves)))
         else: # first time solved
             self.set (level_name, getpass.getuser(), str (int (moves)))
-            saved_level_num = self.getLastFinishedLevel()
-            self.set ("main", "last_level", level_list[min(saved_level_num+2, len(level_list)-1)])
+            available_level_num = self.getLastAvailableLevel()
+            self.set ("main", "last_level", level_list[min(available_level_num+2, len(level_list)-1)])
+            
+        self.set ("main", "current_level", level_list[min(level_num+1, len(level_list)-1)])
         
         self.save ()
 
     # ................................................................ get last level
-    def getLastFinishedLevel (self):
-        """returns the index of last finished level in level_list"""
+    def getLastAvailableLevel (self):
+        """returns the index of last available level in level_list"""
         last_level = str(self.get("main", "last_level"))
+        if last_level in level_list:
+            return level_list.index(str(last_level))
+        else:
+            return -1
+
+    # ................................................................ get last level
+    def getLastLevel (self):
+        """returns the index of last played level in level_list"""
+        last_level = str(self.get("main", "current_level"))
         if last_level in level_list:
             return level_list.index(str(last_level))
         else:

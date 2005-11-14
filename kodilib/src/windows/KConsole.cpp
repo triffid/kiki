@@ -126,7 +126,7 @@ void KConsole::printError ( const std::string & str, bool panel )
         if (panel == false && console->isVisible() == false) 
         {
             // show console if no panel displayed
-            console->show(); 
+			// console->show(); 
         }
     }
 }

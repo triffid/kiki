@@ -33,9 +33,7 @@ level_dict["nice"] = {
                         "size":     (11,11,11),
                         "intro":    "nice",    
                         "help":     ( 
-                                        "",
-                                        "",
-                                        "" 
+                                        "$scale(1.5)mission:\nget to the exit!",
                                     ),
                         "player":   {   "position":     (2,-1,0),
                                     },

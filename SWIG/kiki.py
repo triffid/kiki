@@ -736,6 +736,7 @@ class KikiController(KEventHandler,KikiActionObject):
     def getKikiHome(*args): return _kiki.KikiController_getKikiHome(*args)
     def setGamma(*args): return _kiki.KikiController_setGamma(*args)
     def getGamma(*args): return _kiki.KikiController_getGamma(*args)
+    def changeScreenSize(*args): return _kiki.KikiController_changeScreenSize(*args)
     def displayText(*args): return _kiki.KikiController_displayText(*args)
     def getLocalizedString(*args): return _kiki.KikiController_getLocalizedString(*args)
     def isDebugVersion(*args): return _kiki.KikiController_isDebugVersion(*args)

@@ -38,6 +38,10 @@ lang['dutch'] = {
 "STORY_PAGE_2": "maar op een dag,\nvernietigde een parasiet\nhet controle programma\nvan de maker.\n\nvanaf dat moment werkt\nde maker slecht en\nproduceert hij slechts\nluie domme kleine robotjes\ndie op elkaar schieten\nen de nano wereld stuk maken.",
 "STORY_PAGE_3": "het is jouw taak om kiki,\nde laatste gezonde bot,\nte helpen om de maker\nte repareren.\n\nveel geluk!",
 
+# statistics
+
+"STATISTICS_TEXT": "$scale(1.5)statistics\n\nyou solved %d of %d levels\n\nyour current score is %d\n\n$scale(2.0)%d",   
+
 # setup  
 
 "off": "uit",

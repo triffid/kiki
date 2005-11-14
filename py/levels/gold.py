@@ -4,7 +4,8 @@ level_dict["gold"] = {
                         "size":     (3,11,3),    
                         "intro":    "gold", 
                         "help":     ( 
-                                        Controller.getLocalizedString("HELP_GOLD_1"),
+                                        "$scale(1.5)mission:\nget to the exit!\n\n" + \
+                                        "move the stones to reach it",                                    
                                     ),
                         "player":   {   "position":         (0,-4,0),
                                     },

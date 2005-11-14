@@ -1,14 +1,13 @@
 # level design by Michael Abel
-
 # .................................................................................................................
 level_dict["borg"] = {   
                         "scheme":   "default_scheme",
                         "size":     (9,9,9),
                         "intro":    "borg",    
                         "help":     ( 
-                                        "Belive me,",
-                                        "they are ",
-					"CRAZY!"
+                                        "Believe me,\n" + \
+                                        "they are\n" + \
+					                    "CRAZY!",
                                         
                                     ),
                         "player":   {   "coordinates":     (0,0,0),

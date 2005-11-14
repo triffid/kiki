@@ -9471,6 +9471,136 @@ static PyObject *_wrap_KikiController_getGamma(PyObject *, PyObject *args) {
 }
 
 
+static PyObject *_wrap_KikiController_changeScreenSize__SWIG_0(PyObject *, PyObject *args) {
+    PyObject *resultobj = NULL;
+    KikiController *arg1 = (KikiController *) 0 ;
+    int arg2 ;
+    int arg3 ;
+    bool arg4 ;
+    bool result;
+    PyObject * obj0 = 0 ;
+    PyObject * obj1 = 0 ;
+    PyObject * obj2 = 0 ;
+    PyObject * obj3 = 0 ;
+    
+    if(!PyArg_ParseTuple(args,(char *)"OOOO:KikiController_changeScreenSize",&obj0,&obj1,&obj2,&obj3)) goto fail;
+    SWIG_Python_ConvertPtr(obj0, (void **)&arg1, SWIGTYPE_p_KikiController, SWIG_POINTER_EXCEPTION | 0);
+    if (SWIG_arg_fail(1)) SWIG_fail;
+    {
+        arg2 = (int)(SWIG_As_int(obj1)); 
+        if (SWIG_arg_fail(2)) SWIG_fail;
+    }
+    {
+        arg3 = (int)(SWIG_As_int(obj2)); 
+        if (SWIG_arg_fail(3)) SWIG_fail;
+    }
+    {
+        arg4 = (bool)(SWIG_As_bool(obj3)); 
+        if (SWIG_arg_fail(4)) SWIG_fail;
+    }
+    result = (bool)(arg1)->changeScreenSize(arg2,arg3,arg4);
+    
+    {
+        resultobj = SWIG_From_bool((bool)(result)); 
+    }
+    return resultobj;
+    fail:
+    return NULL;
+}
+
+
+static PyObject *_wrap_KikiController_changeScreenSize__SWIG_1(PyObject *, PyObject *args) {
+    PyObject *resultobj = NULL;
+    KikiController *arg1 = (KikiController *) 0 ;
+    int arg2 ;
+    int arg3 ;
+    bool result;
+    PyObject * obj0 = 0 ;
+    PyObject * obj1 = 0 ;
+    PyObject * obj2 = 0 ;
+    
+    if(!PyArg_ParseTuple(args,(char *)"OOO:KikiController_changeScreenSize",&obj0,&obj1,&obj2)) goto fail;
+    SWIG_Python_ConvertPtr(obj0, (void **)&arg1, SWIGTYPE_p_KikiController, SWIG_POINTER_EXCEPTION | 0);
+    if (SWIG_arg_fail(1)) SWIG_fail;
+    {
+        arg2 = (int)(SWIG_As_int(obj1)); 
+        if (SWIG_arg_fail(2)) SWIG_fail;
+    }
+    {
+        arg3 = (int)(SWIG_As_int(obj2)); 
+        if (SWIG_arg_fail(3)) SWIG_fail;
+    }
+    result = (bool)(arg1)->changeScreenSize(arg2,arg3);
+    
+    {
+        resultobj = SWIG_From_bool((bool)(result)); 
+    }
+    return resultobj;
+    fail:
+    return NULL;
+}
+
+
+static PyObject *_wrap_KikiController_changeScreenSize(PyObject *self, PyObject *args) {
+    int argc;
+    PyObject *argv[5];
+    int ii;
+    
+    argc = PyObject_Length(args);
+    for (ii = 0; (ii < argc) && (ii < 4); ii++) {
+        argv[ii] = PyTuple_GetItem(args,ii);
+    }
+    if (argc == 3) {
+        int _v;
+        {
+            void *ptr;
+            if (SWIG_ConvertPtr(argv[0], &ptr, SWIGTYPE_p_KikiController, 0) == -1) {
+                _v = 0;
+                PyErr_Clear();
+            } else {
+                _v = 1;
+            }
+        }
+        if (_v) {
+            _v = SWIG_Check_int(argv[1]);
+            if (_v) {
+                _v = SWIG_Check_int(argv[2]);
+                if (_v) {
+                    return _wrap_KikiController_changeScreenSize__SWIG_1(self,args);
+                }
+            }
+        }
+    }
+    if (argc == 4) {
+        int _v;
+        {
+            void *ptr;
+            if (SWIG_ConvertPtr(argv[0], &ptr, SWIGTYPE_p_KikiController, 0) == -1) {
+                _v = 0;
+                PyErr_Clear();
+            } else {
+                _v = 1;
+            }
+        }
+        if (_v) {
+            _v = SWIG_Check_int(argv[1]);
+            if (_v) {
+                _v = SWIG_Check_int(argv[2]);
+                if (_v) {
+                    _v = SWIG_Check_bool(argv[3]);
+                    if (_v) {
+                        return _wrap_KikiController_changeScreenSize__SWIG_0(self,args);
+                    }
+                }
+            }
+        }
+    }
+    
+    PyErr_SetString(PyExc_NotImplementedError,"No matching function for overloaded 'KikiController_changeScreenSize'");
+    return NULL;
+}
+
+
 static PyObject *_wrap_KikiController_displayText(PyObject *, PyObject *args) {
     PyObject *resultobj = NULL;
     KikiController *arg1 = (KikiController *) 0 ;
@@ -15147,6 +15277,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"KikiController_getKikiHome", _wrap_KikiController_getKikiHome, METH_VARARGS, NULL},
 	 { (char *)"KikiController_setGamma", _wrap_KikiController_setGamma, METH_VARARGS, NULL},
 	 { (char *)"KikiController_getGamma", _wrap_KikiController_getGamma, METH_VARARGS, NULL},
+	 { (char *)"KikiController_changeScreenSize", _wrap_KikiController_changeScreenSize, METH_VARARGS, NULL},
 	 { (char *)"KikiController_displayText", _wrap_KikiController_displayText, METH_VARARGS, NULL},
 	 { (char *)"KikiController_getLocalizedString", _wrap_KikiController_getLocalizedString, METH_VARARGS, NULL},
 	 { (char *)"KikiController_isDebugVersion", _wrap_KikiController_isDebugVersion, METH_VARARGS, NULL},

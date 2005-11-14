@@ -8,7 +8,7 @@ level_dict["steps"] = {
                                         "to get to the exit,\njump on the stones",
                                         "to jump,\npress \"$key(jump)\"\nwhile moving",
                                         "to move, press \"$key(move forward)\" or \"$key(move backward)\",\n\n" + \
-                                        "to turn, press \"$key(turn left)\" or \"$key(turn right)\""
+                                        "to turn, press \"$key(turn left)\" or \"$key(turn right)\"",
                                     ),
                         "player":   {   "coordinates":     (3,0,6),
                                         "nostatus":         0,

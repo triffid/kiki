@@ -4,12 +4,15 @@ if Controller.isDebugVersion(): print "[levels.py]"
 
 # .................................................................................................................
 
-level_list = ["start", "steps", "move", "switch", "electro", # intro
-              "gold", "jump", "escape", "gears", "gamma", "cube", # easy
-              "elevate", "bombs", "sandbox", "energy", "towers", "maze", "random", "plate", "entropy", "pool", # medium
-              "slick", "bridge", "flower", "stones", "walls", "grid", "rings", "core", "bronze", "mesh", # difficult
-              "hidden", "church", "strange", "nice", "columns", "machine", "neutron", "regal", "captured", "green", # tough 
-              "borg",
+level_list = ["start", "steps", "move", "electro", "elevate", "throw", # intro
+              "gold", "jump", "escape", "gears", "gamma", "cube", "switch", "borg", # easy
+              "mini", "blocks", "bombs", "sandbox", "energy", "maze", "love", 
+              "towers", "edge", "random", "plate", "nice", "entropy", # medium
+              "slick", "bridge", "flower", "stones", "walls", "grid", # difficult
+              "rings", "core", "bronze", "pool", # difficult
+              "hidden", "church", "strange", "mesh", "columns", "machine", # tough
+              "neutron", "captured", "circuit", "regal", "conductor", "evil", # very hard
+              "mutants", # outro
              ]
                    
 # .................................................................................................................
@@ -21,7 +24,7 @@ def outro (index=0):
     """well hidden outro :-)"""
     outro_text = [  "$scale(1.5)congratulations!\n\n$scale(1)you rescued\nthe nano world!\n\n" +
                 "the last dumb mutant bot\nhas been destroyed.\n\nthe maker is functioning again.\n" + 
-                "kiki will go now\nand see all his new friends.\n\nyou should maybe\ndo the same?",
+                "kiki will go now\nand see all his new friends.\n\nyou should maybe\ndo the same?", 
                 "the maker wants to thank you!\n\n(btw.: you thought\nyou didn't see\nkiki's maker in the game?\n" +
                 "you are wrong!\nyou saw him\nall the time,\nbecause kiki\nlives inside him!)\n\n$scale(1.5)the end", 
                 "p.s.: the maker of the game\nwants to thank you as well!\n\ni definitely want your feedback:\n" + 

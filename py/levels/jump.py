@@ -3,8 +3,10 @@ level_dict["jump"] = {
                         "scheme":   "red_scheme",
                         "size":     (7,7,13),    
                         "intro":    "jump", 
-                        "help":     (  Controller.getLocalizedString ("HELP_JUMP_1"),
-                                        Controller.getLocalizedString ("HELP_JUMP_2"),
+                        "help":     (  "$scale(1.5)mission:\nget to the exit!\n\n" + \
+                                        "jump on the stones to reach it\n\n" + \
+                                        "you can attach to a stone when falling by\n" + \
+                                        "if you move into its direction",
                                     ),
                         "player":   {   "position":         (0,0,5),
                                     },

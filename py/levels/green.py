@@ -4,8 +4,8 @@ level_dict["green"] = {
                         "size":     (13,5,13),    
                         "intro":    "green", 
                         "help":     ( 
-                                        "activate the exit\n" \
-                                        "by placing a powered\n" \
+                                        "$scale(1.5)mission:\nactivate the exit!\n\n" + \
+                                        "place a powered\n" \
                                         "wire stone next to it.",  
                                         "a wirestone is powered by\n" \
                                         "a rotating generator\n" \

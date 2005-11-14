@@ -65,7 +65,6 @@ level_dict["maze"] = {
                         "intro":    "maze",    
                         "help":     ( 
                                         "Dont get confused :) !",
-					"Maybe use another view mode"
                                        
                                     ),
                         "player":   {   "coordinates":     (3,0,0),

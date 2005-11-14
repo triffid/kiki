@@ -26,6 +26,7 @@ class KikiController : public KEventHandler, public KikiActionObject
 
     void			setGamma		( int g );
     int				getGamma		() const;
+    bool     changeScreenSize (int width, int height, bool fullscreen = false);
     
     void			displayText		( const std::string & text, int color );
     std::string			getLocalizedString	( const std::string & key );

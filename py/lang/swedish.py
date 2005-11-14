@@ -38,6 +38,10 @@ lang["swedish"] = {
 "STORY_PAGE_2": "men en dag\nförstörde en parasitmakt\nskaparens kontrollprogram.\n\n\nSedan dess är han trasig\noch bygger bara\nkorkade och lata små robotar\nsom skjuter varandra och\nförstör nano-världen.",
 "STORY_PAGE_3": "din uppgift är att hjälpa kiki,\nden sista kloka roboten,\natt reparera skaparen.\n\nlycka till!",
 
+# statistics
+
+"STATISTICS_TEXT": "$scale(1.5)statistics\n\nyou solved %d of %d levels\n\nyour current score is\n\n$scale(2.0)%d",
+
 # setup 
 
 "off": "av",

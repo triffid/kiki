@@ -5,7 +5,7 @@ schemes=[test_scheme, tron_scheme,candy_scheme, default_scheme,
 
 
 # .................................................................................................................
-def func_isotrop():
+def func_gamma():
 	s = world.getSize()
 	world.switch_countera = 0
 	world.switch_counter = 0
@@ -62,9 +62,8 @@ level_dict["gamma"] = {
                         "size":     (10,10,10),
                         "intro":    "gamma",    
                         "help":     ( 
-                                        "",
-                                        "",
-                                        "" 
+                                        "$scale(1.5)mission:\nactivate the exit!\n\n" + \
+                                        "shoot at the 3 switches to activate the exit",
                                     ),
                         "player":   {   "coordinates":     (0,5,0),
                                         "nostatus":         0,
@@ -73,11 +72,10 @@ level_dict["gamma"] = {
                                         {
                                             "name":         "exit",
                                             "active":       0,
-                                            #"position":     (0,0,0),
                                             "coordinates":     (2,7,4), #absolute coord
                                         },
 				    ],
-			 "create": func_isotrop,
+			 "create": func_gamma,
 			}
 
 # .................................................................................................................

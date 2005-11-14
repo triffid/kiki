@@ -6,7 +6,7 @@ level_dict["gears"] = {
                         "help":     ( 
                                         "$scale(1.5)mission:\nactivate the exit!\n\n" + \
                                         "to activate the exit\nfeed it with electricity:\n\n" + \
-                                        "connect the generator\nwith the motor\n"+ \
+                                        "connect the generator\nwith the motor\n" + \
                                         "and close the circuit\nwith the wire stones",
                                     ),
                         "player":   {   "position":         (0,0,0),

@@ -10,6 +10,8 @@ lang['german'] = {
 # menu 
 
 "new game": "neues spiel",
+"continue": "fortfahren",
+"statistics": "statistik",
 "load level": "level laden",
 "next level": "nächster level",
 "restart": "neustart",
@@ -35,6 +37,10 @@ lang['german'] = {
 "STORY_PAGE_1": "es war einmal\ndie nano-welt,\nin der lebte eine schar\nvon kleinen robotern.\n\nglücklich verbrachten sie\nihr künstliches leben damit,\nrohstoffe für den\nerschaffer zu sammeln,\ndamit er mehr und mehr\nkleine roboter herstelle.",
 "STORY_PAGE_2": "eines tages aber\nzerstörten\nparasitäre kapazitäten\ndas hauptprogramm\ndes erschaffers.\n\nseit dem funktioniert er\nnicht mehr richtig\nund produziert nur noch\nfaule, dumme roboter,\ndie aufeinander schiessen\nund die nano-welt zerstören.",
 "STORY_PAGE_3": "deine aufgabe ist es nun,\nkiki,\ndem einzigen gesunden bot,\nder überlebte,\nbei der reparatur des \nerschaffers zu helfen.\n\nviel glück!",
+
+# statistics
+
+"STATISTICS_TEXT": "$scale(1.5)statistik\n\ndu hast %d von %d leveln gelöst\n\ndeine momentane punktzahl ist\n\n$scale(2.0)%d",
 
 # setup 
 

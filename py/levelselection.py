@@ -24,10 +24,8 @@ def levelSelection (level_index=-1, escapeAction=0):
     
     # ............................................................................................................    
     
-    last_level = highscore.getLastFinishedLevel() + 1
-    current_level = (level_index >= 0) and level_index or last_level
-    console.out("levelSelection %d %d" % (level_index, current_level))
-    
+    last_level = highscore.getLastAvailableLevel()
+    current_level = (level_index >= 0) and level_index or last_level 
         
     world.max_level_index = last_level
     

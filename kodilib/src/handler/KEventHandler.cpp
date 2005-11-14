@@ -236,22 +236,35 @@ bool KEventHandler::setScreenSize ( int width, int height, bool fullscreen )
         flags |= SDL_RESIZABLE;
     }
     
-    if (SDL_VideoModeOK (width, height, 32, flags) == 0)
+    if (SDL_VideoModeOK (width, height, 32, flags) == 0) // video mode not ok
     {
         if (fullscreen)
         {
+			switch (width)
+			{
+			case 1600:
+				KConsole::printf ("couldn't set video mode %dx%d:\ntrying to fallback to 1280x1024 mode", width, height);
+				return setScreenSize (1280, 1024, true);
+			case 1280:
+				KConsole::printf ("couldn't set video mode %dx%d:\ntrying to fallback to 1024x768 mode", width, height);
+				return setScreenSize (1024, 768, true);
+			case 1024:
+				KConsole::printf ("couldn't set video mode %dx%d:\ntrying to fallback to 800x600 mode", width, height);
+				return setScreenSize (800, 600, true);
+			default:
+				break;
+			}
+
             // fallback to window mode
-            KConsole::printf ("couldn't set video mode %dx%d (%s):\n%s\n", 
+            KConsole::printf ("couldn't set video mode %dx%d (%s) test failed",
                              width, height, 
-                             fullscreen ? "fullscreen" : "window", SDL_GetError());
+                             fullscreen ? "fullscreen" : "window");
             KConsole::printf ("trying to fallback to window mode");
             return setScreenSize (width, height, false);
         }
         else
         {
-            KConsole::printError( kStringPrintf("couldn't set video mode %dx%d (%s)", 
-                              width, height, 
-                              fullscreen ? "fullscreen" : "window"), true);
+            KConsole::printError( kStringPrintf("couldn't set video mode %dx%d (window test failed)", width, height));
             return false;
         }
     }
@@ -260,10 +273,23 @@ bool KEventHandler::setScreenSize ( int width, int height, bool fullscreen )
     {
         if (fullscreen)
         {
+			switch (width)
+			{
+			case 1600:
+				KConsole::printf ("couldn't init video mode %dx%d:\ntrying to fallback to 1280x1024 mode", width, height);
+				return setScreenSize (1280, 1024, true);
+			case 1280:
+				KConsole::printf ("couldn't init video mode %dx%d:\ntrying to fallback to 1024x768 mode", width, height);
+				return setScreenSize (1024, 768, true);
+			case 1024:
+				KConsole::printf ("couldn't init video mode %dx%d:\ntrying to fallback to 800x600 mode", width, height);
+				return setScreenSize (800, 600, true);
+			default:
+				break;
+			}
+
             // fallback to window mode
-            KConsole::printf ("couldn't change video mode %dx%d (%s):\n%s\n", 
-                             width, height, 
-                             fullscreen ? "fullscreen" : "window", SDL_GetError());
+            KConsole::printf ("couldn't change video mode %dx%d (fullscreen setting failed)", width, height);
             KConsole::printf ("trying to fallback to window mode");
             return setScreenSize (width, height, false);
         }

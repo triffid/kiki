@@ -49,7 +49,8 @@ class KikiConfig (ConfigParser):
                 if fullscreen <> Controller.getFullscreen():
                     screen_size = self.get (section, fullscreen and "fullscreen size" or "window size")
                     screen_size = tuple (map (int, screen_size.split("x")))
-                    Controller.setScreenSize (screen_size[0], screen_size[1], self.getboolean(section, option))
+                    Controller.changeScreenSize (screen_size[0], screen_size[1], self.getboolean(section, option))
+                    self.set (section, "fullscreen size", "%dx%d" % Controller.getScreenSize())
         elif section == "keyboard":
             player = Controller.getPlayer()
             player.setKeyForAction (value, option.replace("_", " "))

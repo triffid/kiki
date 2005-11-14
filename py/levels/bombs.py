@@ -20,6 +20,6 @@ level_dict["bombs"] = {
 """
 world.addObjectAtPos (KikiBomb(), world.decenter (0,-4,2))
 world.addObjectAtPos (KikiBomb(), world.decenter (0,-4,-2))
-world.addObjectAtPos (KikiBomb(), world.decenter (-2,-2,0))
+world.addObjectAtPos (KikiBomb(), world.decenter (-3,-2,0))
 """,                                 
 }

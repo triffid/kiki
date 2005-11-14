@@ -6,10 +6,10 @@ level_dict["random"] = {
                         "size":     (21,21,21),
                         "intro":    "random",    
                         "help":     ( 
+                                        "$scale(1.5)mission:\nget to the exit!\n\n" + \
                                         "jump and try",
-                                        "" 
                                     ),
-                        "player":   {   "coordinates":     (2,2,0),
+                        "player":   {   "coordinates":     (1,3,2),
                                         "nostatus":         0,
                                     },
                         "exits":    [

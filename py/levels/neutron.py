@@ -17,8 +17,8 @@ level_dict["neutron"] = {
                         "size":     (11,11,11),
                         "intro":    "neutron",    
                         "help":     ( 
-                                        "No joke\nit is solvable:)"
-                                        
+                        				"$scale(1.5)mission:\nget to the exit!\n\n" + \
+                                        "it looks simpler than it is",
                                     ),
                         "player":   {   "position":     (0,-1,0),
                                         "nostatus":         0,
@@ -27,9 +27,8 @@ level_dict["neutron"] = {
                                         {
                                             "name":         "exit",
                                             "active":       1,
-                                            "position":     (0,0,0),
-                                            #"coordinates":     (1,1,1), #absolute coord
-                                        },
+                                            "position":     (0,0,0),                                        
+									    },
 				    ],
 			 "create": func_neutron,
 			}

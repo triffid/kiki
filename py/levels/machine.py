@@ -32,8 +32,7 @@ level_dict["machine"] = {
                         "size":     (5,5,9),
                         "intro":    "machine",    
                         "help":     ( 
-                                        "There is no hint at all,\n"+
-										"just move the stones",
+                        				"$scale(1.5)mission:\nactivate the exit!",
                                     ),
                         "player":   {   "position":     (0,0,0),
                                         "orientation":   roty270,
@@ -42,7 +41,7 @@ level_dict["machine"] = {
                                         {
                                             "name":         "exit",
                                             "active":       0,
-                                            "coordinates":     (1,2,8), #absolute coord
+                                            "coordinates":  (1,2,8), 
                                         },
 				    ],
 			 "create": func_electro,
