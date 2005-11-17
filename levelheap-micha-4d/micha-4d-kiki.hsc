@@ -3,34 +3,34 @@
 #[borg]		8,9	naja?
 #[cube]		8	ok
 #[blocks]	13 	ok
-#[slick]	24	0k
-#flower		59	0k
-#[mini		23	??? bekomme nur 30 hin
+#[slick]	24	ok
+#flower		59	ok
+#[mini		23	ok
 #[throw		36	ok
 #[maze		20	ok
-#[random		11	ok ?
-#[plate		67	naja ?
+#[random	11	ok ?
+#[plate		5	ok
 #[nice		13	ok
 #[edge		51	ok
 #[entropy	16	ok
-#[pool 		210	naja ? 
+#[pool 		210	naja ? ->kodi
 #[circuit	145	ok ?
-#[green2			???
+#[evil		282	naja
 #[machine 	62	ok
 #[neutron	379	ok?
-#[mesh		217	???
+#[mesh		101	ok
 #[conductor	476	ok
-#walls		25	ok
+#walls		22	ok
 
 #mainly ready highscore
 
 [plate]
-moves = 67
-micha-4d = 67
+moves = 5
+micha-4d = 5
 
 [entropy]
-moves = 16
-micha-4d = 16
+moves = 15
+micha-4d = 15
 
 [borg]
 moves = 8
@@ -41,8 +41,8 @@ moves = 59
 micha-4d = 59
 
 [green2]
-moves = 1000
-micha-4d = 1000
+moves = 282
+micha-4d = 282
 
 [slick]
 moves = 24
@@ -81,13 +81,12 @@ moves = 476
 micha-4d = 476
 
 [walls]
-moves = 25
-micha-4d = 25
+moves = 22
+micha-4d = 22
 
 [mesh]
-moves = 217
-micha-4d = 217
-micha = 217
+moves = 101
+micha-4d = 101
 
 [throw]
 moves = 36
