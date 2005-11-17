@@ -19,11 +19,9 @@ level_dict["edge"] = {
                         "scheme":   "candy_scheme",
                         "size":     (7,7,7),
                         "intro":    "edge",    
-                        "help":     ( 
-                                        "",
-                                        "",
-                                        "" 
-                                    ),
+                        "help":     (       "$scale(1.5)mission:\nget to the exit!\n\n",
+			
+			            ),
                         "player":   {   "coordinates":     (3,0,0),
                                         "nostatus":         0,
 					"orientation"	:	rot0
