@@ -11,7 +11,7 @@ moves = 21
 monsterkodi = 21
 
 [borg]
-moves = 20
+moves = 8
 micha-4d = 8
 
 [bridge]
@@ -52,7 +52,7 @@ micha-4d = 8
 monsterkodi = 13
 
 [edge]
-moves = 51
+moves = 40
 micha-4d = 51
 monsterkodi = 40
 
@@ -69,8 +69,8 @@ moves = 12
 monsterkodi = 12
 
 [entropy]
-moves = 16
-micha-4d = 16
+moves = 15
+micha-4d = 15
 
 [escape]
 moves = 22
@@ -81,7 +81,7 @@ moves = 388
 monsterkodi = 388
 
 [flower]
-moves = 53
+moves = 59
 monsterkodi = 14
 micha-4d = 59
 
@@ -124,12 +124,12 @@ micha-4d = 20
 monsterkodi = 18
 
 [mesh]
-moves = 217
-micha-4d = 217
+moves = 101
+micha-4d = 101
 
 [mini]
-moves = 31
-micha-4d = 30
+moves = 23
+micha-4d = 23
 monsterkodi = 31
 
 [move]
@@ -151,8 +151,8 @@ micha-4d = 13
 monsterkodi = 20
 
 [plate]
-moves = 67
-micha-4d = 67
+moves = 5
+micha-4d = 5
 
 [pool]
 moves = 70
@@ -160,7 +160,7 @@ micha-4d = 210
 monsterkodi = 70
 
 [random]
-moves = 15
+moves = 11
 micha-4d = 11
 monsterkodi = 15
 
@@ -210,6 +210,6 @@ moves = 18
 monsterkodi = 18
 
 [walls]
-moves = 25
-micha-4d = 25
+moves = 22
+micha-4d = 22
 monsterkodi = 30
