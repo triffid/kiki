@@ -81,7 +81,7 @@ moves = 388
 monsterkodi = 388
 
 [flower]
-moves = 59
+moves = 14
 monsterkodi = 14
 micha-4d = 59
 
@@ -119,7 +119,7 @@ moves = 62
 micha-4d = 62
 
 [maze]
-moves = 20
+moves = 18
 micha-4d = 20
 monsterkodi = 18
 
@@ -173,7 +173,7 @@ moves = 25
 monsterkodi = 25
 
 [sandbox]
-moves = 119
+moves = 89
 micha-4d = 119
 monsterkodi = 89
 
