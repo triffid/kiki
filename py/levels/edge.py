@@ -20,9 +20,7 @@ level_dict["edge"] = {
                         "size":     (7,7,7),
                         "intro":    "edge",    
                         "help":     ( 
-                                        "",
-                                        "",
-                                        "" 
+                                            "$scale(1.5)mission:\nget to the exit!",
                                     ),
                         "player":   {   "coordinates":     (3,0,0),
                                         "nostatus":         0,
