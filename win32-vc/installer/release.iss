@@ -3,7 +3,7 @@
 
 [Setup]
 AppName=kiki
-AppVerName=kiki the nanobot 1.0.0
+AppVerName=kiki the nanobot 1.0
 AppPublisher=monsterkodi
 AppPublisherURL=http://kiki.sf.net
 AppSupportURL=http://kiki.sf.net
