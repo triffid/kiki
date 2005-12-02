@@ -22,8 +22,8 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "..\..\*.exe"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
-Source: "..\..\*.dll"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
+Source: "..\..\*.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\..\*.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\..\py\*"; DestDir: "{app}\py"; Flags: ignoreversion recursesubdirs
 Source: "..\..\py_crippled\*"; DestDir: "{app}\py_crippled"; Flags: ignoreversion recursesubdirs
 Source: "..\..\sound\*"; DestDir: "{app}\sound"; Flags: ignoreversion recursesubdirs
