@@ -9,11 +9,12 @@ lang['euskara'] = {
 "kiki the nano bot": "kiki the nano bot",
 
 # menu 
-
+"continue": "jarraitu",
 "new game": "joku berria",
 "load level": "maila eskuratu",
 "next level": "hurrengo maila",
 "restart": "berriz hasi",
+"statistics": "estatistikak",
 "setup": "ezarpenak",
 "story": "istorioa",
 "demo": "erakustaldia",
@@ -24,23 +25,25 @@ lang['euskara'] = {
 
 # about
 
-"version": "bertsioa",
+"version": "bertsioa:",
 "programmed by": "programatzailea",
+"levels": "mailak",
+"translations": "itzulpenak",
 "sounds from": "soinuak",
 "thanks": "eskerrak",
 "visit": "ikusi",
-"for more games": "joku gehiagorako",
+"for more games": "joku gehiagotarako",
 "main menu": "hautesleihoa",
 
 # story 
 
-"STORY_PAGE_1": "behin batean, nano\nmunduan errobot\ntxiki batzuk bizi\nziren.\n\nbizitza artifizial alai bat\nbizi zuten egilearentzako baliabide\n bilketarekin lanpeturik,\nhark egin baitzituen errobot\ntxiki guztiak.",
-"STORY_PAGE_2": "baina halako batean,\nindar parasito batek\negilearen kontrol gailu\nnagusia suntsitu zuen.\n\ngeroztik egileak gaizki\nfuntzionatzen du\neta errobot inozo eta alferrak\nsoilik sortzen ditu,\nzeintzuek elkar tirokatzen duten\nhonela nano mundua suntsituz.",
+"STORY_PAGE_1": "behin batean, nano\nmunduan errobot\ntxiki batzuk bizi\nziren.\n\nbizitza artifizial alai bat\nbizi zuten, egilearentzako baliabide\n bilketarekin lanpeturik,\nhark egin baitzituen errobot\ntxiki guztiak.",
+"STORY_PAGE_2": "baina halako batean,\nindar-parasito batek\negilearen kontrol gailu\nnagusia suntsitu zuen.\n\ngeroztik egileak gaizki\nfuntzionatzen du\neta errobot inozo eta alferrak\nsoilik sortzen ditu,\nzeintzuek elkar tirokatzen duten\nhonela nano mundua suntsituz.",
 "STORY_PAGE_3": "zure eginbeharra kiki, bizi\nden errobot on bakarra,\nlaguntzea da, egilea konpon dezan.\n\nzorte on!",
 
 # statistics
 
-"STATISTICS_TEXT": "$scale(1.5)statistics\n\nyou solved %d of %d levels\n\nyour current score is\n\n$scale(2.0)%d",
+"STATISTICS_TEXT": "$scale(1.5)estatistikak\n\n%d maila burutu dituzu %d(e)tik\n\nzure uneko emaitza:\n\n$scale(2.0)%d",
 
 # setup
 
@@ -64,8 +67,8 @@ lang['euskara'] = {
 "move backward": "atzera egin",
 "turn left": "ezkerrera biratu",
 "turn right": "eskumara biratu",
-"jump": "jauzi",
-"push": "sakatu",
+"jump": "jauzi egin",
+"push": "bultzatu",
 "shoot": "tirokatu",
 "change view": "ikuskera aldatu",
 "look up": "gora begiratu",
