@@ -4,7 +4,7 @@ if Controller.isDebugVersion(): print "[lang.py]"
 
 Controller.language = "english"
 
-lang_list = [  "dutch", "english", "euskara", "german",  "portuguese", "spanish", "swedish", ]
+lang_list = [  "dutch", "english", "euskara", "francaise", "german",  "portuguese", "spanish", "swedish", ]
 lang = {}
 for langName in lang_list:
     execfile (kikipy_path + os.path.sep + "lang" + os.path.sep + langName + ".py")
