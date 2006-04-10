@@ -7,6 +7,7 @@
 #define __KikiPythonWidget
 
 #include "KikiPos.h"
+#include "KikiPython.h"
 #include <KTextField.h>
 
 class KikiPythonWidget : public KTextField

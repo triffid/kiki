@@ -9,6 +9,10 @@
 #include <math.h>
 
 #include <SDL.h>
+
+#define K_INCLUDE_GLUT
+#include "KIncludeTools.h"
+
 #include "KikiController.h"
 
 // __________________________________________________________________________________________________
@@ -19,6 +23,8 @@ int main (int argc, char * argv[])
     int width, height;
     SDL_Surface * screen;
 
+    glutInit(&argc,argv);
+  
     // initialize SDL
     if ( SDL_Init(SDL_INIT_VIDEO | SDL_INIT_VIDEO) < 0 ) // SDL_INIT_TIMER
     {
