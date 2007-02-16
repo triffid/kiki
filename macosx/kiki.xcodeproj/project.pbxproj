@@ -1,0 +1,1211 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		002F3A2E09D0888800EBEB88 /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 002F3A2C09D0888800EBEB88 /* SDLMain.m */; };
+		002F3C0109D093BD00EBEB88 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002F3C0009D093BD00EBEB88 /* OpenGL.framework */; };
+		002F3C6109D0951E00EBEB88 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002F3C6009D0951E00EBEB88 /* GLUT.framework */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		C39F167C0B850630009CC3A5 /* KikiAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F15F90B850630009CC3A5 /* KikiAction.cpp */; };
+		C39F167E0B850630009CC3A5 /* KikiActionObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F15FB0B850630009CC3A5 /* KikiActionObject.cpp */; };
+		C39F16820B850630009CC3A5 /* KikiEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F15FF0B850630009CC3A5 /* KikiEvent.cpp */; };
+		C39F16840B850630009CC3A5 /* KikiFace.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F16010B850630009CC3A5 /* KikiFace.cpp */; };
+		C39F16860B850630009CC3A5 /* KikiObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F16030B850630009CC3A5 /* KikiObject.cpp */; };
+		C39F168A0B850630009CC3A5 /* KikiPyAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F16070B850630009CC3A5 /* KikiPyAction.cpp */; };
+		C39F168C0B850630009CC3A5 /* KikiTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F16090B850630009CC3A5 /* KikiTools.cpp */; };
+		C39F168F0B850630009CC3A5 /* KikiBot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F160D0B850630009CC3A5 /* KikiBot.cpp */; };
+		C39F16910B850630009CC3A5 /* KikiBotFume.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F160F0B850630009CC3A5 /* KikiBotFume.cpp */; };
+		C39F16950B850630009CC3A5 /* KikiMutant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F16130B850630009CC3A5 /* KikiMutant.cpp */; };
+		C39F16970B850630009CC3A5 /* KikiPlayback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F16150B850630009CC3A5 /* KikiPlayback.cpp */; };
+		C39F16990B850630009CC3A5 /* KikiPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F16170B850630009CC3A5 /* KikiPlayer.cpp */; };
+		C39F169B0B850630009CC3A5 /* KikiRecorder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F16190B850630009CC3A5 /* KikiRecorder.cpp */; };
+		C39F169D0B850630009CC3A5 /* KikiStatusDisplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F161B0B850630009CC3A5 /* KikiStatusDisplay.cpp */; };
+		C39F16A00B850630009CC3A5 /* KikiCharacter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F161F0B850630009CC3A5 /* KikiCharacter.cpp */; };
+		C39F16A20B850630009CC3A5 /* KikiColumnMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F16210B850630009CC3A5 /* KikiColumnMenu.cpp */; };
+		C39F16A40B850630009CC3A5 /* KikiGUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F16230B850630009CC3A5 /* KikiGUI.cpp */; };
+		C39F16A60B850630009CC3A5 /* KikiMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F16250B850630009CC3A5 /* KikiMenu.cpp */; };
+		C39F16A80B850630009CC3A5 /* KikiPageText.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F16270B850630009CC3A5 /* KikiPageText.cpp */; };
+		C39F16AA0B850630009CC3A5 /* KikiScreenText.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F16290B850630009CC3A5 /* KikiScreenText.cpp */; };
+		C39F16AC0B850630009CC3A5 /* KikiScrollMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F162B0B850630009CC3A5 /* KikiScrollMenu.cpp */; };
+		C39F16AE0B850630009CC3A5 /* KikiText.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F162D0B850630009CC3A5 /* KikiText.cpp */; };
+		C39F16B00B850630009CC3A5 /* KikiTextLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F162F0B850630009CC3A5 /* KikiTextLine.cpp */; };
+		C39F16B60B850630009CC3A5 /* KikiAtom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F16360B850630009CC3A5 /* KikiAtom.cpp */; };
+		C39F16B80B850630009CC3A5 /* KikiBillBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F16380B850630009CC3A5 /* KikiBillBoard.cpp */; };
+		C39F16BA0B850630009CC3A5 /* KikiBomb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F163A0B850630009CC3A5 /* KikiBomb.cpp */; };
+		C39F16BC0B850630009CC3A5 /* KikiBullet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F163C0B850630009CC3A5 /* KikiBullet.cpp */; };
+		C39F16BE0B850630009CC3A5 /* KikiCellText.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F163E0B850630009CC3A5 /* KikiCellText.cpp */; };
+		C39F16C00B850630009CC3A5 /* KikiGate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F16400B850630009CC3A5 /* KikiGate.cpp */; };
+		C39F16C20B850630009CC3A5 /* KikiGear.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F16420B850630009CC3A5 /* KikiGear.cpp */; };
+		C39F16C40B850630009CC3A5 /* KikiGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F16440B850630009CC3A5 /* KikiGenerator.cpp */; };
+		C39F16C70B850630009CC3A5 /* KikiLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F16470B850630009CC3A5 /* KikiLight.cpp */; };
+		C39F16C90B850630009CC3A5 /* KikiMotorCylinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F16490B850630009CC3A5 /* KikiMotorCylinder.cpp */; };
+		C39F16CB0B850630009CC3A5 /* KikiMotorGear.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F164B0B850630009CC3A5 /* KikiMotorGear.cpp */; };
+		C39F16CD0B850630009CC3A5 /* KikiNeutron.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F164D0B850630009CC3A5 /* KikiNeutron.cpp */; };
+		C39F16CF0B850630009CC3A5 /* KikiPushable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F164F0B850630009CC3A5 /* KikiPushable.cpp */; };
+		C39F16D10B850630009CC3A5 /* KikiSpikes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F16510B850630009CC3A5 /* KikiSpikes.cpp */; };
+		C39F16D30B850630009CC3A5 /* KikiStone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F16530B850630009CC3A5 /* KikiStone.cpp */; };
+		C39F16D50B850630009CC3A5 /* KikiSwitch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F16550B850630009CC3A5 /* KikiSwitch.cpp */; };
+		C39F16D70B850630009CC3A5 /* KikiTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F16570B850630009CC3A5 /* KikiTest.cpp */; };
+		C39F16D90B850630009CC3A5 /* KikiValve.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F16590B850630009CC3A5 /* KikiValve.cpp */; };
+		C39F16DB0B850630009CC3A5 /* KikiWall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F165B0B850630009CC3A5 /* KikiWall.cpp */; };
+		C39F16DD0B850630009CC3A5 /* KikiWire.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F165D0B850630009CC3A5 /* KikiWire.cpp */; };
+		C39F16DF0B850630009CC3A5 /* KikiWireStone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F165F0B850630009CC3A5 /* KikiWireStone.cpp */; };
+		C39F16E60B850630009CC3A5 /* KikiController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F16670B850630009CC3A5 /* KikiController.cpp */; };
+		C39F16E90B850630009CC3A5 /* KikiLocalization.m in Sources */ = {isa = PBXBuildFile; fileRef = C39F166A0B850630009CC3A5 /* KikiLocalization.m */; };
+		C39F16EB0B850630009CC3A5 /* KikiPython.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F166C0B850630009CC3A5 /* KikiPython.cpp */; };
+		C39F16ED0B850630009CC3A5 /* KikiPythonWidget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F166E0B850630009CC3A5 /* KikiPythonWidget.cpp */; };
+		C39F16EF0B850630009CC3A5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F16700B850630009CC3A5 /* main.cpp */; };
+		C39F16F20B850630009CC3A5 /* KikiSound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F16740B850630009CC3A5 /* KikiSound.cpp */; };
+		C39F16F40B850630009CC3A5 /* KikiCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F16770B850630009CC3A5 /* KikiCell.cpp */; };
+		C39F16F60B850630009CC3A5 /* KikiWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F16790B850630009CC3A5 /* KikiWorld.cpp */; };
+		C39F18C90B8506A0009CC3A5 /* KEventHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F176C0B85069E009CC3A5 /* KEventHandler.cpp */; };
+		C39F18CB0B8506A0009CC3A5 /* KFileHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F176E0B85069E009CC3A5 /* KFileHandler.cpp */; };
+		C39F18CD0B8506A0009CC3A5 /* KKeyActionHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17700B85069F009CC3A5 /* KKeyActionHandler.cpp */; };
+		C39F18CF0B8506A0009CC3A5 /* KKeyHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17720B85069F009CC3A5 /* KKeyHandler.cpp */; };
+		C39F18D10B8506A0009CC3A5 /* KKeyRecorder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17740B85069F009CC3A5 /* KKeyRecorder.cpp */; };
+		C39F18D30B8506A0009CC3A5 /* KPickable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17760B85069F009CC3A5 /* KPickable.cpp */; };
+		C39F18D50B8506A0009CC3A5 /* KPickHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17780B85069F009CC3A5 /* KPickHandler.cpp */; };
+		C39F18D70B8506A0009CC3A5 /* KSelectable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F177A0B85069F009CC3A5 /* KSelectable.cpp */; };
+		C39F18D90B8506A0009CC3A5 /* KSelectionHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F177C0B85069F009CC3A5 /* KSelectionHandler.cpp */; };
+		C39F18DB0B8506A0009CC3A5 /* KDisplayTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F177F0B85069F009CC3A5 /* KDisplayTools.cpp */; };
+		C39F18DD0B8506A0009CC3A5 /* KFileTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17810B85069F009CC3A5 /* KFileTools.cpp */; };
+		C39F18E00B8506A0009CC3A5 /* KIntrospection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17840B85069F009CC3A5 /* KIntrospection.cpp */; };
+		C39F18E30B8506A0009CC3A5 /* KKeyTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17870B85069F009CC3A5 /* KKeyTools.cpp */; };
+		C39F18E50B8506A0009CC3A5 /* KNotificationObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17890B85069F009CC3A5 /* KNotificationObject.cpp */; };
+		C39F18E70B8506A0009CC3A5 /* KStringTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F178B0B85069F009CC3A5 /* KStringTools.cpp */; };
+		C39F18EA0B8506A0009CC3A5 /* KXMLTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F178E0B85069F009CC3A5 /* KXMLTools.cpp */; };
+		C39F18ED0B8506A0009CC3A5 /* KKey.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17920B85069F009CC3A5 /* KKey.cpp */; };
+		C39F18EF0B8506A0009CC3A5 /* KLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17940B85069F009CC3A5 /* KLight.cpp */; };
+		C39F18F10B8506A0009CC3A5 /* KLightingProjection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17960B85069F009CC3A5 /* KLightingProjection.cpp */; };
+		C39F18F30B8506A0009CC3A5 /* KMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17980B85069F009CC3A5 /* KMatrix.cpp */; };
+		C39F18F50B8506A0009CC3A5 /* KOrthographicProjection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F179A0B85069F009CC3A5 /* KOrthographicProjection.cpp */; };
+		C39F18F70B8506A0009CC3A5 /* KPerspectiveProjection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F179C0B85069F009CC3A5 /* KPerspectiveProjection.cpp */; };
+		C39F18F90B8506A0009CC3A5 /* KProjection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F179E0B85069F009CC3A5 /* KProjection.cpp */; };
+		C39F18FB0B8506A0009CC3A5 /* KQuaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17A00B85069F009CC3A5 /* KQuaternion.cpp */; };
+		C39F18FD0B8506A0009CC3A5 /* KSeparatedMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17A20B85069F009CC3A5 /* KSeparatedMatrix.cpp */; };
+		C39F18FF0B8506A0009CC3A5 /* KTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17A40B85069F009CC3A5 /* KTexture.cpp */; };
+		C39F19010B8506A0009CC3A5 /* KTrash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17A60B85069F009CC3A5 /* KTrash.cpp */; };
+		C39F19040B8506A0009CC3A5 /* KButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17AA0B85069F009CC3A5 /* KButton.cpp */; };
+		C39F19060B8506A0009CC3A5 /* KButtonBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17AC0B85069F009CC3A5 /* KButtonBox.cpp */; };
+		C39F19090B8506A0009CC3A5 /* KFileNameField.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17AF0B85069F009CC3A5 /* KFileNameField.cpp */; };
+		C39F190B0B8506A0009CC3A5 /* KFileTreeDir.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17B10B85069F009CC3A5 /* KFileTreeDir.cpp */; };
+		C39F190D0B8506A0009CC3A5 /* KFileTreeDirCurrent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17B30B85069F009CC3A5 /* KFileTreeDirCurrent.cpp */; };
+		C39F190F0B8506A0009CC3A5 /* KFileTreeDirUp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17B50B85069F009CC3A5 /* KFileTreeDirUp.cpp */; };
+		C39F19110B8506A0009CC3A5 /* KFileTreeFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17B70B85069F009CC3A5 /* KFileTreeFile.cpp */; };
+		C39F19130B8506A0009CC3A5 /* KFileTreeNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17B90B85069F009CC3A5 /* KFileTreeNode.cpp */; };
+		C39F19150B8506A0009CC3A5 /* KFileTreeWidget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17BB0B85069F009CC3A5 /* KFileTreeWidget.cpp */; };
+		C39F19170B8506A0009CC3A5 /* KIconButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17BD0B85069F009CC3A5 /* KIconButton.cpp */; };
+		C39F19190B8506A0009CC3A5 /* KKeySequenceField.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17BF0B85069F009CC3A5 /* KKeySequenceField.cpp */; };
+		C39F191B0B8506A0009CC3A5 /* KLabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17C10B85069F009CC3A5 /* KLabel.cpp */; };
+		C39F191D0B8506A0009CC3A5 /* KMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17C30B85069F009CC3A5 /* KMenu.cpp */; };
+		C39F191F0B8506A0009CC3A5 /* KMenuItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17C50B85069F009CC3A5 /* KMenuItem.cpp */; };
+		C39F19210B8506A0009CC3A5 /* KNumberField.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17C70B85069F009CC3A5 /* KNumberField.cpp */; };
+		C39F19230B8506A0009CC3A5 /* KProjectionWidget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17C90B85069F009CC3A5 /* KProjectionWidget.cpp */; };
+		C39F19250B8506A0009CC3A5 /* KScrollBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17CB0B85069F009CC3A5 /* KScrollBar.cpp */; };
+		C39F19270B8506A0009CC3A5 /* KSliderButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17CD0B85069F009CC3A5 /* KSliderButton.cpp */; };
+		C39F19290B8506A0009CC3A5 /* KStatusMenuItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17CF0B85069F009CC3A5 /* KStatusMenuItem.cpp */; };
+		C39F192B0B8506A0009CC3A5 /* KSubMenuItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17D10B85069F009CC3A5 /* KSubMenuItem.cpp */; };
+		C39F192D0B8506A0009CC3A5 /* KTextField.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17D30B85069F009CC3A5 /* KTextField.cpp */; };
+		C39F192F0B8506A0009CC3A5 /* KTextWidget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17D50B85069F009CC3A5 /* KTextWidget.cpp */; };
+		C39F19310B8506A0009CC3A5 /* KToggleButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17D70B85069F009CC3A5 /* KToggleButton.cpp */; };
+		C39F19330B8506A0009CC3A5 /* KWidget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17D90B85069F009CC3A5 /* KWidget.cpp */; };
+		C39F19350B8506A0009CC3A5 /* KWidgetArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17DB0B85069F009CC3A5 /* KWidgetArray.cpp */; };
+		C39F19370B8506A0009CC3A5 /* KConsole.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17DE0B85069F009CC3A5 /* KConsole.cpp */; };
+		C39F19390B8506A0009CC3A5 /* KFileTreeWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17E00B85069F009CC3A5 /* KFileTreeWindow.cpp */; };
+		C39F193B0B8506A0009CC3A5 /* KMenuWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17E20B85069F009CC3A5 /* KMenuWindow.cpp */; };
+		C39F193D0B8506A0009CC3A5 /* KMessagePanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17E40B85069F009CC3A5 /* KMessagePanel.cpp */; };
+		C39F193F0B8506A0009CC3A5 /* KPopupMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17E60B85069F009CC3A5 /* KPopupMenu.cpp */; };
+		C39F19410B8506A0009CC3A5 /* KWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17E80B85069F009CC3A5 /* KWindow.cpp */; };
+		C39F19D60B850711009CC3A5 /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39F19D50B850711009CC3A5 /* Python.framework */; };
+		C39F19E10B850780009CC3A5 /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39F19E00B850780009CC3A5 /* SDL.framework */; };
+		C39F19E70B8507FF009CC3A5 /* SDL_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39F19E50B8507FE009CC3A5 /* SDL_image.framework */; };
+		C39F19E80B8507FF009CC3A5 /* SDL_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39F19E60B8507FE009CC3A5 /* SDL_mixer.framework */; };
+		C39F19F60B8508A4009CC3A5 /* KikiPy_wrap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F19F40B8508A4009CC3A5 /* KikiPy_wrap.cpp */; };
+		C39F1B5A0B85120D009CC3A5 /* SDL_image.framework in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = C39F19E50B8507FE009CC3A5 /* SDL_image.framework */; };
+		C39F1B5B0B85120D009CC3A5 /* SDL_mixer.framework in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = C39F19E60B8507FE009CC3A5 /* SDL_mixer.framework */; };
+		C39F1B5C0B85120D009CC3A5 /* SDL.framework in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = C39F19E00B850780009CC3A5 /* SDL.framework */; };
+		C39F1B690B851520009CC3A5 /* kiki.icns in Resources */ = {isa = PBXBuildFile; fileRef = C39F1B680B851520009CC3A5 /* kiki.icns */; };
+		C39F1B980B851955009CC3A5 /* sound in Resources */ = {isa = PBXBuildFile; fileRef = C39F1A020B850945009CC3A5 /* sound */; };
+		C39F1B990B851955009CC3A5 /* py in Resources */ = {isa = PBXBuildFile; fileRef = C39F1A260B8509A8009CC3A5 /* py */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4A9504CCFFE6A4B311CA0CBA /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		4A9504CDFFE6A4B311CA0CBA /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		002F39FD09D0883400EBEB88 /* Copy Frameworks into .app bundle */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C39F1B5A0B85120D009CC3A5 /* SDL_image.framework in Copy Frameworks into .app bundle */,
+				C39F1B5B0B85120D009CC3A5 /* SDL_mixer.framework in Copy Frameworks into .app bundle */,
+				C39F1B5C0B85120D009CC3A5 /* SDL.framework in Copy Frameworks into .app bundle */,
+			);
+			name = "Copy Frameworks into .app bundle";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		002F3A2B09D0888800EBEB88 /* SDLMain.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SDLMain.h; sourceTree = SOURCE_ROOT; };
+		002F3A2C09D0888800EBEB88 /* SDLMain.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = SDLMain.m; sourceTree = SOURCE_ROOT; };
+		002F3C0009D093BD00EBEB88 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		002F3C6009D0951E00EBEB88 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../../../../../../../../System/Library/Frameworks/GLUT.framework; sourceTree = SOURCE_ROOT; };
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* kiki_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kiki_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* kiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C39F15F90B850630009CC3A5 /* KikiAction.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiAction.cpp; sourceTree = "<group>"; };
+		C39F15FA0B850630009CC3A5 /* KikiAction.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiAction.h; sourceTree = "<group>"; };
+		C39F15FB0B850630009CC3A5 /* KikiActionObject.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiActionObject.cpp; sourceTree = "<group>"; };
+		C39F15FC0B850630009CC3A5 /* KikiActionObject.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiActionObject.h; sourceTree = "<group>"; };
+		C39F15FD0B850630009CC3A5 /* KikiBase.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiBase.h; sourceTree = "<group>"; };
+		C39F15FE0B850630009CC3A5 /* KikiColorObject.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiColorObject.h; sourceTree = "<group>"; };
+		C39F15FF0B850630009CC3A5 /* KikiEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiEvent.cpp; sourceTree = "<group>"; };
+		C39F16000B850630009CC3A5 /* KikiEvent.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiEvent.h; sourceTree = "<group>"; };
+		C39F16010B850630009CC3A5 /* KikiFace.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiFace.cpp; sourceTree = "<group>"; };
+		C39F16020B850630009CC3A5 /* KikiFace.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiFace.h; sourceTree = "<group>"; };
+		C39F16030B850630009CC3A5 /* KikiObject.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiObject.cpp; sourceTree = "<group>"; };
+		C39F16040B850630009CC3A5 /* KikiObject.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiObject.h; sourceTree = "<group>"; };
+		C39F16050B850630009CC3A5 /* KikiObjectHeader.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiObjectHeader.h; sourceTree = "<group>"; };
+		C39F16060B850630009CC3A5 /* KikiPos.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiPos.h; sourceTree = "<group>"; };
+		C39F16070B850630009CC3A5 /* KikiPyAction.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiPyAction.cpp; sourceTree = "<group>"; };
+		C39F16080B850630009CC3A5 /* KikiPyAction.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiPyAction.h; sourceTree = "<group>"; };
+		C39F16090B850630009CC3A5 /* KikiTools.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiTools.cpp; sourceTree = "<group>"; };
+		C39F160A0B850630009CC3A5 /* KikiTools.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiTools.h; sourceTree = "<group>"; };
+		C39F160C0B850630009CC3A5 /* body.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = body.h; sourceTree = "<group>"; };
+		C39F160D0B850630009CC3A5 /* KikiBot.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiBot.cpp; sourceTree = "<group>"; };
+		C39F160E0B850630009CC3A5 /* KikiBot.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiBot.h; sourceTree = "<group>"; };
+		C39F160F0B850630009CC3A5 /* KikiBotFume.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiBotFume.cpp; sourceTree = "<group>"; };
+		C39F16100B850630009CC3A5 /* KikiBotFume.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiBotFume.h; sourceTree = "<group>"; };
+		C39F16110B850630009CC3A5 /* KikiBots.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiBots.h; sourceTree = "<group>"; };
+		C39F16120B850630009CC3A5 /* KikiBotStatus.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiBotStatus.h; sourceTree = "<group>"; };
+		C39F16130B850630009CC3A5 /* KikiMutant.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiMutant.cpp; sourceTree = "<group>"; };
+		C39F16140B850630009CC3A5 /* KikiMutant.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiMutant.h; sourceTree = "<group>"; };
+		C39F16150B850630009CC3A5 /* KikiPlayback.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiPlayback.cpp; sourceTree = "<group>"; };
+		C39F16160B850630009CC3A5 /* KikiPlayback.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiPlayback.h; sourceTree = "<group>"; };
+		C39F16170B850630009CC3A5 /* KikiPlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiPlayer.cpp; sourceTree = "<group>"; };
+		C39F16180B850630009CC3A5 /* KikiPlayer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiPlayer.h; sourceTree = "<group>"; };
+		C39F16190B850630009CC3A5 /* KikiRecorder.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiRecorder.cpp; sourceTree = "<group>"; };
+		C39F161A0B850630009CC3A5 /* KikiRecorder.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiRecorder.h; sourceTree = "<group>"; };
+		C39F161B0B850630009CC3A5 /* KikiStatusDisplay.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiStatusDisplay.cpp; sourceTree = "<group>"; };
+		C39F161C0B850630009CC3A5 /* KikiStatusDisplay.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiStatusDisplay.h; sourceTree = "<group>"; };
+		C39F161D0B850630009CC3A5 /* tire.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tire.h; sourceTree = "<group>"; };
+		C39F161F0B850630009CC3A5 /* KikiCharacter.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiCharacter.cpp; sourceTree = "<group>"; };
+		C39F16200B850630009CC3A5 /* KikiCharacter.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiCharacter.h; sourceTree = "<group>"; };
+		C39F16210B850630009CC3A5 /* KikiColumnMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiColumnMenu.cpp; sourceTree = "<group>"; };
+		C39F16220B850630009CC3A5 /* KikiColumnMenu.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiColumnMenu.h; sourceTree = "<group>"; };
+		C39F16230B850630009CC3A5 /* KikiGUI.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiGUI.cpp; sourceTree = "<group>"; };
+		C39F16240B850630009CC3A5 /* KikiGUI.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiGUI.h; sourceTree = "<group>"; };
+		C39F16250B850630009CC3A5 /* KikiMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiMenu.cpp; sourceTree = "<group>"; };
+		C39F16260B850630009CC3A5 /* KikiMenu.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiMenu.h; sourceTree = "<group>"; };
+		C39F16270B850630009CC3A5 /* KikiPageText.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiPageText.cpp; sourceTree = "<group>"; };
+		C39F16280B850630009CC3A5 /* KikiPageText.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiPageText.h; sourceTree = "<group>"; };
+		C39F16290B850630009CC3A5 /* KikiScreenText.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiScreenText.cpp; sourceTree = "<group>"; };
+		C39F162A0B850630009CC3A5 /* KikiScreenText.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiScreenText.h; sourceTree = "<group>"; };
+		C39F162B0B850630009CC3A5 /* KikiScrollMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiScrollMenu.cpp; sourceTree = "<group>"; };
+		C39F162C0B850630009CC3A5 /* KikiScrollMenu.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiScrollMenu.h; sourceTree = "<group>"; };
+		C39F162D0B850630009CC3A5 /* KikiText.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiText.cpp; sourceTree = "<group>"; };
+		C39F162E0B850630009CC3A5 /* KikiText.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiText.h; sourceTree = "<group>"; };
+		C39F162F0B850630009CC3A5 /* KikiTextLine.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiTextLine.cpp; sourceTree = "<group>"; };
+		C39F16300B850630009CC3A5 /* KikiTextLine.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiTextLine.h; sourceTree = "<group>"; };
+		C39F16330B850630009CC3A5 /* cylinder.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = cylinder.h; sourceTree = "<group>"; };
+		C39F16340B850630009CC3A5 /* gear.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = gear.h; sourceTree = "<group>"; };
+		C39F16350B850630009CC3A5 /* generator.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = generator.h; sourceTree = "<group>"; };
+		C39F16360B850630009CC3A5 /* KikiAtom.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiAtom.cpp; sourceTree = "<group>"; };
+		C39F16370B850630009CC3A5 /* KikiAtom.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiAtom.h; sourceTree = "<group>"; };
+		C39F16380B850630009CC3A5 /* KikiBillBoard.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiBillBoard.cpp; sourceTree = "<group>"; };
+		C39F16390B850630009CC3A5 /* KikiBillBoard.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiBillBoard.h; sourceTree = "<group>"; };
+		C39F163A0B850630009CC3A5 /* KikiBomb.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiBomb.cpp; sourceTree = "<group>"; };
+		C39F163B0B850630009CC3A5 /* KikiBomb.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiBomb.h; sourceTree = "<group>"; };
+		C39F163C0B850630009CC3A5 /* KikiBullet.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiBullet.cpp; sourceTree = "<group>"; };
+		C39F163D0B850630009CC3A5 /* KikiBullet.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiBullet.h; sourceTree = "<group>"; };
+		C39F163E0B850630009CC3A5 /* KikiCellText.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiCellText.cpp; sourceTree = "<group>"; };
+		C39F163F0B850630009CC3A5 /* KikiCellText.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiCellText.h; sourceTree = "<group>"; };
+		C39F16400B850630009CC3A5 /* KikiGate.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiGate.cpp; sourceTree = "<group>"; };
+		C39F16410B850630009CC3A5 /* KikiGate.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiGate.h; sourceTree = "<group>"; };
+		C39F16420B850630009CC3A5 /* KikiGear.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiGear.cpp; sourceTree = "<group>"; };
+		C39F16430B850630009CC3A5 /* KikiGear.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiGear.h; sourceTree = "<group>"; };
+		C39F16440B850630009CC3A5 /* KikiGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiGenerator.cpp; sourceTree = "<group>"; };
+		C39F16450B850630009CC3A5 /* KikiGenerator.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiGenerator.h; sourceTree = "<group>"; };
+		C39F16460B850630009CC3A5 /* KikiItems.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiItems.h; sourceTree = "<group>"; };
+		C39F16470B850630009CC3A5 /* KikiLight.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiLight.cpp; sourceTree = "<group>"; };
+		C39F16480B850630009CC3A5 /* KikiLight.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiLight.h; sourceTree = "<group>"; };
+		C39F16490B850630009CC3A5 /* KikiMotorCylinder.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiMotorCylinder.cpp; sourceTree = "<group>"; };
+		C39F164A0B850630009CC3A5 /* KikiMotorCylinder.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiMotorCylinder.h; sourceTree = "<group>"; };
+		C39F164B0B850630009CC3A5 /* KikiMotorGear.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiMotorGear.cpp; sourceTree = "<group>"; };
+		C39F164C0B850630009CC3A5 /* KikiMotorGear.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiMotorGear.h; sourceTree = "<group>"; };
+		C39F164D0B850630009CC3A5 /* KikiNeutron.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiNeutron.cpp; sourceTree = "<group>"; };
+		C39F164E0B850630009CC3A5 /* KikiNeutron.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiNeutron.h; sourceTree = "<group>"; };
+		C39F164F0B850630009CC3A5 /* KikiPushable.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiPushable.cpp; sourceTree = "<group>"; };
+		C39F16500B850630009CC3A5 /* KikiPushable.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiPushable.h; sourceTree = "<group>"; };
+		C39F16510B850630009CC3A5 /* KikiSpikes.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiSpikes.cpp; sourceTree = "<group>"; };
+		C39F16520B850630009CC3A5 /* KikiSpikes.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiSpikes.h; sourceTree = "<group>"; };
+		C39F16530B850630009CC3A5 /* KikiStone.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiStone.cpp; sourceTree = "<group>"; };
+		C39F16540B850630009CC3A5 /* KikiStone.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiStone.h; sourceTree = "<group>"; };
+		C39F16550B850630009CC3A5 /* KikiSwitch.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiSwitch.cpp; sourceTree = "<group>"; };
+		C39F16560B850630009CC3A5 /* KikiSwitch.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiSwitch.h; sourceTree = "<group>"; };
+		C39F16570B850630009CC3A5 /* KikiTest.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiTest.cpp; sourceTree = "<group>"; };
+		C39F16580B850630009CC3A5 /* KikiTest.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiTest.h; sourceTree = "<group>"; };
+		C39F16590B850630009CC3A5 /* KikiValve.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiValve.cpp; sourceTree = "<group>"; };
+		C39F165A0B850630009CC3A5 /* KikiValve.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiValve.h; sourceTree = "<group>"; };
+		C39F165B0B850630009CC3A5 /* KikiWall.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiWall.cpp; sourceTree = "<group>"; };
+		C39F165C0B850630009CC3A5 /* KikiWall.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiWall.h; sourceTree = "<group>"; };
+		C39F165D0B850630009CC3A5 /* KikiWire.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiWire.cpp; sourceTree = "<group>"; };
+		C39F165E0B850630009CC3A5 /* KikiWire.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiWire.h; sourceTree = "<group>"; };
+		C39F165F0B850630009CC3A5 /* KikiWireStone.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiWireStone.cpp; sourceTree = "<group>"; };
+		C39F16600B850630009CC3A5 /* KikiWireStone.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiWireStone.h; sourceTree = "<group>"; };
+		C39F16610B850630009CC3A5 /* kolben.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = kolben.h; sourceTree = "<group>"; };
+		C39F16620B850630009CC3A5 /* motor.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = motor.h; sourceTree = "<group>"; };
+		C39F16630B850630009CC3A5 /* valve.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = valve.h; sourceTree = "<group>"; };
+		C39F16640B850630009CC3A5 /* wire.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wire.h; sourceTree = "<group>"; };
+		C39F16660B850630009CC3A5 /* Kiki.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Kiki.h; sourceTree = "<group>"; };
+		C39F16670B850630009CC3A5 /* KikiController.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiController.cpp; sourceTree = "<group>"; };
+		C39F16680B850630009CC3A5 /* KikiController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiController.h; sourceTree = "<group>"; };
+		C39F16690B850630009CC3A5 /* KikiLocalization.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiLocalization.h; sourceTree = "<group>"; };
+		C39F166A0B850630009CC3A5 /* KikiLocalization.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = KikiLocalization.m; sourceTree = "<group>"; };
+		C39F166B0B850630009CC3A5 /* KikiMain.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiMain.h; sourceTree = "<group>"; };
+		C39F166C0B850630009CC3A5 /* KikiPython.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiPython.cpp; sourceTree = "<group>"; };
+		C39F166D0B850630009CC3A5 /* KikiPython.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiPython.h; sourceTree = "<group>"; };
+		C39F166E0B850630009CC3A5 /* KikiPythonWidget.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiPythonWidget.cpp; sourceTree = "<group>"; };
+		C39F166F0B850630009CC3A5 /* KikiPythonWidget.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiPythonWidget.h; sourceTree = "<group>"; };
+		C39F16700B850630009CC3A5 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C39F16740B850630009CC3A5 /* KikiSound.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiSound.cpp; sourceTree = "<group>"; };
+		C39F16750B850630009CC3A5 /* KikiSound.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiSound.h; sourceTree = "<group>"; };
+		C39F16770B850630009CC3A5 /* KikiCell.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiCell.cpp; sourceTree = "<group>"; };
+		C39F16780B850630009CC3A5 /* KikiCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiCell.h; sourceTree = "<group>"; };
+		C39F16790B850630009CC3A5 /* KikiWorld.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiWorld.cpp; sourceTree = "<group>"; };
+		C39F167A0B850630009CC3A5 /* KikiWorld.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiWorld.h; sourceTree = "<group>"; };
+		C39F176C0B85069E009CC3A5 /* KEventHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KEventHandler.cpp; sourceTree = "<group>"; };
+		C39F176D0B85069E009CC3A5 /* KEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KEventHandler.h; sourceTree = "<group>"; };
+		C39F176E0B85069E009CC3A5 /* KFileHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KFileHandler.cpp; sourceTree = "<group>"; };
+		C39F176F0B85069F009CC3A5 /* KFileHandler.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KFileHandler.h; sourceTree = "<group>"; };
+		C39F17700B85069F009CC3A5 /* KKeyActionHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KKeyActionHandler.cpp; sourceTree = "<group>"; };
+		C39F17710B85069F009CC3A5 /* KKeyActionHandler.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KKeyActionHandler.h; sourceTree = "<group>"; };
+		C39F17720B85069F009CC3A5 /* KKeyHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KKeyHandler.cpp; sourceTree = "<group>"; };
+		C39F17730B85069F009CC3A5 /* KKeyHandler.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KKeyHandler.h; sourceTree = "<group>"; };
+		C39F17740B85069F009CC3A5 /* KKeyRecorder.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KKeyRecorder.cpp; sourceTree = "<group>"; };
+		C39F17750B85069F009CC3A5 /* KKeyRecorder.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KKeyRecorder.h; sourceTree = "<group>"; };
+		C39F17760B85069F009CC3A5 /* KPickable.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KPickable.cpp; sourceTree = "<group>"; };
+		C39F17770B85069F009CC3A5 /* KPickable.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KPickable.h; sourceTree = "<group>"; };
+		C39F17780B85069F009CC3A5 /* KPickHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KPickHandler.cpp; sourceTree = "<group>"; };
+		C39F17790B85069F009CC3A5 /* KPickHandler.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KPickHandler.h; sourceTree = "<group>"; };
+		C39F177A0B85069F009CC3A5 /* KSelectable.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KSelectable.cpp; sourceTree = "<group>"; };
+		C39F177B0B85069F009CC3A5 /* KSelectable.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KSelectable.h; sourceTree = "<group>"; };
+		C39F177C0B85069F009CC3A5 /* KSelectionHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KSelectionHandler.cpp; sourceTree = "<group>"; };
+		C39F177D0B85069F009CC3A5 /* KSelectionHandler.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KSelectionHandler.h; sourceTree = "<group>"; };
+		C39F177F0B85069F009CC3A5 /* KDisplayTools.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KDisplayTools.cpp; sourceTree = "<group>"; };
+		C39F17800B85069F009CC3A5 /* KDisplayTools.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KDisplayTools.h; sourceTree = "<group>"; };
+		C39F17810B85069F009CC3A5 /* KFileTools.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KFileTools.cpp; sourceTree = "<group>"; };
+		C39F17820B85069F009CC3A5 /* KFileTools.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KFileTools.h; sourceTree = "<group>"; };
+		C39F17830B85069F009CC3A5 /* KIncludeTools.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KIncludeTools.h; sourceTree = "<group>"; };
+		C39F17840B85069F009CC3A5 /* KIntrospection.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KIntrospection.cpp; sourceTree = "<group>"; };
+		C39F17850B85069F009CC3A5 /* KIntrospection.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KIntrospection.h; sourceTree = "<group>"; };
+		C39F17860B85069F009CC3A5 /* KKeySymbols.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KKeySymbols.h; sourceTree = "<group>"; };
+		C39F17870B85069F009CC3A5 /* KKeyTools.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KKeyTools.cpp; sourceTree = "<group>"; };
+		C39F17880B85069F009CC3A5 /* KKeyTools.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KKeyTools.h; sourceTree = "<group>"; };
+		C39F17890B85069F009CC3A5 /* KNotificationObject.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KNotificationObject.cpp; sourceTree = "<group>"; };
+		C39F178A0B85069F009CC3A5 /* KNotificationObject.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KNotificationObject.h; sourceTree = "<group>"; };
+		C39F178B0B85069F009CC3A5 /* KStringTools.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KStringTools.cpp; sourceTree = "<group>"; };
+		C39F178C0B85069F009CC3A5 /* KStringTools.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KStringTools.h; sourceTree = "<group>"; };
+		C39F178D0B85069F009CC3A5 /* KTools.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KTools.h; sourceTree = "<group>"; };
+		C39F178E0B85069F009CC3A5 /* KXMLTools.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KXMLTools.cpp; sourceTree = "<group>"; };
+		C39F178F0B85069F009CC3A5 /* KXMLTools.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KXMLTools.h; sourceTree = "<group>"; };
+		C39F17910B85069F009CC3A5 /* KColor.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KColor.h; sourceTree = "<group>"; };
+		C39F17920B85069F009CC3A5 /* KKey.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KKey.cpp; sourceTree = "<group>"; };
+		C39F17930B85069F009CC3A5 /* KKey.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KKey.h; sourceTree = "<group>"; };
+		C39F17940B85069F009CC3A5 /* KLight.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KLight.cpp; sourceTree = "<group>"; };
+		C39F17950B85069F009CC3A5 /* KLight.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KLight.h; sourceTree = "<group>"; };
+		C39F17960B85069F009CC3A5 /* KLightingProjection.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KLightingProjection.cpp; sourceTree = "<group>"; };
+		C39F17970B85069F009CC3A5 /* KLightingProjection.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KLightingProjection.h; sourceTree = "<group>"; };
+		C39F17980B85069F009CC3A5 /* KMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KMatrix.cpp; sourceTree = "<group>"; };
+		C39F17990B85069F009CC3A5 /* KMatrix.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KMatrix.h; sourceTree = "<group>"; };
+		C39F179A0B85069F009CC3A5 /* KOrthographicProjection.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KOrthographicProjection.cpp; sourceTree = "<group>"; };
+		C39F179B0B85069F009CC3A5 /* KOrthographicProjection.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KOrthographicProjection.h; sourceTree = "<group>"; };
+		C39F179C0B85069F009CC3A5 /* KPerspectiveProjection.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KPerspectiveProjection.cpp; sourceTree = "<group>"; };
+		C39F179D0B85069F009CC3A5 /* KPerspectiveProjection.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KPerspectiveProjection.h; sourceTree = "<group>"; };
+		C39F179E0B85069F009CC3A5 /* KProjection.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KProjection.cpp; sourceTree = "<group>"; };
+		C39F179F0B85069F009CC3A5 /* KProjection.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KProjection.h; sourceTree = "<group>"; };
+		C39F17A00B85069F009CC3A5 /* KQuaternion.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KQuaternion.cpp; sourceTree = "<group>"; };
+		C39F17A10B85069F009CC3A5 /* KQuaternion.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KQuaternion.h; sourceTree = "<group>"; };
+		C39F17A20B85069F009CC3A5 /* KSeparatedMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KSeparatedMatrix.cpp; sourceTree = "<group>"; };
+		C39F17A30B85069F009CC3A5 /* KSeparatedMatrix.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KSeparatedMatrix.h; sourceTree = "<group>"; };
+		C39F17A40B85069F009CC3A5 /* KTexture.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KTexture.cpp; sourceTree = "<group>"; };
+		C39F17A50B85069F009CC3A5 /* KTexture.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KTexture.h; sourceTree = "<group>"; };
+		C39F17A60B85069F009CC3A5 /* KTrash.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KTrash.cpp; sourceTree = "<group>"; };
+		C39F17A70B85069F009CC3A5 /* KTrash.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KTrash.h; sourceTree = "<group>"; };
+		C39F17A80B85069F009CC3A5 /* KVector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KVector.h; sourceTree = "<group>"; };
+		C39F17AA0B85069F009CC3A5 /* KButton.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KButton.cpp; sourceTree = "<group>"; };
+		C39F17AB0B85069F009CC3A5 /* KButton.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KButton.h; sourceTree = "<group>"; };
+		C39F17AC0B85069F009CC3A5 /* KButtonBox.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KButtonBox.cpp; sourceTree = "<group>"; };
+		C39F17AD0B85069F009CC3A5 /* KButtonBox.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KButtonBox.h; sourceTree = "<group>"; };
+		C39F17AE0B85069F009CC3A5 /* KButtonSymbols.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KButtonSymbols.h; sourceTree = "<group>"; };
+		C39F17AF0B85069F009CC3A5 /* KFileNameField.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KFileNameField.cpp; sourceTree = "<group>"; };
+		C39F17B00B85069F009CC3A5 /* KFileNameField.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KFileNameField.h; sourceTree = "<group>"; };
+		C39F17B10B85069F009CC3A5 /* KFileTreeDir.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KFileTreeDir.cpp; sourceTree = "<group>"; };
+		C39F17B20B85069F009CC3A5 /* KFileTreeDir.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KFileTreeDir.h; sourceTree = "<group>"; };
+		C39F17B30B85069F009CC3A5 /* KFileTreeDirCurrent.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KFileTreeDirCurrent.cpp; sourceTree = "<group>"; };
+		C39F17B40B85069F009CC3A5 /* KFileTreeDirCurrent.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KFileTreeDirCurrent.h; sourceTree = "<group>"; };
+		C39F17B50B85069F009CC3A5 /* KFileTreeDirUp.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KFileTreeDirUp.cpp; sourceTree = "<group>"; };
+		C39F17B60B85069F009CC3A5 /* KFileTreeDirUp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KFileTreeDirUp.h; sourceTree = "<group>"; };
+		C39F17B70B85069F009CC3A5 /* KFileTreeFile.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KFileTreeFile.cpp; sourceTree = "<group>"; };
+		C39F17B80B85069F009CC3A5 /* KFileTreeFile.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KFileTreeFile.h; sourceTree = "<group>"; };
+		C39F17B90B85069F009CC3A5 /* KFileTreeNode.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KFileTreeNode.cpp; sourceTree = "<group>"; };
+		C39F17BA0B85069F009CC3A5 /* KFileTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KFileTreeNode.h; sourceTree = "<group>"; };
+		C39F17BB0B85069F009CC3A5 /* KFileTreeWidget.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KFileTreeWidget.cpp; sourceTree = "<group>"; };
+		C39F17BC0B85069F009CC3A5 /* KFileTreeWidget.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KFileTreeWidget.h; sourceTree = "<group>"; };
+		C39F17BD0B85069F009CC3A5 /* KIconButton.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KIconButton.cpp; sourceTree = "<group>"; };
+		C39F17BE0B85069F009CC3A5 /* KIconButton.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KIconButton.h; sourceTree = "<group>"; };
+		C39F17BF0B85069F009CC3A5 /* KKeySequenceField.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KKeySequenceField.cpp; sourceTree = "<group>"; };
+		C39F17C00B85069F009CC3A5 /* KKeySequenceField.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KKeySequenceField.h; sourceTree = "<group>"; };
+		C39F17C10B85069F009CC3A5 /* KLabel.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KLabel.cpp; sourceTree = "<group>"; };
+		C39F17C20B85069F009CC3A5 /* KLabel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KLabel.h; sourceTree = "<group>"; };
+		C39F17C30B85069F009CC3A5 /* KMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KMenu.cpp; sourceTree = "<group>"; };
+		C39F17C40B85069F009CC3A5 /* KMenu.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KMenu.h; sourceTree = "<group>"; };
+		C39F17C50B85069F009CC3A5 /* KMenuItem.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KMenuItem.cpp; sourceTree = "<group>"; };
+		C39F17C60B85069F009CC3A5 /* KMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KMenuItem.h; sourceTree = "<group>"; };
+		C39F17C70B85069F009CC3A5 /* KNumberField.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KNumberField.cpp; sourceTree = "<group>"; };
+		C39F17C80B85069F009CC3A5 /* KNumberField.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KNumberField.h; sourceTree = "<group>"; };
+		C39F17C90B85069F009CC3A5 /* KProjectionWidget.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KProjectionWidget.cpp; sourceTree = "<group>"; };
+		C39F17CA0B85069F009CC3A5 /* KProjectionWidget.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KProjectionWidget.h; sourceTree = "<group>"; };
+		C39F17CB0B85069F009CC3A5 /* KScrollBar.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KScrollBar.cpp; sourceTree = "<group>"; };
+		C39F17CC0B85069F009CC3A5 /* KScrollBar.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KScrollBar.h; sourceTree = "<group>"; };
+		C39F17CD0B85069F009CC3A5 /* KSliderButton.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KSliderButton.cpp; sourceTree = "<group>"; };
+		C39F17CE0B85069F009CC3A5 /* KSliderButton.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KSliderButton.h; sourceTree = "<group>"; };
+		C39F17CF0B85069F009CC3A5 /* KStatusMenuItem.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KStatusMenuItem.cpp; sourceTree = "<group>"; };
+		C39F17D00B85069F009CC3A5 /* KStatusMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KStatusMenuItem.h; sourceTree = "<group>"; };
+		C39F17D10B85069F009CC3A5 /* KSubMenuItem.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KSubMenuItem.cpp; sourceTree = "<group>"; };
+		C39F17D20B85069F009CC3A5 /* KSubMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KSubMenuItem.h; sourceTree = "<group>"; };
+		C39F17D30B85069F009CC3A5 /* KTextField.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KTextField.cpp; sourceTree = "<group>"; };
+		C39F17D40B85069F009CC3A5 /* KTextField.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KTextField.h; sourceTree = "<group>"; };
+		C39F17D50B85069F009CC3A5 /* KTextWidget.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KTextWidget.cpp; sourceTree = "<group>"; };
+		C39F17D60B85069F009CC3A5 /* KTextWidget.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KTextWidget.h; sourceTree = "<group>"; };
+		C39F17D70B85069F009CC3A5 /* KToggleButton.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KToggleButton.cpp; sourceTree = "<group>"; };
+		C39F17D80B85069F009CC3A5 /* KToggleButton.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KToggleButton.h; sourceTree = "<group>"; };
+		C39F17D90B85069F009CC3A5 /* KWidget.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KWidget.cpp; sourceTree = "<group>"; };
+		C39F17DA0B85069F009CC3A5 /* KWidget.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KWidget.h; sourceTree = "<group>"; };
+		C39F17DB0B85069F009CC3A5 /* KWidgetArray.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KWidgetArray.cpp; sourceTree = "<group>"; };
+		C39F17DC0B85069F009CC3A5 /* KWidgetArray.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KWidgetArray.h; sourceTree = "<group>"; };
+		C39F17DE0B85069F009CC3A5 /* KConsole.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KConsole.cpp; sourceTree = "<group>"; };
+		C39F17DF0B85069F009CC3A5 /* KConsole.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KConsole.h; sourceTree = "<group>"; };
+		C39F17E00B85069F009CC3A5 /* KFileTreeWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KFileTreeWindow.cpp; sourceTree = "<group>"; };
+		C39F17E10B85069F009CC3A5 /* KFileTreeWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KFileTreeWindow.h; sourceTree = "<group>"; };
+		C39F17E20B85069F009CC3A5 /* KMenuWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KMenuWindow.cpp; sourceTree = "<group>"; };
+		C39F17E30B85069F009CC3A5 /* KMenuWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KMenuWindow.h; sourceTree = "<group>"; };
+		C39F17E40B85069F009CC3A5 /* KMessagePanel.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KMessagePanel.cpp; sourceTree = "<group>"; };
+		C39F17E50B85069F009CC3A5 /* KMessagePanel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KMessagePanel.h; sourceTree = "<group>"; };
+		C39F17E60B85069F009CC3A5 /* KPopupMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KPopupMenu.cpp; sourceTree = "<group>"; };
+		C39F17E70B85069F009CC3A5 /* KPopupMenu.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KPopupMenu.h; sourceTree = "<group>"; };
+		C39F17E80B85069F009CC3A5 /* KWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KWindow.cpp; sourceTree = "<group>"; };
+		C39F17E90B85069F009CC3A5 /* KWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KWindow.h; sourceTree = "<group>"; };
+		C39F19D50B850711009CC3A5 /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = /Library/Frameworks/Python.framework; sourceTree = "<absolute>"; };
+		C39F19E00B850780009CC3A5 /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = ../../../Library/Frameworks/SDL.framework; sourceTree = SOURCE_ROOT; };
+		C39F19E50B8507FE009CC3A5 /* SDL_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_image.framework; path = ../../../Library/Frameworks/SDL_image.framework; sourceTree = SOURCE_ROOT; };
+		C39F19E60B8507FE009CC3A5 /* SDL_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_mixer.framework; path = ../../../Library/Frameworks/SDL_mixer.framework; sourceTree = SOURCE_ROOT; };
+		C39F19F40B8508A4009CC3A5 /* KikiPy_wrap.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = KikiPy_wrap.cpp; path = ../SWIG/KikiPy_wrap.cpp; sourceTree = SOURCE_ROOT; };
+		C39F19F50B8508A4009CC3A5 /* KikiPy_wrap.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = KikiPy_wrap.h; path = ../SWIG/KikiPy_wrap.h; sourceTree = SOURCE_ROOT; };
+		C39F1A020B850945009CC3A5 /* sound */ = {isa = PBXFileReference; lastKnownFileType = folder; name = sound; path = ../sound; sourceTree = SOURCE_ROOT; };
+		C39F1A260B8509A8009CC3A5 /* py */ = {isa = PBXFileReference; lastKnownFileType = folder; name = py; path = ../py; sourceTree = SOURCE_ROOT; };
+		C39F1B680B851520009CC3A5 /* kiki.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = kiki.icns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				002F3C6109D0951E00EBEB88 /* GLUT.framework in Frameworks */,
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				002F3C0109D093BD00EBEB88 /* OpenGL.framework in Frameworks */,
+				C39F19D60B850711009CC3A5 /* Python.framework in Frameworks */,
+				C39F19E10B850780009CC3A5 /* SDL.framework in Frameworks */,
+				C39F19E70B8507FF009CC3A5 /* SDL_image.framework in Frameworks */,
+				C39F19E80B8507FF009CC3A5 /* SDL_mixer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				002F3A2B09D0888800EBEB88 /* SDLMain.h */,
+				002F3A2C09D0888800EBEB88 /* SDLMain.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C39F19E50B8507FE009CC3A5 /* SDL_image.framework */,
+				C39F19E60B8507FE009CC3A5 /* SDL_mixer.framework */,
+				C39F19E00B850780009CC3A5 /* SDL.framework */,
+				C39F19D50B850711009CC3A5 /* Python.framework */,
+				002F3C6009D0951E00EBEB88 /* GLUT.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				002F3C0009D093BD00EBEB88 /* OpenGL.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* kiki.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* kiki */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = kiki;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C39F16FC0B85069E009CC3A5 /* kodilib */,
+				C39F15F60B850630009CC3A5 /* src */,
+				C39F19F40B8508A4009CC3A5 /* KikiPy_wrap.cpp */,
+				C39F19F50B8508A4009CC3A5 /* KikiPy_wrap.h */,
+				32CA4F630368D1EE00C91783 /* kiki_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C39F1B680B851520009CC3A5 /* kiki.icns */,
+				C39F1A020B850945009CC3A5 /* sound */,
+				C39F1A260B8509A8009CC3A5 /* py */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C39F15F60B850630009CC3A5 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C39F15F80B850630009CC3A5 /* base */,
+				C39F160B0B850630009CC3A5 /* bots */,
+				C39F161E0B850630009CC3A5 /* gui */,
+				C39F16310B850630009CC3A5 /* items */,
+				C39F16650B850630009CC3A5 /* main */,
+				C39F16730B850630009CC3A5 /* sound */,
+				C39F16760B850630009CC3A5 /* world */,
+			);
+			name = src;
+			path = ../src;
+			sourceTree = SOURCE_ROOT;
+		};
+		C39F15F80B850630009CC3A5 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				C39F15F90B850630009CC3A5 /* KikiAction.cpp */,
+				C39F15FA0B850630009CC3A5 /* KikiAction.h */,
+				C39F15FB0B850630009CC3A5 /* KikiActionObject.cpp */,
+				C39F15FC0B850630009CC3A5 /* KikiActionObject.h */,
+				C39F15FD0B850630009CC3A5 /* KikiBase.h */,
+				C39F15FE0B850630009CC3A5 /* KikiColorObject.h */,
+				C39F15FF0B850630009CC3A5 /* KikiEvent.cpp */,
+				C39F16000B850630009CC3A5 /* KikiEvent.h */,
+				C39F16010B850630009CC3A5 /* KikiFace.cpp */,
+				C39F16020B850630009CC3A5 /* KikiFace.h */,
+				C39F16030B850630009CC3A5 /* KikiObject.cpp */,
+				C39F16040B850630009CC3A5 /* KikiObject.h */,
+				C39F16050B850630009CC3A5 /* KikiObjectHeader.h */,
+				C39F16060B850630009CC3A5 /* KikiPos.h */,
+				C39F16070B850630009CC3A5 /* KikiPyAction.cpp */,
+				C39F16080B850630009CC3A5 /* KikiPyAction.h */,
+				C39F16090B850630009CC3A5 /* KikiTools.cpp */,
+				C39F160A0B850630009CC3A5 /* KikiTools.h */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		C39F160B0B850630009CC3A5 /* bots */ = {
+			isa = PBXGroup;
+			children = (
+				C39F160C0B850630009CC3A5 /* body.h */,
+				C39F160D0B850630009CC3A5 /* KikiBot.cpp */,
+				C39F160E0B850630009CC3A5 /* KikiBot.h */,
+				C39F160F0B850630009CC3A5 /* KikiBotFume.cpp */,
+				C39F16100B850630009CC3A5 /* KikiBotFume.h */,
+				C39F16110B850630009CC3A5 /* KikiBots.h */,
+				C39F16120B850630009CC3A5 /* KikiBotStatus.h */,
+				C39F16130B850630009CC3A5 /* KikiMutant.cpp */,
+				C39F16140B850630009CC3A5 /* KikiMutant.h */,
+				C39F16150B850630009CC3A5 /* KikiPlayback.cpp */,
+				C39F16160B850630009CC3A5 /* KikiPlayback.h */,
+				C39F16170B850630009CC3A5 /* KikiPlayer.cpp */,
+				C39F16180B850630009CC3A5 /* KikiPlayer.h */,
+				C39F16190B850630009CC3A5 /* KikiRecorder.cpp */,
+				C39F161A0B850630009CC3A5 /* KikiRecorder.h */,
+				C39F161B0B850630009CC3A5 /* KikiStatusDisplay.cpp */,
+				C39F161C0B850630009CC3A5 /* KikiStatusDisplay.h */,
+				C39F161D0B850630009CC3A5 /* tire.h */,
+			);
+			path = bots;
+			sourceTree = "<group>";
+		};
+		C39F161E0B850630009CC3A5 /* gui */ = {
+			isa = PBXGroup;
+			children = (
+				C39F161F0B850630009CC3A5 /* KikiCharacter.cpp */,
+				C39F16200B850630009CC3A5 /* KikiCharacter.h */,
+				C39F16210B850630009CC3A5 /* KikiColumnMenu.cpp */,
+				C39F16220B850630009CC3A5 /* KikiColumnMenu.h */,
+				C39F16230B850630009CC3A5 /* KikiGUI.cpp */,
+				C39F16240B850630009CC3A5 /* KikiGUI.h */,
+				C39F16250B850630009CC3A5 /* KikiMenu.cpp */,
+				C39F16260B850630009CC3A5 /* KikiMenu.h */,
+				C39F16270B850630009CC3A5 /* KikiPageText.cpp */,
+				C39F16280B850630009CC3A5 /* KikiPageText.h */,
+				C39F16290B850630009CC3A5 /* KikiScreenText.cpp */,
+				C39F162A0B850630009CC3A5 /* KikiScreenText.h */,
+				C39F162B0B850630009CC3A5 /* KikiScrollMenu.cpp */,
+				C39F162C0B850630009CC3A5 /* KikiScrollMenu.h */,
+				C39F162D0B850630009CC3A5 /* KikiText.cpp */,
+				C39F162E0B850630009CC3A5 /* KikiText.h */,
+				C39F162F0B850630009CC3A5 /* KikiTextLine.cpp */,
+				C39F16300B850630009CC3A5 /* KikiTextLine.h */,
+			);
+			path = gui;
+			sourceTree = "<group>";
+		};
+		C39F16310B850630009CC3A5 /* items */ = {
+			isa = PBXGroup;
+			children = (
+				C39F16330B850630009CC3A5 /* cylinder.h */,
+				C39F16340B850630009CC3A5 /* gear.h */,
+				C39F16350B850630009CC3A5 /* generator.h */,
+				C39F16360B850630009CC3A5 /* KikiAtom.cpp */,
+				C39F16370B850630009CC3A5 /* KikiAtom.h */,
+				C39F16380B850630009CC3A5 /* KikiBillBoard.cpp */,
+				C39F16390B850630009CC3A5 /* KikiBillBoard.h */,
+				C39F163A0B850630009CC3A5 /* KikiBomb.cpp */,
+				C39F163B0B850630009CC3A5 /* KikiBomb.h */,
+				C39F163C0B850630009CC3A5 /* KikiBullet.cpp */,
+				C39F163D0B850630009CC3A5 /* KikiBullet.h */,
+				C39F163E0B850630009CC3A5 /* KikiCellText.cpp */,
+				C39F163F0B850630009CC3A5 /* KikiCellText.h */,
+				C39F16400B850630009CC3A5 /* KikiGate.cpp */,
+				C39F16410B850630009CC3A5 /* KikiGate.h */,
+				C39F16420B850630009CC3A5 /* KikiGear.cpp */,
+				C39F16430B850630009CC3A5 /* KikiGear.h */,
+				C39F16440B850630009CC3A5 /* KikiGenerator.cpp */,
+				C39F16450B850630009CC3A5 /* KikiGenerator.h */,
+				C39F16460B850630009CC3A5 /* KikiItems.h */,
+				C39F16470B850630009CC3A5 /* KikiLight.cpp */,
+				C39F16480B850630009CC3A5 /* KikiLight.h */,
+				C39F16490B850630009CC3A5 /* KikiMotorCylinder.cpp */,
+				C39F164A0B850630009CC3A5 /* KikiMotorCylinder.h */,
+				C39F164B0B850630009CC3A5 /* KikiMotorGear.cpp */,
+				C39F164C0B850630009CC3A5 /* KikiMotorGear.h */,
+				C39F164D0B850630009CC3A5 /* KikiNeutron.cpp */,
+				C39F164E0B850630009CC3A5 /* KikiNeutron.h */,
+				C39F164F0B850630009CC3A5 /* KikiPushable.cpp */,
+				C39F16500B850630009CC3A5 /* KikiPushable.h */,
+				C39F16510B850630009CC3A5 /* KikiSpikes.cpp */,
+				C39F16520B850630009CC3A5 /* KikiSpikes.h */,
+				C39F16530B850630009CC3A5 /* KikiStone.cpp */,
+				C39F16540B850630009CC3A5 /* KikiStone.h */,
+				C39F16550B850630009CC3A5 /* KikiSwitch.cpp */,
+				C39F16560B850630009CC3A5 /* KikiSwitch.h */,
+				C39F16570B850630009CC3A5 /* KikiTest.cpp */,
+				C39F16580B850630009CC3A5 /* KikiTest.h */,
+				C39F16590B850630009CC3A5 /* KikiValve.cpp */,
+				C39F165A0B850630009CC3A5 /* KikiValve.h */,
+				C39F165B0B850630009CC3A5 /* KikiWall.cpp */,
+				C39F165C0B850630009CC3A5 /* KikiWall.h */,
+				C39F165D0B850630009CC3A5 /* KikiWire.cpp */,
+				C39F165E0B850630009CC3A5 /* KikiWire.h */,
+				C39F165F0B850630009CC3A5 /* KikiWireStone.cpp */,
+				C39F16600B850630009CC3A5 /* KikiWireStone.h */,
+				C39F16610B850630009CC3A5 /* kolben.h */,
+				C39F16620B850630009CC3A5 /* motor.h */,
+				C39F16630B850630009CC3A5 /* valve.h */,
+				C39F16640B850630009CC3A5 /* wire.h */,
+			);
+			path = items;
+			sourceTree = "<group>";
+		};
+		C39F16650B850630009CC3A5 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				C39F16660B850630009CC3A5 /* Kiki.h */,
+				C39F16670B850630009CC3A5 /* KikiController.cpp */,
+				C39F16680B850630009CC3A5 /* KikiController.h */,
+				C39F16690B850630009CC3A5 /* KikiLocalization.h */,
+				C39F166A0B850630009CC3A5 /* KikiLocalization.m */,
+				C39F166B0B850630009CC3A5 /* KikiMain.h */,
+				C39F166C0B850630009CC3A5 /* KikiPython.cpp */,
+				C39F166D0B850630009CC3A5 /* KikiPython.h */,
+				C39F166E0B850630009CC3A5 /* KikiPythonWidget.cpp */,
+				C39F166F0B850630009CC3A5 /* KikiPythonWidget.h */,
+				C39F16700B850630009CC3A5 /* main.cpp */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		C39F16730B850630009CC3A5 /* sound */ = {
+			isa = PBXGroup;
+			children = (
+				C39F16740B850630009CC3A5 /* KikiSound.cpp */,
+				C39F16750B850630009CC3A5 /* KikiSound.h */,
+			);
+			path = sound;
+			sourceTree = "<group>";
+		};
+		C39F16760B850630009CC3A5 /* world */ = {
+			isa = PBXGroup;
+			children = (
+				C39F16770B850630009CC3A5 /* KikiCell.cpp */,
+				C39F16780B850630009CC3A5 /* KikiCell.h */,
+				C39F16790B850630009CC3A5 /* KikiWorld.cpp */,
+				C39F167A0B850630009CC3A5 /* KikiWorld.h */,
+			);
+			path = world;
+			sourceTree = "<group>";
+		};
+		C39F16FC0B85069E009CC3A5 /* kodilib */ = {
+			isa = PBXGroup;
+			children = (
+				C39F176B0B85069E009CC3A5 /* handler */,
+				C39F177E0B85069F009CC3A5 /* tools */,
+				C39F17900B85069F009CC3A5 /* types */,
+				C39F17A90B85069F009CC3A5 /* widgets */,
+				C39F17DD0B85069F009CC3A5 /* windows */,
+			);
+			name = kodilib;
+			path = ../kodilib;
+			sourceTree = SOURCE_ROOT;
+		};
+		C39F176B0B85069E009CC3A5 /* handler */ = {
+			isa = PBXGroup;
+			children = (
+				C39F176C0B85069E009CC3A5 /* KEventHandler.cpp */,
+				C39F176D0B85069E009CC3A5 /* KEventHandler.h */,
+				C39F176E0B85069E009CC3A5 /* KFileHandler.cpp */,
+				C39F176F0B85069F009CC3A5 /* KFileHandler.h */,
+				C39F17700B85069F009CC3A5 /* KKeyActionHandler.cpp */,
+				C39F17710B85069F009CC3A5 /* KKeyActionHandler.h */,
+				C39F17720B85069F009CC3A5 /* KKeyHandler.cpp */,
+				C39F17730B85069F009CC3A5 /* KKeyHandler.h */,
+				C39F17740B85069F009CC3A5 /* KKeyRecorder.cpp */,
+				C39F17750B85069F009CC3A5 /* KKeyRecorder.h */,
+				C39F17760B85069F009CC3A5 /* KPickable.cpp */,
+				C39F17770B85069F009CC3A5 /* KPickable.h */,
+				C39F17780B85069F009CC3A5 /* KPickHandler.cpp */,
+				C39F17790B85069F009CC3A5 /* KPickHandler.h */,
+				C39F177A0B85069F009CC3A5 /* KSelectable.cpp */,
+				C39F177B0B85069F009CC3A5 /* KSelectable.h */,
+				C39F177C0B85069F009CC3A5 /* KSelectionHandler.cpp */,
+				C39F177D0B85069F009CC3A5 /* KSelectionHandler.h */,
+			);
+			name = handler;
+			path = src/handler;
+			sourceTree = "<group>";
+		};
+		C39F177E0B85069F009CC3A5 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				C39F177F0B85069F009CC3A5 /* KDisplayTools.cpp */,
+				C39F17800B85069F009CC3A5 /* KDisplayTools.h */,
+				C39F17810B85069F009CC3A5 /* KFileTools.cpp */,
+				C39F17820B85069F009CC3A5 /* KFileTools.h */,
+				C39F17830B85069F009CC3A5 /* KIncludeTools.h */,
+				C39F17840B85069F009CC3A5 /* KIntrospection.cpp */,
+				C39F17850B85069F009CC3A5 /* KIntrospection.h */,
+				C39F17860B85069F009CC3A5 /* KKeySymbols.h */,
+				C39F17870B85069F009CC3A5 /* KKeyTools.cpp */,
+				C39F17880B85069F009CC3A5 /* KKeyTools.h */,
+				C39F17890B85069F009CC3A5 /* KNotificationObject.cpp */,
+				C39F178A0B85069F009CC3A5 /* KNotificationObject.h */,
+				C39F178B0B85069F009CC3A5 /* KStringTools.cpp */,
+				C39F178C0B85069F009CC3A5 /* KStringTools.h */,
+				C39F178D0B85069F009CC3A5 /* KTools.h */,
+				C39F178E0B85069F009CC3A5 /* KXMLTools.cpp */,
+				C39F178F0B85069F009CC3A5 /* KXMLTools.h */,
+			);
+			name = tools;
+			path = src/tools;
+			sourceTree = "<group>";
+		};
+		C39F17900B85069F009CC3A5 /* types */ = {
+			isa = PBXGroup;
+			children = (
+				C39F17910B85069F009CC3A5 /* KColor.h */,
+				C39F17920B85069F009CC3A5 /* KKey.cpp */,
+				C39F17930B85069F009CC3A5 /* KKey.h */,
+				C39F17940B85069F009CC3A5 /* KLight.cpp */,
+				C39F17950B85069F009CC3A5 /* KLight.h */,
+				C39F17960B85069F009CC3A5 /* KLightingProjection.cpp */,
+				C39F17970B85069F009CC3A5 /* KLightingProjection.h */,
+				C39F17980B85069F009CC3A5 /* KMatrix.cpp */,
+				C39F17990B85069F009CC3A5 /* KMatrix.h */,
+				C39F179A0B85069F009CC3A5 /* KOrthographicProjection.cpp */,
+				C39F179B0B85069F009CC3A5 /* KOrthographicProjection.h */,
+				C39F179C0B85069F009CC3A5 /* KPerspectiveProjection.cpp */,
+				C39F179D0B85069F009CC3A5 /* KPerspectiveProjection.h */,
+				C39F179E0B85069F009CC3A5 /* KProjection.cpp */,
+				C39F179F0B85069F009CC3A5 /* KProjection.h */,
+				C39F17A00B85069F009CC3A5 /* KQuaternion.cpp */,
+				C39F17A10B85069F009CC3A5 /* KQuaternion.h */,
+				C39F17A20B85069F009CC3A5 /* KSeparatedMatrix.cpp */,
+				C39F17A30B85069F009CC3A5 /* KSeparatedMatrix.h */,
+				C39F17A40B85069F009CC3A5 /* KTexture.cpp */,
+				C39F17A50B85069F009CC3A5 /* KTexture.h */,
+				C39F17A60B85069F009CC3A5 /* KTrash.cpp */,
+				C39F17A70B85069F009CC3A5 /* KTrash.h */,
+				C39F17A80B85069F009CC3A5 /* KVector.h */,
+			);
+			name = types;
+			path = src/types;
+			sourceTree = "<group>";
+		};
+		C39F17A90B85069F009CC3A5 /* widgets */ = {
+			isa = PBXGroup;
+			children = (
+				C39F17AA0B85069F009CC3A5 /* KButton.cpp */,
+				C39F17AB0B85069F009CC3A5 /* KButton.h */,
+				C39F17AC0B85069F009CC3A5 /* KButtonBox.cpp */,
+				C39F17AD0B85069F009CC3A5 /* KButtonBox.h */,
+				C39F17AE0B85069F009CC3A5 /* KButtonSymbols.h */,
+				C39F17AF0B85069F009CC3A5 /* KFileNameField.cpp */,
+				C39F17B00B85069F009CC3A5 /* KFileNameField.h */,
+				C39F17B10B85069F009CC3A5 /* KFileTreeDir.cpp */,
+				C39F17B20B85069F009CC3A5 /* KFileTreeDir.h */,
+				C39F17B30B85069F009CC3A5 /* KFileTreeDirCurrent.cpp */,
+				C39F17B40B85069F009CC3A5 /* KFileTreeDirCurrent.h */,
+				C39F17B50B85069F009CC3A5 /* KFileTreeDirUp.cpp */,
+				C39F17B60B85069F009CC3A5 /* KFileTreeDirUp.h */,
+				C39F17B70B85069F009CC3A5 /* KFileTreeFile.cpp */,
+				C39F17B80B85069F009CC3A5 /* KFileTreeFile.h */,
+				C39F17B90B85069F009CC3A5 /* KFileTreeNode.cpp */,
+				C39F17BA0B85069F009CC3A5 /* KFileTreeNode.h */,
+				C39F17BB0B85069F009CC3A5 /* KFileTreeWidget.cpp */,
+				C39F17BC0B85069F009CC3A5 /* KFileTreeWidget.h */,
+				C39F17BD0B85069F009CC3A5 /* KIconButton.cpp */,
+				C39F17BE0B85069F009CC3A5 /* KIconButton.h */,
+				C39F17BF0B85069F009CC3A5 /* KKeySequenceField.cpp */,
+				C39F17C00B85069F009CC3A5 /* KKeySequenceField.h */,
+				C39F17C10B85069F009CC3A5 /* KLabel.cpp */,
+				C39F17C20B85069F009CC3A5 /* KLabel.h */,
+				C39F17C30B85069F009CC3A5 /* KMenu.cpp */,
+				C39F17C40B85069F009CC3A5 /* KMenu.h */,
+				C39F17C50B85069F009CC3A5 /* KMenuItem.cpp */,
+				C39F17C60B85069F009CC3A5 /* KMenuItem.h */,
+				C39F17C70B85069F009CC3A5 /* KNumberField.cpp */,
+				C39F17C80B85069F009CC3A5 /* KNumberField.h */,
+				C39F17C90B85069F009CC3A5 /* KProjectionWidget.cpp */,
+				C39F17CA0B85069F009CC3A5 /* KProjectionWidget.h */,
+				C39F17CB0B85069F009CC3A5 /* KScrollBar.cpp */,
+				C39F17CC0B85069F009CC3A5 /* KScrollBar.h */,
+				C39F17CD0B85069F009CC3A5 /* KSliderButton.cpp */,
+				C39F17CE0B85069F009CC3A5 /* KSliderButton.h */,
+				C39F17CF0B85069F009CC3A5 /* KStatusMenuItem.cpp */,
+				C39F17D00B85069F009CC3A5 /* KStatusMenuItem.h */,
+				C39F17D10B85069F009CC3A5 /* KSubMenuItem.cpp */,
+				C39F17D20B85069F009CC3A5 /* KSubMenuItem.h */,
+				C39F17D30B85069F009CC3A5 /* KTextField.cpp */,
+				C39F17D40B85069F009CC3A5 /* KTextField.h */,
+				C39F17D50B85069F009CC3A5 /* KTextWidget.cpp */,
+				C39F17D60B85069F009CC3A5 /* KTextWidget.h */,
+				C39F17D70B85069F009CC3A5 /* KToggleButton.cpp */,
+				C39F17D80B85069F009CC3A5 /* KToggleButton.h */,
+				C39F17D90B85069F009CC3A5 /* KWidget.cpp */,
+				C39F17DA0B85069F009CC3A5 /* KWidget.h */,
+				C39F17DB0B85069F009CC3A5 /* KWidgetArray.cpp */,
+				C39F17DC0B85069F009CC3A5 /* KWidgetArray.h */,
+			);
+			name = widgets;
+			path = src/widgets;
+			sourceTree = "<group>";
+		};
+		C39F17DD0B85069F009CC3A5 /* windows */ = {
+			isa = PBXGroup;
+			children = (
+				C39F17DE0B85069F009CC3A5 /* KConsole.cpp */,
+				C39F17DF0B85069F009CC3A5 /* KConsole.h */,
+				C39F17E00B85069F009CC3A5 /* KFileTreeWindow.cpp */,
+				C39F17E10B85069F009CC3A5 /* KFileTreeWindow.h */,
+				C39F17E20B85069F009CC3A5 /* KMenuWindow.cpp */,
+				C39F17E30B85069F009CC3A5 /* KMenuWindow.h */,
+				C39F17E40B85069F009CC3A5 /* KMessagePanel.cpp */,
+				C39F17E50B85069F009CC3A5 /* KMessagePanel.h */,
+				C39F17E60B85069F009CC3A5 /* KPopupMenu.cpp */,
+				C39F17E70B85069F009CC3A5 /* KPopupMenu.h */,
+				C39F17E80B85069F009CC3A5 /* KWindow.cpp */,
+				C39F17E90B85069F009CC3A5 /* KWindow.h */,
+			);
+			name = windows;
+			path = src/windows;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* kiki */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "kiki" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				002F39FD09D0883400EBEB88 /* Copy Frameworks into .app bundle */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+			};
+			dependencies = (
+			);
+			name = kiki;
+			productInstallPath = "$(HOME)/Applications";
+			productName = kiki;
+			productReference = 8D1107320486CEB800E47090 /* kiki.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "kiki" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504CCFFE6A4B311CA0CBA /* Debug */,
+				4A9504CDFFE6A4B311CA0CBA /* Release */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* kiki */;
+			projectDirPath = "";
+			targets = (
+				8D1107260486CEB800E47090 /* kiki */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C39F1B980B851955009CC3A5 /* sound in Resources */,
+				C39F1B990B851955009CC3A5 /* py in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				C39F1B690B851520009CC3A5 /* kiki.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				002F3A2E09D0888800EBEB88 /* SDLMain.m in Sources */,
+				C39F167C0B850630009CC3A5 /* KikiAction.cpp in Sources */,
+				C39F167E0B850630009CC3A5 /* KikiActionObject.cpp in Sources */,
+				C39F16820B850630009CC3A5 /* KikiEvent.cpp in Sources */,
+				C39F16840B850630009CC3A5 /* KikiFace.cpp in Sources */,
+				C39F16860B850630009CC3A5 /* KikiObject.cpp in Sources */,
+				C39F168A0B850630009CC3A5 /* KikiPyAction.cpp in Sources */,
+				C39F168C0B850630009CC3A5 /* KikiTools.cpp in Sources */,
+				C39F168F0B850630009CC3A5 /* KikiBot.cpp in Sources */,
+				C39F16910B850630009CC3A5 /* KikiBotFume.cpp in Sources */,
+				C39F16950B850630009CC3A5 /* KikiMutant.cpp in Sources */,
+				C39F16970B850630009CC3A5 /* KikiPlayback.cpp in Sources */,
+				C39F16990B850630009CC3A5 /* KikiPlayer.cpp in Sources */,
+				C39F169B0B850630009CC3A5 /* KikiRecorder.cpp in Sources */,
+				C39F169D0B850630009CC3A5 /* KikiStatusDisplay.cpp in Sources */,
+				C39F16A00B850630009CC3A5 /* KikiCharacter.cpp in Sources */,
+				C39F16A20B850630009CC3A5 /* KikiColumnMenu.cpp in Sources */,
+				C39F16A40B850630009CC3A5 /* KikiGUI.cpp in Sources */,
+				C39F16A60B850630009CC3A5 /* KikiMenu.cpp in Sources */,
+				C39F16A80B850630009CC3A5 /* KikiPageText.cpp in Sources */,
+				C39F16AA0B850630009CC3A5 /* KikiScreenText.cpp in Sources */,
+				C39F16AC0B850630009CC3A5 /* KikiScrollMenu.cpp in Sources */,
+				C39F16AE0B850630009CC3A5 /* KikiText.cpp in Sources */,
+				C39F16B00B850630009CC3A5 /* KikiTextLine.cpp in Sources */,
+				C39F16B60B850630009CC3A5 /* KikiAtom.cpp in Sources */,
+				C39F16B80B850630009CC3A5 /* KikiBillBoard.cpp in Sources */,
+				C39F16BA0B850630009CC3A5 /* KikiBomb.cpp in Sources */,
+				C39F16BC0B850630009CC3A5 /* KikiBullet.cpp in Sources */,
+				C39F16BE0B850630009CC3A5 /* KikiCellText.cpp in Sources */,
+				C39F16C00B850630009CC3A5 /* KikiGate.cpp in Sources */,
+				C39F16C20B850630009CC3A5 /* KikiGear.cpp in Sources */,
+				C39F16C40B850630009CC3A5 /* KikiGenerator.cpp in Sources */,
+				C39F16C70B850630009CC3A5 /* KikiLight.cpp in Sources */,
+				C39F16C90B850630009CC3A5 /* KikiMotorCylinder.cpp in Sources */,
+				C39F16CB0B850630009CC3A5 /* KikiMotorGear.cpp in Sources */,
+				C39F16CD0B850630009CC3A5 /* KikiNeutron.cpp in Sources */,
+				C39F16CF0B850630009CC3A5 /* KikiPushable.cpp in Sources */,
+				C39F16D10B850630009CC3A5 /* KikiSpikes.cpp in Sources */,
+				C39F16D30B850630009CC3A5 /* KikiStone.cpp in Sources */,
+				C39F16D50B850630009CC3A5 /* KikiSwitch.cpp in Sources */,
+				C39F16D70B850630009CC3A5 /* KikiTest.cpp in Sources */,
+				C39F16D90B850630009CC3A5 /* KikiValve.cpp in Sources */,
+				C39F16DB0B850630009CC3A5 /* KikiWall.cpp in Sources */,
+				C39F16DD0B850630009CC3A5 /* KikiWire.cpp in Sources */,
+				C39F16DF0B850630009CC3A5 /* KikiWireStone.cpp in Sources */,
+				C39F16E60B850630009CC3A5 /* KikiController.cpp in Sources */,
+				C39F16E90B850630009CC3A5 /* KikiLocalization.m in Sources */,
+				C39F16EB0B850630009CC3A5 /* KikiPython.cpp in Sources */,
+				C39F16ED0B850630009CC3A5 /* KikiPythonWidget.cpp in Sources */,
+				C39F16EF0B850630009CC3A5 /* main.cpp in Sources */,
+				C39F16F20B850630009CC3A5 /* KikiSound.cpp in Sources */,
+				C39F16F40B850630009CC3A5 /* KikiCell.cpp in Sources */,
+				C39F16F60B850630009CC3A5 /* KikiWorld.cpp in Sources */,
+				C39F18C90B8506A0009CC3A5 /* KEventHandler.cpp in Sources */,
+				C39F18CB0B8506A0009CC3A5 /* KFileHandler.cpp in Sources */,
+				C39F18CD0B8506A0009CC3A5 /* KKeyActionHandler.cpp in Sources */,
+				C39F18CF0B8506A0009CC3A5 /* KKeyHandler.cpp in Sources */,
+				C39F18D10B8506A0009CC3A5 /* KKeyRecorder.cpp in Sources */,
+				C39F18D30B8506A0009CC3A5 /* KPickable.cpp in Sources */,
+				C39F18D50B8506A0009CC3A5 /* KPickHandler.cpp in Sources */,
+				C39F18D70B8506A0009CC3A5 /* KSelectable.cpp in Sources */,
+				C39F18D90B8506A0009CC3A5 /* KSelectionHandler.cpp in Sources */,
+				C39F18DB0B8506A0009CC3A5 /* KDisplayTools.cpp in Sources */,
+				C39F18DD0B8506A0009CC3A5 /* KFileTools.cpp in Sources */,
+				C39F18E00B8506A0009CC3A5 /* KIntrospection.cpp in Sources */,
+				C39F18E30B8506A0009CC3A5 /* KKeyTools.cpp in Sources */,
+				C39F18E50B8506A0009CC3A5 /* KNotificationObject.cpp in Sources */,
+				C39F18E70B8506A0009CC3A5 /* KStringTools.cpp in Sources */,
+				C39F18EA0B8506A0009CC3A5 /* KXMLTools.cpp in Sources */,
+				C39F18ED0B8506A0009CC3A5 /* KKey.cpp in Sources */,
+				C39F18EF0B8506A0009CC3A5 /* KLight.cpp in Sources */,
+				C39F18F10B8506A0009CC3A5 /* KLightingProjection.cpp in Sources */,
+				C39F18F30B8506A0009CC3A5 /* KMatrix.cpp in Sources */,
+				C39F18F50B8506A0009CC3A5 /* KOrthographicProjection.cpp in Sources */,
+				C39F18F70B8506A0009CC3A5 /* KPerspectiveProjection.cpp in Sources */,
+				C39F18F90B8506A0009CC3A5 /* KProjection.cpp in Sources */,
+				C39F18FB0B8506A0009CC3A5 /* KQuaternion.cpp in Sources */,
+				C39F18FD0B8506A0009CC3A5 /* KSeparatedMatrix.cpp in Sources */,
+				C39F18FF0B8506A0009CC3A5 /* KTexture.cpp in Sources */,
+				C39F19010B8506A0009CC3A5 /* KTrash.cpp in Sources */,
+				C39F19040B8506A0009CC3A5 /* KButton.cpp in Sources */,
+				C39F19060B8506A0009CC3A5 /* KButtonBox.cpp in Sources */,
+				C39F19090B8506A0009CC3A5 /* KFileNameField.cpp in Sources */,
+				C39F190B0B8506A0009CC3A5 /* KFileTreeDir.cpp in Sources */,
+				C39F190D0B8506A0009CC3A5 /* KFileTreeDirCurrent.cpp in Sources */,
+				C39F190F0B8506A0009CC3A5 /* KFileTreeDirUp.cpp in Sources */,
+				C39F19110B8506A0009CC3A5 /* KFileTreeFile.cpp in Sources */,
+				C39F19130B8506A0009CC3A5 /* KFileTreeNode.cpp in Sources */,
+				C39F19150B8506A0009CC3A5 /* KFileTreeWidget.cpp in Sources */,
+				C39F19170B8506A0009CC3A5 /* KIconButton.cpp in Sources */,
+				C39F19190B8506A0009CC3A5 /* KKeySequenceField.cpp in Sources */,
+				C39F191B0B8506A0009CC3A5 /* KLabel.cpp in Sources */,
+				C39F191D0B8506A0009CC3A5 /* KMenu.cpp in Sources */,
+				C39F191F0B8506A0009CC3A5 /* KMenuItem.cpp in Sources */,
+				C39F19210B8506A0009CC3A5 /* KNumberField.cpp in Sources */,
+				C39F19230B8506A0009CC3A5 /* KProjectionWidget.cpp in Sources */,
+				C39F19250B8506A0009CC3A5 /* KScrollBar.cpp in Sources */,
+				C39F19270B8506A0009CC3A5 /* KSliderButton.cpp in Sources */,
+				C39F19290B8506A0009CC3A5 /* KStatusMenuItem.cpp in Sources */,
+				C39F192B0B8506A0009CC3A5 /* KSubMenuItem.cpp in Sources */,
+				C39F192D0B8506A0009CC3A5 /* KTextField.cpp in Sources */,
+				C39F192F0B8506A0009CC3A5 /* KTextWidget.cpp in Sources */,
+				C39F19310B8506A0009CC3A5 /* KToggleButton.cpp in Sources */,
+				C39F19330B8506A0009CC3A5 /* KWidget.cpp in Sources */,
+				C39F19350B8506A0009CC3A5 /* KWidgetArray.cpp in Sources */,
+				C39F19370B8506A0009CC3A5 /* KConsole.cpp in Sources */,
+				C39F19390B8506A0009CC3A5 /* KFileTreeWindow.cpp in Sources */,
+				C39F193B0B8506A0009CC3A5 /* KMenuWindow.cpp in Sources */,
+				C39F193D0B8506A0009CC3A5 /* KMessagePanel.cpp in Sources */,
+				C39F193F0B8506A0009CC3A5 /* KPopupMenu.cpp in Sources */,
+				C39F19410B8506A0009CC3A5 /* KWindow.cpp in Sources */,
+				C39F19F60B8508A4009CC3A5 /* KikiPy_wrap.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(FRAMEWORK_SEARCH_PATHS)",
+					"$(SRCROOT)/../kodilib/macosx/build/Development",
+					"$(SRCROOT)/../../../Library/Frameworks",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(LIBRARY_SEARCH_PATHS)",
+					"$(SRCROOT)/../kodilib/win32-vc/Debug",
+					"$(SRCROOT)/../kodilib/win32-vc/Release",
+				);
+				PRODUCT_NAME = kiki;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(FRAMEWORK_SEARCH_PATHS)",
+					"$(SRCROOT)/../kodilib/macosx/build/Development",
+					"$(SRCROOT)/../../../Library/Frameworks",
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(LIBRARY_SEARCH_PATHS)",
+					"$(SRCROOT)/../kodilib/win32-vc/Debug",
+					"$(SRCROOT)/../kodilib/win32-vc/Release",
+				);
+				PRODUCT_NAME = kiki;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(HOME)/Library/Frameworks",
+					/Library/Frameworks,
+					"$(FRAMEWORK_SEARCH_PATHS)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(HOME)/Library/Frameworks/SDL.framework/Headers",
+					"$(HOME)/Library/Frameworks/SDL_mixer.framework/Headers",
+					"$(HOME)/Library/Frameworks/SDL_image.framework/Headers",
+					/Library/Frameworks/Python.framework/Headers,
+					"$(HEADER_SEARCH_PATHS)",
+				);
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(HOME)/Library/Frameworks",
+					/Library/Frameworks,
+					"$(FRAMEWORK_SEARCH_PATHS)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(HOME)/Library/Frameworks/SDL.framework/Headers",
+					"$(HOME)/Library/Frameworks/SDL_mixer.framework/Headers",
+					"$(HOME)/Library/Frameworks/SDL_image.framework/Headers",
+					/Library/Frameworks/Python.framework/Headers,
+					"$(HEADER_SEARCH_PATHS)",
+				);
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "kiki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "kiki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

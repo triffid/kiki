@@ -51,7 +51,7 @@ KikiController::KikiController () : KEventHandler (), KKeyHandler (), KikiAction
 #endif
 
 #if defined(__APPLE__) && defined(__MACH__)
-    kiki_home = "./";
+    kiki_home = "./kiki.app/Contents/Resources/";
     quit_key = "META_q";
     gamma = 1;
 #else
