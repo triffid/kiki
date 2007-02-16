@@ -271,9 +271,9 @@ void KikiCharacter::renderCharacter ( char c )
     glNormal3f (0.0, 0.0, 1.0);
 
 #ifndef WIN32
-    gluTessCallback (tess, GLU_TESS_BEGIN, (GLvoid (*)())glBegin);
-    gluTessCallback (tess, GLU_TESS_VERTEX, (GLvoid (*)())glVertex3dv);
-    gluTessCallback (tess, GLU_TESS_END, (GLvoid (*)())glEnd);
+    gluTessCallback (tess, GLU_TESS_BEGIN, (GLvoid (*)(...))glBegin);
+    gluTessCallback (tess, GLU_TESS_VERTEX, (GLvoid (*)(...))glVertex3dv);
+    gluTessCallback (tess, GLU_TESS_END, (GLvoid (*)(...))glEnd);
 #else
 	gluTessCallback (tess, GLU_TESS_BEGIN, (void (__stdcall *)())glBegin);
     gluTessCallback (tess, GLU_TESS_VERTEX, (void (__stdcall *)())glVertex3dv);

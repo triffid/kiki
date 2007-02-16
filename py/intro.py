@@ -55,7 +55,7 @@ def display_about ():
     about_menu = KikiMenu ()
     about_menu.getEventWithName ("hide").addAction (once (display_main_menu))
     about_menu.addItem ("$no_item" + Controller.getLocalizedString ("kiki the nano bot"))
-    about_menu.addItem ("$no_item$scale(0.7)" + Controller.getLocalizedString ("version") + " 1.0.0")
+    about_menu.addItem ("$no_item$scale(0.7)" + Controller.getLocalizedString ("version") + " 1.0.3")
     about_menu.addItem ("$no_item")
 
     about_menu.addItem ("$no_item" + "|" + Controller.getLocalizedString ("programmed by"))
