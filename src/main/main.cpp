@@ -23,7 +23,10 @@ int main (int argc, char * argv[])
     int width, height;
     SDL_Surface * screen;
 
+#if defined(__APPLE__) && defined(__MACH__)
+#else
     glutInit(&argc,argv);
+#endif
   
     // initialize SDL
     if ( SDL_Init(SDL_INIT_VIDEO | SDL_INIT_VIDEO) < 0 ) // SDL_INIT_TIMER
