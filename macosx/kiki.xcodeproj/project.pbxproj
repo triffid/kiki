@@ -19,6 +19,7 @@
 		C307B8C60B8533DB00BCD3FA /* SDL_mixer.framework in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = C307B88D0B8533C700BCD3FA /* SDL_mixer.framework */; };
 		C307B8C70B8533DB00BCD3FA /* SDL.framework in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = C307B88E0B8533C700BCD3FA /* SDL.framework */; };
 		C307B94E0B853BEF00BCD3FA /* KikiPy_wrap.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = C307B94D0B853BEF00BCD3FA /* KikiPy_wrap.h */; };
+		C350DD730B865C0000199F81 /* Python.framework in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = C39F19D50B850711009CC3A5 /* Python.framework */; };
 		C39F167C0B850630009CC3A5 /* KikiAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F15F90B850630009CC3A5 /* KikiAction.cpp */; };
 		C39F167E0B850630009CC3A5 /* KikiActionObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F15FB0B850630009CC3A5 /* KikiActionObject.cpp */; };
 		C39F16820B850630009CC3A5 /* KikiEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F15FF0B850630009CC3A5 /* KikiEvent.cpp */; };
@@ -158,6 +159,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				C350DD730B865C0000199F81 /* Python.framework in Copy Frameworks into .app bundle */,
 				C307B8C50B8533DB00BCD3FA /* SDL_image.framework in Copy Frameworks into .app bundle */,
 				C307B8C60B8533DB00BCD3FA /* SDL_mixer.framework in Copy Frameworks into .app bundle */,
 				C307B8C70B8533DB00BCD3FA /* SDL.framework in Copy Frameworks into .app bundle */,
@@ -179,9 +181,9 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* kiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C307B88C0B8533C700BCD3FA /* SDL_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_image.framework; path = ../../../../Library/Frameworks/SDL_image.framework; sourceTree = SOURCE_ROOT; };
-		C307B88D0B8533C700BCD3FA /* SDL_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_mixer.framework; path = ../../../../Library/Frameworks/SDL_mixer.framework; sourceTree = SOURCE_ROOT; };
-		C307B88E0B8533C700BCD3FA /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = ../../../../Library/Frameworks/SDL.framework; sourceTree = SOURCE_ROOT; };
+		C307B88C0B8533C700BCD3FA /* SDL_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_image.framework; path = /Users/kodi/Library/Frameworks/SDL_image.framework; sourceTree = "<absolute>"; };
+		C307B88D0B8533C700BCD3FA /* SDL_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_mixer.framework; path = /Users/kodi/Library/Frameworks/SDL_mixer.framework; sourceTree = "<absolute>"; };
+		C307B88E0B8533C700BCD3FA /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = /Users/kodi/Library/Frameworks/SDL.framework; sourceTree = "<absolute>"; };
 		C307B94D0B853BEF00BCD3FA /* KikiPy_wrap.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = KikiPy_wrap.h; path = ../SWIG/KikiPy_wrap.h; sourceTree = SOURCE_ROOT; };
 		C39F15F90B850630009CC3A5 /* KikiAction.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiAction.cpp; sourceTree = "<group>"; };
 		C39F15FA0B850630009CC3A5 /* KikiAction.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiAction.h; sourceTree = "<group>"; };
@@ -426,7 +428,7 @@
 		C39F17E70B85069F009CC3A5 /* KPopupMenu.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KPopupMenu.h; sourceTree = "<group>"; };
 		C39F17E80B85069F009CC3A5 /* KWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KWindow.cpp; sourceTree = "<group>"; };
 		C39F17E90B85069F009CC3A5 /* KWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KWindow.h; sourceTree = "<group>"; };
-		C39F19D50B850711009CC3A5 /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = /Library/Frameworks/Python.framework; sourceTree = "<absolute>"; };
+		C39F19D50B850711009CC3A5 /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = /Users/kodi/Library/Frameworks/Python.framework; sourceTree = "<absolute>"; };
 		C39F19F40B8508A4009CC3A5 /* KikiPy_wrap.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = KikiPy_wrap.cpp; path = ../SWIG/KikiPy_wrap.cpp; sourceTree = SOURCE_ROOT; };
 		C39F1A020B850945009CC3A5 /* sound */ = {isa = PBXFileReference; lastKnownFileType = folder; name = sound; path = ../sound; sourceTree = SOURCE_ROOT; };
 		C39F1A260B8509A8009CC3A5 /* py */ = {isa = PBXFileReference; lastKnownFileType = folder; name = py; path = ../py; sourceTree = SOURCE_ROOT; };
@@ -1156,7 +1158,7 @@
 					"$(HOME)/Library/Frameworks/SDL.framework/Headers",
 					"$(HOME)/Library/Frameworks/SDL_mixer.framework/Headers",
 					"$(HOME)/Library/Frameworks/SDL_image.framework/Headers",
-					/Library/Frameworks/Python.framework/Headers,
+					"$(HOME)/Library/Frameworks/Python.framework/Headers",
 					"$(HEADER_SEARCH_PATHS)",
 				);
 				PREBINDING = NO;
@@ -1178,7 +1180,7 @@
 					"$(HOME)/Library/Frameworks/SDL.framework/Headers",
 					"$(HOME)/Library/Frameworks/SDL_mixer.framework/Headers",
 					"$(HOME)/Library/Frameworks/SDL_image.framework/Headers",
-					/Library/Frameworks/Python.framework/Headers,
+					"$(HOME)/Library/Frameworks/Python.framework/Headers",
 					"$(HEADER_SEARCH_PATHS)",
 				);
 				PREBINDING = NO;
