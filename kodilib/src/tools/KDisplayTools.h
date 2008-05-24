@@ -15,13 +15,12 @@
 
 void 		kDisplayString		( const std::string &, const KPosition &, bool = true );
 void 		kDisplayString		( const std::string &, const KVector &, void * );
-int		kDisplayXPMIcon		( char ** xpmData, const KPosition & pos );
+int     kDisplayXPMIcon		( const char ** xpmData, const KPosition & pos );
 void		kDisplayWireSphere	( float radius = 0.5, int subdivisions = 8);
 void		kDisplaySolidSphere	( float radius = 0.5, int subdivisions = 8);
 void		kDisplaySolidCube	( float sidelength = 1.0);
 void		kDisplayWireCube	( float sidelength = 1.0);
-void		kDisplaySolidCylinder	( float base = 0.5, float top = 0.0, float height = 1.0, 
-                                            int subdivisions = 8);
+void		kDisplaySolidCylinder	( float base = 0.5, float top = 0.0, float height = 1.0, int subdivisions = 8);
 
 extern SDL_PixelFormat KDL_PIXEL_FORMAT;
 

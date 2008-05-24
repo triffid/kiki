@@ -6,7 +6,7 @@
 #ifndef __KButtonSymbols
 #define __KButtonSymbols
 
-static char *KDS_BUTTONICON_CLEAR[] =
+static const char *KDS_BUTTONICON_CLEAR[] =
 {
 // width height ncolors chars_per_pixel 
 "13 13 1 1",
@@ -28,7 +28,7 @@ static char *KDS_BUTTONICON_CLEAR[] =
 ".............",
 };
 
-static char *KDS_BUTTONICON_CROSS[] =
+static const char *KDS_BUTTONICON_CROSS[] =
 {
 // width height ncolors chars_per_pixel 
 "13 13 2 1",
@@ -51,7 +51,7 @@ static char *KDS_BUTTONICON_CROSS[] =
 "#...........#",
 };
 
-static char *KDS_BUTTONICON_UP[] =
+static const char *KDS_BUTTONICON_UP[] =
 {
 // width height ncolors chars_per_pixel 
 "13 13 2 1",
@@ -74,7 +74,7 @@ static char *KDS_BUTTONICON_UP[] =
 ".............",
 };
 
-static char *KDS_BUTTONICON_DOWN[] =
+static const char *KDS_BUTTONICON_DOWN[] =
 {
 // width height ncolors chars_per_pixel 
 "13 13 2 1",
@@ -97,7 +97,7 @@ static char *KDS_BUTTONICON_DOWN[] =
 ".............",
 };
 
-static char *KDS_BUTTONICON_ARROW_RIGHT[] =
+static const char *KDS_BUTTONICON_ARROW_RIGHT[] =
 {
 // width height ncolors chars_per_pixel 
 "13 13 2 1",
@@ -120,7 +120,7 @@ static char *KDS_BUTTONICON_ARROW_RIGHT[] =
 ".............",
 };
 
-static char *KDS_BUTTONICON_ARROW_LEFT[] =
+static const char *KDS_BUTTONICON_ARROW_LEFT[] =
 {
 // width height ncolors chars_per_pixel 
 "13 13 2 1",
@@ -143,7 +143,7 @@ static char *KDS_BUTTONICON_ARROW_LEFT[] =
 ".............",
 };
 
-static char *KDS_BUTTONICON_ARROW_UP[] =
+static const char *KDS_BUTTONICON_ARROW_UP[] =
 {
 // width height ncolors chars_per_pixel 
 "13 13 2 1",
@@ -166,7 +166,7 @@ static char *KDS_BUTTONICON_ARROW_UP[] =
 ".............",
 };
 
-static char *KDS_BUTTONICON_ARROW_DOWN[] =
+static const char *KDS_BUTTONICON_ARROW_DOWN[] =
 {
 // width height ncolors chars_per_pixel 
 "13 13 2 1",
@@ -189,7 +189,7 @@ static char *KDS_BUTTONICON_ARROW_DOWN[] =
 ".............",
 };
 
-static char *KDS_BUTTONICON_TOP[] =
+static const char *KDS_BUTTONICON_TOP[] =
 {
 // width height ncolors chars_per_pixel 
 "13 13 2 1",
@@ -212,7 +212,7 @@ static char *KDS_BUTTONICON_TOP[] =
 ".............",
 };
 
-static char *KDS_BUTTONICON_BOTTOM[] =
+static const char *KDS_BUTTONICON_BOTTOM[] =
 {
 // width height ncolors chars_per_pixel 
 "13 13 2 1",
@@ -235,7 +235,7 @@ static char *KDS_BUTTONICON_BOTTOM[] =
 ".............",
 };
 
-static char *KDS_BUTTONICON_DOUBLE_UP[] =
+static const char *KDS_BUTTONICON_DOUBLE_UP[] =
 {
 // width height ncolors chars_per_pixel 
 "13 13 2 1",
@@ -258,7 +258,7 @@ static char *KDS_BUTTONICON_DOUBLE_UP[] =
 ".............",
 };
 
-static char *KDS_BUTTONICON_DOUBLE_DOWN[] =
+static const char *KDS_BUTTONICON_DOUBLE_DOWN[] =
 {
 // width height ncolors chars_per_pixel 
 "13 13 2 1",

@@ -44,8 +44,10 @@ void KikiPyAction::perform ()
     }
     else if (PyInstance_Check(python_object))
     {
-        result = PyObject_CallMethod (python_object, "performAction", "sf", action_name.c_str(),
-                                                                            getRelativeTime());
+        result = PyObject_CallMethod (python_object,  const_cast<char*>("performAction"), 
+                                                      const_cast<char*>("sf"), 
+                                                      action_name.c_str(),
+                                                      getRelativeTime());
     }
     if (result)
     {
@@ -63,7 +65,9 @@ void KikiPyAction::finish ()
 {
     if (PyObject_TypeCheck(python_object, &PyInstance_Type))
     {
-        if (PyObject_CallMethod(python_object, "finishAction", "s", action_name.c_str()) == NULL)
+        if (PyObject_CallMethod(python_object,  const_cast<char*>("finishAction"), 
+                                                const_cast<char*>("s"), 
+                                                action_name.c_str()) == NULL)
         {
             KConsole::printError("KikiPyAction::finish failed");
         }
@@ -75,7 +79,9 @@ void KikiPyAction::finished ()
 { 
     if (PyObject_TypeCheck(python_object, &PyInstance_Type))
     {
-        if (PyObject_CallMethod(python_object, "actionFinished", "s", action_name.c_str()) == NULL)
+        if (PyObject_CallMethod(python_object,  const_cast<char*>("actionFinished"), 
+                                                const_cast<char*>("s"), 
+                                                action_name.c_str()) == NULL)
         {
             KConsole::printError("KikiPyAction::finished failed");
         }

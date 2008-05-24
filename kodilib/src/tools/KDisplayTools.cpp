@@ -38,7 +38,7 @@ SDL_PixelFormat KDL_PIXEL_FORMAT = {
 };
 
 // --------------------------------------------------------------------------------------------------------
-int kDisplayXPMIcon ( char ** xpmData, const KPosition & pos )
+int kDisplayXPMIcon ( const char ** xpmData, const KPosition & pos )
 {
     glPushAttrib(GL_PIXEL_MODE_BIT);
     
@@ -49,7 +49,7 @@ int kDisplayXPMIcon ( char ** xpmData, const KPosition & pos )
     glPixelTransferf(GL_GREEN_SCALE, color[1]);
     glPixelTransferf(GL_BLUE_SCALE, color[2]);
     
-    SDL_Surface * xpmSurface = IMG_ReadXPMFromArray (xpmData);
+    SDL_Surface * xpmSurface = IMG_ReadXPMFromArray (const_cast<char **>(xpmData));
     if (xpmSurface == NULL) 
     {
         KConsole::printError("kDisplayXPMIcon: IMG_ReadXPMFromArray failed");

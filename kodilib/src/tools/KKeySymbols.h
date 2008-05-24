@@ -5,7 +5,7 @@
 #ifndef __KKeySymbols
 #define __KKeySymbols
 
-static char *KDL_KEY_ICON_META[] =
+static const char *KDL_KEY_ICON_META[] =
 {
 // width height ncolors chars_per_pixel 
 "13 13 2 1",
@@ -28,7 +28,7 @@ static char *KDL_KEY_ICON_META[] =
 ".###.....###.",
 };
 
-static char *KDL_KEY_ICON_ALT[] =
+static const char *KDL_KEY_ICON_ALT[] =
 {
 // width height ncolors chars_per_pixel 
 "17 13 2 1",
@@ -51,7 +51,7 @@ static char *KDL_KEY_ICON_ALT[] =
 ".................",
 };
 
-static char *KDL_KEY_ICON_CTRL[] =
+static const char *KDL_KEY_ICON_CTRL[] =
 {
 // width height ncolors chars_per_pixel 
 "11 13 2 1",
@@ -74,7 +74,7 @@ static char *KDL_KEY_ICON_CTRL[] =
 "...######..",
 };
 
-static char *KDL_KEY_ICON_SHIFT[] =
+static const char *KDL_KEY_ICON_SHIFT[] =
 {
 // width height ncolors chars_per_pixel 
 "13 13 2 1",
@@ -97,7 +97,7 @@ static char *KDL_KEY_ICON_SHIFT[] =
 "......#......",
 };
 
-static char *KDL_KEY_ICON_RETURN[] =
+static const char *KDL_KEY_ICON_RETURN[] =
 {
 // width height ncolors chars_per_pixel 
 "17 13 2 1",
@@ -120,7 +120,7 @@ static char *KDL_KEY_ICON_RETURN[] =
 ".................",
 };
 
-static char *KDL_KEY_ICON_ENTER[] =
+static const char *KDL_KEY_ICON_ENTER[] =
 {
 // width height ncolors chars_per_pixel 
 "11 13 2 1",
@@ -143,7 +143,7 @@ static char *KDL_KEY_ICON_ENTER[] =
 "...........",
 };
 
-static char *KDL_KEY_ICON_UP[] =
+static const char *KDL_KEY_ICON_UP[] =
 {
 // width height ncolors chars_per_pixel 
 "12 13 2 1",
@@ -166,7 +166,7 @@ static char *KDL_KEY_ICON_UP[] =
 ".....##.....",
 };
 
-static char *KDL_KEY_ICON_DOWN[] =
+static const char *KDL_KEY_ICON_DOWN[] =
 {
 // width height ncolors chars_per_pixel 
 "12 13 2 1",
@@ -189,7 +189,7 @@ static char *KDL_KEY_ICON_DOWN[] =
 ".....##.....",
 };
 
-static char *KDL_KEY_ICON_RIGHT[] =
+static const char *KDL_KEY_ICON_RIGHT[] =
 {
 // width height ncolors chars_per_pixel 
 "13 13 2 1",
@@ -212,7 +212,7 @@ static char *KDL_KEY_ICON_RIGHT[] =
 "......##.....",
 };
 
-static char *KDL_KEY_ICON_LEFT[] =
+static const char *KDL_KEY_ICON_LEFT[] =
 {
 // width height ncolors chars_per_pixel 
 "13 13 2 1",
@@ -235,7 +235,7 @@ static char *KDL_KEY_ICON_LEFT[] =
 ".....##......",
 };
 
-static char *KDL_KEY_ICON_HOME[] =
+static const char *KDL_KEY_ICON_HOME[] =
 {
 // width height ncolors chars_per_pixel 
 "11 13 2 1",
@@ -258,7 +258,7 @@ static char *KDL_KEY_ICON_HOME[] =
 "...........",
 };
 
-static char *KDL_KEY_ICON_END[] =
+static const char *KDL_KEY_ICON_END[] =
 {
 // width height ncolors chars_per_pixel 
 "11 13 2 1",
@@ -281,7 +281,7 @@ static char *KDL_KEY_ICON_END[] =
 "...........",
 };
 
-static char *KDL_KEY_ICON_PAGEUP[] =
+static const char *KDL_KEY_ICON_PAGEUP[] =
 {
 // width height ncolors chars_per_pixel 
 "12 13 2 1",
@@ -304,7 +304,7 @@ static char *KDL_KEY_ICON_PAGEUP[] =
 ".....##.....",
 };
 
-static char *KDL_KEY_ICON_PAGEDOWN[] =
+static const char *KDL_KEY_ICON_PAGEDOWN[] =
 {
 // width height ncolors chars_per_pixel 
 "12 13 2 1",
@@ -328,7 +328,7 @@ static char *KDL_KEY_ICON_PAGEDOWN[] =
 };
 
 /*
-static char *KDL_KEY_ICON_CAPSLOCK[] =
+static const char *KDL_KEY_ICON_CAPSLOCK[] =
 {
 // width height ncolors chars_per_pixel 
 "13 13 2 1",
@@ -352,7 +352,7 @@ static char *KDL_KEY_ICON_CAPSLOCK[] =
 };
 */
 
-static char *KDL_KEY_ICON_BACKSPACE[] =
+static const char *KDL_KEY_ICON_BACKSPACE[] =
 {
 // width height ncolors chars_per_pixel 
 "19 13 2 1",
@@ -375,7 +375,7 @@ static char *KDL_KEY_ICON_BACKSPACE[] =
 ".....##############",
 };
 
-static char *KDL_KEY_ICON_DELETE[] =
+static const char *KDL_KEY_ICON_DELETE[] =
 {
 // width height ncolors chars_per_pixel 
 "19 13 2 1",
@@ -398,7 +398,7 @@ static char *KDL_KEY_ICON_DELETE[] =
 "##############.....",
 };
 
-static char *KDL_KEY_ICON_TAB[] =
+static const char *KDL_KEY_ICON_TAB[] =
 {
 // width height ncolors chars_per_pixel 
 "17 13 2 1",
@@ -421,7 +421,7 @@ static char *KDL_KEY_ICON_TAB[] =
 "........##.....##",
 };
 
-static char *KDL_KEY_ICON_KP[] =
+static const char *KDL_KEY_ICON_KP[] =
 {
 // width height ncolors chars_per_pixel 
 "4 13 2 1",
