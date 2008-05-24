@@ -140,19 +140,19 @@ static KikiCharCoords KikiCharacterData[][3][30] = {
         {0,8}, {0,5}, {2,3}, {-1}}, {{-1}}, {{-1}}}, 
     {{	{0,0}, {6,0}, {6,2}, {2.5,2}, {6,5.5}, {6,8}, {0,8}, {0,6}, {3.5,6},	// z
         {0,2.5}, {-1}}, {{-1}}, {{-1}}},
-    {{	{0,9}, {2,9}, {2,10}, {0,10}, {-1}},					// dots for ü,ö and ä
+    {{	{0,9}, {2,9}, {2,10}, {0,10}, {-1}},					// dots for √º,√∂ and √§
         {{4,9}, {6,9}, {6,10}, {4,10}, {-1}}, {{-1}}},
-    {{	{1,9}, {3,9}, {5,11}, {3,11}, {-1}},					// slash for ó,í, ú and é
+    {{	{1,9}, {3,9}, {5,11}, {3,11}, {-1}},					// slash for √≥,√≠, √∫ and √©
         {{-1}}, {{-1}}},
-    {{	{3,9}, {5,9}, {3,11}, {1,11}, {-1}},					// backslash for à
+    {{	{3,9}, {5,9}, {3,11}, {1,11}, {-1}},					// backslash for √†
         {{-1}}, {{-1}}},        
-    {{	{1,9}, {2,9}, {3,10}, {4,9}, {5,9}, {3,11}, {-1}},			// hat for ô
+    {{	{1,9}, {2,9}, {3,10}, {4,9}, {5,9}, {3,11}, {-1}},			// hat for √¥
         {{-1}}, {{-1}}},
-    {{	{1,9}, {2,9}, {3,10}, {4,9}, {6,11}, {5,11}, {4,10}, {3,11}, {-1}},	// tilde for ã
+    {{	{1,9}, {2,9}, {3,10}, {4,9}, {6,11}, {5,11}, {4,10}, {3,11}, {-1}},	// tilde for √£
         {{-1}}, {{-1}}},
-    {{	{2,0}, {3,-1}, {2,-2}, {3,-2}, {4,-1}, {3,-0}, {-1}},			// tail for ç
+    {{	{2,0}, {3,-1}, {2,-2}, {3,-2}, {4,-1}, {3,-0}, {-1}},			// tail for √ß
         {{-1}}, {{-1}}},
-    {{	{1,9}, {5,9}, {5,12}, {1,12}, {-1}},					// circle for å
+    {{	{1,9}, {5,9}, {5,12}, {1,12}, {-1}},					// circle for √•
         {{2,10}, {2,11}, {4, 11}, {4,10}, {-1}}, {{-1}}},    
 };
 
@@ -170,19 +170,19 @@ KikiCharacter::KikiCharacter ( char c )
 		//KConsole::printf ("KikiCharacter::KikiCharacter character %c (%d)", c, c);
         switch (c)
         {
-			case -68:  character = 52; addon = 1; break; // ¸
-		    case -74:  character = 46; addon = 1; break; // ˆ
-			case -76:  character = 46; addon = 4; break; // Ù
-		    case -77:  character = 46; addon = 2; break; // Û
-		    case -79:  character = 45; addon = 5; break; // Ò
-			case -83:  character = 40; addon = 2; break; // Ì
-			case -87:  character = 36; addon = 2; break; // È
-			case -89:  character = 34; addon = 6; break; // Á
-			case -91:  character = 32; addon = 7; break; // Â
-		    case -92:  character = 32; addon = 1; break; // ‰
-			case -93:  character = 32; addon = 5; break; // „
-			case -95:  character = 32; addon = 2; break; // ·
-			case -96:  character = 32; addon = 3; break; // ‡
+			case -68:  character = 52; addon = 1; break; // ¬∏
+		    case -74:  character = 46; addon = 1; break; // ÀÜ
+			case -76:  character = 46; addon = 4; break; // √ô
+		    case -77:  character = 46; addon = 2; break; // √õ
+		    case -79:  character = 45; addon = 5; break; // √í
+			case -83:  character = 40; addon = 2; break; // √å
+			case -87:  character = 36; addon = 2; break; // √à
+			case -89:  character = 34; addon = 6; break; // √Å
+			case -91:  character = 32; addon = 7; break; // √Ç
+		    case -92:  character = 32; addon = 1; break; // ‚Ä∞
+			case -93:  character = 32; addon = 5; break; // ‚Äû
+			case -95:  character = 32; addon = 2; break; // ¬∑
+			case -96:  character = 32; addon = 3; break; // ‚Ä°
 
             default:
                 KConsole::printf ("KikiCharacter::KikiCharacter unknown character %c (%d)", c, c);
@@ -271,11 +271,11 @@ void KikiCharacter::renderCharacter ( char c )
     glNormal3f (0.0, 0.0, 1.0);
 
 #ifndef WIN32
-    gluTessCallback (tess, GLU_TESS_BEGIN, (GLvoid (*)(...))glBegin);
-    gluTessCallback (tess, GLU_TESS_VERTEX, (GLvoid (*)(...))glVertex3dv);
-    gluTessCallback (tess, GLU_TESS_END, (GLvoid (*)(...))glEnd);
+    gluTessCallback (tess, GLU_TESS_BEGIN, (GLvoid (*)())glBegin);
+    gluTessCallback (tess, GLU_TESS_VERTEX, (GLvoid (*)())glVertex3dv);
+    gluTessCallback (tess, GLU_TESS_END, (GLvoid (*)())glEnd);
 #else
-	gluTessCallback (tess, GLU_TESS_BEGIN, (void (__stdcall *)())glBegin);
+	  gluTessCallback (tess, GLU_TESS_BEGIN, (void (__stdcall *)())glBegin);
     gluTessCallback (tess, GLU_TESS_VERTEX, (void (__stdcall *)())glVertex3dv);
     gluTessCallback (tess, GLU_TESS_END, (void (__stdcall *)())glEnd);
 #endif

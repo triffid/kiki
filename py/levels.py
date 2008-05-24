@@ -5,11 +5,11 @@ if Controller.isDebugVersion(): print "[levels.py]"
 # .................................................................................................................
 
 level_list = [
-                "grasp", "fallen", "sokoban", "cheese", "invisimaze", "spiral",
-                "start", "steps", "move", "electro", "elevate", "throw", # intro
+              "start", "steps", "move", "electro", "elevate", "throw", # intro
               "gold", "jump", "escape", "gears", "gamma", "cube", "switch", "borg", # easy
               "mini", "blocks", "bombs", "sandbox", "energy", "maze", "love", 
               "towers", "edge", "random", "plate", "nice", "entropy", # medium
+              "grasp", "fallen", "cheese", "invisimaze", "spiral", # owen hay's levels (TODO: sort in)
               "slick", "bridge", "flower", "stones", "walls", "grid", # difficult
               "rings", "core", "bronze", "pool", # difficult
               "hidden", "church", "strange", "mesh", "columns", "machine", # tough

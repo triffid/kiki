@@ -12,14 +12,11 @@
 		002F3C6109D0951E00EBEB88 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002F3C6009D0951E00EBEB88 /* GLUT.framework */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		C307B88F0B8533C700BCD3FA /* SDL_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C307B88C0B8533C700BCD3FA /* SDL_image.framework */; };
-		C307B8900B8533C700BCD3FA /* SDL_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C307B88D0B8533C700BCD3FA /* SDL_mixer.framework */; };
-		C307B8910B8533C700BCD3FA /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C307B88E0B8533C700BCD3FA /* SDL.framework */; };
-		C307B8C50B8533DB00BCD3FA /* SDL_image.framework in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = C307B88C0B8533C700BCD3FA /* SDL_image.framework */; };
-		C307B8C60B8533DB00BCD3FA /* SDL_mixer.framework in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = C307B88D0B8533C700BCD3FA /* SDL_mixer.framework */; };
-		C307B8C70B8533DB00BCD3FA /* SDL.framework in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = C307B88E0B8533C700BCD3FA /* SDL.framework */; };
 		C307B94E0B853BEF00BCD3FA /* KikiPy_wrap.h in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = C307B94D0B853BEF00BCD3FA /* KikiPy_wrap.h */; };
-		C350DD730B865C0000199F81 /* Python.framework in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = C39F19D50B850711009CC3A5 /* Python.framework */; };
+		C33450A30DE82A6200E01965 /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33450A20DE82A6200E01965 /* Python.framework */; };
+		C33450A80DE82AB700E01965 /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33450A50DE82AB700E01965 /* SDL.framework */; };
+		C33450A90DE82AB700E01965 /* SDL_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33450A60DE82AB700E01965 /* SDL_image.framework */; };
+		C33450AA0DE82AB700E01965 /* SDL_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33450A70DE82AB700E01965 /* SDL_mixer.framework */; };
 		C39F167C0B850630009CC3A5 /* KikiAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F15F90B850630009CC3A5 /* KikiAction.cpp */; };
 		C39F167E0B850630009CC3A5 /* KikiActionObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F15FB0B850630009CC3A5 /* KikiActionObject.cpp */; };
 		C39F16820B850630009CC3A5 /* KikiEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F15FF0B850630009CC3A5 /* KikiEvent.cpp */; };
@@ -130,7 +127,6 @@
 		C39F193D0B8506A0009CC3A5 /* KMessagePanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17E40B85069F009CC3A5 /* KMessagePanel.cpp */; };
 		C39F193F0B8506A0009CC3A5 /* KPopupMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17E60B85069F009CC3A5 /* KPopupMenu.cpp */; };
 		C39F19410B8506A0009CC3A5 /* KWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F17E80B85069F009CC3A5 /* KWindow.cpp */; };
-		C39F19D60B850711009CC3A5 /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39F19D50B850711009CC3A5 /* Python.framework */; };
 		C39F19F60B8508A4009CC3A5 /* KikiPy_wrap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39F19F40B8508A4009CC3A5 /* KikiPy_wrap.cpp */; settings = {COMPILER_FLAGS = "-DSWIG_PYTHON_SILENT_MEMLEAK"; }; };
 		C39F1B690B851520009CC3A5 /* kiki.icns in Resources */ = {isa = PBXBuildFile; fileRef = C39F1B680B851520009CC3A5 /* kiki.icns */; };
 		C39F1B980B851955009CC3A5 /* sound in Resources */ = {isa = PBXBuildFile; fileRef = C39F1A020B850945009CC3A5 /* sound */; };
@@ -144,10 +140,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C350DD730B865C0000199F81 /* Python.framework in Copy Frameworks into .app bundle */,
-				C307B8C50B8533DB00BCD3FA /* SDL_image.framework in Copy Frameworks into .app bundle */,
-				C307B8C60B8533DB00BCD3FA /* SDL_mixer.framework in Copy Frameworks into .app bundle */,
-				C307B8C70B8533DB00BCD3FA /* SDL.framework in Copy Frameworks into .app bundle */,
 				C307B94E0B853BEF00BCD3FA /* KikiPy_wrap.h in Copy Frameworks into .app bundle */,
 			);
 			name = "Copy Frameworks into .app bundle";
@@ -166,10 +158,11 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* kiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C307B88C0B8533C700BCD3FA /* SDL_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_image.framework; path = /Users/kodi/Library/Frameworks/SDL_image.framework; sourceTree = "<absolute>"; };
-		C307B88D0B8533C700BCD3FA /* SDL_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_mixer.framework; path = /Users/kodi/Library/Frameworks/SDL_mixer.framework; sourceTree = "<absolute>"; };
-		C307B88E0B8533C700BCD3FA /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = /Users/kodi/Library/Frameworks/SDL.framework; sourceTree = "<absolute>"; };
 		C307B94D0B853BEF00BCD3FA /* KikiPy_wrap.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = KikiPy_wrap.h; path = ../SWIG/KikiPy_wrap.h; sourceTree = SOURCE_ROOT; };
+		C33450A20DE82A6200E01965 /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = /System/Library/Frameworks/Python.framework; sourceTree = "<absolute>"; };
+		C33450A50DE82AB700E01965 /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = ../../../Library/Frameworks/SDL.framework; sourceTree = SOURCE_ROOT; };
+		C33450A60DE82AB700E01965 /* SDL_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_image.framework; path = ../../../Library/Frameworks/SDL_image.framework; sourceTree = SOURCE_ROOT; };
+		C33450A70DE82AB700E01965 /* SDL_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_mixer.framework; path = ../../../Library/Frameworks/SDL_mixer.framework; sourceTree = SOURCE_ROOT; };
 		C39F15F90B850630009CC3A5 /* KikiAction.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiAction.cpp; sourceTree = "<group>"; };
 		C39F15FA0B850630009CC3A5 /* KikiAction.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KikiAction.h; sourceTree = "<group>"; };
 		C39F15FB0B850630009CC3A5 /* KikiActionObject.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KikiActionObject.cpp; sourceTree = "<group>"; };
@@ -413,7 +406,6 @@
 		C39F17E70B85069F009CC3A5 /* KPopupMenu.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KPopupMenu.h; sourceTree = "<group>"; };
 		C39F17E80B85069F009CC3A5 /* KWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = KWindow.cpp; sourceTree = "<group>"; };
 		C39F17E90B85069F009CC3A5 /* KWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KWindow.h; sourceTree = "<group>"; };
-		C39F19D50B850711009CC3A5 /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = /Library/Frameworks/Python.framework; sourceTree = "<absolute>"; };
 		C39F19F40B8508A4009CC3A5 /* KikiPy_wrap.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = KikiPy_wrap.cpp; path = ../SWIG/KikiPy_wrap.cpp; sourceTree = SOURCE_ROOT; };
 		C39F1A020B850945009CC3A5 /* sound */ = {isa = PBXFileReference; lastKnownFileType = folder; name = sound; path = ../sound; sourceTree = SOURCE_ROOT; };
 		C39F1A260B8509A8009CC3A5 /* py */ = {isa = PBXFileReference; lastKnownFileType = folder; name = py; path = ../py; sourceTree = SOURCE_ROOT; };
@@ -428,10 +420,10 @@
 				002F3C6109D0951E00EBEB88 /* GLUT.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				002F3C0109D093BD00EBEB88 /* OpenGL.framework in Frameworks */,
-				C39F19D60B850711009CC3A5 /* Python.framework in Frameworks */,
-				C307B88F0B8533C700BCD3FA /* SDL_image.framework in Frameworks */,
-				C307B8900B8533C700BCD3FA /* SDL_mixer.framework in Frameworks */,
-				C307B8910B8533C700BCD3FA /* SDL.framework in Frameworks */,
+				C33450A30DE82A6200E01965 /* Python.framework in Frameworks */,
+				C33450A80DE82AB700E01965 /* SDL.framework in Frameworks */,
+				C33450A90DE82AB700E01965 /* SDL_image.framework in Frameworks */,
+				C33450AA0DE82AB700E01965 /* SDL_mixer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,10 +442,10 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C307B88C0B8533C700BCD3FA /* SDL_image.framework */,
-				C307B88D0B8533C700BCD3FA /* SDL_mixer.framework */,
-				C307B88E0B8533C700BCD3FA /* SDL.framework */,
-				C39F19D50B850711009CC3A5 /* Python.framework */,
+				C33450A50DE82AB700E01965 /* SDL.framework */,
+				C33450A60DE82AB700E01965 /* SDL_image.framework */,
+				C33450A70DE82AB700E01965 /* SDL_mixer.framework */,
+				C33450A20DE82A6200E01965 /* Python.framework */,
 				002F3C6009D0951E00EBEB88 /* GLUT.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 				002F3C0009D093BD00EBEB88 /* OpenGL.framework */,
@@ -910,9 +902,11 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "kiki" */;
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			mainGroup = 29B97314FDCFA39411CA2CEA /* kiki */;
 			projectDirPath = "";
+			projectRoot = ..;
 			targets = (
 				8D1107260486CEB800E47090 /* kiki */,
 			);
@@ -1135,12 +1129,12 @@
 					"$(HOME)/Library/Frameworks/SDL.framework/Headers",
 					"$(HOME)/Library/Frameworks/SDL_mixer.framework/Headers",
 					"$(HOME)/Library/Frameworks/SDL_image.framework/Headers",
-					/Library/Frameworks/Python.framework/Headers,
+					/System/Library/Frameworks/Python.framework/Headers,
 					"$(HOME)/Library/Frameworks/Python.framework/Headers",
 					"$(HEADER_SEARCH_PATHS)",
 				);
 				PREBINDING = NO;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
 			};
 			name = Debug;
 		};
@@ -1162,7 +1156,7 @@
 					"$(HEADER_SEARCH_PATHS)",
 				);
 				PREBINDING = NO;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
 			};
 			name = Release;
 		};
