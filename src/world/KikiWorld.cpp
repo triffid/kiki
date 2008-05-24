@@ -287,6 +287,7 @@ void KikiWorld::deleteAllObjects ()
 
     if (Controller.player)
     {
+        Controller.player->finishRotateAction();
         removeObject (Controller.player); // remove the player first, to keep it's state
         Controller.timer_event->removeAllActions ();
         Controller.removeKeyHandler (Controller.player); // prevent keyboard input while building world

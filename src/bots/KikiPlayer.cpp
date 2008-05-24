@@ -474,6 +474,7 @@ void KikiPlayer::finishAction ( KikiAction * action )
             if (rotate)
             {
                 rotate_action = getActionWithId (rotate);
+                rotate_action->reset();
                 Controller.timer_event->addAction (rotate_action);
             }
         }
@@ -742,3 +743,12 @@ const KColor & KikiPlayer::getTireColor ()
     return colors[KikiPlayer_tire_color];
 }
  
+// __________________________________________________________________________________________________
+void KikiPlayer::finishRotateAction ()
+{
+  if (rotate_action)
+  {
+    rotate = false;
+    finishAction(rotate_action);
+  }
+}

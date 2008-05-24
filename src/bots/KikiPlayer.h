@@ -39,6 +39,7 @@ class KikiPlayer : public KikiBot, public KKeyHandler
     void		initAction	 	( KikiAction * action );    
     void		performAction	 	( KikiAction * action );
     void		finishAction	 	( KikiAction * action );
+    void    finishRotateAction ();
 
     // ........................................................................ display
     void		display		 	();
