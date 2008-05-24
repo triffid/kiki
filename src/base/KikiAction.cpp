@@ -15,10 +15,12 @@ KikiAction::KikiAction ( KikiActionObject * o, int i, const std::string & n, int
 { 
     action_object	= o;
     action_name 	= n;
-    action_id		= i;
-    mode		= m;
-    duration		= d;
-    event		= NULL;
+    action_id     = i;
+    mode          = m;
+    duration      = d;
+    event         = NULL;
+  
+    delete_flag_ptr = NULL;
     
     reset();
 }
@@ -26,11 +28,13 @@ KikiAction::KikiAction ( KikiActionObject * o, int i, const std::string & n, int
 // --------------------------------------------------------------------------------------------------------
 KikiAction::KikiAction ( KikiActionObject * o, int d, int m ) 
 { 
-    action_object 	= o;
-    action_id		= 0;
-    mode		= m;
-    duration		= d;
-    event		= NULL;
+    action_object = o;
+    action_id     = 0;
+    mode          = m;
+    duration      = d;
+    event         = NULL;
+
+    delete_flag_ptr = NULL;
 
     reset();
 }
@@ -40,6 +44,7 @@ KikiAction::~KikiAction ()
 {
     if (event) event->removeAction(this);
     if (action_object) action_object->removeAction(this);
+    if (delete_flag_ptr) *delete_flag_ptr = true;
 }
 
 // --------------------------------------------------------------------------------------------------------
@@ -51,7 +56,16 @@ void KikiAction::finish ()  { action_object->finishAction (this); }
 // --------------------------------------------------------------------------------------------------------
 void KikiAction::finished () 
 { 
+    bool delete_flag = false;
+    delete_flag_ptr = &delete_flag;  
+  
     action_object->actionFinished(this);
+  
+    if (delete_flag)
+    {
+      return;
+    }
+    delete_flag_ptr = NULL;
 
     if (current == getDuration()) // if keepRest wasn't called -> reset start and current values
     {

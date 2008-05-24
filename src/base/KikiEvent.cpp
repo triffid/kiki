@@ -124,7 +124,7 @@ void KikiEvent::triggerActions ()
     {
         KikiAction * action = save_actions.back();
         action->performWithEvent (*this);
-        if (save_actions.back() == action)
+        if (save_actions.empty() == false && save_actions.back() == action)
         {
             save_actions.pop_back();
         }
@@ -134,25 +134,19 @@ void KikiEvent::triggerActions ()
 // --------------------------------------------------------------------------------------------------------
 void KikiEvent::addFinishedAction ( KikiAction * action )
 {
-	//if (action->getName() != "timer")
-		finished_actions.push_back(action);
-	//else
-	//	KConsole::print(this->getName() + " addFinishedAction: " + action->getName());
+  finished_actions.push_back(action);
 }
 
 // --------------------------------------------------------------------------------------------------------
 void KikiEvent::finishActions ()
 {
-	//KConsole::print(this->getName() + " finishActions");
 	try {
 		while (finished_actions.empty() == false)
 		{
 			KikiAction * action = finished_actions.back();
-			//KConsole::print(this->getName() + " finishActions " + action->getName());
 			action->finished();
-			if (finished_actions.back() == action)
+			if (finished_actions.empty() == false && finished_actions.back() == action)
 			{
-				//KConsole::print(this->getName() + " finishActions -- " + action->getName());
 				finished_actions.pop_back();
 			}
 		} 

@@ -67,7 +67,8 @@ class KikiAction
     int			last;
     int			duration;
     int			mode;
-    KikiEvent * 	event;
+    KikiEvent * event;
+    bool      * delete_flag_ptr;
 };
 
 // __________________________________________________________________________________________________
