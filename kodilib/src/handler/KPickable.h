@@ -8,6 +8,7 @@
 
 #include "KIntrospection.h"
 #include <vector>
+#include <limits.h>
 
 #define DEBUG_PICKING		false
 

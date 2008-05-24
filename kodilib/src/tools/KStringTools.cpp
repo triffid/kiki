@@ -6,7 +6,8 @@
 #include "KStringTools.h"
 #include "KVector.h"
 
-#include <sys/types.h> 	// INT_MAX
+//#include <sys/types.h> 	// INT_MAX
+#include <limits.h> // INT_MAX
 #include <stdio.h>
 
 // --------------------------------------------------------------------------------------------------------
