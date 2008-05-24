@@ -7,7 +7,9 @@
 #include "KConsole.h"
 #include "KStringTools.h"
 
+#ifdef WIN32
 #pragma warning(disable:4786)
+#endif
 
 #include <fcntl.h>     	// open
 #include <sys/types.h> 	// stat
