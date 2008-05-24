@@ -16,6 +16,17 @@ KikiScrollMenu::KikiScrollMenu ( int rows, int columns, int activeItem ) : KikiC
 }
 
 // __________________________________________________________________________________________________
+KikiScrollMenu::~KikiScrollMenu ()
+{
+  menu_items.clear();
+  while (all_menu_items.empty() == false)
+  {
+    delete all_menu_items.back();
+    all_menu_items.pop_back();
+  }
+}
+
+// __________________________________________________________________________________________________
 void KikiScrollMenu::addItem ( const std::string & itemText, KikiAction * itemAction, bool option )
 {  
     all_menu_items.push_back (newItem (itemText, itemAction));

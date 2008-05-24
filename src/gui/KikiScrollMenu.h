@@ -11,13 +11,14 @@
 // __________________________________________________________________________________________________
 class KikiScrollMenu : public KikiColumnMenu
 {
-    public: // ........................................................................ PUBLIC
+  public: // ........................................................................ PUBLIC
 
-    // ........................................................................ (con|de)struction
-                KikiScrollMenu	( int rows = 5, int columns = 4, int selectedItem = -1 );
-    
-    // ........................................................................ menu items
-    virtual void addItem	( const std::string & itemText, KikiAction * action = 0, bool option = false );
+  // ........................................................................ (con|de)struction
+  KikiScrollMenu ( int rows = 5, int columns = 4, int selectedItem = -1 );
+ ~KikiScrollMenu ();
+  
+  // ........................................................................ menu items
+  virtual void addItem	( const std::string & itemText, KikiAction * action = 0, bool option = false );
 	virtual KikiMenuItem * currentItem ();
 
 	virtual void show ();
@@ -25,17 +26,17 @@ class KikiScrollMenu : public KikiColumnMenu
 	virtual int  getCurrentIndex ();
 	virtual void setCurrentIndex (int index);
 
-    protected: // ..................................................................... PROTECTED
+  protected: // ..................................................................... PROTECTED
+  
+  void	activeIndexChanged ();
+  void	nextItem ();
+  void	previousItem ();
+	bool  handleKey ( const KKey & key );
     
-    void	activeIndexChanged ();
-    void	nextItem ();
-    void	previousItem ();
-	bool    handleKey ( const KKey & key );
-    
-    int 	visible_items;
-	int     offset;
-	int     num_rows;
-    std::vector<KikiMenuItem*>	all_menu_items;
+  int 	visible_items;
+	int   offset;
+	int   num_rows;
+  std::vector<KikiMenuItem*>	all_menu_items;
 };
 
 #endif

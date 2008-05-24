@@ -44,6 +44,17 @@ KikiMenu::KikiMenu ( int selectedItem ) : KikiScreenText ()
 
 // __________________________________________________________________________________________________
 
+KikiMenu::~KikiMenu ()
+{
+  while (menu_items.empty() == false)
+  {
+    delete menu_items.back();
+    menu_items.pop_back();
+  }
+}
+
+// __________________________________________________________________________________________________
+
 void KikiMenu::setCurrentIndex (int index)
 {
 	active_index = 0;
@@ -399,6 +410,14 @@ KikiMenuItem::KikiMenuItem ()
     item_text  = NULL;
     value_text = NULL;
 	extra_text = NULL;
+}
+
+// __________________________________________________________________________________________________
+KikiMenuItem::~KikiMenuItem ()
+{
+  delete item_text;
+  delete value_text;
+  delete extra_text;
 }
 
 // __________________________________________________________________________________________________
