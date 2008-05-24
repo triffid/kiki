@@ -46,7 +46,7 @@ void KikiTextLine::addCharacter ( char c )
 void KikiTextLine::setText ( const std::string & str )
 {
     text = str;
-    unsigned int pos;
+    std::string::size_type pos;
  
     if ((pos = text.find ("$scale(")) != std::string::npos)
     {

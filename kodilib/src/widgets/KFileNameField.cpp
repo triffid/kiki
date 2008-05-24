@@ -41,7 +41,7 @@ bool KFileNameField::handleKey ( const KKey & key )
         std::string restPath; 				 // path behind cursor
         
         // map cropped path to current directory and rest path to file prefix
-        unsigned int lastSlashPos = croppedPath.rfind("/");
+        std::string::size_type lastSlashPos = croppedPath.rfind("/");
         if (lastSlashPos < croppedPath.size()-1)
         {
             restPath = croppedPath.substr(lastSlashPos+1);
@@ -88,7 +88,7 @@ bool KFileNameField::handleKey ( const KKey & key )
         }
 
         // ............................collect list of entries in searchDir that match prefix restPath
-        unsigned int restLength = restPath.size();
+        std::string::size_type restLength = restPath.size();
         std::vector<std::string> matchingEntries;
         std::vector<std::string>::iterator iter = dir_entries.begin();
         while (iter != dir_entries.end())
@@ -223,7 +223,7 @@ bool KFileNameField::handleKey ( const KKey & key )
 // --------------------------------------------------------------------------------------------------------
 void KFileNameField::selectLastPathComponent ()
 {
-    unsigned int lastSlashPos = text.rfind("/");
+    std::string::size_type lastSlashPos = text.rfind("/");
     if (lastSlashPos == text.size()-1) lastSlashPos = text.rfind("/", lastSlashPos-1);
     if (lastSlashPos < text.size()) cursor_pos = lastSlashPos+1;
     else cursor_pos = 0;

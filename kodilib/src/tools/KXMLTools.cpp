@@ -59,11 +59,11 @@ std::string kXMLPrintf ( int depth, const char * fmt ...)
 std::string kXMLParseToTagsInVector ( std::string & xml, const std::vector<std::string> & tags )
 {
     std::string open("<");
-    unsigned int minLoc = std::string::npos; 
+    std::string::size_type minLoc = std::string::npos; 
     std::vector<std::string>::const_iterator iter = tags.begin();
     while (iter != tags.end())
     {
-        unsigned int loc = xml.find(open+(*iter));
+        std::string::size_type loc = xml.find(open+(*iter));
         if (loc < minLoc) minLoc = loc;
         iter++;
     }
@@ -78,7 +78,7 @@ std::string kXMLReadNamedAttribute ( const std::string & xml, const std::string 
     std::string value;
     std::string nameStr(name);
     nameStr += "='";
-    unsigned int loc = xml.find(nameStr);
+    std::string::size_type loc = xml.find(nameStr);
     if (loc != std::string::npos)
     {	
         loc += nameStr.size();
@@ -91,7 +91,7 @@ std::string kXMLReadNamedAttribute ( const std::string & xml, const std::string 
 // --------------------------------------------------------------------------------------------------------
 bool kXMLParseNamedCloseTag ( std::string & xml, const std::string & name, bool printError )
 {
-    unsigned int loc = xml.find('<');
+    std::string::size_type loc = xml.find('<');
     if (loc == std::string::npos) 
     {
         if (printError) KConsole::printError(kStringPrintf("invalid XML:\nmissing close tag '%s'", 
@@ -118,7 +118,7 @@ bool kXMLParseNamedCloseTag ( std::string & xml, const std::string & name, bool 
 // --------------------------------------------------------------------------------------------------------
 bool kXMLReadNamedOpenTag ( const std::string & xml, const std::string & name, std::string * attributes )
 {
-    unsigned int loc = xml.find('<'), endloc;
+    std::string::size_type loc = xml.find('<'), endloc;
     
     if (loc == std::string::npos || xml[loc+1] == '/') return false;
     
@@ -141,7 +141,7 @@ bool kXMLReadNamedOpenTag ( const std::string & xml, const std::string & name, s
 // --------------------------------------------------------------------------------------------------------
 std::string kXMLParseNamedOpenTag ( std::string & xml, const std::string & name, std::string * attributes, bool printError )
 {
-    unsigned int loc = xml.find('<');
+    std::string::size_type loc = xml.find('<');
     if (loc == std::string::npos || xml[loc+1] == '/') 
     {
         if (printError) KConsole::printError(kStringPrintf("invalid XML:\nmissing tag '%s'", name.c_str()));
@@ -192,7 +192,7 @@ std::string kXMLParseNamedOpenTag ( std::string & xml, const std::string & name,
 // --------------------------------------------------------------------------------------------------------
 bool kXMLParseOpenTag ( std::string & xml, std::string & name, std::string * attributes, bool printError )
 {
-    unsigned int loc = xml.find('<');
+    std::string::size_type loc = xml.find('<');
     if (loc == std::string::npos || xml[loc+1] == '/') 
     {
         if (printError) KConsole::printError("invalid XML:\nmissing open tag");
@@ -296,7 +296,7 @@ std::string kXMLValue( const std::string & name, int type, const void * value, i
 // --------------------------------------------------------------------------------------------------------
 bool kXMLParseValue( std::string & xml, const std::string & name, int type, void * value, bool printError )
 {
-    unsigned int loc = xml.find('<');
+    std::string::size_type loc = xml.find('<');
     if (loc == std::string::npos || xml[loc+1] == '/')     
     {
         if (printError) KConsole::printError(kStringPrintf("invalid XML:\nmissing value '%s'", name.c_str()));
@@ -380,8 +380,8 @@ bool kXMLParseValue( std::string & xml, const std::string & name, int type, void
         }
         else if (typeString == "string")
         {
-            unsigned int first = substring.find("\"")+1;
-            unsigned int last  = substring.rfind("\"", std::string::npos);
+            std::string::size_type first = substring.find("\"")+1;
+            std::string::size_type last  = substring.rfind("\"", std::string::npos);
             *((std::string*)value) = substring.substr(first, last-first);
         }
         

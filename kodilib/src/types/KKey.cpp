@@ -31,7 +31,7 @@ KKey::KKey ( std::string keyName )
 // --------------------------------------------------------------------------------------------------------
 std::string KKey::getUnmodifiedName () const
 {
-    unsigned int keyPos = name.find('_', 0);
+    std::string::size_type keyPos = name.find('_', 0);
     if (keyPos == std::string::npos) 
     {
         return name;
@@ -42,7 +42,7 @@ std::string KKey::getUnmodifiedName () const
 // --------------------------------------------------------------------------------------------------------
 std::string KKey::getModifierName () const
 {
-    unsigned int keyPos = name.find('_', 0);
+    std::string::size_type keyPos = name.find('_', 0);
     if (keyPos == std::string::npos) 
     {
         return "";

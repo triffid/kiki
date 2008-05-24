@@ -170,7 +170,7 @@ int kKeyGetDisplayWidthForModifier ( const std::string & modName )
 // --------------------------------------------------------------------------------------------------------
 int kKeyGetDisplayWidthForKey ( const std::string & keyName )
 {
-    unsigned int keyPos = keyName.find('_', 0);
+    std::string::size_type keyPos = keyName.find('_', 0);
     if (keyPos == std::string::npos) 
     {
         return kKeyGetDisplayWidthForPureKey(keyName) + KDL_MOD_KEY_SPACING;
@@ -313,7 +313,7 @@ int kKeyDisplayPureKey ( const std::string & keyName, const KPosition & pos )
 int kKeyDisplayKey ( const std::string & keyName, const KPosition & pos )
 {
     KPosition start = pos;
-    unsigned int keyPos = keyName.find('_', 0);
+    std::string::size_type keyPos = keyName.find('_', 0);
     if (keyPos == std::string::npos) 
     {
         return start.x + kKeyDisplayPureKey(keyName, start) + KDL_MOD_KEY_SPACING;
@@ -380,7 +380,7 @@ SDLMod kKeyGetModForModName ( const std::string & modName )
 // --------------------------------------------------------------------------------------------------------
 SDL_keysym kKeyGetKeysymForKeyName ( const std::string & keyName )
 {
-    unsigned int pos = keyName.find('_');
+    std::string::size_type pos = keyName.find('_');
     
     std::string modString;
     std::string symString = keyName;

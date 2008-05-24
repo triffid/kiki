@@ -18,7 +18,7 @@
 KikiMenu::KikiMenu ( int selectedItem ) : KikiScreenText ()
 {    
     index_offset = 0;
-	circular     = true;
+    circular     = true;
 
     if (selectedItem < 0)
     {
@@ -35,7 +35,7 @@ KikiMenu::KikiMenu ( int selectedItem ) : KikiScreenText ()
 
     addEventWithName ("next");
     addEventWithName ("previous");
-	addEventWithName ("changed");
+    addEventWithName ("changed");
     
     escape_active = true;
     
@@ -54,7 +54,7 @@ KikiMenuItem * KikiMenu::newItem ( const std::string & itemText, KikiAction * it
 {
     std::string item_text (itemText);
     std::string event_name (itemText);
-    unsigned int pos;
+    std::string::size_type pos;
     float scale_factor = 1.0;
 
     KikiMenuItem * menu_item = new KikiMenuItem ();

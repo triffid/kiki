@@ -222,8 +222,8 @@ string kFileAbsPathName ( const string & path )
 // --------------------------------------------------------------------------------------------------------
 string kFileSuffix ( const string & path )
 {
-    unsigned int lastDotPos = path.rfind(".");
-    unsigned int lastSlashPos = path.rfind(kPathSep);
+    std::string::size_type lastDotPos = path.rfind(".");
+    std::string::size_type lastSlashPos = path.rfind(kPathSep);
 
     if (lastDotPos < path.size() - 1 && (lastDotPos > lastSlashPos || lastSlashPos == string::npos))
     {
@@ -236,7 +236,7 @@ string kFileSuffix ( const string & path )
 string kFileDirName ( const string & path )
 {
 	string native = kFileNativePath(path);
-    unsigned int lastSlashPos = native.rfind(kPathSep);
+    std::string::size_type lastSlashPos = native.rfind(kPathSep);
     if (lastSlashPos < native.size())
     {
         return native.substr(0, lastSlashPos+1);
@@ -249,7 +249,7 @@ string kFileBaseName ( const string & path, bool removeSuffix )
 {
 	string native = kFileNativePath(path);
     string baseName = native;
-    unsigned int lastSlashPos = native.rfind(kPathSep);
+    std::string::size_type lastSlashPos = native.rfind(kPathSep);
     if (lastSlashPos < native.size() - 1) 
     {
         baseName = native.substr(lastSlashPos+1);

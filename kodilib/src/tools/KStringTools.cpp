@@ -14,7 +14,7 @@
 void kStringInsertStringBehindTags ( std::string & str, const std::string & insertString, 
                                      const std::string & tag )
 {
-    unsigned int oldPos = 0;
+    std::string::size_type oldPos = 0;
     while ((oldPos = str.find(tag, oldPos)) != std::string::npos)
     {
         oldPos += tag.size();
@@ -35,8 +35,8 @@ std::vector<std::string> kStringGetComponents ( const std::string & str, const s
 {
     std::vector<std::string> components;
     
-    unsigned int dividerLength = divider.size();
-    unsigned int oldpos = 0, pos;
+    std::string::size_type dividerLength = divider.size();
+    std::string::size_type oldpos = 0, pos;
     
     while ((pos = str.find(divider, oldpos)) != std::string::npos)
     {
@@ -51,7 +51,7 @@ std::vector<std::string> kStringGetComponents ( const std::string & str, const s
 // --------------------------------------------------------------------------------------------------------
 void kStringReplace ( std::string & str, const std::string & toReplace, const std::string & replacement )
 {
-    unsigned int pos = 0, chars = toReplace.size();
+    std::string::size_type pos = 0, chars = toReplace.size();
     while ((pos = str.find(toReplace, pos)) != std::string::npos)
     {
         str.replace(pos, chars, replacement);
@@ -61,7 +61,7 @@ void kStringReplace ( std::string & str, const std::string & toReplace, const st
 // --------------------------------------------------------------------------------------------------------
 void kStringReplaceTabs ( std::string & str, unsigned int tabWidth )
 {
-    unsigned int tabPos;
+    std::string::size_type tabPos;
     while ((tabPos = str.find('\t')) != std::string::npos)
     {
         unsigned int lastNewlinePos = str.rfind('\n', tabPos-1);
@@ -115,7 +115,7 @@ unsigned int kStringCountChars ( const std::string & str, char c )
 // --------------------------------------------------------------------------------------------------------
 unsigned int kStringNthCharPos ( const std::string & str, unsigned int n, char c )
 {
-    unsigned int loc = n, oloc = 0;
+    std::string::size_type loc = n, oloc = 0;
     while (n > 0 && (loc = str.find(c, oloc)) != std::string::npos)
     { 
         n--; 
@@ -139,7 +139,7 @@ void kStringCropRows ( std::string & str, unsigned int rows )
 // --------------------------------------------------------------------------------------------------------
 void kStringCropCols ( std::string & str, unsigned int columns )
 {        
-    unsigned int oloc = 0, nloc = 0;
+    std::string::size_type oloc = 0, nloc = 0;
     while ((nloc = str.find('\n', oloc)) != std::string::npos)
     {
         if ((nloc - oloc) > columns)
@@ -161,10 +161,10 @@ void kStringCropCols ( std::string & str, unsigned int columns )
 unsigned int kStringCols ( const std::string & str )
 {
     if (str.size() == 0) return 0;
-    int oloc = 0, nloc;
+    long oloc = 0, nloc;
     std::string substring;
     int maxlength = 0, length;
-    while ((nloc = str.find('\n', oloc)) != (int)std::string::npos) 
+    while ((nloc = str.find('\n', oloc)) != (long)std::string::npos) 
     {
         substring = str.substr(oloc, nloc - oloc);
         length = substring.size();
@@ -182,7 +182,7 @@ unsigned int kStringCols ( const std::string & str )
 unsigned int kStringRows ( const std::string & str )
 {
     if (str.size() == 0) return 1;
-    unsigned int loc = 0, lines = 0;
+    std::string::size_type loc = 0, lines = 0;
     while ((loc = str.find('\n', loc)) != std::string::npos) { lines++; loc++; }
     if (str[str.size()-1] == '\n') return lines;
     return lines+1;
@@ -205,8 +205,8 @@ std::string kStringPrintf ( const std::string & fmt, va_list * argList )
 {
     static char str[256];
     std::string format(fmt), subformat, text;
-    unsigned int oloc = 0;
-    unsigned int nloc = 0;
+    std::string::size_type oloc = 0;
+    std::string::size_type nloc = 0;
     
     kStringReplaceTabs(format);
     
@@ -261,7 +261,7 @@ std::string kStringPrintf ( const char * fmt ...)
 // --------------------------------------------------------------------------------------------------------
 bool kStringHasSuffix ( const std::string & str, const std::string & suffix )
 {
-    unsigned int result = str.rfind(suffix);
+    std::string::size_type result = str.rfind(suffix);
     if (result == std::string::npos) return false;
     return (result == str.size()-suffix.size());
 }
