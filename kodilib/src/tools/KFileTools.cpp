@@ -42,15 +42,21 @@ string kFileJoinPaths ( const string & path1, const string & path2 )
 // --------------------------------------------------------------------------------------------------------
 string kFileGetCurrentPath ()
 {
-#ifndef WIN32
-    char buffer[MAXPATHLEN+1];
-    getwd(buffer);
+#ifdef _GNU_SOURCE
+   char * buffer = get_current_dir_name();
+   string current_path(buffer);
+   free(buffer);
+   return current_path;
 #else
-	char buffer[MAX_PATH+1];
-	getcwd(buffer, MAX_PATH+1);
+#ifndef WIN32
+  char buffer[MAXPATHLEN+1];
+  getwd(buffer);
+#else
+  char buffer[MAX_PATH+1];
+  getcwd(buffer, MAX_PATH+1);
 #endif
-
-    return string(buffer);
+  return string(buffer);
+#endif  
 }
 
 // --------------------------------------------------------------------------------------------------------
