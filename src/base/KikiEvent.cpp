@@ -20,10 +20,7 @@ KikiEvent::KikiEvent ( KikiActionObject * o, const std::string & name )
 // --------------------------------------------------------------------------------------------------------
 KikiEvent::~KikiEvent ()
 {
-    while (actions.empty() == false)
-    {
-        actions.pop_back();
-    }
+  actions.clear();
 }
 
 // --------------------------------------------------------------------------------------------------------
