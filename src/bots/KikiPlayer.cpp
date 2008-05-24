@@ -606,6 +606,7 @@ bool KikiPlayer::handleKey ( const KKey & key )
         if (!look_action)
         {
             look_action =  getActionWithId ((key.name == look_up_key) ? ACTION_LOOK_UP : ACTION_LOOK_DOWN);
+            look_action->reset();
             Controller.timer_event->addAction (look_action);
         }
         
