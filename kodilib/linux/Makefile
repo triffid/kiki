@@ -21,7 +21,7 @@ KODI_INCLUDES = -I $(KODISRCDIR)/handler -I $(KODISRCDIR)/tools -I $(KODISRCDIR)
 
 INCLUDES = $(KODI_INCLUDES) $(X11_INCLUDES) $(SDL_INCLUDES)
 
-CXXFLAGS = $(INCLUDES) $(SDL_CFLAGS)
+CXXOPTS = $(INCLUDES) $(SDL_CFLAGS) $(CXXFLAGS)
 
 src =  \
 	$(KODISRCDIR)/handler/KEventHandler.cpp \
@@ -95,4 +95,4 @@ clean:
 	$(RM) -f $(obj) libkodi.a
 
 %.o:    %.cpp
-	$(CXX) -c $(CXXFLAGS) -o $@ $<
+	$(CXX) -c $(CXXOPTS) -o $@ $<

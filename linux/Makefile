@@ -46,7 +46,7 @@ KIKI_INCLUDES = -I ../SWIG $(KODILIBINC) \
 
 INCLUDES = $(KIKI_INCLUDES) $(X11_INCLUDES) $(PYTHON_INCLUDES)
 
-CXXFLAGS = $(INCLUDES) $(SDLCFLAGS)
+CXXOPTS = $(INCLUDES) $(SDLCFLAGS) $(CXXFLAGS)
 
 src =  \
 	$(KIKISRC)/base/KikiAction.cpp \
@@ -105,8 +105,10 @@ src =  \
 obj = $(src:.cpp=.o)
 
 kiki: $(KIKISRC)/../SWIG/KikiPy_wrap.cpp $(obj)
-	-(cd ../SWIG; swig -c++ -python -globals kiki -o KikiPy_wrap.cpp KikiPy.i; cp kiki.py ../py)
-	$(CXX) $(obj) $(KODILIB) -o kiki $(GLLIBS) $(SDLLIBS) $(PYTHONLIBS)
+	$(CXX) $(CXXOPTS) $(obj) $(KODILIB) -o kiki $(GLLIBS) $(SDLLIBS) $(PYTHONLIBS)
+
+$(KIKISRC)/../SWIG/KikiPy_wrap.cpp: $(wildcard ../SWIG/*.i)
+	-(cd ../SWIG && swig -c++ -python -globals kiki -o KikiPy_wrap.cpp KikiPy.i && cp kiki.py ../py) 
 
 obj-clean:
 	$(RM) -f $(obj)
@@ -115,5 +117,5 @@ clean:
 	$(RM) -f $(obj) kiki
 
 %.o:    %.cpp
-	$(CXX) -c $(CXXFLAGS) -o $@ $<
+	$(CXX) -c $(CXXOPTS) -o $@ $<
 
