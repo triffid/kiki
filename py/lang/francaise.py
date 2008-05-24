@@ -2,7 +2,7 @@
 # Versions Francaise de kiki texts
 # translation by philrich123.free.fr
 
-lang['francais'] = {
+lang['francaise'] = {
 
 # game title
 
