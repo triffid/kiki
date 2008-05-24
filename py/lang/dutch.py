@@ -11,6 +11,8 @@ lang['dutch'] = {
 # menu  
 
 "new game": "nieuw spel",
+"continue": "verdergaan",
+"statistics": "statistieken",
 "load level": "laad spel",
 "next level": "volgend niveau",
 "restart": "begin opnieuw",
@@ -40,7 +42,7 @@ lang['dutch'] = {
 
 # statistics
 
-"STATISTICS_TEXT": "$scale(1.5)statistics\n\nyou solved %d of %d levels\n\nyour current score is %d\n\n$scale(2.0)%d",   
+"STATISTICS_TEXT": "$scale(1.5)statistieken\n\nje loste %d van %d niveaus op\n\nje huidige score is\n\n$scale(2.0)%d",
 
 # setup  
 
