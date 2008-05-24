@@ -65,12 +65,15 @@ void KikiPyAction::finish ()
 {
     if (PyObject_TypeCheck(python_object, &PyInstance_Type))
     {
-        if (PyObject_CallMethod(python_object,  const_cast<char*>("finishAction"), 
-                                                const_cast<char*>("s"), 
-                                                action_name.c_str()) == NULL)
-        {
-            KConsole::printError("KikiPyAction::finish failed");
-        }
+      PyObject * result = PyObject_CallMethod(python_object, const_cast<char*>("finishAction"), const_cast<char*>("s"), action_name.c_str());
+      if (result)
+      {
+        Py_DECREF(result);
+      }
+      else      
+      {
+          KConsole::printError("KikiPyAction::finish failed");
+      }
     }
 }
 
@@ -79,9 +82,12 @@ void KikiPyAction::finished ()
 { 
     if (PyObject_TypeCheck(python_object, &PyInstance_Type))
     {
-        if (PyObject_CallMethod(python_object,  const_cast<char*>("actionFinished"), 
-                                                const_cast<char*>("s"), 
-                                                action_name.c_str()) == NULL)
+        PyObject * result = PyObject_CallMethod(python_object, const_cast<char*>("actionFinished"), const_cast<char*>("s"), action_name.c_str());
+        if (result)
+        {
+          Py_DECREF(result);
+        }
+        else        
         {
             KConsole::printError("KikiPyAction::finished failed");
         }
