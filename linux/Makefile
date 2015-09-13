@@ -6,19 +6,14 @@
 #
 
 X11_INCLUDES = -I /usr/X11/include/
-PYTHON_VERSION=2.3
-PYTHON_INCLUDES = -I /usr/include/python$(PYTHON_VERSION)
+PYTHON_INCLUDES = $(shell python-config --cflags)
 
 SDLCFLAGS = $(shell sdl-config --cflags)
 SDLLIBS = $(shell sdl-config --libs) -lSDL_image -lSDL_mixer
 
 GLLIBS = -lglut -lGLU -lGL
 
-PYTHONHOME = /usr/lib/python$(PYTHON_VERSION)/
-PYTHONLIBS = $(PYTHONHOME)/config/libpython$(PYTHON_VERSION).a -lutil \
-             $(PYTHONHOME)/lib-dynload/math.so \
-	     $(PYTHONHOME)/lib-dynload/time.so \
-	     $(PYTHONHOME)/lib-dynload/_random.so
+PYTHONLIBS = $(shell python-config --libs)
 
 # change this, if the kodilib directory isn't parallel to the kiki directory
 
