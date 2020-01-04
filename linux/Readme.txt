@@ -11,10 +11,10 @@ Prerequisites
 
   Development Tools
 
-    You will need a version 3 gcc compiler to build kiki.
+    You will need a gcc compiler to build kiki.
     
     The environment variable CXX should point to the location
-    of the c++-compiler, e.g: /usr/bin/g++-3.2
+    of the c++-compiler, e.g: /usr/bin/g++-9
   
   SDL libraries
 
@@ -27,7 +27,7 @@ Prerequisites
 
   Python            http://www.python.org
 
-    kiki works with python versions 2.2.x and 2.3a.x but it will
+    kiki works with python versions 3.x but it will
     probably work with older versions as well.
   
     You won't need it if you are just building the unchanged sources,
@@ -35,6 +35,11 @@ Prerequisites
     
   SWIG              http://www.swig.org
     
+  On Debian
+
+    sudo apt install python3-dev libsdl-image1.2-dev libsdl-mixer1.2-dev \
+    freeglut3-dev swig build-essential
+    make -C kodilib/linux && make -C linux
 
 Building the kodilib
 
