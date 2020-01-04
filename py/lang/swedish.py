@@ -1,4 +1,4 @@
-﻿# -*- encoding: utf-8 -*-
+# -*- encoding: utf-8 -*-
 # Swedish versions of kiki texts 
 # translation by Ivan aka Fenris 
  

@@ -1,4 +1,4 @@
-﻿# -*- encoding: utf-8 -*-
+# -*- encoding: utf-8 -*-
 # Portuguese (Portugues do Brazil) versions of kiki texts 
 # translation by F.C.Covett 
 

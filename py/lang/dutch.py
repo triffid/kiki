@@ -1,4 +1,4 @@
-﻿# -*- encoding: utf-8 -*-
+# -*- encoding: utf-8 -*-
 # Dutch (Nederlands) versions of kiki texts 
 # translation by Arthur Langereis 
 

@@ -1,4 +1,4 @@
-﻿# -*- encoding: utf-8 -*-
+# -*- encoding: utf-8 -*-
 # Localized versions of kiki texts 
 
 lang['german'] = {

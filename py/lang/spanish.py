@@ -1,4 +1,4 @@
-﻿# -*- encoding: utf-8 -*-
+# -*- encoding: utf-8 -*-
 # Spanish (Español) versions of kiki texts 
 # translation by jay_traveller 
  
