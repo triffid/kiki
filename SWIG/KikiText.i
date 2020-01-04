@@ -10,7 +10,7 @@ class KikiText
                         KikiText	( const std::string & = "", bool center = true, int colorIndex = 0 );
     
     void		setText		( const std::string & str, int colorIndex = base_color );
-    const std::string &	getText		() const;
+    std::string 	getText		() const;
     
     void		clear		();
     bool		isEmpty		() const;
