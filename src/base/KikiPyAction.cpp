@@ -42,7 +42,7 @@ void KikiPyAction::perform ()
         result = PyObject_CallFunctionObjArgs (PyMethod_Function(python_object), 
                                                PyMethod_Self(python_object), NULL); 
     }
-    else if (PyInstance_Check(python_object))
+    else if (PyObject_HasAttrString(python_object, "performAction"))
     {
         result = PyObject_CallMethod (python_object,  const_cast<char*>("performAction"), 
                                                       const_cast<char*>("sf"), 
@@ -63,7 +63,7 @@ void KikiPyAction::perform ()
 // --------------------------------------------------------------------------------------------------------
 void KikiPyAction::finish ()
 {
-    if (PyObject_TypeCheck(python_object, &PyInstance_Type))
+    if (PyObject_HasAttrString(python_object, "finishAction"))
     {
       PyObject * result = PyObject_CallMethod(python_object, const_cast<char*>("finishAction"), const_cast<char*>("s"), action_name.c_str());
       if (result)
@@ -80,7 +80,7 @@ void KikiPyAction::finish ()
 // --------------------------------------------------------------------------------------------------------
 void KikiPyAction::finished ()
 { 
-    if (PyObject_TypeCheck(python_object, &PyInstance_Type))
+    if (PyObject_HasAttrString(python_object, "finishAction"))
     {
         PyObject * result = PyObject_CallMethod(python_object, const_cast<char*>("actionFinished"), const_cast<char*>("s"), action_name.c_str());
         if (result)
