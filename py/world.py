@@ -2,7 +2,6 @@
 if Controller.isDebugVersion(): print("[world.py]")
 
 import random
-import types
 
 
 execfile(kikipy_path + "colors.py")
@@ -62,7 +61,7 @@ def addObjectLine (self, object, start, end):
     for i in range (maxdiff):
         pos = KikiPos(*(map (lambda a, b: int(a+i*b), start, deltas)))
         if self.isUnoccupiedPos (pos):
-            if type(object) == types.StringType:
+            if isinstance(object, str):
                 self.addObjectAtPos (eval(object), pos)
             else:
                 self.addObjectAtPos (object(), pos)
@@ -85,7 +84,7 @@ del addObjectPoly
 def addObjectRandom (self, object, number):
     """adds number objects of type at random positions to the world"""
     for i in range (number):
-        if type (object) == types.StringType:
+        if isinstance(object, str):
             self.setObjectRandom (eval(object))
         else:
             self.setObjectRandom (object())
@@ -127,7 +126,7 @@ class KikiPyWorld (KikiPyActionObject):
         """creates the world from a level name or a dictionary"""
 
         if world_dict:
-            if type (world_dict) == types.StringType:
+            if isinstance(world_dict, str):
                 world.level_index = level_list.index (world_dict)
                 world.level_name = world_dict
                 self.dict = level_dict[world_dict]

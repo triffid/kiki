@@ -1,7 +1,6 @@
 
 from math import *
 import os
-import types
 
 # .................................................................................................................
 #                                                       ObjFileConverter
@@ -130,7 +129,7 @@ class ObjFileConverter:
             normal_list = map (lambda s: s[1], zipped_list)
 
             for normal_index in normal_list:
-                if type (self.normals[normal_index]) == types.IntType:
+                if isinstance(self.normals[normal_index], int):
                     vertex_list.append (self.normals[normal_index])
                 else:
                     vertex_list.append (normal_index)
