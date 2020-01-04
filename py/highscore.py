@@ -1,5 +1,10 @@
 
-if Controller.isDebugVersion(): print "[highscore.py]"
+if Controller.isDebugVersion(): print("[highscore.py]")
+
+from configparser import ConfigParser
+import os
+import getpass
+
 
 # .................................................................................................................
 #                                               KIKI HIGHSCORE

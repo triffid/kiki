@@ -7,6 +7,21 @@ import sys
 import os
 import re
 import getpass
+import pydoc
+
+
+def execfile(f):
+    import inspect
+
+    frame = inspect.currentframe()
+    try:
+        locals_ = (frame.f_back.f_locals)
+        with open(f) as fd:
+            compiled = compile(fd.read(), f, 'exec')
+            exec(compiled, globals(), locals_)
+    finally:
+        del frame
+
 
 # .................................................................................................................
 #................................ redirect interpreter output to console
@@ -34,7 +49,7 @@ def help (request):
 
 def dirn (arg):
     """prints the result of a dir(arg) call in seperate lines"""
-    print "\n".join(dir(arg))
+    print("\n".join(dir(arg)))
     
 # .................................................................................................................
 # ............................... shortcuts

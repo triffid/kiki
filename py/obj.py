@@ -1,5 +1,7 @@
 
 from math import *
+import os
+import types
 
 # .................................................................................................................
 #                                                       ObjFileConverter
@@ -22,7 +24,7 @@ class ObjFileConverter:
                 file = open (file_path + ".obj", "r")
                 self.file_path = file_path + ".obj"
             except:
-                print "[*** Error ***] unable to open file", file_path
+                print("[*** Error ***] unable to open file", file_path)
                 return
     
         if object_name:
@@ -46,12 +48,12 @@ class ObjFileConverter:
         self.parseObjects()
         self.optimizeFaces()
 
-        print "\nsummary:"
-        print "vertices/normals:", len (self.vertices), len (self.normals)
-        print "triangles:       ", len (self.triangles)
-        print "quads:           ", len (self.quads)
-        print "fans:            ", len (self.fans)
-        print "strips:          ", len (self.strips)
+        print("\nsummary:")
+        print("vertices/normals:", len (self.vertices), len (self.normals))
+        print("triangles:       ", len (self.triangles))
+        print("quads:           ", len (self.quads))
+        print("fans:            ", len (self.fans))
+        print("strips:          ", len (self.strips))
 
         self.generateArrays()
 
@@ -61,11 +63,11 @@ class ObjFileConverter:
             
         if self.line >= len(self.lines): return
 
-        while self.lines[self.line][0:2] <> "o ":
+        while self.lines[self.line][0:2] != "o ":
             self.line += 1
             if self.line >= len(self.lines): return            
             
-        print "\nobject", self.lines[self.line][2:]
+        print("\nobject", self.lines[self.line][2:])
 
         num_v = len (self.vertices)
         num_n = len (self.normals)
@@ -76,10 +78,10 @@ class ObjFileConverter:
         self.parseNormals()
         self.parseFaces()
         
-        print "vertices/normals:", len (self.vertices) - num_v, len (self.normals) - num_n
-        print "triangles:       ", len (self.triangles) - num_t
-        print "quads:           ", len (self.quads) - num_q
-        print ""
+        print("vertices/normals:", len (self.vertices) - num_v, len (self.normals) - num_n)
+        print("triangles:       ", len (self.triangles) - num_t)
+        print("quads:           ", len (self.quads) - num_q)
+        print("")
         
         self.parseObjects()
   
@@ -87,7 +89,7 @@ class ObjFileConverter:
     def parseVertices (self):
         """collects vertices"""
             
-        while self.lines[self.line][0:2] <> "v ":
+        while self.lines[self.line][0:2] != "v ":
             self.line += 1
             
         while self.lines[self.line][0:2] == "v ":
@@ -116,7 +118,7 @@ class ObjFileConverter:
     def parseFaces (self):
         """collects faces into triangle and quad lists"""
         
-        while self.lines[self.line][0:2] <> "f ":
+        while self.lines[self.line][0:2] != "f ":
             self.line += 1
             
         while self.lines[self.line][0:2] == "f ":
@@ -435,24 +437,24 @@ class ObjFileConverter:
         try:
             file = open (file_path, "w")
         except:
-            print "[*** Error ***] unable to open file for writing ", file_path
+            print("[*** Error ***] unable to open file for writing ", file_path)
             return 0
         
         file.write("\n".join(result))
         file.close()
-        print "\noutput written to", file_path
+        print("\noutput written to", file_path)
 
         file_path = "/Users/kodi/Projects/kiki/src/items/" + self.object_name + ".h"
 
         try:
             file = open (file_path, "w")
         except:
-            print "[*** Error ***] unable to open file for writing ", file_path
+            print("[*** Error ***] unable to open file for writing ", file_path)
             return 0
         
         file.write("\n".join(result))
         file.close()
-        print "\noutput written to", file_path
+        print("\noutput written to", file_path)
 
 
 #ObjFileConverter("/Users/kodi/Projects/kiki/misc/objects/body.obj", "body")

@@ -1,5 +1,6 @@
 
-if Controller.isDebugVersion(): print "[edit.py]"
+if Controller.isDebugVersion(): print("[edit.py]")
+
 
 execfile (kikipy_path + "buffer.py")
 execfile (kikipy_path + "interpreter.py")
@@ -259,7 +260,7 @@ class PythonConsole:
         # ................................................... extract mod- and key name
         modName = ""
         keyName = key
-        if key.find("_") <> -1:
+        if key.find("_") != -1:
             modName = key.split("_")[0]
             keyName = key.split("_")[1]
 

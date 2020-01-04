@@ -1,4 +1,6 @@
 
+import re
+
 # .................................................................................................................
 #                                                   KikiPyBuffer
 # .................................................................................................................
@@ -301,14 +303,14 @@ class KikiPyBuffer:
             lineIndex += 1
             result = self.lines[lineIndex].find(text)
             
-        if result <> -1: return KikiPos(result,lineIndex)
+        if result != -1: return KikiPos(result,lineIndex)
         
         lineIndex = -1
         while result == -1 and lineIndex+1 < pos.y:
             lineIndex += 1
             result = self.lines[lineIndex].find(text)
             
-        if result <> -1: return KikiPos(result,lineIndex)
+        if result != -1: return KikiPos(result,lineIndex)
         return None
         
     # .............................................................................................................
@@ -471,7 +473,7 @@ class KikiPyBuffer:
         # ................................................... control sequences
         else:
             # ..................................................................  CTRL
-            if modName.find("CTRL") <> -1:
+            if modName.find("CTRL") != -1:
                 reset_selection = (modName.find("SHIFT") == -1)
                 if keyName == "a":                                              # CTRL_a
                     self.setCursor(0, self.cursor.y, reset_selection)               # cursor to start of line
@@ -508,7 +510,7 @@ class KikiPyBuffer:
                 elif keyName == "f" or keyName == "g":                          # META_f and META_g
                     if keyName == "g" and self.__class__.find_string:               # META_g
                         self.findAndGotoText(self.__class__.find_string)                # repeat last find
-                    elif self.selectionEmpty() or self.selection.y <> self.cursor.y:# if nothing selected
+                    elif self.selectionEmpty() or self.selection.y != self.cursor.y:# if nothing selected
                         self.editor.requestUserInput("find")                            # request search string
                     else:                                                           # else
                         self.findAndGotoText(self.selectionText()[0])                   # search selected string

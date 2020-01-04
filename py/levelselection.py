@@ -1,5 +1,5 @@
 
-if Controller.isDebugVersion(): print "[levelselection.py]"
+if Controller.isDebugVersion(): print("[levelselection.py]")
 
 world.max_level_index = 0
 

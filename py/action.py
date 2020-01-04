@@ -1,5 +1,5 @@
 
-if Controller.isDebugVersion(): print "[action.py]"
+if Controller.isDebugVersion(): print("[action.py]")
 
 # .................................................................................................................
 class KikiPyActionObject:
@@ -37,8 +37,8 @@ class KikiPyActionObject:
 # .................................................................................................................
 def continuous(*args):
     default_args = ("continuous kikipy action", 0, KikiAction.CONTINUOUS)
-    return apply (KikiPyAction, args + default_args[len(args)-1:])
+    return KikiPyAction(*(args + default_args[len(args)-1:]))
 
 def once(*args):
     default_args = ("kikipy action", 0, KikiAction.ONCE)
-    return apply (KikiPyAction, args + default_args[len(args)-1:])
+    return KikiPyAction(*(args + default_args[len(args)-1:]))

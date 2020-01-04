@@ -1,5 +1,5 @@
 
-if Controller.isDebugVersion(): print '[colors.py]'
+if Controller.isDebugVersion(): print('[colors.py]')
 
 # .................................................................................................................
 # ........................................................ apply color scheme
@@ -8,7 +8,7 @@ def applyColorScheme (scheme):
     for item in scheme.items():
         for subitem in item[1].items():
             colorstr = str(subitem[1])
-            color = apply(KColor, subitem[1])
+            color = KColor(*subitem[1])
             eval(item[0]+".setObjectColor(\'"+subitem[0]+"\', color)")
 
 

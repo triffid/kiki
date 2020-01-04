@@ -1,7 +1,8 @@
 
-if Controller.isDebugVersion(): print "[config.py]"
+if Controller.isDebugVersion(): print("[config.py]")
 
-from ConfigParser import ConfigParser
+import os
+from configparser import ConfigParser
 
 # .................................................................................................................
 #                                               KIKI CONFIG
@@ -46,7 +47,7 @@ class KikiConfig (ConfigParser):
                 Controller.setGamma(int(value))
             elif option == "fullscreen":
                 fullscreen = self.getboolean(section, option)
-                if fullscreen <> Controller.getFullscreen():
+                if fullscreen != Controller.getFullscreen():
                     screen_size = self.get (section, fullscreen and "fullscreen size" or "window size")
                     screen_size = tuple (map (int, screen_size.split("x")))
                     Controller.changeScreenSize (screen_size[0], screen_size[1], self.getboolean(section, option))
@@ -71,7 +72,7 @@ class KikiConfig (ConfigParser):
     def save (self):
         """save the configuration"""
         try:
-            cfg_file = file (self.config_file_path, "w+")
+            cfg_file = open (self.config_file_path, "w+")
             self.write (cfg_file)
             cfg_file.close()
         except:

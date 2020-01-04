@@ -1,5 +1,5 @@
 
-if Controller.isDebugVersion(): print "[intro.py]"
+if Controller.isDebugVersion(): print("[intro.py]")
 
 # .................................................................................................................
 #                                             Intro Screen

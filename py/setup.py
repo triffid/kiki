@@ -1,5 +1,5 @@
 
-if Controller.isDebugVersion(): print "[setup.py]"
+if Controller.isDebugVersion(): print("[setup.py]")
 
 # .................................................................................................................
 #                                               KEY SETUP MENU
@@ -33,7 +33,7 @@ def quickKeySetup (item_index = 0, escapeAction=0):
                 tmp_menu.addItem (Controller.getLocalizedString (action_name))
             else:
                 action_key = ""
-                if action_index <> item_index:
+                if action_index != item_index:
                     action_key = player.getKeyForAction (action_name)
                     
                 tmp_menu.addItem (Controller.getLocalizedString (action_name) + ": |" + action_key)

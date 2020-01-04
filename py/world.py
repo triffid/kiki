@@ -1,8 +1,9 @@
 
-if Controller.isDebugVersion(): print "[world.py]"
+if Controller.isDebugVersion(): print("[world.py]")
 
 import random
 import types
+
 
 execfile(kikipy_path + "colors.py")
 execfile(kikipy_path + "action.py")
@@ -59,7 +60,7 @@ def addObjectLine (self, object, start, end):
     maxdiff = max(map (abs, diff))
     deltas = map (lambda a, d = float (maxdiff): a/d, diff)
     for i in range (maxdiff):
-        pos = apply (KikiPos, (map (lambda a, b: int(a+i*b), start, deltas)))
+        pos = KikiPos(*(map (lambda a, b: int(a+i*b), start, deltas)))
         if self.isUnoccupiedPos (pos):
             if type(object) == types.StringType:
                 self.addObjectAtPos (eval(object), pos)
@@ -188,7 +189,7 @@ class KikiPyWorld (KikiPyActionObject):
                 if "position" in entry:
                     pos = world.decenter (entry["position"])
                 elif "coordinates" in entry:
-                    pos = apply (KikiPos, entry["coordinates"])
+                    pos = KikiPos(*entry["coordinates"])
                 world.addObjectAtPos (exit_gate, pos)
                 exit_id += 1
 
@@ -198,7 +199,7 @@ class KikiPyWorld (KikiPyActionObject):
             if callable(self.dict["create"]):
                 self.dict["create"]()
             else:
-                exec self.dict["create"] in globals()
+                exec(self.dict["create"], globals())
 
         # ............................................................ player
 
@@ -280,7 +281,7 @@ class KikiPyWorld (KikiPyActionObject):
                 elif callable (w):
                     w()
                 else:
-                    exec "KikiPyWorld().create(" + world + ")"
+                    exec("KikiPyWorld().create(" + world + ")")
             else:
                 KikiPyWorld().create (level_list[world.level_index+1])
                 
@@ -319,7 +320,7 @@ class KikiPyWorld (KikiPyActionObject):
             if callable(self.dict["escape"]):
                 self.dict["escape"]()
             else:
-                exec self.dict["escape"] in globals()
+                exec(self.dict["escape"], globals())
             return
 
         menu = KikiMenu()

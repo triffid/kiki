@@ -1,7 +1,8 @@
 
-if Controller.isDebugVersion(): print "[interpreter.py]"
+if Controller.isDebugVersion(): print("[interpreter.py]")
 
 import code
+import sys
 
 # .................................................................................................................
 #                                             INTERPRETER BUFFER
