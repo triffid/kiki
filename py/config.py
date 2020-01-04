@@ -65,9 +65,9 @@ class KikiConfig (ConfigParser):
         """overwritten to allow spaces in option names"""        
         ConfigParser.set (self, section, str(option).replace(" ", "_"), str(value))
             
-    def get (self, section, option):
+    def get (self, section, option, **kwargs):
         """overwritten to allow spaces in option names"""
-        return ConfigParser.get (self, section, str(option).replace(" ", "_"))
+        return super().get (section, str(option).replace(" ", "_"), **kwargs)
 
     def save (self):
         """save the configuration"""
