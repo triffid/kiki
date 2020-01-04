@@ -5,7 +5,7 @@
 # you might have to change these to match your system
 #
 
-PYTHON_INCLUDES = $(shell python-config --cflags)
+PYTHON_INCLUDES = $(shell python3-config --cflags)
 
 SDLCFLAGS = $(shell sdl-config --cflags)
 SDLLIBS = $(shell sdl-config --libs) $(shell pkg-config SDL_image SDL_mixer --libs)
@@ -13,7 +13,7 @@ SDLLIBS = $(shell sdl-config --libs) $(shell pkg-config SDL_image SDL_mixer --li
 GLCFLAGS = $(shell pkg-config glu --cflags)
 GLLIBS = -lglut $(shell pkg-config glu --libs)
 
-PYTHONLIBS = $(shell python-config --libs)
+PYTHONLIBS = $(shell python3-config --ldflags)
 
 # change this, if the kodilib directory isn't parallel to the kiki directory
 
