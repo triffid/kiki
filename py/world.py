@@ -143,9 +143,9 @@ class KikiPyWorld (KikiPyActionObject):
             applyColorScheme (default_scheme)
 
         if "border" in self.dict:
-            border = self.dict["border"]
+            border = bool(self.dict["border"])
         else:
-            border = 1
+            border = bool(1)
 
         world.setDisplayBorder (border)
 
@@ -174,7 +174,7 @@ class KikiPyWorld (KikiPyActionObject):
         if "exits" in self.dict:
             exit_id = 0
             for entry in self.dict["exits"]:
-                exit_gate = KikiGate (entry["active"])
+                exit_gate = KikiGate (bool(entry["active"]))
                 
                 if "name" in entry:
                     name = entry["name"]
