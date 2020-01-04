@@ -5,13 +5,13 @@
 # you might have to change these to match your system
 #
 
-X11_INCLUDES = -I /usr/X11/include/
 PYTHON_INCLUDES = $(shell python-config --cflags)
 
 SDLCFLAGS = $(shell sdl-config --cflags)
-SDLLIBS = $(shell sdl-config --libs) -lSDL_image -lSDL_mixer
+SDLLIBS = $(shell sdl-config --libs) $(shell pkg-config SDL_image SDL_mixer --libs)
 
-GLLIBS = -lglut -lGLU -lGL
+GLCFLAGS = $(shell pkg-config glu --cflags)
+GLLIBS = -lglut $(shell pkg-config glu --libs)
 
 PYTHONLIBS = $(shell python-config --libs)
 
@@ -41,7 +41,7 @@ KIKI_INCLUDES = -I ../SWIG $(KODILIBINC) \
 
 INCLUDES = $(KIKI_INCLUDES) $(X11_INCLUDES) $(PYTHON_INCLUDES)
 
-CXXOPTS = $(INCLUDES) $(SDLCFLAGS) $(CXXFLAGS)
+CXXOPTS = $(INCLUDES) $(SDLCFLAGS) $(CXXFLAGS) $(GLCFLAGS)
 
 src =  \
 	$(KIKISRC)/base/KikiAction.cpp \

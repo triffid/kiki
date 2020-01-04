@@ -5,9 +5,7 @@
 # you might have to change these to match your system
 #
 
-X11_INCLUDES = -I /usr/X11/include
-SDL_INCLUDES = -I /usr/include/SDL
-SDL_CFLAGS = -D_REENTRANT
+SDL_CFLAGS = $(shell pkg-config SDL_image --cflags)
 
 #
 # the following should be ok on most machines
@@ -19,7 +17,7 @@ KODISRCDIR = ../src
 
 KODI_INCLUDES = -I $(KODISRCDIR)/handler -I $(KODISRCDIR)/tools -I $(KODISRCDIR)/types -I $(KODISRCDIR)/widgets -I $(KODISRCDIR)/windows
 
-INCLUDES = $(KODI_INCLUDES) $(X11_INCLUDES) $(SDL_INCLUDES)
+INCLUDES = $(KODI_INCLUDES)
 
 CXXOPTS = $(INCLUDES) $(SDL_CFLAGS) $(CXXFLAGS)
 
