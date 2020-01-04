@@ -16,8 +16,7 @@ class KikiPyInterpreter (KikiPyBuffer, code.InteractiveConsole):
     # .............................................................................................................
     def __init__(self, editor):
         """initializes the interpreter with an editor"""
-        KikiPyBuffer.__init__(self, editor)
-        code.InteractiveConsole.__init__(self, globals())
+        super().__init__(editor=editor, locals=globals())
         
         self.title_text = "python"
         

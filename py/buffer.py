@@ -19,8 +19,9 @@ class KikiPyBuffer:
     #                                                  INIT
     # .............................................................................................................
 
-    def __init__ (self, editor):
+    def __init__ (self, *, editor, **kwargs):
         """initializes the console with a widget"""
+        super().__init__(**kwargs)
         self.editor      = editor
         self.cursor      = KikiPos()                    # cursor pos
         self.selection   = KikiPos()                    # selection pos
