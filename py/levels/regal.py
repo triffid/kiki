@@ -19,7 +19,7 @@ level_dict["regal"] = {
 """
 sx, sy, sz = 7,3,9
             
-for z in range(-sz/2+1, sz/2+1):
+for z in range(-sz//2+1, sz//2+1):
     
     world.addObjectAtPos (KikiWall (), world.decenter(-sx/2+1, 0, z))
     world.addObjectAtPos (KikiWall (), world.decenter( sx/2, 0, z))

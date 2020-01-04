@@ -27,22 +27,22 @@ level_dict["green"] = {
 """
 sx, sy, sz = 13,5,13
             
-for z in range(-sz/2+2, sz/2):
+for z in range(-sz//2+2, sz//2):
     
     world.addObjectAtPos (KikiWall (), world.decenter(-sx/2+2, 0, z))
     world.addObjectAtPos (KikiWall (), world.decenter( sx/2-1, 0, z))
 
-for z in range(-sz/2+4, sz/2-2):
+for z in range(-sz//2+4, sz//2-2):
     
     world.addObjectAtPos (KikiWall (), world.decenter(-sx/2+4, 0, z))
     world.addObjectAtPos (KikiWall (), world.decenter( sx/2-3, 0, z))
 
-for x in range(-sx/2+3, sx/2-1):
+for x in range(-sx//2+3, sx//2-1):
     
     world.addObjectAtPos (KikiWall (), world.decenter(x, 0, -sz/2+2))
     world.addObjectAtPos (KikiWall (), world.decenter(x, 0,  sz/2-1))
 
-for x in range(-sx/2+4, sx/2-2):
+for x in range(-sx//2+4, sx//2-2):
     
     world.addObjectAtPos (KikiWall (), world.decenter(x, 0, -sz/2+4))
     world.addObjectAtPos (KikiWall (), world.decenter(x, 0,  sz/2-3))

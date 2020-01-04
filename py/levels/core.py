@@ -20,9 +20,9 @@ level_dict["core"] = {
 """
 s = world.getSize()
 
-for y in range (-s.y/2+1.5, s.y/2+0.5, 2):
-    for x in range (-s.x/2+1.5, s.x/2+0.5):
-        for z in range (-s.z/2+1.5, s.z/2+0.5):
+for y in range (-s.y//2+1.5, s.y//2+0.5, 2):
+    for x in range (-s.x//2+1.5, s.x//2+0.5):
+        for z in range (-s.z//2+1.5, s.z//2+0.5):
             world.addObjectAtPos (KikiStone (), world.decenter (x, y, z))
             
 for y in [-1, 1]:

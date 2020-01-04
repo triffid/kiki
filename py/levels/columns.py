@@ -20,9 +20,9 @@ level_dict["columns"] = {
 """
 s = world.getSize()
 
-for y in range (-s.y/2+1, s.y/2+1):
-    for x in range (-s.x/2+1, s.x/2+1, 2):
-        for z in range (-s.z/2+1, s.z/2+1, 2):
+for y in range (-s.y//2+1, s.y//2+1):
+    for x in range (-s.x//2+1, s.x//2+1, 2):
+        for z in range (-s.z//2+1, s.z//2+1, 2):
             world.addObjectAtPos (KikiStone (), world.decenter (x, y, z))
             
 world.deleteObject (world.getOccupantAtPos (world.decenter (-1, 0, 1)))
