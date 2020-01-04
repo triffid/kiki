@@ -103,7 +103,7 @@ kiki: $(KIKISRC)/../SWIG/KikiPy_wrap.cpp $(obj)
 	$(CXX) $(CXXOPTS) $(obj) $(KODILIB) -o kiki $(GLLIBS) $(SDLLIBS) $(PYTHONLIBS)
 
 $(KIKISRC)/../SWIG/KikiPy_wrap.cpp: $(wildcard ../SWIG/*.i)
-	-(cd ../SWIG && swig -c++ -python -globals kiki -o KikiPy_wrap.cpp KikiPy.i && cp kiki.py ../py) 
+	-(cd ../SWIG && swig -c++ -python -modern -py3 -globals kiki -o KikiPy_wrap.cpp KikiPy.i && cp kiki.py ../py)
 
 obj-clean:
 	$(RM) -f $(obj)
