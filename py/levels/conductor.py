@@ -19,7 +19,7 @@ def func_conductor():
 		world.addObjectAtPos(KikiWireStone(), KikiPos (5,6,h))
 
 	wire_u=lambda:KikiWire (KikiFace.Z, 4+1 )
-   	wire_d=lambda:KikiWire (KikiFace.NZ, 4+1 )
+	wire_d=lambda:KikiWire (KikiFace.NZ, 4+1 )
 	
 	world.addObjectLine (wire_d, KikiPos (5,2,1),KikiPos (5,6,1))
 	world.addObjectLine (wire_u, KikiPos (5,2,3),KikiPos (5,6,3))
@@ -36,13 +36,13 @@ def func_conductor():
 	g=KikiGenerator 	(KikiFace.Z) #set to Active as last command in LevelS
 	world.addObjectAtPos (g	, KikiPos (5,1,0))
 
- 	world.addObjectAtPos (KikiWireStone()	, KikiPos (5,2,0))
- 	world.addObjectAtPos (KikiWireStone()	, KikiPos (5,2,1))
+	world.addObjectAtPos (KikiWireStone()	, KikiPos (5,2,0))
+	world.addObjectAtPos (KikiWireStone()	, KikiPos (5,2,1))
  	
 	world.addObjectAtPos (KikiWireStone()	, KikiPos (5,5,3))
- 	world.addObjectAtPos (KikiWireStone()	, KikiPos (5,5,5))
+	world.addObjectAtPos (KikiWireStone()	, KikiPos (5,5,5))
 	
- 	KikiWireWall(15 ,KikiPos(5,4,8))	
+	KikiWireWall(15 ,KikiPos(5,4,8))	
 
 	world.addObjectAtPos(KikiWall(), KikiPos(0,0,0))
 	world.addObjectAtPos(KikiWall(), KikiPos(10,0,0))

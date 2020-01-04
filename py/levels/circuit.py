@@ -9,7 +9,7 @@ def func_circuit():
 	sx=s.x-1
 	sy=s.y-1
 	sz=s.z-1
- 
+
 	p=[	[KikiPos( 0, 0, 0+1),KikiPos( 0, 0,mz),KikiPos( 0,my,mz), KikiFace.X, KikiFace.X],
 		[KikiPos( 0,my,mz+1),KikiPos( 0,my,sz),KikiPos(mx,my,sz), KikiFace.X,KikiFace.NZ],
 		[KikiPos(mx,my-1,sz),KikiPos(mx, 0,sz),KikiPos(my, 0,mz),KikiFace.NZ, KikiFace.Y],
@@ -19,11 +19,11 @@ def func_circuit():
 		[KikiPos(mx+1,sy,my),KikiPos(sx,sy,mz),KikiPos(sx,sy,sz), KikiFace.NY, KikiFace.NY],
 		]
 	for k in p:			
- 		stone=lambda:KikiWire( k[3], 15)
+		stone=lambda:KikiWire( k[3], 15)
 		world.addObjectLine(stone,k[0],k[1])
 		world.addObjectAtPos(KikiWire( k[3], 15) , k[1])	#correct the last missing stone of the line
 		
- 		stone=lambda:KikiWire( k[4], 15)
+		stone=lambda:KikiWire( k[4], 15)
 		world.addObjectLine(stone,k[1],k[2])
 		
 	world.addObjectAtPos(KikiWireStone(), world.decenter(1,0,0))
@@ -61,7 +61,7 @@ level_dict["circuit"] = {
 					"orientation"	:	rot0
 
 				    },
-                        "exits":    [
+			"exits":    [
                                         {
                                             "name":         "exit",
                                             "active":       0,

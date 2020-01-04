@@ -4,7 +4,7 @@ def func_sand():
 	sys.stdout = KConsole
 	sys.stderr = KConsole
 	
- 	def switched():
+	def switched():
 		unoccupied=False
 		for (i,j) in [ (i,j) for i in range(3,6) for j in range(3,6) ]:
 		  if 	world.isUnoccupiedPos(KikiPos(i,j,0)):

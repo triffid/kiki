@@ -19,7 +19,7 @@ def func_gamma():
 	def switched (switch):
 		world.switch_counter += switch.isActive() and 1 or -1
 		exit = kikiObjectToGate(world.getObjectWithName("exit"))
-    		exit.setActive(world.switch_counter == 4)
+		exit.setActive(world.switch_counter == 4)
 
 			
 	aswitch = KikiSwitch()
@@ -29,10 +29,10 @@ def func_gamma():
 	eswitch = KikiSwitch()
 	
 	aswitch.getEventWithName("switched").addAction ( continuous ( aswitched ))
- 	bswitch.getEventWithName("switched").addAction ( continuous (lambda s= bswitch :  switched(s) ))
- 	cswitch.getEventWithName("switched").addAction ( continuous (lambda s= cswitch :  switched(s) ))
- 	dswitch.getEventWithName("switched").addAction ( continuous (lambda s= dswitch :  switched(s) ))
- 	eswitch.getEventWithName("switched").addAction ( continuous (lambda s= eswitch :  switched(s) ))
+	bswitch.getEventWithName("switched").addAction ( continuous (lambda s= bswitch :  switched(s) ))
+	cswitch.getEventWithName("switched").addAction ( continuous (lambda s= cswitch :  switched(s) ))
+	dswitch.getEventWithName("switched").addAction ( continuous (lambda s= dswitch :  switched(s) ))
+	eswitch.getEventWithName("switched").addAction ( continuous (lambda s= eswitch :  switched(s) ))
  
 	world.addObjectAtPos (aswitch , KikiPos  (s.x-1,0,0))	
 	world.addObjectAtPos (bswitch , KikiPos  (0,0,0))	
