@@ -5,7 +5,7 @@
 # you might have to change these to match your system
 #
 
-PYTHON_INCLUDES = $(shell python3-config --cflags)
+PYTHON_INCLUDES = $(subst -specs=/usr/share/dpkg/no-pie-compile.specs,,$(shell python3-config --cflags))
 
 SDLCFLAGS = $(shell sdl-config --cflags)
 SDLLIBS = $(shell sdl-config --libs) $(shell pkg-config SDL_image SDL_mixer --libs)
