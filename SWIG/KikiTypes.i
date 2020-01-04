@@ -8,6 +8,7 @@ class KikiPos
     int z;
                         KikiPos		();
                         KikiPos		( int, int, int = 0 );
+                        KikiPos		( double, double, double = 0 );
                         KikiPos		( const KikiPos & p );
                         KikiPos		( const KVector & v );
     KikiPos		operator-  	( const KikiPos & p ) const;
