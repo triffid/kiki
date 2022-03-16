@@ -11,9 +11,9 @@ SDLCFLAGS = $(shell sdl-config --cflags)
 SDLLIBS = $(shell sdl-config --libs) $(shell pkg-config SDL_image SDL_mixer --libs)
 
 GLCFLAGS = $(shell pkg-config glu --cflags)
-GLLIBS = -lglut $(shell pkg-config glu --libs)
+GLLIBS = -lglut $(shell pkg-config glu gl --libs)
 
-PYTHONLIBS = $(shell python3-config --ldflags)
+PYTHONLIBS = $(shell python3-config --ldflags --embed)
 
 # change this, if the kodilib directory isn't parallel to the kiki directory
 
