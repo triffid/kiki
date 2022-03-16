@@ -55,9 +55,9 @@ def addObjectLine (self, object, start, end):
         end = (end.x, end.y, end.z)
     ex, ey, ez = end
     
-    diff = map (lambda a,b: a-b, end, start)
+    diff = list(map(lambda a,b: a-b, end, start))
     maxdiff = max(map (abs, diff))
-    deltas = map (lambda a, d = float (maxdiff): a/d, diff)
+    deltas = list(map(lambda a, d = float (maxdiff): a/d, diff))
     for i in range (maxdiff):
         pos = KikiPos(*(map (lambda a, b: int(a+i*b), start, deltas)))
         if self.isUnoccupiedPos (pos):

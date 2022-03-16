@@ -25,6 +25,8 @@ def levelSelection (level_index=-1, escapeAction=0):
     # ............................................................................................................    
     
     last_level = highscore.getLastAvailableLevel()
+    if (last_level < 0):
+        last_level = 0
     current_level = (level_index >= 0) and level_index or last_level 
         
     world.max_level_index = last_level
