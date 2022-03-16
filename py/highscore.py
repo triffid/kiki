@@ -101,7 +101,7 @@ class KikiHighscore (ConfigParser):
     def save (self):
         """save the highscore"""
         try:
-            highscore_file = file (self.highscore_file_path, "w+")
+            highscore_file = open(self.highscore_file_path, "w+")
             self.write (highscore_file)
             highscore_file.close()
         except:
