@@ -24,8 +24,8 @@ level_dict["electro"] = {
 s = world.getSize ()
 d = 2
 
-world.addObjectLine ( KikiWireStone, world.decenter (-d, s.y/2, 0), world.decenter (-d, 0, 0))
-world.addObjectLine ( KikiWireStone, world.decenter ( d, s.y/2, 0), world.decenter ( d, 0, 0))
+world.addObjectLine ( KikiWireStone, world.decenter (-d, s.y/2 - 1, 0), world.decenter (-d, 0, 0))
+world.addObjectLine ( KikiWireStone, world.decenter ( d, s.y/2 - 1, 0), world.decenter ( d, 0, 0))
 world.addObjectLine ( KikiWireStone, world.decenter ( d, 0, 0), world.decenter ( 0, 0, 0))
 world.addObjectLine ( KikiWireStone, world.decenter (-d, 0, 0), world.decenter ( 0, 0, 0))
 
